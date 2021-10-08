@@ -1,6 +1,6 @@
 RewriteEngine on
 
-RewriteBase /pro/
+RewriteBase /project/
 
 
 RewriteCond %{REQUEST_FILENAME} !-d
