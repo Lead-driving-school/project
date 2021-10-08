@@ -6,8 +6,9 @@ class Test extends Controller{
         parent:: __construct();
     }
     function index(){
-
         $this->view->render('Test');
         // $this->model->printSomethis();
     }
+
+    
 }
