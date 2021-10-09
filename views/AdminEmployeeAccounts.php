@@ -24,8 +24,8 @@
                 </div>
 
                 <div class="tab-container">
-                    <a href="Account_Employee.html"><div class="tab-1">Employees<hr class="tab-line"></div></a>
-                    <a href="Account_student.html"><div class="tab-2">Students</div></a>
+                    <a href="<?php echo URL?>AdminEmployeeAccounts"><div class="tab-1">Employees<hr class="tab-line"></div></a>
+                    <a href="<?php echo URL?>AdminStudentAccounts"><div class="tab-2">Students</div></a>
                 </div>
 
                 <div class="search-container">
