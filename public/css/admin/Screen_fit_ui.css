@@ -9,9 +9,12 @@
 
 .title-container{
     width: 92%;
+    height: 150px;
     display: flex;
+    align-items: center;
     flex-direction: row-reverse;
-    font-size: 30px;
+    font-size: 50px;
+    font-weight: 600;
     background-color: blue;
 }
 

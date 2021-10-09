@@ -60,7 +60,7 @@
             <sidebar-component></sidebar-component>
             <div class="container-1">
                 <div class="title-container">
-                    <h1>Vehicles</h1>
+                   Vehicles
                 </div>
 
                 <div class="add-new-search-container">

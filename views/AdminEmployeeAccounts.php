@@ -20,7 +20,7 @@
             <sidebar-component></sidebar-component>
             <div class="container-1">
                 <div class="title-container">
-                    <h1>Accounts</h1>
+                    Accounts
                 </div>
 
                 <div class="tab-container">
