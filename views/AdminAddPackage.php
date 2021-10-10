@@ -70,9 +70,11 @@
                      
             </div>
             <div class="button-container">
+                <a href="<?php echo URL?>AdminPackages">
                 <button class="cancel">
                     Cancel
-                </button>
+                </button></a>
+                
                 <button class="confirm">
                     Confirm
                 </button>

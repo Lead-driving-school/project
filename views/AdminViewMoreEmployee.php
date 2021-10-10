@@ -59,13 +59,19 @@
 
             </div>
             <div class="button-container">
-                <button class="cancel">
-                    Back
-                </button>
+                <a href="<?php echo URL?>AdminEmployeeAccounts">
+                    <button class="cancel">
+                        Back
+                    </button>
+                </a>
 
-                <button class="save">
-                    Edit
-                </button>
+                <a href="<?php echo URL?>AdminEditEmployee">
+                    <button class="save">
+                        Edit
+                    </button>
+                </a>
+
+                
                 
             </div>
         </div>

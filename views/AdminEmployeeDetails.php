@@ -60,7 +60,7 @@
 
             </div>
             <div class="button-container">
-                <button class="back">Back</button>
+                <a href="<?php echo URL?>AdminStaff"><button class="back">Back</button></a>
             </div>
         </div>
     </div>

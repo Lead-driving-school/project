@@ -11,10 +11,15 @@ sidebarTemplate.innerHTML = `
         top: 80px;
         background-color: #292d42;
     }
+    .list{
+        height:20px;
+        width:100px;
+        background-color: #000000;
+    }
 </style>
 
 <div class="sidebar">
-        
+   <a href="<?php echo URL?>AdminEmployeeAccounts"><div class="list">Employees</div></a>
 </div>
 `
 
