@@ -75,7 +75,7 @@
                     </div>
                     <hr class="topic-line">
                     <div class="addnew-btn-container">
-                        <button class="add-new">Add New</button>
+                        <a href="<?php echo URL?>AdminAddInitPrices"><button class="add-new">Add New</button></a>
                     </div>
                     <div class="row-container">
                         <div class="row">
@@ -120,9 +120,9 @@
                         <h2>Training Packages</h2>
                     </div>
                     <hr class="topic-line">
+
                     <div class="addnew-btn-container">
                         <a href="<?php echo URL?>AdminAddPackage"><button class="add-new">Add New</button></a>
-                       
                     </div>
                     <div class="row-container">
                         <div class="row">
@@ -157,7 +157,7 @@
                     </div>
                     <hr class="topic-line">
                     <div class="addnew-btn-container">
-                        <button class="add-new">Add New</button>
+                        <a href="<?php echo URL?>AdminAddExtraPrices"><button class="add-new">Add New</button></a>
                     </div>
                     <div class="row-container">
                         <div class="row">
