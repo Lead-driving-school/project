@@ -6,7 +6,8 @@ class Test_Model extends Model{
         parent::__construct();
     }
 
-    function printSomethis(){
+    function printSomething(){
         echo "Hello from test model";
     }
+    
 }
