@@ -4,6 +4,13 @@ class Test extends Controller{
         parent:: __construct();
     }
     function index(){
+
         $this->model->printSomething();
+
+        $this->view->render('Test');
+        // $this->model->printSomethis();
+
     }
+
+    
 }

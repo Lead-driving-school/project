@@ -6,7 +6,7 @@ class View{
         
     }
 
-    public function render($viewName){
+    public function render($viewName , $invalid=''){
         require 'views/' .$viewName .'.php';
     }
  
