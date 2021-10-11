@@ -62,7 +62,7 @@
                 </div>
 
                 <div class="add-new-search-container">
-                    <button class="add-Employee">Add Employee</button>
+                <a href="<?php echo URL?>AdminAddEmployee"><button class="add-Employee">Add Employee</button></a>
                     <button class="search">Search</button>
                 </div>
 
