@@ -1,9 +1,11 @@
 <?php
-class Test extends Controller{
+
+class Conductor extends Controller{
+
     function __construct(){
         parent:: __construct();
     }
     function index(){
-        $this->model->printSomething();
+        $this->view->render('Conductor/markAttendance');
     }
 }
