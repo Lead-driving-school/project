@@ -56,43 +56,43 @@
     <div class="box-1">
         <header-component></header-component>
         <div class="box-2">
-        <div class="sidebar">
-        
-        <div class="nav-list">
-            <a class="list-item" href="#">
-                <span class="link-icon">&#xf012</span>
-                <span class="link-name">Profile</span>
-            </a>
-            
-            <a class="list-item" href="<?php echo URL?>AdminStaff">
-                <span class="link-icon">&#xf013</span>
-                <span class="link-name">Staff</span>
-            </a>
-            <a class="list-item" href="<?php echo URL?>AdminPackages">
-                <span class="link-icon">&#xf007</span>
-                <span class="link-name">Packages & prices</span>
-            </a>
-            
-            <a class="list-item" href="<?php echo URL?>AdminEmployeeAccounts">
-                <span class="link-icon">&#xf009</span>
-                <span class="link-name">Accounts</span>
-            </a>
-            <a class="list-item" href="<?php echo URL?>AdminVehicles">
-                <span class="link-icon">&#xf010</span>
-                <span class="link-name">Vehicles</span>
-            </a>
-            
-            <a class="list-item" href="#">
-                <span class="link-icon">&#xf011</span>
-                <span class="link-name">Reports</span>
-            </a>
+            <div class="sidebar">
+                
+                <div class="nav-list">
+                    <a class="list-item" href="#">
+                        <span class="link-icon">&#xf012</span>
+                        <span class="link-name">Profile</span>
+                    </a>
+                    
+                    <a class="list-item" href="<?php echo URL?>Admin/staff">
+                        <span class="link-icon">&#xf013</span>
+                        <span class="link-name">Staff</span>
+                    </a>
+                    <a class="list-item" href="<?php echo URL?>Admin/packages">
+                        <span class="link-icon">&#xf007</span>
+                        <span class="link-name">Packages & prices</span>
+                    </a>
+                    
+                    <a class="list-item" href="<?php echo URL?>Admin/employeeAccounts">
+                        <span class="link-icon">&#xf009</span>
+                        <span class="link-name">Accounts</span>
+                    </a>
+                    <a class="list-item" href="<?php echo URL?>Admin/ehicles">
+                        <span class="link-icon">&#xf010</span>
+                        <span class="link-name">Vehicles</span>
+                    </a>
+                    
+                    <a class="list-item" href="#">
+                        <span class="link-icon">&#xf011</span>
+                        <span class="link-name">Reports</span>
+                    </a>
 
-            <a class="list-item" href="#">
-                <span class="link-icon">&#xf011</span>
-                <span class="link-name">Income & Expences</span>
-            </a>
-        </div>
-    </div>
+                    <a class="list-item" href="#">
+                        <span class="link-icon">&#xf011</span>
+                        <span class="link-name">Income & Expences</span>
+                    </a>
+                </div>
+            </div>
             <div class="container-1">
                 <div class="title-container">
                    Vehicles

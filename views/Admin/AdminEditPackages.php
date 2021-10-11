@@ -81,7 +81,7 @@
                      
             </div>
             <div class="button-container">
-                <a href="<?php echo URL?>AdminPackages">
+                <a href="<?php echo URL?>Admin/packages">
                     <button class="cancel">
                         Cancel
                     </button>

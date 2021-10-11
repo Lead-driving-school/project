@@ -20,7 +20,13 @@
                    <label for="package-name">Package Name :</label>
                    <input type="text" class="package-name">
                </div>
-               
+               <div class="input-container">
+                    <label for="vehicle-class-type">Vehicle classes :</label>
+                    <select class="vehicle-class-type" id="">
+                        <option value="LightVehicles">Light Vehicles</option>
+                        <option value="HeavyVehecles">Heavy Vehecles</option>
+                    </select>
+                </div> 
                 <div class="classes-check-outer">
                     <div class="classes-check">
                         <div class="chk-bx">
@@ -53,7 +59,10 @@
                         </div>
                     </div>
                 </div>
-                
+                <div class="input-container">
+                    <label for="training-days">Number of Training Days :</label>
+                    <input type="number" class="training-days">
+                </div>
                 <div class="input-container">
                     <label for="total-price">total-price (LKR):</label>
                     <input type="number" class="total-price">
@@ -61,7 +70,7 @@
                      
             </div>
             <div class="button-container">
-                <a href="<?php echo URL?>AdminPackages">
+                <a href="<?php echo URL?>Admin/packages">
                 <button class="cancel">
                     Cancel
                 </button></a>

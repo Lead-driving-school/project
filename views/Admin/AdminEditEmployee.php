@@ -69,7 +69,7 @@
 
             </div>
             <div class="button-container">
-                <a href="<?php echo URL?>AdminEmployeeAccounts">
+                <a href="<?php echo URL?>Admin/employeeAccounts">
                     <button class="cancel">
                         Cancel
                     </button>

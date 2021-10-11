@@ -26,20 +26,20 @@
                 <span class="link-name">Profile</span>
             </a>
             
-            <a class="list-item" href="<?php echo URL?>AdminStaff">
+            <a class="list-item" href="<?php echo URL?>Admin/staff">
                 <span class="link-icon">&#xf013</span>
                 <span class="link-name">Staff</span>
             </a>
-            <a class="list-item" href="<?php echo URL?>AdminPackages">
+            <a class="list-item" href="<?php echo URL?>Admin/packages">
                 <span class="link-icon">&#xf007</span>
                 <span class="link-name">Packages & prices</span>
             </a>
             
-            <a class="list-item" href="<?php echo URL?>AdminEmployeeAccounts">
+            <a class="list-item" href="<?php echo URL?>Admin/employeeAccounts">
                 <span class="link-icon">&#xf009</span>
                 <span class="link-name">Accounts</span>
             </a>
-            <a class="list-item" href="<?php echo URL?>AdminVehicles">
+            <a class="list-item" href="<?php echo URL?>Admin/vehicles">
                 <span class="link-icon">&#xf010</span>
                 <span class="link-name">Vehicles</span>
             </a>
@@ -64,8 +64,8 @@
                 
                 
                 <div class="tab-container">
-                    <a href="<?php echo URL?>AdminPackages"> <div class="tab-1">Packages & Prices<hr class="tab-line"></div></a>
-                    <a href="<?php echo URL?>AdminExpences"><div class="tab-2">Service Charges for RMV </div></a>
+                    <a href="<?php echo URL?>Admin/packages"> <div class="tab-1">Packages & Prices<hr class="tab-line"></div></a>
+                    <a href="<?php echo URL?>Admin/expences"><div class="tab-2">Service Charges for RMV </div></a>
                 </div>
                 
 
@@ -75,7 +75,7 @@
                     </div>
                     <hr class="topic-line">
                     <div class="addnew-btn-container">
-                        <a href="<?php echo URL?>AdminAddInitPrices"><button class="add-new">Add New</button></a>
+                        <a href="<?php echo URL?>Admin/addInitPrices"><button class="add-new">Add New</button></a>
                     </div>
                     <div class="row-container">
                         <div class="row">
@@ -122,31 +122,31 @@
                     <hr class="topic-line">
 
                     <div class="addnew-btn-container">
-                        <a href="<?php echo URL?>AdminAddPackage"><button class="add-new">Add New</button></a>
+                        <a href="<?php echo URL?>Admin/addPackage"><button class="add-new">Add New</button></a>
                     </div>
                     <div class="row-container">
                         <div class="row">
                             <div class="column-1">Package 1</div>
                             <div class="col-3">Rs 3500.00</div>
-                            <div class="col-4"><a href="<?php echo URL?>AdminEditPackages"><button class="edit">Edit</button></a></div>
+                            <div class="col-4"><a href="<?php echo URL?>Admin/eitPackages"><button class="edit">Edit</button></a></div>
                         </div>
 
                         <div class="row">
                             <div class="column-1">Package 2</div>
                             <div class="col-3">Rs 3500.00</div>
-                            <div class="col-4"><a href="<?php echo URL?>AdminEditPackages"><button class="edit">Edit</button></a></div>
+                            <div class="col-4"><a href="<?php echo URL?>Admin/editPackages"><button class="edit">Edit</button></a></div>
                         </div>
 
                         <div class="row">
                             <div class="column-1">Package 3</div>
                             <div class="col-3">Rs 3500.00</div>
-                            <div class="col-4"><a href="<?php echo URL?>AdminEditPackages"><button class="edit">Edit</button></a></div>
+                            <div class="col-4"><a href="<?php echo URL?>Admin/editPackages"><button class="edit">Edit</button></a></div>
                         </div>
 
                         <div class="row">
                             <div class="column-1">Package 4</div>
                             <div class="col-3">Rs 3500.00</div>
-                            <div class="col-4"><a href="<?php echo URL?>AdminEditPackages"><button class="edit">Edit</button></a></div>
+                            <div class="col-4"><a href="<?php echo URL?>Admin/editPackages"><button class="edit">Edit</button></a></div>
                         </div>
                     </div>
                 </div>
@@ -157,7 +157,7 @@
                     </div>
                     <hr class="topic-line">
                     <div class="addnew-btn-container">
-                        <a href="<?php echo URL?>AdminAddExtraPrices"><button class="add-new">Add New</button></a>
+                        <a href="<?php echo URL?>Admin/addExtraPrices"><button class="add-new">Add New</button></a>
                     </div>
                     <div class="row-container">
                         <div class="row">
