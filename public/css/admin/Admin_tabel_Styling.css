@@ -1,0 +1,87 @@
+.row-container{
+    width: 92%;
+    height: 70%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow-y: scroll; /* Show vertical scrollbar */
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: blueviolet;
+    
+}
+
+.row{
+    width: 98%;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: chartreuse;
+}
+
+.col-1, .col-2, .col-3, .col-4{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.col-1{
+    width: 10%;
+    background-color: cornflowerblue;
+}
+
+.col-2{
+    width: 35%;
+    background-color: crimson;
+}
+
+.col-3{
+    width: 15%;
+    background-color: darkblue;
+}
+
+.col-4{
+    width: 15%;
+    background-color: darkgoldenrod;
+}
+
+.col-5{
+    width: 15%;
+    height: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: darkgreen;
+}
+
+
+.column-1, .column-2, .column-3{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.column-1{
+    width: 12%;
+    background-color: cornflowerblue;
+}
+
+.column-2{
+    width: 50%;
+    background-color: crimson;
+}
+.column-3{
+    width: 15%;
+    background-color: darkgoldenrod;
+}
+
+.column-4{
+    width: 15%;
+    height: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: darkgreen;
+}

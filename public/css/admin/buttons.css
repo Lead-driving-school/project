@@ -115,7 +115,9 @@
 
 
 .add-new{
-    width: 100px;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
     height: 40px;
     border: 3px solid #292d42;
     /* background-color: white; */
