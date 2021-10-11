@@ -23,15 +23,15 @@
         <div class="conf-box">
             <div class="msg-container">
                 <h2>Delete Package?</h2>
-                deleting a package will permenently remove it from your system 
+                deleting a Vehicles will permenently remove it from your system 
             </div>
             <div class="btn-container">
                 <button onclick="cancel()">
-                    No, keep package 
+                    No, keep Vehicles 
                 </button >
                     
                 <button onclick="yesDelete()">
-                    Yes, Delete package
+                    Yes, Delete Vehicles
                 </button>
             </div>
         </div>
@@ -99,7 +99,7 @@
                 </div>
 
                 <div class="add-new-search-container">
-                    <button class="add-Employee">Add Employee</button>
+                    <button class="add-new">Add Vehicle</button>
                     <button class="search">Search</button>
                 </div>
 
