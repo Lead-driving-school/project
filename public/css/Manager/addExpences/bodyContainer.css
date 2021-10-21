@@ -1,0 +1,136 @@
+.form-part {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  width: 90%;
+  height: 85%;
+  justify-content: space-between;
+}
+h2 {
+  margin-top: 30px;
+  align-self: center;
+  font-size: 35px;
+}
+.body-container {
+  margin-top: 30px;
+  width: 600px;
+  height: 600px;
+  display: flex;
+}
+.expense-name-class,
+.amount-class,
+.confirm-class {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+.discription-class {
+  display: flex;
+  justify-content: space-between;
+}
+.expense-name-class label,
+.discription-class label,
+.amount-class label,
+.confirm-class label {
+  font-size: 15px;
+}
+.Discription-input {
+  height: 90px;
+  width: 70%;
+  padding: 10px 10px;
+  padding-left: 10px;
+  background-color: #f3f7f7;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px #dce0e094 inset;
+  resize: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.Expense-name-input,
+.Amount-input,
+.Confirm-amount-input {
+  width: 60%;
+  height: 35px;
+  padding-left: 10px;
+  background-color: #f3f7f7;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px #dce0e094 inset;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.button-set {
+  display: flex;
+  margin-left: 30px;
+  padding-right: 50px;
+  width: 350px;
+  margin-top: 30px;
+  align-items: space-around;
+  justify-content: space-around;
+}
+.submit-next,
+.submit-finish {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  width: 120px;
+  height: 40px;
+  font-size: 12px;
+  color: white;
+  background-color: #0892d0;
+  border: 2px solid #0892d0;
+  box-shadow: 1px 1px 10px #898a8a;
+  border-radius: 3px;
+}
+.submit-next:hover,
+.submit-finish:hover {
+  font-weight: bold;
+  width: 120px;
+  height: 40px;
+  cursor: pointer;
+  color: #0892d0;
+  background-color: white;
+  border: 2px solid #0892d0;
+  box-shadow: 1px 1px 10px #898a8a;
+  border-radius: 3px;
+}
+.cancel {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  color: white;
+  font-size: 12px;
+  background-color: #262b2f;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 1px 1px 10px #b0b3b3;
+}
+.cancel:hover {
+  font-weight: bold;
+  width: 100px;
+  height: 40px;
+  color: #262b2f;
+  background-color: white;
+  border: 2px solid #262b2f;
+  border-radius: 3px;
+  box-shadow: 1px 1px 10px #b0b3b3;
+}
+::placeholder {
+  color: red;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: red;
+}
+
+::-ms-input-placeholder {
+  color: red;
+}
