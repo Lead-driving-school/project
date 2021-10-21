@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+html {
+  font-size: 65%;
+}
+.main-container {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  width: 100vw;
+  background-color: #f2f2f2;
+  height: calc(100% - 60px);
+}
+h1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  align-self: flex-end;
+  font-size: 40px;
+  color: #262b2f;
+}

@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.main-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  width: 100%;
+}
+.topic {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  padding-right: 50px;
+}
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 20px;
+}
+.body-content {
+  background-color: white;
+  margin-top: 10px;
+  margin-left: 5%;
+  width: 90%;
+  display: flex;
+  border-radius: 4px;
+  box-shadow: 1px 1px 10px #b0b3b3;
+}
+.left-side {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.button-set {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+}
+.session-buttons {
+  color: honeydew;
+  border: none;
+  width: 120px;
+  margin-right: 40px;
+  font-weight: 600;
+  height: 40px;
+  background-color: #262b2f;
+  box-shadow: 1px 1px 10px #b0b3b3;
+  border-radius: 4px;
+}
+.session-buttons:hover {
+  color: #262b2f;
+  background-color: white;
+  border: 2px solid #262b2f;
+}
+#save {
+  background-color: #0892d0;
+}
+#save:hover {
+  color: #0892d0;
+  background-color: white;
+  border: 2px solid #0892d0;
+}
