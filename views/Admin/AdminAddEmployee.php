@@ -17,6 +17,9 @@
             <div class="title-container">
                 <h1>Register Employee</h1>
             </div>
+            <div class="err">
+                
+            </div>
             <div class="field-container">
                <div class="input-container">
                    <label for="Name">Name :</label>

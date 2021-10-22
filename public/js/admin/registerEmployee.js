@@ -55,9 +55,12 @@ function register()
           console.log("onreadystatechange");
           if( httpreq.readyState === 4 && httpreq.status === 200){
               // console.log("Done");
-              // console.log(httpreq.responseText);
-              if(httpreq.responseText=='New Record created successfully'){
-                window.location.assign("http://localhost/project/Admin/staff");
+              console.log(httpreq.responseText);
+              if(httpreq.responseText=='successfull'){
+                // window.location.assign("http://localhost/project/Admin/staff");
+              }
+              else if(httpreq.responseText=='contact exist'){
+                //view error msg
               }
               
           }

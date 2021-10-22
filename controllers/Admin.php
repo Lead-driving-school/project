@@ -71,8 +71,7 @@ class Admin extends Controller{
 
     function registerEmployee($data){
         $user = explode(",", $data);
-        echo $user[0];
-        $result=$this->model->registerEmployee($user[0], $user[1], $user[2], $user[3], $user[4], $user[5], $user[6], $user[7], $user[0]);
+        $result=$this->model->registerEmployee($user[0], $user[1], $user[2], $user[3], $user[4], $user[5], $user[6], $user[7]);
         echo $result;
     }
 
