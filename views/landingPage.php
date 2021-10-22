@@ -30,8 +30,8 @@
                         Here is your web space to continue your learning process.
                     </div>
                     <div class="student-button-set">
-                        <button class="Student-login" id="stLogin">Log in</button>
-                        <button class="Student-signup" id="stSignUp">Start now</button>
+                        <a href=""><button class="Student-login" id="stLogin">Log in</button></a>
+                        <a href="<?php echo URL?>User/signup"><button class="Student-signup" id="stSignUp">Start now</button></a>
                     </div>
                 </div>
                 

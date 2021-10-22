@@ -7,7 +7,7 @@ class User extends Controller{
         
     }
     function signup(){
-        $this->view->render('signup');
+        $this->view->render('studentSignup');
         
     }
     function signupLogic($data){
@@ -20,7 +20,7 @@ class User extends Controller{
         }
     }
     function signupPassword(){
-        $this->view->render('signupPassword'); 
+        $this->view->render('studentSignupPassword'); 
     }
     function signupPasswordLogic($data){
         $values = explode(",", $data);

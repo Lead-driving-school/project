@@ -8,6 +8,9 @@ class Admin_Model extends Model{
     //return truth value and usertype
     public function registerEmployee($name, $empAddress, $NIC, $Dob, $gender, $telNo, $empType,$licenseNumber) {
         $hired_date = date('Y-m-d');
+        $this->db->runQuery("INSERT INTO employee (name, address, gender, dob ,hired_date, contact_no, nic, job_title) VALUES ('$name','$empAddress', '$gender', '$Dob','$hired_date','$telNo', '$NIC', '$empType')");
+        
+        return "New Record created successfully";
         $OTP=rand(100000,999999);
         $initPassword=rand(100000,999999);
         $contact=$this->db->runQuery("SELECT contact_no FROM employee WHERE contact_no='$telNo'");
@@ -45,15 +48,12 @@ class Admin_Model extends Model{
         else{
             return "nic contact exist";
         }
-        
     }
 
     public function getEmployeeDetails(){
         $result=$this->db->runQuery("SELECT employee_id,name,job_title,contact_no FROM employee");
         return $result;
     }
-    
-    
 }
 
                                       
