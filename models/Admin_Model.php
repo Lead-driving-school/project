@@ -8,9 +8,6 @@ class Admin_Model extends Model{
     //return truth value and usertype
     public function registerEmployee($name, $empAddress, $NIC, $Dob, $gender, $telNo, $empType,$licenseNumber) {
         $hired_date = date('Y-m-d');
-        $this->db->runQuery("INSERT INTO employee (name, address, gender, dob ,hired_date, contact_no, nic, job_title) VALUES ('$name','$empAddress', '$gender', '$Dob','$hired_date','$telNo', '$NIC', '$empType')");
-        
-        return "New Record created successfully";
         $OTP=rand(100000,999999);
         $initPassword=rand(100000,999999);
         $contact=$this->db->runQuery("SELECT contact_no FROM employee WHERE contact_no='$telNo'");
@@ -37,6 +34,7 @@ class Admin_Model extends Model{
                 $this->db->runQuery("INSERT INTO teacher (employee_id) VALUES ('$Emp_Id')");
             }
 
+            $this->sendOtp($OTP);
             return "successfull";
         }
         else if(!empty($contact)&&empty($nic)){
@@ -53,6 +51,28 @@ class Admin_Model extends Model{
     public function getEmployeeDetails(){
         $result=$this->db->runQuery("SELECT employee_id,name,job_title,contact_no FROM employee");
         return $result;
+    }
+
+    public function sendOtp($otp){
+        $user = "94771845973";
+        $password = "7243";
+        $text = urlencode("hi roshan your otp is: ".$otp);
+        $to = "94771845973";
+
+        $baseurl ="http://www.textit.biz/sendmsg";
+        $url = "$baseurl/?id=$user&pw=$password&to=$to&text=$text";
+        $ret = file($url);
+
+        $res= explode(":",$ret[0]);
+
+        if (trim($res[0])=="OK")
+        {
+        echo "Message Sent - ID : ".$res[1];
+        }
+        else
+        {
+        echo "Sent Failed - Error : ".$res[1];
+        }
     }
 }
 
