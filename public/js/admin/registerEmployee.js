@@ -66,9 +66,14 @@ function register()
           }
         }
 
-        let newName=name.replace(/\s+/g, '-');
-        let newAddress=empAddress.replace(/\s+/g, '-');
-        console.log(newName);
+        name=name.replace(/,+/g, '_');
+        name=name.replace(/\s+/g, '-');
+        name=name.replace(/\/+/g, "+");
+        
+        empAddress=empAddress.replace(/,+/g, '_');
+        empAddress=empAddress.replace(/\s+/g, '-');
+        empAddress=empAddress.replace(/\/+/g, "+");
+        
         let Employee=[newName,newAddress,NIC,Dob,gender,telNo,empType,licenseNumber];
         
         let url = "http://localhost/project/Admin/registerEmployee/"+Employee;
