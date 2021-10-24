@@ -5,6 +5,17 @@
     /* background-color: tomato; */
 }
 
+.err-true{
+    height: 50px;
+    font-size: 14px;
+    background-color: #fad1d8;
+    border: 1px solid #d11534;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
 /* Details are in this class */
 .field-container{
     width: 80%;
@@ -115,4 +126,12 @@ label{
     font-size: 16px;
     width: 135px;
     /* background-color: #07c075; */
+}
+
+.gender-below{
+    color: #d11534;
+}
+
+#license-Number{
+    visibility: hidden;
 }

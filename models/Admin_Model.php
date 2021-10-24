@@ -19,7 +19,8 @@ class Admin_Model extends Model{
             $emp_Id=$this->db->runQuery("SELECT employee_id FROM employee WHERE nic='$NIC'");
             $Emp_Id=$emp_Id[0]['employee_id'];
 
-            $this->db->runQuery("INSERT INTO employee_private (password, otp, employee_id) VALUES ('$initPassword','$OTP', '$Emp_Id')");
+            $this->db->runQuery("INSERT INTO employee_key (otp, employee_id) VALUES ('$OTP', '$Emp_Id')");
+            $this->db->runQuery("INSERT INTO employee_private (password, employee_id) VALUES ('$initPassword', '$Emp_Id')");
 
             if($empType=='Manager'){
                 $this->db->runQuery("INSERT INTO manager (employee_id) VALUES ('$Emp_Id')");
@@ -34,7 +35,7 @@ class Admin_Model extends Model{
                 $this->db->runQuery("INSERT INTO teacher (employee_id) VALUES ('$Emp_Id')");
             }
 
-            $this->sendOtp($OTP);
+            // $this->sendOtp($OTP);
             return "successfull";
         }
         else if(!empty($contact)&&empty($nic)){

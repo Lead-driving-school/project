@@ -17,7 +17,7 @@
             <div class="title-container">
                 <h1>Register Employee</h1>
             </div>
-            <div class="err">
+            <div class="err" id="err">
                 
             </div>
             <div class="field-container">
@@ -39,10 +39,13 @@
                 </div>
                 <div class="input-container" >
                     <label>Gender :</label><br>
-                    <input class="radio" type="radio" name="gender"  id="gender" value="m">
+                    <input class="male" type="radio" name="Gender"  id="male" value="m">
                     <label for="male">Male</label> <br>
-                    <input class="radio" type="radio" name="gender" id="gender" value="f">
+                    <input class="female" type="radio" name="Gender" id="female" value="f">
                     <label for="female">Female</label> 
+                </div>
+                <div class="gender-below" id="gender-below">
+
                 </div>
                 <div class="input-container">
                     <label for="tel-no">Contact Number :</label>
@@ -50,7 +53,7 @@
                 </div>
                 <div class="input-container">
                     <label for="Emp-type">Job Title :</label>
-                    <select class="Emp-type" id="empType"  name="empType">
+                    <select class="Emp-type" id="empType"  name="empType" onchange="changeLicense()">
                         <option value="Manager">Manager</option>
                         <option value="Receptionist">Receptionist</option>
                         <option value="Instructor">Instructor</option>
@@ -58,7 +61,7 @@
                     </select>
                 </div> 
 
-                <div class="input-container">
+                <div class="input-container" id='license-Number'>
                     <label for="license-Number">license Number :</label>
                     <input type="text" class="license-Number"  id="licenseNumber"  name="licenseNumber">
                 </div>
