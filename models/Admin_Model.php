@@ -19,7 +19,8 @@ class Admin_Model extends Model{
             $emp_Id=$this->db->runQuery("SELECT employee_id FROM employee WHERE nic='$NIC'");
             $Emp_Id=$emp_Id[0]['employee_id'];
 
-            $this->db->runQuery("INSERT INTO employee_private (password, otp, employee_id) VALUES ('$initPassword','$OTP', '$Emp_Id')");
+            $this->db->runQuery("INSERT INTO employee_key (otp, employee_id) VALUES ('$OTP', '$Emp_Id')");
+            $this->db->runQuery("INSERT INTO employee_private (password, employee_id) VALUES ('$initPassword', '$Emp_Id')");
 
             if($empType=='Manager'){
                 $this->db->runQuery("INSERT INTO manager (employee_id) VALUES ('$Emp_Id')");
@@ -51,6 +52,16 @@ class Admin_Model extends Model{
     public function getEmployeeDetails(){
         $result=$this->db->runQuery("SELECT employee_id,name,job_title,contact_no FROM employee");
         return $result;
+    }
+
+    public function getEmployeeDetailsMore($id){
+        $result=$this->db->runQuery("SELECT employee_id,name,job_title,nic,contact_no,address,dob,gender,hired_date FROM employee WHERE employee_id='$id'");
+        
+        if($result[0]['job_title']=='Instructor'){
+            $license=$this->db->runQuery("SELECT instructor_license_id FROM instructor WHERE employee_id='$id'");
+        }
+
+        return array_merge($result, $license/*, $arrayN, $arrayN*/);
     }
 
     public function sendOtp($otp){

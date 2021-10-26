@@ -10,8 +10,8 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container-1">
-        <div class="container-2">
+    <div class="mid-box-container-1">
+        <div class="mid-box-container-2">
             <div class="title-container">
                 <h1>Edit Employee</h1>
             </div>

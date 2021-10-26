@@ -79,4 +79,9 @@ class Admin extends Controller{
         $result=$this->model->getEmployeeDetails();
         echo json_encode($result);
     }
+
+    function getEmployeeDetailsMore($id){
+        $result=$this->model->getEmployeeDetailsMore($id);
+        echo json_encode($result);
+    }
 }
