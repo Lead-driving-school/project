@@ -1,6 +1,6 @@
 
 /* Add new package title */
-.title-container{
+.mid-box-title-container{
     width: 100%;
     text-align: center;
     border-radius: 13px;
@@ -8,14 +8,14 @@
 }
 
 /* Details are in this class */
-.details-container{
+.mid-box-details-container{
     width: 100%;
     /* background-color: seagreen; */
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
-.row{
+.mid-box-row{
     width: 86%;
     height: 40px;
     display: flex;
@@ -23,7 +23,7 @@
     align-items: center;
     /* background-color: aqua; */
 }
-.column-1{
+.mid-box-column-1{
     width: 30%;
     height: 90%;
     display: flex;
@@ -31,7 +31,7 @@
     align-items: center;
     /* background-color: blueviolet; */
 }
-.column-2{
+.mid-box-column-2{
     width: 65%;
     height: 90%;
     display: flex;
@@ -39,7 +39,7 @@
     align-items: center;
     /* background-color: chartreuse; */
 }
-.button-container{
+.mid-box-button-container{
     width: 80%;
     height: 70px;
     display: flex;

@@ -54,6 +54,16 @@ class Admin_Model extends Model{
         return $result;
     }
 
+    public function getEmployeeDetailsMore($id){
+        $result=$this->db->runQuery("SELECT employee_id,name,job_title,nic,contact_no,address,dob,gender,hired_date FROM employee WHERE employee_id='$id'");
+        
+        if($result[0]['job_title']=='Instructor'){
+            $license=$this->db->runQuery("SELECT instructor_license_id FROM instructor WHERE employee_id='$id'");
+        }
+
+        return array_merge($result, $license/*, $arrayN, $arrayN*/);
+    }
+
     public function sendOtp($otp){
         $user = "94771845973";
         $password = "7243";
