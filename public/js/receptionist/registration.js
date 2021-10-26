@@ -1,0 +1,239 @@
+function nextPage(){
+    var flag=true;
+    var initName=document.getElementById("initName").value;
+    if(initName.length==0){
+        document.getElementById("initName").placeholder="Name with Initials can not be empty"
+        document.getElementById("initName").style.border="2px solid red"
+        flag=false;
+    }
+    var fullName=document.getElementById("fullName").value;
+    if(fullName.length==0){
+        document.getElementById("fullName").placeholder="Full Name can not be empty"
+        document.getElementById("fullName").style.border="2px solid red"
+        flag=false;
+    }
+    var pmtAddress=document.getElementById("pmtAddress").value;
+    if(pmtAddress.length==0){
+        document.getElementById("pmtAddress").placeholder="Address can not be empty"
+        document.getElementById("pmtAddress").style.border="2px solid red"
+        flag=false;
+    }
+    var city=document.getElementById("city").value;
+    if(city.length==0){
+        document.getElementById("city").placeholder="This feild can not be empty"
+        document.getElementById("city").style.border="2px solid red"
+        flag=false;
+    }
+    var district=document.getElementById("district").value;
+    if(district.length==0){
+        document.getElementById("district").placeholder="This feild can not be empty"
+        document.getElementById("district").style.border="2px solid red"
+        flag=false;
+    }
+    var divSecre=document.getElementById("divSecre").value;
+    if(divSecre.length==0){
+        document.getElementById("divSecre").placeholder="This feild can not be empty"
+        document.getElementById("divSecre").style.border="2px solid red"
+        flag=false;
+    }
+    var police=document.getElementById("police").value;
+    if(police.length==0){
+        document.getElementById("police").placeholder="This feild can not be empty"
+        document.getElementById("police").style.border="2px solid red"
+        flag=false;
+    }
+    if(document.getElementById("male").checked){
+        var gender="m"
+    }else if(document.getElementById("female").checked){
+        var gender="f"
+    }else{
+        document.getElementById("message").innerHTML="You haven't select a gender"
+        flag=false;
+    }
+    var dateofbirth=document.getElementById("dateofbirth").value;
+    if(dateofbirth.length==0){
+        document.getElementById("dateofbirth").innerHTML="Date of birth can not be empty"
+        document.getElementById("dateofbirth").style.border="2px solid red"
+        flag=false;
+    }
+    var nic=document.getElementById("nic").value;
+    if(nic.length==0){
+        document.getElementById("nic").placeholder="nic can not be empty"
+        document.getElementById("nic").style.border="2px solid red"
+        flag=false;
+    }
+    var mobile=document.getElementById("mobile").value;
+    if(mobile.length!=10){
+        document.getElementById("mobile").placeholder="Please recheck the mobile number"
+        document.getElementById("dateofbirth").style.border="2px solid red"
+        flag=false;
+    }
+
+    // if(flag==true){
+    //     document.getElementById("reg-form").classList.replace("reg-form","reg-form-hidden");
+    //     document.getElementById("reg2-f2").classList.replace("reg2-f2","reg2-f2-visible");
+    // }
+    packageLoad()
+    document.getElementById("reg-form").classList.replace("reg-form","reg-form-hidden");
+    document.getElementById("reg2-f2").classList.replace("reg2-f2","reg2-f2-visible");
+    
+
+}
+
+function pre(){
+    document.getElementById("reg2-f2").classList.replace("reg2-f2-visible","reg2-f2");
+    // alert("hi");
+    document.getElementById("reg-form").classList.replace("reg-form-hidden","reg-form");
+}
+
+function changing(){
+    if(document.getElementById("written").checked){
+        var type="written"
+    }else if(document.getElementById("trial").checked){
+        var type="trial"
+    }else if(document.getElementById("license").checked){
+        var type="license"
+    }
+    if(type=="written"){
+        document.getElementById("number-text").innerHTML="Medical No"
+        document.getElementById("ending-date").classList.replace("sub-row-f2","sub-row-f2-hidden")
+    }else if(type=="trial"){
+        document.getElementById("number-text").innerHTML="L-permit No"
+        document.getElementById("ending-date").classList.replace("sub-row-f2-hidden","sub-row-f2")
+    }else{
+        document.getElementById("number-text").innerHTML="License No"
+        document.getElementById("ending-date").classList.replace("sub-row-f2-hidden","sub-row-f2")
+    }
+}
+
+function SaveData(){
+    var initName=document.getElementById("initName").value;
+    var fullName=document.getElementById("fullName").value;
+    var pmtAddress=document.getElementById("pmtAddress").value;
+    var city=document.getElementById("city").value;
+    var district=document.getElementById("district").value;
+    var divSecre=document.getElementById("divSecre").value;
+    var police=document.getElementById("police").value;
+    if(document.getElementById("male").checked){
+        var gender="m"
+    }else if(document.getElementById("female").checked){
+        var gender="f"
+    }
+    var dateofbirth=document.getElementById("dateofbirth").value;
+    var nic=document.getElementById("nic").value;
+    var mobile=document.getElementById("mobile").value;
+    var occupation=document.getElementById("occupation").value;
+    if(document.getElementById("written").checked){
+        var type="written"
+    }else if(document.getElementById("trial").checked){
+        var type="trial"
+    }else if(document.getElementById("license").checked){
+        var type="license"
+    }
+    if(type=="written"){
+        var classA1=document.getElementById("A1").checked;
+        var classA=document.getElementById("A").checked;
+        var classB1=document.getElementById("B1").checked;
+        var classB=document.getElementById("B").checked;
+
+        var classArray=[]
+        if(classA1==true){
+            classArray.push("A1");
+        }if(classA==true){
+            classArray.push("A");
+        }if(classB1==true){
+            classArray.push("B1");
+        }if(classB==true){
+            classArray.push("B");
+        }
+        console.log(classA1,classA,classB1,classB);
+        console.log(classArray);
+        var packageId=document.getElementById("package-id-container").value;
+        var initialCharges=document.getElementById("initPayment").value;
+        var packagePrice=document.getElementById("package-amount-container").value;
+
+        let httpreq = new XMLHttpRequest();
+        httpreq.onreadystatechange = function(){
+          console.log("onreadystatechange");
+          if( httpreq.readyState === 4 && httpreq.status === 200){
+            console.log(httpreq.responseText);
+              
+              
+          }
+        }
+        data=[nic,pmtAddress,gender,dateofbirth,mobile,initialCharges,packagePrice,district,city,divSecre,police,occupation,type,initName,fullName]
+        vehicleClasses=[classA1,classA,classB1,classB]
+        var url="http://localhost/project/Receptionist/registerForWritten/"+data+"/"+vehicleClasses+"/"+packageId+"/"+classArray;
+        httpreq.open( "POST" , url  , true);
+        httpreq.send();
+    }else if(type=="trial"){
+
+    }else if(type=="license"){
+
+    }
+}
+
+function loadVehicleClasses(){
+    var classA1=document.getElementById("A1").checked;
+    var classA=document.getElementById("A").checked;
+    var classB1=document.getElementById("B1").checked;
+    var classB=document.getElementById("B").checked;
+    let httpreq = new XMLHttpRequest();
+    httpreq.onreadystatechange = function(){
+        
+        if( httpreq.readyState === 4 && httpreq.status === 200){
+            // console.log(httpreq.responseText);
+            var text=httpreq.responseText;
+            document.getElementById("initPayment").value=text;
+        }
+    }
+    let data=[classA1,classA,classB1,classB]
+    var url="http://localhost/project/Receptionist/vehicleClassSelection/"+data;
+    httpreq.open( "POST" , url  , true);
+    httpreq.send();
+
+    
+}
+
+function packageLoad(){
+    console.log("packageload");
+    var packageRows=document.getElementById("scroll");
+    let httpr= new XMLHttpRequest();
+    httpr.onreadystatechange = function(){
+        // console.log("onreadystatechange");
+        // console.log(httpr.readyState,httpr.status);
+        if( httpr.readyState === 4 && httpr.status === 200){
+            // console.log(httpr.responseText)
+            const obj=JSON.parse(httpr.responseText);
+            
+            for(var i=0;i<obj.length;i++){
+                packageRows.innerHTML+='<div class="packages-f2">'+
+                    '<div class="cell-1-f2">package_'+obj[i].package_id+'</div>'+
+                   '<div class="cell-2-f2">'+obj[i].classes+'</div>'+
+                    '<div class="cell-3-f2">'+obj[i].amount+'</div>'+
+                    '<div class="cell-4-f2"><button class="submit-f2" id="pk-2-'+i+'" onclick=addPackage('+obj.length+','+i+','+obj[i].package_id+','+obj[i].amount+')>Select</button></div>'+
+                '</div>'
+            }
+        }
+    }
+    var url="http://localhost/project/Receptionist/packageSelection";
+    httpr.open( "POST" , url  , true);
+    httpr.send();
+}
+function addPackage(length,id,packageId,amount){
+    console.log(packageId,amount)
+    for(var i=0;i<length;i++){
+        if(i!=id){
+            var idVal="pk-2-"+i
+            document.getElementById(idVal).classList.replace("submit-f2-selected","submit-f2");
+            document.getElementById(idVal).innerHTML="Select"
+        }
+    }
+    document.getElementById("package-id-container").value=packageId;
+    document.getElementById("package-amount-container").value=amount;
+    var idVal="pk-2-"+id
+    document.getElementById(idVal).classList.replace("submit-f2","submit-f2-selected");
+    document.getElementById(idVal).innerHTML="Selected"
+}
+
+
