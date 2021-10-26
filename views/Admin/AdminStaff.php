@@ -9,7 +9,7 @@
     <link  rel="stylesheet" href="<?php echo URL?>public/css/admin/layOut_common.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/Screen_fit_ui.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/buttons.css">
-    <link rel="stylesheet" href="<?php echo URL?>public/css/common/sidebar.css">
+    <!-- <link rel="stylesheet" href="<?php echo URL?>public/css/common/sidebar.css"> -->
     <link rel="stylesheet" href="<?php echo URL?>public/css/common/header.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/Mid_Box_Layout2.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/Employee_Details.css">

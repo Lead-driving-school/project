@@ -41,21 +41,28 @@ class Receptionist_Model extends Model{
     }
     function addStudent($nic,$address,$gender,$dob,$contact,$initPrice,$packagePrice,$district,$city,$div_sec,$police,$occupation,$type,$initName,$fullName){
         $totalAmount=doubleval($initPrice)+doubleval($packagePrice);
-        
+        $message='hiiiiiiii';
         $date=date('Y-m-d');
-        // $values=[$nic,$address,$date,$gender,$dob,$contact,$totalAmount,$district,$city,$div_sec,$police,$occupation,$type,$initName,$fullName];
+        $OTP=rand(100000,999999);
+        $initPassword=rand(100000,999999);
         $result=$this->db->runQuery("SELECT(student_id) from student where nic='$nic'");
         if(empty($result[0]['student_id'])){
             $result=$this->db->runQuery("SELECT(student_id) from student where contact='$contact'");
             if(empty($result[0]['contact'])){
                 $result=$this->db->runQuery("INSERT INTO student(nic,address,arival_date,gender,dob,contact,total_amount,district,city,div_sec,police_station,occupation,type,init_name,full_name) values('$nic','$address','$date','$gender','$dob','$contact',$totalAmount,'$district','$city','$div_sec','$police','$occupation','$type','$initName','$fullName')");
+
+                $studentId=$this->db->runQuery("SELECT(student_id) from student where nic='$nic'");
+                $student_Id=$studentId[0]['student_id'];
+
+                $this->db->runQuery("INSERT INTO student_key (otp, student_id) VALUES ('$OTP', '$student_Id')");
+                $this->db->runQuery("INSERT INTO student_private (password, student_id) VALUES ('$initPassword', '$student_Id')");
             }else{
                 $message="Contact Exist";
             }  
         }else{
             $message="NIC Exist";
         }
-        // return $values;
+        return $message;
     }
 
 

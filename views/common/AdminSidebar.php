@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" href="<?php echo URL?>public/css/common/sidebar.css"> 
 <div class="sidebar">
 
@@ -29,6 +28,11 @@
         <a class="list-item" href="#">
             <span class="link-icon">&#xf080</span>
             <span class="link-name">Reports</span>
+        </a>
+
+        <a class="list-item" href="<?php echo URL?>Admin/viewComlain">
+            <span class="link-icon">&#xf080</span>
+            <span class="link-name">Complains & Reviews</span>
         </a>
 
         <a class="list-item" href="<?php echo URL?>IncomeExpenses">

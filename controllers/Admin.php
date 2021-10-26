@@ -69,6 +69,16 @@ class Admin extends Controller{
         $this->view->render('Admin/AdminAddVehicle');
     }
 
+    function viewComlain(){
+        $this->view->render('Admin/AdminViewComplain');
+    }
+
+    function viewReview(){
+        $this->view->render('Admin/AdminViewReview');
+    }
+
+    
+
     function registerEmployee($data){
         $user = explode(",", $data);
         $result=$this->model->registerEmployee($user[0], $user[1], $user[2], $user[3], $user[4], $user[5], $user[6], $user[7]);
