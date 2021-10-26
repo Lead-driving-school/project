@@ -8,7 +8,7 @@ class User_Model extends Model{
 
     function getOTP($nic,$otpcode){
         
-        $result=$this->db->runQuery("SELECT student_private.otp FROM student_private INNER JOIN student on student.student_id=student_private.student_id Where student.nic = '$nic'");
+        $result=$this->db->runQuery("SELECT student_key.otp FROM student_key INNER JOIN student on student.student_id=student_key.student_id Where student.nic = '$nic'");
         if(empty($result)){
             return false;
         }

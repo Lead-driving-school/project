@@ -8,7 +8,7 @@ class Staff_Model extends Model{
 
     function getOTP($nic,$otpcode){
         
-        $result=$this->db->runQuery("SELECT employee_private.otp FROM employee_private INNER JOIN employee on employee.employee_id=employee_private.employee_id Where employee.nic = '$nic'");
+        $result=$this->db->runQuery("SELECT employee_key.otp FROM employee_key INNER JOIN employee on employee.employee_id=employee_key.employee_id Where employee.nic = '$nic'");
         if(empty($result)){
             return false;
         }

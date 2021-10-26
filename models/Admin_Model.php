@@ -34,7 +34,7 @@ class Admin_Model extends Model{
                 $this->db->runQuery("INSERT INTO teacher (employee_id) VALUES ('$Emp_Id')");
             }
 
-            $this->sendOtp($OTP);
+            // $this->sendOtp($OTP);
             return "successfull";
         }
         else if(!empty($contact)&&empty($nic)){
