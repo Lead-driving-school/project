@@ -68,12 +68,12 @@
                 </div> 
                 <div class="details-container">
                     <div class="details">
-                        <div class="record"><p>Session Title</p><p>XXXXX</p></div>
-                        <div class="record"><p>Sender</p><p>XXXXX</p></div>
-                        <div class="record"><p>Sending Date</p><p>XXXXX</p></div>
-                        <div class="record"><p>Sending Time</p><p>XXXXXXX</p></div>
-                        <div class="record"><p>Session type</p><p>XXXXXX</p></div>
-                        <div class="record"><p>Current Allocation</p><p>XXXXX</p></div>
+                        <div class="record"><p>Session Title</p><p>Road Signs</p></div>
+                        <div class="record"><p>Sender</p><p>G. Weerasinghe</p></div>
+                        <div class="record"><p>Sending Date</p><p>2021-10-07</p></div>
+                        <div class="record"><p>Sending Time</p><p>14:10</p></div>
+                        <div class="record"><p>Session type</p><p>Theory</p></div>
+                        <div class="record"><p>Current Allocation</p><p>10/20</p></div>
                     </div>
                     <div class="button-container">
                         <button name="Accept" id="Accept">Accept</button>
