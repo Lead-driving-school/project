@@ -1,0 +1,131 @@
+*{
+    font-family: Arial, Helvetica, FontAwesome, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    
+    /* background-color: #f3f7f7; */
+}
+
+.class-header{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(42, 165, 89);
+
+}
+
+.container-1{
+    width: 100vw;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+}
+
+
+
+.container-3{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: fuchsia; */
+
+}
+
+.container-theory{
+    width: 46%;
+    height: 500px;
+    /* overflow-x: hidden;
+    overflow-y: auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: gold; */
+
+}
+
+.title{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgb(224, 192, 238); */
+}
+
+.details{
+    width: 100%;
+    height: 90%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: rgb(154, 9, 216); */
+}
+
+.container-trail{
+    width: 46%;
+    height: 500px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: rgb(130, 166, 231); */
+}
+
+
+
+.theory-box,.trail-box{
+    width: 92%;
+    height: fit-content;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 10px;
+    border-radius: 6px;
+    /* background-color: green; */
+}
+
+
+.row{
+    height: 45px;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    box-shadow: 1px 1px 5px;
+    border-radius: 6px;
+    /* background-color: rgb(84, 152, 219); */
+}
+
+.col-1{
+    height: 45px;
+    width:28% ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: chocolate; */
+
+}
+
+.col-2{
+    height: 45px; ;
+    width: 72%;
+    display: flex;
+    align-items: center;
+    /* background-color: rgb(102, 42, 89); */
+}
+

@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-width: 100px;
+    font-family: sans-serif;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #c72020; */
+
+}
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: #05c075;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.logo{
+    width: 15%;
+    height: 70px;
+    padding-left: 20px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    width: 125px;
+    height: 55px;
+}
+.main{
+
+    display: flex;
+    /* justify-content: center; */
+}
+
+.view{
+    height: calc(100vh- 80px);
+    width: calc(100% - 250px);
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(206, 206, 16); */
+}
+.profile{
+
+    width: 100%;
+    height:15%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: blueviolet; */
+
+}
+.pic{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* background-color: brown; */
+}
+
+.pic-div-1{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    justify-content: flex-start;
+    /* background-color: rgb(42, 165, 52); */
+}
+.ppic{
+    width: 83px;
+    height: 83px;
+}
+.pic-div-2{
+    width: 60%;
+    height: 90%;
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    /* background-color: rgb(147, 199, 152); */
+}
+.title{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* background-color: brown; */
+}
+.ti-name{
+    width: 74%;
+    height: 100%;
+    font-size: 25px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    /* background-color: burlywood; */
+}
+.summary{
+    width: 100%;
+    height: 17%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: chartreuse; */
+}
+.paid{
+    width: 40%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: crimson; */
+}
+.paid-col-1{
+    width: 19%;
+    height: 70%;
+    font-size: 22px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: cyan; */
+
+}
+.paid-col-2{
+    width: 50%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    /* background-color: rgb(169, 218, 218); */
+
+}
+.paid-val{
+    width: 67%;
+    height: 90%;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 6px;
+    box-shadow: 1px 1px 10px;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.remaining{
+    width: 40%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: crimson; */
+}
+.remaining-col-1{
+    width: 35%;
+    height: 70%;
+    font-size: 22px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: cyan; */
+
+}
+.remaining-col-2{
+
+    width: 50%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    /* background-color: rgb(169, 218, 218); */
+}
+.table-container{
+    width: 100%;
+    height: 63%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: coral; */
+
+}
+.table{
+    width: 77%;
+    height: 85%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* background-color: crimson; */
+}
+
+.table-tiltle{
+    height: 15%;
+    width: 77%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    justify-content: space-evenly;
+    /* background-color: chartreuse; */
+}
+.cel-1,.cel-2,.cel-3,.cel-4{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color : rgb(170, 200, 235); */
+}
+
+.data{
+    height: 75%;
+    width: 97%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(53, 70, 145); */
+}
+
+.row{
+    height: 55px;
+    width: 100%;
+    box-shadow: 1px 1px 5px gray;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    /* background-color: rgb(233, 184, 23); */
+}
+.col-1,.col-2,.col-3,.col-4{
+    width: 20%;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(98, 116, 80); */
+}

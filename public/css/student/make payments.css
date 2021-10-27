@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-width: 100px;
+    font-family: sans-serif;
+}
+
+.container-1{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aqua; */
+
+}
+
+.container-2{
+    width: 30%;
+    height: 520px;
+    box-shadow: 1px 1px 10px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(206, 206, 206); */
+}
+
+.div-1{
+    flex-grow: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    /* background-color: coral; */
+}
+
+.div-2{
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: cornflowerblue; */
+}
+
+.div-3{
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: cyan; */
+}
+
+.div-4{
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: darkgreen; */
+}
+
+.div-5{
+    flex-grow: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* background-color: rgb(161, 172, 16); */
+}
+
+.col-1{
+    width: 30%;
+    height: 60px;
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    /* background-color: darkgrey; */
+}
+.col-2{
+    width: 9%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    /* background-color: darkmagenta; */
+}
+
+.col-3{
+    width: 40%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    /* background-color: darkorange; */
+}
+.amount{
+    border-radius: 5px;
+    border: 2px solid black;
+    width: 90%;
+    height: 35px;
+    font-size: 20px;
+}
+.methods{
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 19px;
+    font-weight: 600;
+    width: 90%;
+    height: 35px;
+}
+
+.total{
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 90%;
+    height: 35px;
+    background-color: white;
+}
+.div-button{
+    height: 70%;
+    width: 36%;
+    /* padding-left: 10px; */
+    /* background-color: darkred; */
+}
+.pay{
+    height: 70%;
+    width: 67%;
+    font-size: 22px;
+    font-weight: 800;
+    color:#ffffff ;
+    box-shadow: 1px 1px 5px grey;
+    border-radius: 6px;
+    background-color: rgb(76, 145, 7);
+    cursor:pointer;
+    
+    /* background-color: rgb(19, 224, 19); */
+}
+.pay:hover{
+    background-color: rgb(76, 131, 33);
+}
