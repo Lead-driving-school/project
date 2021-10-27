@@ -6,7 +6,7 @@ class Receptionist extends Controller{
         parent:: __construct();
     }
     function index(){
-        
+        $this->view->render('receptionist/profile');
     }
     function payments(){
         $this->view->render('receptionist/payments');

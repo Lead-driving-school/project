@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="<?php echo URL?>public/css/common/sidebar.css"> 
 <div class="sidebar"  id="sidebar">
     <div class="nav-list">
-        <a href="<?php echo URL?>Manager/" class="<?php echo (getLink()=="http://localhost/project/Manager/")?"list-item-active":"list-item";?>">
+        <a href="<?php echo URL?>Receptionist/" class="<?php echo (getLink()=="http://localhost/project/Receptionist/")?"list-item-active":"list-item";?>">
             <div class="link-icon">
             &#xf2bd
             </div>
@@ -10,7 +10,7 @@
             Profile
             </div>
         </a>
-        <a href="<?php echo URL?>Manager/eventCalendar" class="<?php echo (getLink()=="http://localhost/project/Manager/eventCalendar")?"list-item-active":"list-item";?>" >
+        <a href="<?php echo URL?>Receptionist/eventCalendar" class="<?php echo (getLink()=="http://localhost/project/Receptionist/eventCalendar")?"list-item-active":"list-item";?>" >
             <div class="link-icon">
             &#xf2bd
             </div>
@@ -18,28 +18,12 @@
             Event Calendar
             </div>
         </a>
-        <a href="<?php echo URL?>Manager/request" class="<?php echo (getLink()=="http://localhost/project/Manager/request")?"list-item-active":"list-item";?>" >
+        <a href="<?php echo URL?>Receptionist/payments" class="<?php echo (getLink()=="http://localhost/project/Receptionist/payments")?"list-item-active":"list-item";?>" >
             <div class="link-icon">
             &#xf2bd
             </div>
             <div class="link-name">
-            Requests
-            </div>
-        </a>
-        <a href="<?php echo URL?>Manager/studentList" class="<?php echo (getLink()=="http://localhost/project/Manager/studentList")?"list-item-active":"list-item";?>">
-            <div class="link-icon">
-            &#xf2bd
-            </div>
-            <div class="link-name">
-            List Of Students
-            </div>
-        </a>
-        <a href="<?php echo URL?>IncomeExpenses" class="<?php echo (getLink()=="http://localhost/project/IncomeExpenses")?"list-item-active":"list-item";?>">
-            <div class="link-icon">
-            &#xf2bd
-            </div>
-            <div class="link-name">
-            Income & Expences
+            payments
             </div>
         </a>
         <a href="#" class="list-item">
@@ -47,15 +31,39 @@
             &#xf2bd
             </div>
             <div class="link-name">
-            View Reports
+            registration
             </div>
         </a>
-        <a href="<?php echo URL?>Manager/addExpenses" class="<?php echo (getLink()=="http://localhost/project/Manager/addExpenses")?"list-item-active":"list-item";?>">
+        <a href="<?php echo URL?>IncomeExpenses" class="<?php echo (getLink()=="http://localhost/project/IncomeExpenses")?"list-item-active":"list-item";?>">
             <div class="link-icon">
             &#xf2bd
             </div>
             <div class="link-name">
-            Expense Recording
+            Reports
+            </div>
+        </a>
+        <a href="#" class="list-item">
+            <div class="link-icon">
+            &#xf2bd
+            </div>
+            <div class="link-name">
+            Sessions
+            </div>
+        </a>
+        <a href="<?php echo URL?>Receptionist/studentList" class="<?php echo (getLink()=="http://localhost/project/Receptionist/studentList")?"list-item-active":"list-item";?>">
+            <div class="link-icon">
+            &#xf2bd
+            </div>
+            <div class="link-name">
+            Student List
+            </div>
+        </a>
+        <a href="#" class="list-item">
+            <div class="link-icon">
+            &#xf2bd
+            </div>
+            <div class="link-name">
+            About Us
             </div>
         </a>
         <a href="#" class="list-item">

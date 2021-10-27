@@ -8,7 +8,22 @@
   position: relative;
   align-self: center;
   transition: 0.5s;
-  box-shadow: 1px 1px 20px #b0b3b3 inset;
+  box-shadow: 1px 1px 10px #b0b3b3 inset;
+}
+.heading-row {
+  /* background-color: tomato; */
+  font-size: 15px;
+  margin: 6px 5px;
+  padding: 8px 0px;
+  height: 30px;
+  text-shadow: 5px;
+  border-radius: 3px;
+}
+.heading-cell {
+  margin: auto;
+  /* background-color: #0892d0; */
+  width: 95%;
+  display: flex;
 }
 .row {
   font-size: 15px;
@@ -18,7 +33,7 @@
   text-shadow: 5px;
   background: white;
   border-radius: 3px;
-  box-shadow: 1px 1px 20px #b0b3b3;
+  box-shadow: 1px 1px 10px #b0b3b3;
 }
 .cell {
   width: 100%;
@@ -59,8 +74,8 @@
   width: 35%;
 }
 .three {
-  width: 15%;
+  width: 20%;
 }
 .four {
-  width: 30%;
+  width: 25%;
 }
