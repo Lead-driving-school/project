@@ -4,7 +4,7 @@ class Manager extends Controller{
         parent:: __construct();
     }
     function index(){
-        $this->view->render('Manager/eventCalendar');
+        $this->view->render('Manager/profile');
     }
     function addExam(){
         $this->view->render('Manager/addExam');
@@ -20,8 +20,7 @@ class Manager extends Controller{
         $result=$this->model->setExpenses($values[0],$values[1],doubleval($values[2]),$managerId);
         echo "inserted";
     }
-
-
+    
     function validate($password){
         // echo $password;
         $managerId=1;
@@ -34,15 +33,31 @@ class Manager extends Controller{
     function addInstructor(){
         $this->view->render('Manager/addInstructor');
     }
+
+    function addInstructorS(){
+        $this->view->render('Manager/addInstructorS');
+    }
+
     function addSession(){
         $this->view->render('Manager/addSession');
     }
+    
     function addStudent(){
         $this->view->render('Manager/addStudent');
     }
+
+    function addStudentS(){
+        $this->view->render('Manager/addStudentS');
+    }
+
     function addVehicle(){
         $this->view->render('Manager/addVehicle');
     }
+
+    function addVehicleS(){
+        $this->view->render('Manager/addVehicleS');
+    }
+
     function changeInstructor(){
         $this->view->render('Manager/changeInstructor');
     }
@@ -57,6 +72,9 @@ class Manager extends Controller{
     }
     function editSession(){
         $this->view->render('Manager/editSession');
+    }
+    function studentList(){
+        $this->view->render('Manager/studentList');
     }
     function eventCalendar(){
         $this->view->render('Manager/eventCalendar');

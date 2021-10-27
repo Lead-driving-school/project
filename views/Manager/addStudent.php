@@ -14,6 +14,15 @@
             <div class="topic">
                 <h1>Add Student</h1>
             </div>
+            <div class="heading-row">
+                    <div class="heading-cell">
+                        <div class="information">
+                            <div class="one">ID</div>
+                            <div class="two">Name</div>
+                            <div class="three">Allocation</div>
+                        </div>
+                    </div>
+            </div>
             <div class="table">
                 <div class="row">
                     <div class="cell">

@@ -33,11 +33,11 @@
                     </div>
                     <div class="add-instructor-class">
                         <label for="add-instructor">Instructor:</label>
-                        <button class="session-buttons" name="add-instructor" id="add-instructor">ADD INSTRUCTOR</button>
+                        <a href="<?php echo URL?>Manager/addInstructorS"><button class="session-buttons" name="add-instructor" id="add-instructor">ADD INSTRUCTOR</button></a>
                     </div>
                     <div class="add-vehicle-class">
                         <label for="add-vehicle">Vehicle:</label>
-                        <button class="session-buttons"name="add-vehicle" id="add-vehicle">ADD VEHICLE</button>
+                        <a href="<?php echo URL?>Manager/addVehicleS"><button class="session-buttons"name="add-vehicle" id="add-vehicle">ADD VEHICLE</button></a>
                     </div>
                     <div class="date-class">
                         <label for="date">Date:</label>
@@ -49,12 +49,12 @@
                     </div>
                     <div class="add-student-class">
                         <label for="add-participant">Add Students:</label>
-                        <button class="session-buttons" name="add-participants" id="add-participants">ADD STUDENTS</button>
+                        <a href="<?php echo URL?>Manager/addStudentS"><button class="session-buttons" name="add-participants" id="add-participants">ADD STUDENTS</button></a>
                     </div>
                 </div>
                 
                 <div class="button-set">
-                    <button class="session-buttons" name="cancel" id="cancel" >CANCEL</button>
+                    <a href="<?php echo URL?>Manager/eventCalendar"><button class="session-buttons" name="cancel" id="cancel" >CANCEL</button></a>
                     <button class="session-buttons"name="confirm" id="confirm">CONFIRM</button>
                 </div>
             </div>
