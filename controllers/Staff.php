@@ -40,15 +40,15 @@ class Staff extends Controller{
         $user = explode(",", $data);
         $loginData = $this->model->login($user[0], $user[1]);
         if($loginData){
-            $_SESSION['userType'] = "Admin";
-            echo "success,".$_SESSION['userType'].",";
+            // $_SESSION['userType'] = "Admin";
             $this->startSession($loginData);
         }   
     }
 
     public function startSession($loginData){
         $_SESSION['username'] = $loginData[0]['nic'];
-        $_SESSION['job_title'] = $loginData[0]['job_title'];    
+        $_SESSION['job_title'] = $loginData[0]['job_title'];
+        echo "success,".$_SESSION['job_title'].",";    
     }
     public function logout(){
         unset($_SESSION['user_id']);

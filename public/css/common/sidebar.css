@@ -32,9 +32,9 @@
 }
 
 .list-item:hover {
-  font-weight: 600;
-  text-shadow: 10px;
-  transition-duration: 0.5s;
+  background-color: #5c656d;
+  border-radius: 5px;
+  transition-duration: 0.2s;
 }
 
 .link-icon {

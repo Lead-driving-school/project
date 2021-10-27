@@ -94,7 +94,7 @@
                     </div> 
                 </div>
 
-                <div class="row-container" id="row-container" onload='loadTable()'>
+                <div class="row-container" id="row-container" >
                     <!-- <div class="row">
                         <div class="col-1">E123</div>
                         <div class="col-2">Sahan rishitha samarathunga</div>
