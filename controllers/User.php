@@ -10,6 +10,10 @@ class User extends Controller{
         $this->view->render('studentSignup');
         
     }
+    public function loginPage(){
+        $this->view->render('studentLogin');
+    }
+
     function signupLogic($data){
         $values = explode(",", $data);
         $result= $this->model->getOTP($values[0],$values[1]);
@@ -27,6 +31,37 @@ class User extends Controller{
         if($values[0]==$values[1]){
             $this->model->setPassword($_SESSION['nic'],$values[0]);
             echo "completed";
+        }
+    }
+
+    public function login($data){
+        
+        $user = explode(",", $data);
+        $loginData = $this->model->login($user[0], $user[1]);
+        if($loginData){
+            echo "success,";
+            // $this->startSession($loginData);
+        }   
+    }
+
+    
+    public function startSession($loginData){
+        $_SESSION['username'] = $loginData[0]['NIC'];
+        $_SESSION['student']='student';
+        echo "success,";    
+    }
+    public function logout(){
+        unset($_SESSION['user_id']);
+        unset($_SESSION['user_email']);
+        unset($_SESSION['user_name']);
+        session_destroy();
+        redirect('login');
+    }
+    public function isLoggedIn(){
+        if(isset($_SESSION['user_id'])){
+            return true;
+        } else {
+            return false;
         }
     }
 }

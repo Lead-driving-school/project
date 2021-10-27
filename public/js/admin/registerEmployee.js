@@ -22,7 +22,7 @@ function register()
       var empType=document.getElementById('empType').value;
       var licenseNumber=document.getElementById('licenseNumber').value;
       var err=document.getElementById('err');
-      var gender='';
+      var gender;
 
       
 
@@ -101,7 +101,7 @@ function register()
         empAddress=empAddress.replace(/\/+/g, '~');
 
         console.log(empAddress)
-
+        console.log(document.getElementById('male').value)
         let Employee=[name,empAddress,NIC,Dob,gender,telNo,empType,licenseNumber];
         
         let url = "http://localhost/project/Admin/registerEmployee/"+Employee;

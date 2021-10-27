@@ -40,7 +40,7 @@ class Receptionist extends Controller{
         $result=$this->model->addInitExpenses($values[0],$vehicleCLasses,$receptionistId);
         $result=$this->model->assignPackages($values[0],$packageId,$receptionistId);
         $result=$this->model->assginVehicleClasses($values[0],$classArray);
-        // echo $result;
+        
     }
 
     function sessions(){

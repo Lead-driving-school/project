@@ -9,6 +9,12 @@ class Admin extends Controller{
         $this->view->render('Admin/AdminStaff');
     }
 
+    
+
+    function incomeExpenses(){
+        $this->view->render('Admin/income&Expenses');
+    }
+
     function addEmployee(){
         $this->view->render('Admin/AdminAddEmployee');
     }
@@ -68,6 +74,16 @@ class Admin extends Controller{
     function addVehicle(){
         $this->view->render('Admin/AdminAddVehicle');
     }
+
+    function viewComlain(){
+        $this->view->render('Admin/AdminViewComplain');
+    }
+
+    function viewReview(){
+        $this->view->render('Admin/AdminViewReview');
+    }
+
+    
 
     function registerEmployee($data){
         $user = explode(",", $data);
