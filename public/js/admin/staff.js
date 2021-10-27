@@ -20,7 +20,6 @@ httpreq.onreadystatechange = function(){
         function loadTable(){
             for(var i=0;i<employee.length;i++){
                 rows.innerHTML += '<div class="row"  ><div class="col-1" "  value="'+employee[i].employee_id+'">EM-'+employee[i].employee_id+'</div><div class="col-2">'+employee[i].name+'</div><div class="col-3">'+employee[i].job_title+'</div><div class="col-4">'+employee[i].contact_no+'</div><div class="col-5"><button class="view-more" id="'+employee[i].employee_id+'" onclick="viewMore('+employee[i].employee_id+')">View more</button></div></div>';
-                console.log(document.getElementById(employee[i].employee_id).id)
             }
         }
 

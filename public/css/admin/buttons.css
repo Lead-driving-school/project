@@ -142,7 +142,7 @@
   cursor: pointer;
 }
 
-.view-more {
+.view-more , .mark-as-read{
   width: fit-content;
   padding-left: 10px;
   padding-right: 10px;
@@ -156,7 +156,7 @@
   font-weight: 600;
 }
 
-.view-more:hover {
+.view-more:hover, .mark-as-read:hover{
   border: 2px solid #0892d0;
   background-color: white;
   color: #0892d0;

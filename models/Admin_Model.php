@@ -56,12 +56,12 @@ class Admin_Model extends Model{
 
     public function getEmployeeDetailsMore($id){
         $result=$this->db->runQuery("SELECT employee_id,name,job_title,nic,contact_no,address,dob,gender,hired_date FROM employee WHERE employee_id='$id'");
-        
+        $license=[];
         if($result[0]['job_title']=='Instructor'){
             $license=$this->db->runQuery("SELECT instructor_license_id FROM instructor WHERE employee_id='$id'");
         }
 
-        return array_merge($result, $license/*, $arrayN, $arrayN*/);
+        return array_merge($result, $license);
     }
 
     public function sendOtp($otp){
