@@ -1,7 +1,4 @@
-
-
-
-function viewComplaint(){
+function viewReview(){
     const row=document.getElementById("msgBox")
     let httprequest= new XMLHttpRequest();
     console.log("AAAAA")
@@ -12,12 +9,16 @@ function viewComplaint(){
             const obj=JSON.parse(httprequest.responseText)
             for(var i=0;i<obj.length;i++){
                 
-                obj[i].description = obj[i].description.replace(/-/g, " ");
-                obj[i].suggestions =obj[i].suggestions.replace(/-/g, " ");
+                obj[i].idea = obj[i].idea.replace(/-/g, " ");
+                obj[i].satisfaction =obj[i].satisfaction.replace(/-/g, " ");
+                obj[i].improvements =obj[i].improvements.replace(/-/g, " ");
                 obj[i].init_name =obj[i].init_name.replace(/-/g, " ");
                 
-                if(obj[i].suggestions==''){
-                    obj[i].suggestions="Description is not available"
+                if(obj[i].improvements==''){
+                    obj[i].improvements="Not answered"
+                }
+                if(obj[i].satisfaction==''){
+                    obj[i].satisfaction="Not answered"
                 }
             }
             
@@ -28,15 +29,16 @@ function viewComplaint(){
             }
 
             for(var i=0; i<obj.length; i++){
-                row.innerHTML='<div class="msg-box-row">'+
-                '<div class="msg-title"><h2>'+obj[i].init_name+'</h2></div>'+
+                row.innerHTML+='<div class="msg-box-row">'+
+                '<div class="msg-title"><h2>'+ obj[i].init_name+'</h2></div>'+
                 '<div class="msg-date"><h4>'+myArr[i][0]+'</h4><h5>'+myArr[i][1]+'</h5></div>'+
 
-                '<h3>Complain</h3>'+
-                '<p>'+ obj[i].description+'</p>'+
-                '<h3>Suggetion</h3>'+
-                '<p>'+obj[i].suggestions+'</p>'+
-
+                '<h3>Review</h3>'+
+                '<p>'+obj[i].idea+'</p>'+
+                '<h3>Satisfaction about the driving school</h3>'+
+                '<p>'+obj[i].satisfaction+'</p>'+
+                '<h3>Comment</h3>'+
+                '<p>'+obj[i].improvements+'</p>'+
                 '<div class="msg-btn"><button class="mark-as-read">Mark as read</button></div>'+
 
             '</div>'
@@ -44,10 +46,9 @@ function viewComplaint(){
             }
         }
     }
-    var url="http://localhost/project/Admin/complaintLogic";
+    var url="http://localhost/project/Admin/reviewLogic";
     httprequest.open("POST",url,true)
     httprequest.send()
 
 }
-viewComplaint()
-
+viewReview()

@@ -31,12 +31,7 @@
                     <a href="<?php echo URL?>Admin/viewReview"><div class="tab-2">Review</div></a>
                 </div>
 
-                <div class="msg-box-container" onload="viewComplaint()" id="msgBox">
-
-
-
-
-
+                <div class="msg-box-container"  id="msgBox">
                 
                 </div>
                 
