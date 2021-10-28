@@ -156,9 +156,10 @@ select {
 }
 
 .table-head {
-  width: 70%;
+  width: 71%;
   height: 12%;
-  background-color: black;
+  padding-left: 5px;
+  background-color: #262b2f;
   color: white;
   border-radius: 4px;
   display: flex;
@@ -285,5 +286,22 @@ select {
 }
 .col-6 {
   width: 15%;
+  justify-content: center;
   /* background-color: rgb(144, 248, 248); */
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0892d0;
 }

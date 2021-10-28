@@ -30,12 +30,12 @@
                     </div>
                     <div class="add-instructor-class">
                         <label for="add-instructor">Instructor:</label>
-                        <button class="session-buttons" name="add-instructor" id="add-instructor">ADD INSTRUCTOR</button>
+                        <a href="<?php echo URL?>Manager/changeInstructorS"><button class="session-buttons" name="add-instructor" id="add-instructor">ADD INSTRUCTOR</button></a>
                         <div class="blank"></div>
                     </div>
                     <div class="add-vehicle-class">
                         <label for="add-vehicle">Vehicle:</label>
-                        <button class="session-buttons"name="add-vehicle" id="add-vehicle">ADD VEHICLE</button>
+                        <a href="<?php echo URL?>Manager/changeVehicleS"><button class="session-buttons" name="add-vehicle" id="add-vehicle">ADD VEHICLE</button></a>
                         <div class="blank"></div>
                     </div>
                     <div class="date-class">
@@ -50,12 +50,12 @@
                     </div>
                     <div class="add-student-class">
                         <label for="add-participant">Add Students:</label>
-                        <button class="session-buttons" name="add-participants" id="add-participants">ADD STUDENTS</button>
+                        <a href="<?php echo URL?>Manager/changeStudentS"><button class="session-buttons" name="add-participants" id="add-participants">ADD STUDENTS</button></a>
                         <div class="blank"></div>
                     </div>
                 </div>
                 <div class="button-set">
-                    <button class="session-buttons" name="cancel" id="cancel" >CANCEL</button>
+                    <a href="<?php echo URL?>Manager/eventCalendar"><button class="session-buttons" name="cancel" id="cancel" >CANCEL</button></a>
                     <button class="session-buttons"name="confirm" id="confirm">CONFIRM</button>
                 </div>
             </div>

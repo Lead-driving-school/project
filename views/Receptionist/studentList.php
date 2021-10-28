@@ -107,9 +107,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="part-4">
-                    <button class="sort">Sort by</button>
-                </div>
+
             </div>
         </div>
     </div>

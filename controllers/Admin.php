@@ -78,10 +78,18 @@ class Admin extends Controller{
     function viewComlain(){
         $this->view->render('Admin/AdminViewComplain');
     }
+    function complaintLogic(){
+        $value=$this->model->getcomplaints();
+        // echo json_encode($value);
+        echo "hello";
+
+    }
 
     function viewReview(){
         $this->view->render('Admin/AdminViewReview');
     }
+
+
 
     
 
