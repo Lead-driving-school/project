@@ -6,81 +6,230 @@ class Admin extends Controller{
         parent:: __construct();
     }
     function index(){
-        $this->view->render('Admin/AdminStaff');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/profile');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
-
     
-
     function incomeExpenses(){
-        $this->view->render('Admin/income&Expenses');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/income&Expenses');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
     function addEmployee(){
-        $this->view->render('Admin/AdminAddEmployee');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/AdminAddEmployee');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
     function addExtraPrices(){
-        $this->view->render('Admin/AdminAddExtraPrices');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/AdminAddExtraPrices');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
     function addInitPrices(){
-        $this->view->render('Admin/AdminAddInitPrices');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/AdminAddInitPrices');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
     function addPackage(){
-        $this->view->render('Admin/AdminAddPackage');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/AdminAddPackage');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
     function editEmployee(){
-        $this->view->render('Admin/AdminEditEmployee');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/AdminEditEmployee');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
     
     function editPackages(){
-        $this->view->render('Admin/AdminEditPackages');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/AdminEditPackages');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
     function employeeAccounts(){
-        $this->view->render('Admin/AdminEmployeeAccounts');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/AdminEmployeeAccounts');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
     function employeeDetails(){
-        $this->view->render('Admin/AdminEmployeeDetails');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/AdminEmployeeDetails');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
     function packages(){
-        $this->view->render('Admin/AdminPackages');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/AdminPackages');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
     function initExpences(){
-        $this->view->render('Admin/AdminInitExpences');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/AdminInitExpences');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
     function staff(){
-        $this->view->render('Admin/AdminStaff');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/AdminStaff');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
     function studentAccounts(){
-        $this->view->render('Admin/AdminStudentAccounts');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/AdminStudentAccounts');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
     function vehicles(){
-        $this->view->render('Admin/AdminVehicles');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/AdminVehicles');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
     function viewMoreEmployee(){
-        $this->view->render('Admin/AdminViewMoreEmployee');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/AdminViewMoreEmployee');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
     function addVehicle(){
-        $this->view->render('Admin/AdminAddVehicle');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/AdminAddVehicle');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
     function viewComlain(){
-        $this->view->render('Admin/AdminViewComplain');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/AdminViewComplain');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
     function viewReview(){
-        $this->view->render('Admin/AdminViewReview');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/AdminViewReview');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
     

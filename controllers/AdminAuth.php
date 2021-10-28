@@ -18,17 +18,17 @@ class AdminAuth extends Controller{
 
     public function startSession($loginData){
         $_SESSION['username'] = $loginData[0]['username'];
+        $_SESSION['job_title'] = "Admin";
         echo "success,";    
     }
     public function logout(){
-        unset($_SESSION['user_id']);
-        unset($_SESSION['user_email']);
-        unset($_SESSION['user_name']);
+        unset($_SESSION['username']);
+        unset($_SESSION['job_title']);
         session_destroy();
-        redirect('login');
+        redirect('AdminAuth');
     }
     public function isLoggedIn(){
-        if(isset($_SESSION['user_id'])){
+        if(isset($_SESSION['username'])){
             return true;
         } else {
             return false;

@@ -51,11 +51,10 @@ class User extends Controller{
         echo "success,";    
     }
     public function logout(){
-        unset($_SESSION['user_id']);
-        unset($_SESSION['user_email']);
-        unset($_SESSION['user_name']);
+        unset($_SESSION['student']);
+        unset($_SESSION['username']);
         session_destroy();
-        redirect('login');
+        redirect('/');
     }
     public function isLoggedIn(){
         if(isset($_SESSION['user_id'])){

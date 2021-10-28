@@ -4,6 +4,6 @@ class Student extends Controller{
         parent:: __construct();
     }
     function index(){
-        $this->view->render('landingPage');
+        
     }
 }

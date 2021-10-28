@@ -1,10 +1,11 @@
 <?php
+// session_start();
 class Manager extends Controller{
     function __construct(){
         parent:: __construct();
     }
     function index(){
-        $this->view->render('Manager/profile');
+            $this->view->render('Manager/profile');
     }
     function addExam(){
         $this->view->render('Manager/addExam');

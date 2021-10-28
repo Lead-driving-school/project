@@ -2,7 +2,7 @@
 <div class="sidebar">
 
     <div class="nav-list">
-        <a class="<?php echo (getLink()=="http://localhost/project/Admin/a")?"list-item-active":"list-item";?>" href="#">
+        <a class="<?php echo (getLink()=="http://localhost/project/Admin")?"list-item-active":"list-item";?>" href="#">
             <span class="link-icon">&#xf007</span>
             <span class="link-name">Profile</span>
         </a>
@@ -40,7 +40,7 @@
             <span class="link-name">Income & Expences</span>
         </a>
 
-        <a class="<?php echo (getLink()=="http://localhost/project/Admin/a")?"list-item-active":"list-item";?>" href="<?php echo URL?>Admin/IncomeExpenses">
+        <a class="<?php echo (getLink()=="http://localhost/project/AdminAuth/logout")?"list-item-active":"list-item";?>" href="<?php echo URL?>AdminAuth/logout">
             <span class="link-icon">&#xf08b</span>
             <span class="link-name">Logout</span>
         </a>
