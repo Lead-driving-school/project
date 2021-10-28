@@ -27,7 +27,7 @@
     </div>
     <!--body content of the page starts here-->
     <div class="main-container" id="main">
-    <?php require_once APPROOT."/../views/common/ManagerSidebar.php"; ?>
+    <?php require_once APPROOT."/../views/common/ReceptionistSidebar.php"; ?>
     
         <div class="body-container">
           <div class="container1">
@@ -47,10 +47,7 @@
                 <div class="days">
                 </div> 
               </div>
-              <div class="buttons">
-                <a href="<?php echo URL?>Manager/addSession"><button id="addSession">Add new Session</button></a>
-                <a href="<?php echo URL?>Manager/addExam"><button id="addExam">Set Exam</button></a>
-              </div>
+
             </div>
           </div>
           <div class="container2">

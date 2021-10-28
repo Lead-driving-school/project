@@ -9,7 +9,8 @@
   width: 30%;
   color: black;
   display: flex;
-  align-items: center;
+  margin-top: 100px;
+  margin-left: 20px;
   justify-content: center;
 
   /* background-color: blueviolet; */

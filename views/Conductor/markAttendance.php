@@ -36,7 +36,7 @@
         </div>
         <div class="container">
             <!--Header-->
-            <h1>Attendance<hr></h1>
+            <h1>Attendance</h1>
             <div class="date-viewer">
                 <p>16th Aug 2021</p>
             </div>

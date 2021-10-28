@@ -95,7 +95,7 @@
             </div>
         </div>
         <div class="button-set">
-            <button class="session-buttons" name="back" id="back" >Back</button>
+            <a href="<?php echo URL?>Manager/editExam"><button class="session-buttons" name="back" id="back" >Back</button></a>
             <button class="session-buttons"name="save" id="save">Save changes</button>
         </div>    
     </div>

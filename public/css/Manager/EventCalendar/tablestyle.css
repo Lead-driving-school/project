@@ -15,8 +15,8 @@
   position: relative;
   margin-top: 12px;
   align-self: stretch;
-  background-color: white;
-  color: #000000;
+  background-color: #262b2f;
+  color: white;
   text-shadow: 5px;
   font-size: 15px;
   transition: 0.5s;
@@ -38,18 +38,19 @@
   display: flex;
   /* background-color: blueviolet; */
 }
-#View {
-  width: 60%;
+.View {
+  width: fit-content;
   height: 28px;
   font-size: 15px;
   font-weight: bold;
+  padding: 0px 20px;
   box-shadow: 1px 1px 10px #b0b3b3;
   color: white;
   background-color: #0892d0;
   border: none;
   border-radius: 2px;
 }
-#View:hover {
+.View:hover {
   background-color: white;
   color: #0892d0;
   border: 2px solid #0892d0;
@@ -73,7 +74,7 @@
 .headingDetails {
   display: flex;
   width: 80%;
-  color: #0892d0;
+  color: white;
   justify-content: space-around;
 }
 .heading-row {
