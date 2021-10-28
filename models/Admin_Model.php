@@ -85,6 +85,12 @@ class Admin_Model extends Model{
         echo "Sent Failed - Error : ".$res[1];
         }
     }
+
+    function getcomplaints(){
+        $result=$this->db->runQuery("SELECT complaints.submitted_date_time,complaints.description,complaints.suggestions, student.other_names from complaints INNER JOIN student on student.student_id=complaints.student_id");
+        return $result;
+
+    }
 }
 
                                       
