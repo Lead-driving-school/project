@@ -237,7 +237,6 @@ body{
     font-size: 20px;
     font-weight: 600;
     color: seashell;
-    border: 2px solid black;
     border-radius: 5px;
     background-color:  #262b2f;
     cursor: pointer;
@@ -256,7 +255,6 @@ body{
     height: 60%;
     font-size: 20px;
     font-weight: 600;
-    border: 2px solid black;
     border-radius: 5px;
     background-color: #0892d0;
     color: seashell;
