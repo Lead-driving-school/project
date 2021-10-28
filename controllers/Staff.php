@@ -1,5 +1,5 @@
 <?php
-session_start();
+    // session_start();
 class Staff extends Controller{
     
     function __construct(){
@@ -48,17 +48,18 @@ class Staff extends Controller{
     public function startSession($loginData){
         $_SESSION['username'] = $loginData[0]['nic'];
         $_SESSION['job_title'] = $loginData[0]['job_title'];
+        $_SESSION['employee_id'] = $loginData[0]['employee_id'];
         echo "success,".$_SESSION['job_title'].",";    
     }
     public function logout(){
-        unset($_SESSION['user_id']);
-        unset($_SESSION['user_email']);
-        unset($_SESSION['user_name']);
+        unset($_SESSION['username']);
+        unset($_SESSION['job_title']);
+        unset($_SESSION['employee_id']);
         session_destroy();
-        redirect('login');
+        redirect('/');
     }
     public function isLoggedIn(){
-        if(isset($_SESSION['user_id'])){
+        if(isset($_SESSION['username'])){
             return true;
         } else {
             return false;

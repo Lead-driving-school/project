@@ -24,7 +24,7 @@ class Staff_Model extends Model{
         return 1;
     }
     public function login($username, $password) {
-        $result=$this->db->runQuery("SELECT employee.nic,employee.job_title,employee.name FROM employee INNER JOIN employee_private ON employee.employee_id=employee_private.employee_id WHERE employee.nic='$username' AND employee_private.password='$password'");
+        $result=$this->db->runQuery("SELECT employee.employee_id,employee.nic,employee.job_title,employee.name FROM employee INNER JOIN employee_private ON employee.employee_id=employee_private.employee_id WHERE employee.nic='$username' AND employee_private.password='$password'");
         // $result=$this->db->runQuery("SELECT nic,job_title FROM employee WHERE name='$username'");
         if(!empty($result)){
             return $result;

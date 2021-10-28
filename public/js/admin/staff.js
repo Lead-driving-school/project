@@ -62,7 +62,13 @@ function viewMore(id){
                 document.getElementById("Contact").innerText=employee[0].contact_no
                 document.getElementById("Address").innerText=empAddress
                 document.getElementById("dob").innerText=employee[0].dob
-                document.getElementById("Gender").innerText=employee[0].gender
+                if(employee[0].gender=='m'){
+                    document.getElementById("Gender").innerText='Male'
+                }
+                if(employee[0].gender=='f'){
+                    document.getElementById("Gender").innerText='Female'
+                }
+                
                 document.getElementById("Hiring-Date").innerText=employee[0].hired_date
                 if(employee[0].job_title=='Instructor'){
                     document.getElementById("Licence-row").innerHTML='<div class="mid-box-column-1"><h4>Licence-No</h4><h4>:</h4></div><div class="mid-box-column-2" id="Licence-No">'+employee[1].instructor_license_id+'</div>'
