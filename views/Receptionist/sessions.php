@@ -76,7 +76,7 @@
                                 <div class="col-3"><p>09/23/2021</p></div>
                                 <div class="col-4"><p>08:00</p></div>
                                 <div class="col-5"><p>Mr.Saman</p></div>
-                                <div class="col-6"><button class="sign">Start</button></div>
+                                <div class="col-6">Started</div>
                             </div>
                             <div class="row-1">
                                 <div class="zero"></div>
@@ -85,7 +85,7 @@
                                 <div class="col-3"><p>09/23/2021</p></div>
                                 <div class="col-4"><p>08:00</p></div>
                                 <div class="col-5"><p>Mr.Saman</p></div>
-                                <div class="col-6"><button class="sign">Start</button></div>
+                                <div class="col-6">Started</div>
                             </div>
                             <div class="row-1">
                                 <div class="zero"></div>
@@ -94,7 +94,7 @@
                                 <div class="col-3"><p>09/23/2021</p></div>
                                 <div class="col-4"><p>08:00</p></div>
                                 <div class="col-5"><p>Mr.Saman</p></div>
-                                <div class="col-6"><button class="sign">Start</button></div>
+                                <div class="col-6">To be started</div>
                             </div>
                             <div class="row-1">
                                 <div class="zero"></div>
@@ -103,7 +103,7 @@
                                 <div class="col-3"><p>09/23/2021</p></div>
                                 <div class="col-4"><p>08:00</p></div>
                                 <div class="col-5"><p>Mr.Saman</p></div>
-                                <div class="col-6"><button class="sign">Start</button></div>
+                                <div class="col-6">To be started</div>
                             </div>
                             <div class="row-1">
                                 <div class="zero"></div>
@@ -112,7 +112,7 @@
                                 <div class="col-3"><p>09/23/2021</p></div>
                                 <div class="col-4"><p>08:00</p></div>
                                 <div class="col-5"><p>Mr.Saman</p></div>
-                                <div class="col-6"><button class="sign">Start</button></div>
+                                <div class="col-6">To be started</div>
                             </div>
                             <div class="row-1">
                                 <div class="zero"></div>
@@ -121,7 +121,7 @@
                                 <div class="col-3"><p>09/23/2021</p></div>
                                 <div class="col-4"><p>08:00</p></div>
                                 <div class="col-5"><p>Mr.Saman</p></div>
-                                <div class="col-6"><button class="sign">Start</button></div>
+                                <div class="col-6">To be started</div>
                             </div>
                     </div>
                 </div>
