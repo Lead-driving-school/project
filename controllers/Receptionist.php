@@ -14,6 +14,9 @@ class Receptionist extends Controller{
     function addResult(){
         $this->view->render('receptionist/addResult');
     }
+    function eventCalendar(){
+        $this->view->render('receptionist/eventCalendar');
+    }
     function profile(){
         $this->view->render('receptionist/profile');
     }

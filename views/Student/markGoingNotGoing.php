@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "<?php echo URL?>public/css/student/MarkGoingNotGoing.css">
+    <title>Mark Session Going or Not Going</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="IMG-20210823-WA0007.jpg" alt="logo">
+            </div>
+        </div>
+
+
+        <div class="main">
+            <?php require_once APPROOT."/../views/common/StudentSidebar.php"; ?>
+
+            <div class="view">
+                <div class="profile">
+                    <div class="title">
+                        <div class="ti-name">
+                            <h1>Sessions</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="summary">
+                    <div class="summary-title">
+                        <div class="all">All</div>
+                        <div class="today">Today <br> <hr></div>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <div class="table">
+                        <div class="table-tiltle">
+                            <div class="row-title">
+                                <div class="cel">ID</div>
+                                <div class="cel">Title</div>
+                                <div class="cel">Date</div>
+                                <div class="cel">Time</div>
+                            </div>
+
+                        </div>
+                        <div class="data">
+                            <div class="row">
+                                <div class="col">183</div>
+                                <div class="col">Traffic lights</div>
+                                <div class="col">2019/10/20</div>
+                                <div class="col">10.30</div>
+                                <div class="col">
+                                    <button class="going">Going</button>
+                                </div>
+                                <div class="col">
+                                    <button class="notgoing">Not Going</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">183</div>
+                                <div class="col">Traffic lights</div>
+                                <div class="col">2019/10/20</div>
+                                <div class="col">10.30</div>
+                                <div class="col">
+                                    <button class="going">Going</button>
+                                </div>
+                                <div class="col">
+                                    <button class="notgoing">Not Going</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">183</div>
+                                <div class="col">Traffic lights</div>
+                                <div class="col">2019/10/20</div>
+                                <div class="col">10.30</div>
+                                <div class="col">
+                                    <button class="going">Going</button>
+                                </div>
+                                <div class="col">
+                                    <button class="notgoing">Not Going</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">183</div>
+                                <div class="col">Traffic lights</div>
+                                <div class="col">2019/10/20</div>
+                                <div class="col">10.30</div>
+                                <div class="col">
+                                    <button class="going">Going</button>
+                                </div>
+                                <div class="col">
+                                    <button class="notgoing">Not Going</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">183</div>
+                                <div class="col">Traffic lights</div>
+                                <div class="col">2019/10/20</div>
+                                <div class="col">10.30</div>
+                                <div class="col">
+                                    <button class="going">Going</button>
+                                </div>
+                                <div class="col">
+                                    <button class="notgoing">Not Going</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">183</div>
+                                <div class="col">Traffic lights</div>
+                                <div class="col">2019/10/20</div>
+                                <div class="col">10.30</div>
+                                <div class="col">
+                                    <button class="going">Going</button>
+                                </div>
+                                <div class="col">
+                                    <button class="notgoing">Not Going</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">183</div>
+                                <div class="col">Traffic lights</div>
+                                <div class="col">2019/10/20</div>
+                                <div class="col">10.30</div>
+                                <div class="col">
+                                    <button class="going">Going</button>
+                                </div>
+                                <div class="col">
+                                    <button class="notgoing">Not Going</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">183</div>
+                                <div class="col">Traffic lights</div>
+                                <div class="col">2019/10/20</div>
+                                <div class="col">10.30</div>
+                                <div class="col">
+                                    <button class="going">Going</button>
+                                </div>
+                                <div class="col">
+                                    <button class="notgoing">Not Going</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

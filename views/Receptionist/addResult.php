@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="<?php echo URL?>public/css/recipient/addResult.css">
+    <link rel="stylesheet" href="<?php echo URL?>public/css/Receptionist/addResult.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Results</title>
 </head>

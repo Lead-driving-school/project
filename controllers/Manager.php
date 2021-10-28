@@ -68,6 +68,17 @@ class Manager extends Controller{
     function changeVehicle(){
         $this->view->render('Manager/changeVehicle');
     }
+
+    function changeInstructorS(){
+        $this->view->render('Manager/changeInstructorS');
+    }
+    function changeStudentS(){
+        $this->view->render('Manager/changeStudentS');
+    }
+    function changeVehicleS(){
+        $this->view->render('Manager/changeVehicleS');
+    }
+
     function editExam(){
         $this->view->render('Manager/editExam');
     }

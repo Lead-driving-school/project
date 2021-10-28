@@ -219,6 +219,12 @@ class Admin extends Controller{
         }
         
     }
+    function complaintLogic(){
+        $value=$this->model->getcomplaints();
+        // echo json_encode($value);
+        echo "hello";
+
+    }
 
     function viewReview(){
         if(isset($_SESSION['job_title'])){
@@ -231,6 +237,8 @@ class Admin extends Controller{
         }
         
     }
+
+
 
     
 

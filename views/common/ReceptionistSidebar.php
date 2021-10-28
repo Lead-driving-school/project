@@ -23,7 +23,15 @@
             &#xf2bd
             </div>
             <div class="link-name">
-            payments
+            Payments
+            </div>
+        </a>
+        <a href="<?php echo URL?>Receptionist/addResult" class="<?php echo (getLink()=="http://localhost/project/Receptionist/addResult")?"list-item-active":"list-item";?>">
+            <div class="link-icon">
+            &#xf2bd
+            </div>
+            <div class="link-name">
+            Add results
             </div>
         </a>
         <a href="#" class="list-item">
