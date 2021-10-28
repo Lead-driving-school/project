@@ -18,7 +18,7 @@ class Student extends Controller{
 
     function complaintLogic($data){
         $value=explode(",",$data);
-        $studentId=1;
+        $studentId=6;
         $this->model->setComplaints($value[0],$value[1],$studentId);
 
         // echo $value[0];
@@ -27,7 +27,7 @@ class Student extends Controller{
 
     function reviewLogic($data){
         $value=explode(",",$data);
-        $studentId=1;
+        $studentId=6;
         $this->model->setReview($value[0],$value[1],$value[2],$studentId);
         //methanin nawettuwe
 

@@ -221,9 +221,7 @@ class Admin extends Controller{
     }
     function complaintLogic(){
         $value=$this->model->getcomplaints();
-        // echo json_encode($value);
-        echo "hello";
-
+        echo json_encode($value);
     }
 
     function viewReview(){
@@ -237,7 +235,10 @@ class Admin extends Controller{
         }
         
     }
-
+    function reviewLogic(){
+        $value=$this->model->getreviews();
+        echo json_encode($value);
+    }
 
 
     
