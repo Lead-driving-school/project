@@ -63,4 +63,13 @@ class User extends Controller{
             return false;
         }
     }
+
+    public function forgotPassword(){
+        $this->view->render('Student/forgotPassword');
+    }
+
+    public function forgotPasswordLogic($data){
+        $user = explode(",", $data);
+        echo $user[0]."student";
+    }
 }

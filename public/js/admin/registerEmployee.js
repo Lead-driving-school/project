@@ -15,14 +15,11 @@ function register()
       var empAddress=document.getElementById('empAddress').value;
       var NIC=document.getElementById('NIC').value;
       var Dob=document.getElementById('Dob').value;
-      var male=document.getElementById('male')
-      var female=document.getElementById('female')
-      var Gender=document.getElementsByName('Gender').value;
       var telNo=document.getElementById('telNo').value;
+      var Gender=document.getElementsByName('Gender').value
       var empType=document.getElementById('empType').value;
       var licenseNumber=document.getElementById('licenseNumber').value;
       var err=document.getElementById('err');
-      var gender;
 
       
 
@@ -47,11 +44,11 @@ function register()
           document.getElementById('Dob').style.border="2px solid red";
           
         }
-        if(male.checked) {
-          gender='m';
+        if(document.getElementById('male').checked) {
+           var gender='m';
         }
-        else if(female.checked){
-          gender='f'
+        else if(document.getElementById('female').checked){
+           var gender='f'
         }
         else{
           document.getElementById('gender-below').innerHTML="Gender field can't be empty";
@@ -64,7 +61,7 @@ function register()
       }
       else
       {
-        console.log(name+" "+empAddress+" "+NIC+" "+Dob+" "+gender+" "+telNo+" "+empType+" "+licenseNumber)
+        console.log(name+" "+empAddress+" "+NIC+" "+Dob+" "+Gender+" "+telNo+" "+empType+" "+licenseNumber)
         let httpreq = new XMLHttpRequest();
         httpreq.onreadystatechange = function(){
           console.log("onreadystatechange");
@@ -100,9 +97,15 @@ function register()
         empAddress=empAddress.replace(/\s+/g, '-');
         empAddress=empAddress.replace(/\/+/g, '~');
 
-        console.log(empAddress)
-        console.log(document.getElementById('male').value)
-        let Employee=[name,empAddress,NIC,Dob,gender,telNo,empType,licenseNumber];
+        if(document.getElementById('male').checked) {
+          Gender=document.getElementById('male').value;
+        }
+        else if(document.getElementById('female').checked){
+          Gender=document.getElementById('female').value
+        }
+
+        console.log(Gender)
+        let Employee=[name,empAddress,NIC,Dob,Gender,telNo,empType,licenseNumber];
         
         let url = "http://localhost/project/Admin/registerEmployee/"+Employee;
     

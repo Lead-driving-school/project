@@ -7,7 +7,7 @@
             <span class="link-name">Profile</span>
         </a>
         
-        <a class="<?php echo (getLink()=="http://localhost/project/Admin")?"list-item-active":"list-item";?>" href="<?php echo URL?>Admin/staff">
+        <a class="<?php echo (getLink()=="http://localhost/project/Admin/staff")?"list-item-active":"list-item";?>" href="<?php echo URL?>Admin/staff">
             <span class="link-icon">&#xf0c0</span>
             <span class="link-name">Staff</span>
         </a>

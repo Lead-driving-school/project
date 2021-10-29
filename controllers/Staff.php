@@ -65,4 +65,11 @@ class Staff extends Controller{
             return false;
         }
     }
+    public function forgotPassword(){
+        $this->view->render('forgotPassword');
+    }
+    public function forgotPasswordLogic($data){
+        $user = explode(",", $data);
+        echo $user[0].'EMP';
+    }
 }

@@ -34,11 +34,11 @@
                             Invalid username or password, please try again.
                         </div>
                         <div class="input-container">
-                            <input class="text-input" id="username" name="username" type="text" placeholder='&#xf007; NIC'>
-                            <input class="text-input" id="password" name="password" type="password" style="font-family: FontAwesome;" placeholder='&#xf023;  password'>
+                            <input class="text-input" id="username" name="username" type="text" placeholder='&#xf007; username'>
+                            <input class="text-input" id="password" name="password" type="password" placeholder='&#xf023;  password'>
                         </div>
                         <div class="buttons">
-                            <a class="forgot-password"  href="https://www.w3schools.com">
+                            <a class="forgot-password"  href="<?php echo URL?>AdminAuth/forgotPassword">
                                Forgot your password?
                             </a>
                             <button class="login-btn"   onclick="check_empty_field()">Log In</button>
