@@ -38,7 +38,7 @@
                             <input class="text-input" id="password" name="password" type="password" style="font-family: FontAwesome;" placeholder='&#xf023;  password'>
                         </div>
                         <div class="buttons">
-                            <a class="forgot-password"  href="https://www.w3schools.com">
+                            <a class="forgot-password"  href="<?php echo URL?>User/forgotPassword">
                                Forgot your password?
                             </a>
                             <button class="login-btn"   onclick="check_empty_field()">Log In</button>

@@ -16,11 +16,7 @@
                 <h1>Edit Employee</h1>
             </div>
             <div class="details-container">
-                <div class="row">
-                    <div class="column-1"><h4>ID</h4><h4>:</h4></div> 
-                    <div class="column-2">E-16204</div> 
-                    <button class="edit">Edit</button> 
-                </div>
+                
                 <div class="row">
                     <div class="column-1"><h4>Name</h4><h3>:</h3></div> 
                     <div class="column-2">Gihan Sandaruwan Weerasinghe</div> 

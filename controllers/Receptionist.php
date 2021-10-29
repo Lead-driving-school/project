@@ -51,5 +51,16 @@ class Receptionist extends Controller{
     }
     function studentList(){
         $this->view->render('receptionist/studentList');
-    }    
+    }
+    
+    function getStudentDetails(){
+        $result=$this->model->getStudentDetails();
+        echo json_encode($result);
+    }
+
+    function getEmployeeDetailsMore($id){
+        $result=$this->model->getEmployeeDetailsMore($id);
+        // echo "hi";
+        echo json_encode($result);
+    }
 }
