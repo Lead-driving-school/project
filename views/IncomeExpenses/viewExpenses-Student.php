@@ -32,8 +32,8 @@
             <div class="tabs">
                 <div class="Horizontal-tab">
                     <div class="tabContainer">
-                    <a href="<?php echo URL?>IncomeExpenses/studentExpenses"><button class="page-change-button" >Expenses of Students</button></a>
-                    <button class="page-change-button" >Other Expenses<hr></button>
+                    <button class="page-change-button" >Expenses of Students<hr></button>
+                    <a href="<?php echo URL?>IncomeExpenses/viewExpenses"><button class="page-change-button" >Other Expenses</button></a>
                     </div>
                     
                 </div>
@@ -44,17 +44,28 @@
                     <div class="cell">
                     <div class="headingDetails">
                         <div class="one">Expense ID</div>
-                        <div class="two">Expense</div>
-                        <div class="three">Accepted Manager</div>
-                        <div class="four">Date</div>
-                        <div class="five">Time</div>
-                        <div class="six">Amount</div>
+                        <div class="two">Student Name</div>
+                        <div class="three">Date</div>
+                        <div class="four">Time</div>
+                        <div class="five">Amount</div>
+                        <div class="six"></div>
                     </div>
                     </div>
                 </div>
             </div>
-            <div id = "tablerows" class="table" onload="loadTable()">
-                
+            <div id = "tablerows" class="table" >
+                <div class="row">
+                    <div class="cell">
+                        <div class="information"> 
+                            <div class="one">EX_1</div>
+                            <div class="two">N.R.Senevirathne</div>
+                            <div class="three">2021-10-22</div>
+                            <div class="four">10:30:49</div>
+                            <div class="five">2500.00</div>
+                            <div class="six"><button class="done-button">Done</button></div>
+                    </div>
+                </div>
+                </div>
             </div>
             <div class="button-container">
                 <button class="income-graph-button" id="incomeGraph" name="incomeGraph">Graphical view</button>
@@ -62,6 +73,6 @@
             </div>
         </div>
     </div>
-    <script src="<?php echo URL?>public/js/IncomeExpenses/viewExpenses.js"></script>
+    
 </body>
 </html>

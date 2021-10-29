@@ -39,10 +39,10 @@
             </div>
             <div class="bottom-part">
                 <div class="participation-count">
-                    <p>45</p><p>Participants</p>
+                    <p>1</p><p>Participants</p>
                 </div>
                 <div class="button-set">
-                    <button class="cancel" id="cancel" name="cancel">Cancel</button>
+                    <a href="<?php echo URL?>Manager/addSession"><button class="cancel" id="cancel" name="cancel">Back</button></a>
                     <button class="save" id="save" name="save">Save Changes</button>
                 </div>
             </div>

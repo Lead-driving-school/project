@@ -57,7 +57,7 @@ class User extends Controller{
         redirect('/');
     }
     public function isLoggedIn(){
-        if(isset($_SESSION['user_id'])){
+        if(isset($_SESSION['username'])){
             return true;
         } else {
             return false;

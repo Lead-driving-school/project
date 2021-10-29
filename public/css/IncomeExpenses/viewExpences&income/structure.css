@@ -47,4 +47,6 @@
 .tabs {
   display: flex;
   margin-left: 120px;
+  margin-bottom: 10px;
+  /* background-color: #0892d0; */
 }

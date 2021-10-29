@@ -58,11 +58,11 @@
                                     <textarea class="Discription-input" name="discription" id="discription" style="white-space: pre"></textarea>
                                 </div>
                                 <div class="amount-class">
-                                    <label for="Amount">Amount:</label>
+                                    <label for="Amount">Amount(LKR):</label>
                                     <input type="text" class="Amount-input" name="amount" id="amount"> 
                                 </div>
                                 <div class="confirm-class">
-                                    <label for="Confirm-amount">Confirm:<br>amount</label>
+                                    <label for="Confirm-amount">Confirm(LKR):<br>amount</label>
                                     <input type="text" class="Confirm-amount-input" name="confirm-amount" id="Confirm-amount">
                                 </div>
                                 <div id="password-mismatch"></div>

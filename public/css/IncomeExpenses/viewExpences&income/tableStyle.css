@@ -105,3 +105,15 @@
   visibility: visible;
   transition: 0.5s;
 }
+.done-button {
+  width: fit-content;
+  height: 28px;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 0px 20px;
+  box-shadow: 1px 1px 10px #b0b3b3;
+  color: white;
+  background-color: #0892d0;
+  border: none;
+  border-radius: 2px;
+}
