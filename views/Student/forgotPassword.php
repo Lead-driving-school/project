@@ -12,6 +12,33 @@
     <title>Document</title>
 </head>
 <body>
+<div class="otp-container" id="otp-container">
+    <div class="otp-mid">
+            <div class="title-container">
+                <h3>Forgot Password ? Enter your</h3>
+            </div>
+            <div class="err" id="err"> 
+                
+            </div>
+            <div class="field-container">
+               <div class="input-container">
+                    <label for="otp">OTP :</label>
+                    <input type="text" class="otp" id="otp" name="otp">
+               </div>
+                 
+            </div>
+            <div class="button-container">
+                <button class="cancel" onclick="otpCancel()">
+                    Cancel
+                </button>
+                <button class="confirm" id="submit" name="submit" onclick="compareOTP()">
+                   Confirm
+                </button>
+                
+            </div>
+    </div>
+
+</div>
 <div class="mid-box-container-1">
         <div>
         <div class="mid-box-container-2">
@@ -32,7 +59,7 @@
                 </div>  
             </div>
             <div class="button-container">
-                <a href="<?php echo URL?>Admin/staff">
+                <a href="<?php echo URL?>User/loginpage">
                 <button class="cancel">
                     Cancel
                 </button></a>

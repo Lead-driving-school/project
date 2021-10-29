@@ -31,6 +31,38 @@ class User_Model extends Model{
             return $result;
         }  
     }
+    public function forgotPassword($nic, $contact){
+        $result=$this->db->runQuery("SELECT NIC,contact FROM student WHERE NIC='$nic' AND contact='$contact'");
+        // echo $result[0]['NIC']."SDJKFNVJKDSNFVKJNDKJNVNJDVFKNJDKFVN";
+        $_SESSION['NIC']=$result[0]['NIC'];
+        if(!empty($result)){
+            return $result;
+        }
+        // echo "from forgot";
+        
+    }
+
+    public function otp(){
+        $_SESSION['otp']=rand(100000,999999);
+        echo $_SESSION['otp'].",".$_SESSION['NIC']; 
+
+        // echo "from otp";
+    }
+
+    public function compareOTP($otp){
+        if($otp==$_SESSION['otp']){
+            echo 'success';
+        }
+
+        // echo "from cm otp";
+    }
+    public function passwordReset($password){
+        $nic=$_SESSION['NIC'];
+        $result=$this->db->runQuery("UPDATE student_private INNER JOIN student on student.student_id = student_private.student_id SET student_private.password ='$password' WHERE student.NIC = '$nic'");
+        unset($_SESSION['otp']);
+        return "success";
+        // echo "from otp";
+    }
 
     
 }
