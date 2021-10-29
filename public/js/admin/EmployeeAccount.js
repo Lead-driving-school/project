@@ -6,7 +6,7 @@ httpreq.onreadystatechange = function(){
     
     if( httpreq.readyState === 4 && httpreq.status === 200){
 
-        console.log(httpreq.responseText);
+        // console.log(httpreq.responseText);
         const employee = JSON.parse(httpreq.responseText);
         for(var i=0;i<employee.length;i++){
             employee[i].name = employee[i].name.replace(/-/g, " ");

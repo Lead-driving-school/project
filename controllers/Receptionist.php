@@ -103,6 +103,7 @@ class Receptionist extends Controller{
         }
     }
     function studentList(){
+<<<<<<< HEAD
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='Receptionist'){
                 $this->view->render('receptionist/studentList');
@@ -114,4 +115,19 @@ class Receptionist extends Controller{
             $this->view->render('error');
         }
     }    
+=======
+        $this->view->render('receptionist/studentList');
+    }
+    
+    function getStudentDetails(){
+        $result=$this->model->getStudentDetails();
+        echo json_encode($result);
+    }
+
+    function getEmployeeDetailsMore($id){
+        $result=$this->model->getEmployeeDetailsMore($id);
+        // echo "hi";
+        echo json_encode($result);
+    }
+>>>>>>> 76105526b8905cad1a0b7c784f7fcd09d2485ee9
 }

@@ -30,5 +30,31 @@ class Staff_Model extends Model{
             return $result;
         }  
     }
+    public function forgotPassword($nic, $contact){
+        $result=$this->db->runQuery("SELECT nic,contact_no FROM employee WHERE nic='$nic' AND contact_no='$contact'");
+        // echo $result[0]['nic']."SDJKFNVJKDSNFVKJNDKJNVNJDVFKNJDKFVN";
+        $_SESSION['Nic']=$result[0]['nic'];
+        if(!empty($result)){
+            return $result;
+        }
+        
+    }
+
+    public function otp(){
+        $_SESSION['otp']=rand(100000,999999);
+        echo $_SESSION['otp'].",".$_SESSION['Nic']; 
+    }
+
+    public function compareOTP($otp){
+        if($otp==$_SESSION['otp']){
+            echo 'success';
+        }
+    }
+    public function passwordReset($password){
+        $nic=$_SESSION['Nic'];
+        $result=$this->db->runQuery("UPDATE employee_private INNER JOIN employee on employee.employee_id = employee_private.employee_id SET employee_private.password ='$password' WHERE employee.nic = '$nic'");
+        unset($_SESSION['otp']);
+        return "success";
+    }
     
 }
