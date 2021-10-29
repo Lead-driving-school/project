@@ -11,7 +11,7 @@
             <span class="link-icon">&#xf0c0</span>
             <span class="link-name">Staff</span>
         </a>
-        <a class="<?php echo (getLink()=="http://localhost/project/Admin/packages")?"list-item-active":"list-item";?>" href="<?php echo URL?>Admin/packages">
+        <a class="<?php echo (getLink()=="http://localhost/project/Admin/packages")||(getLink()=="http://localhost/project/Admin/initExpences")?"list-item-active":"list-item";?>" href="<?php echo URL?>Admin/packages">
             <span class="link-icon">&#xf0d6</span>
             <span class="link-name">Packages & prices</span>
         </a>
@@ -30,7 +30,7 @@
             <span class="link-name">Reports</span>
         </a>
 
-        <a class="<?php echo (getLink()=="http://localhost/project/Admin/viewComlain")?"list-item-active":"list-item";?>" href="<?php echo URL?>Admin/viewComlain">
+        <a class="<?php echo (getLink()=="http://localhost/project/Admin/viewComlain")||(getLink()=="http://localhost/project/Admin/viewReview")?"list-item-active":"list-item";?>" href="<?php echo URL?>Admin/viewComlain">
             <span class="link-icon">&#xf0e6</span>
             <span class="link-name">Complains & Reviews</span>
         </a>
