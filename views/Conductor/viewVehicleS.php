@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/addConductor&Vehicle&Student/addConductor&Vehicle&Student.css">
-    <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/addConductor&Vehicle&Student/tableStyle.css">
+    <link rel="stylesheet" href="<?php echo URL?>public/css/Conductor/viewConductor&Vehicle&Student/viewConductor&Vehicle&Student.css">
+    <link rel="stylesheet" href="<?php echo URL?>public/css/Conductor/viewConductor&Vehicle&Student/tableStyle.css">
     <title>add vehicle</title>
 </head>
 <body>
     <div class="main-content">
         <div class="addInstructor-box">
             <div class="topic">
-                <h1>Add Vehicle</h1>
+                <h1>Vehicles</h1>
             </div>
             <div class="heading-row">
                     <div class="heading-cell">
@@ -34,7 +34,6 @@
                             <div class="four">Motor Car</div>
                         </div>
                         <div class="addButton">
-                            <button id="Add">Add</button>
                         </div>
                     </div>
                 </div>
@@ -47,18 +46,17 @@
                             <div class="four">Dual purpose</div>
                         </div>
                         <div class="addButton">
-                            <button id="Add">Add</button>
+                            
                         </div>
                     </div>
                 </div>
             </div>
             <div class="bottom-part">
-                <div class="participation-count">
-                    <p>45</p><p>Vehicles</p>
+            <div class="button-set">
+                    <a href="<?php echo URL?>Instructor/viewSession"><button class="cancel" id="cancel" name="cancel">Back</button></a>
                 </div>
-                <div class="button-set">
-                    <a href="<?php echo URL?>Manager/addExam"><button class="cancel" id="cancel" name="cancel">Back</button></a>
-                    <button class="save" id="save" name="save">Save Changes</button>
+                <div class="participation-count">
+                    <p>2</p><p>Vehicles</p>
                 </div>
             </div>
         </div>

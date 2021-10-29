@@ -6,24 +6,68 @@ class Receptionist extends Controller{
         parent:: __construct();
     }
     function index(){
-        $this->view->render('receptionist/profile');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Receptionist'){
+                $this->view->render('receptionist/profile');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
     function payments(){
-        $this->view->render('receptionist/payments');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Receptionist'){
+                $this->view->render('receptionist/payments');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
     function addResult(){
-        $this->view->render('receptionist/addResult');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Receptionist'){
+                $this->view->render('receptionist/addResult');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
     function eventCalendar(){
-        $this->view->render('receptionist/eventCalendar');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Receptionist'){
+                $this->view->render('receptionist/eventCalendar');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
-    function profile(){
-        $this->view->render('receptionist/profile');
-    }
+    
     function registration(){
-        $this->view->render('receptionist/registration');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Receptionist'){
+                $this->view->render('receptionist/registration');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
     function vehicleClassSelection($data){
+        
         $values = explode(",", $data);
 
         $result=$this->model->getVehicleClasses($values[0],$values[1],$values[2],$values[3]);
@@ -39,7 +83,7 @@ class Receptionist extends Controller{
         // echo $packageId;
         $result=$this->model->addStudent($values[0],$values[1],$values[2],$values[3],$values[4],$values[5],$values[6],$values[7],$values[8],$values[9],$values[10],$values[11],$values[12],$values[13],$values[14]);
         // echo json_encode($result);
-        $receptionistId=2;
+        $receptionistId=$_SESSION['employee_id'];
         $result=$this->model->addInitExpenses($values[0],$vehicleCLasses,$receptionistId);
         $result=$this->model->assignPackages($values[0],$packageId,$receptionistId);
         $result=$this->model->assginVehicleClasses($values[0],$classArray);
@@ -47,9 +91,27 @@ class Receptionist extends Controller{
     }
 
     function sessions(){
-        $this->view->render('receptionist/sessions');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Receptionist'){
+                $this->view->render('receptionist/sessions');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
     function studentList(){
-        $this->view->render('receptionist/studentList');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Receptionist'){
+                $this->view->render('receptionist/studentList');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }    
 }
