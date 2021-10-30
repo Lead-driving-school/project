@@ -9,7 +9,7 @@
             <span class="link-name">Profile</span>
         </a>
         
-        <a class="list-item" href="<?php echo URL?>Admin/staff">
+        <a class="list-item" href="#">
             <span class="link-icon">&#xf073</span>
             <span class="link-name">Event Calendar</span>
         </a>
@@ -27,23 +27,23 @@
             <span class="link-name">Sessions</span>
         </a>
         
-        <a class="list-item" href="<?php echo URL?>student/makepayments">
+        <!-- <a class="list-item" href="<?php echo URL?>student/makepayments">
             <span class="link-icon">&#xf09d</span>
             <span class="link-name">Pay Online</span>
-        </a>
+        </a> -->
 
         <a class="list-item" href="<?php echo URL?>student/complaints">
             <span class="link-icon">&#xf010</span>
             <span class="link-name">Reviews & Complaints</span>
         </a>
 
-        <a class="list-item" href="<?php echo URL?>IncomeExpenses">
+        <a class="list-item" href="#">
             <span class="link-icon">&#xf010</span>
             <span class="link-name">About Us</span>
         </a>
 
-        <a class="list-item" href="<?php echo URL?>IncomeExpenses">
-            <span class="link-icon">&#xf011</span>
+        <a class="list-item" href="#">
+            <span class="link-icon">&#xf08b</span>
             <span class="link-name">Log Out</span>
         </a>
     </div>
