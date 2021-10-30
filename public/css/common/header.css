@@ -18,8 +18,8 @@
 
 .header-logo{
   min-width: 100px;
-  height: 60px;
-  background-color: white;
+  height: 80px;
+  /* background-color: rgb(104, 16, 16); */
 }
 
 .header-com-name{
@@ -35,7 +35,12 @@
   background-color: white;
 }
 
-img{
+.header-profile img{
   width: 60px;
   height: 60px;
+}
+
+.header-logo img{
+  height: 60px;
+  margin-top: 10px;
 }

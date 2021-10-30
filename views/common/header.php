@@ -2,7 +2,7 @@
 <div class="abc-header">
         <div class="header-container">
             <div class="header-logo">
-                
+            <img src="<?php echo URL?>public/images/logo.png" alt="">
             </div>
             <div class="header-com-name">
                 <h1></h1>
