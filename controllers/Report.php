@@ -5,7 +5,8 @@ class Report extends Controller{
     function __construct(){
         parent:: __construct();
     }
-
+    function index(){
+    }
     function attendance(){
         $this->view->render('Report/attendence_sessions');
     }
