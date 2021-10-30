@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="<?php echo URL?>public/css/student/editprofile.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edit Profile</title>
 </head>
 <body>
     <div class="container-1">
@@ -19,10 +19,10 @@
 
                 <div class="row">
                     <div class="cell-1">
-                        <h4>Profile</h4>
+                        <h4>Profile </h4>
                         <h4>:</h4> </div>
                     <div class="cell-2">
-                            <img src="profpic.png" alt="pp">
+                            <img src="<?php echo URL?>public/images/profpic.png" alt="pp">
                     </div>
                     <div class="cell-3">
                         <button class="Edit">Edit</button>

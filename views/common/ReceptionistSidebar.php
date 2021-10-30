@@ -18,13 +18,7 @@
             Event Calendar
             </div>
         </a>
-        <a href="<?php echo URL?>Receptionist/payments" class="<?php echo (getLink()=="http://localhost/project/Receptionist/payments")?"list-item-active":"list-item";?>" >
-            <div class="link-icon">
-            &#xf2bd
-            </div>
-            <div class="link-name">
-            Payments
-            </div>
+
         </a>
         <a href="<?php echo URL?>Receptionist/addResult" class="<?php echo (getLink()=="http://localhost/project/Receptionist/addResult")?"list-item-active":"list-item";?>">
             <div class="link-icon">
@@ -34,15 +28,8 @@
             Add results
             </div>
         </a>
-        <a href="#" class="list-item">
-            <div class="link-icon">
-            &#xf2bd
-            </div>
-            <div class="link-name">
-            registration
-            </div>
-        </a>
-        <a href="<?php echo URL?>IncomeExpenses" class="<?php echo (getLink()=="http://localhost/project/IncomeExpenses")?"list-item-active":"list-item";?>">
+
+        <a href="" class="<?php echo (getLink()=="http://localhost/project/IncomeExpenses")?"list-item-active":"list-item";?>">
             <div class="link-icon">
             &#xf2bd
             </div>
@@ -50,7 +37,7 @@
             Reports
             </div>
         </a>
-        <a href="#" class="list-item">
+        <a href="<?php echo URL?>Receptionist/sessions" class="<?php echo (getLink()=="http://localhost/project/Receptionist/sessions")?"list-item-active":"list-item";?>">
             <div class="link-icon">
             &#xf2bd
             </div>

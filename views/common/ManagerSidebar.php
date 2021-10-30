@@ -34,7 +34,7 @@
             List Of Students
             </div>
         </a>
-        <a href="<?php echo URL?>IncomeExpenses" class="<?php echo (getLink()=="http://localhost/project/IncomeExpenses")?"list-item-active":"list-item";?>">
+        <a href="<?php echo URL?>Manager/incomeExpenses" class="<?php echo (getLink()=="http://localhost/project/Manager/incomeExpenses")?"list-item-active":"list-item";?>">
             <div class="link-icon">
             &#xf2bd
             </div>
