@@ -42,7 +42,6 @@
                                Forgot your password?
                             </a>
                             <button class="login-btn"   onclick="check_empty_field()">Log In</button>
-
                         </div>
                             </div>
                     
