@@ -1,21 +1,9 @@
 .header {
-  height: 60px;
-  background-color: white;
-  box-shadow: 1px 1px 10px #b0b3b3;
-  width: 100vw;
+  height: 80px;
+  width: 100%;
   margin: 0;
   padding: 0;
+  z-index: 3000;
+  box-shadow: 1px 1px 10px #b0b3b3;
 }
-img.openButton {
-  height: 50px;
-  width: 60px;
-  padding-left: 3rem;
-  padding-top: 1.5rem;
-}
-img.logo {
-  float: right;
-  height: 40px;
-  width: 130px;
-  margin-top: 1rem;
-  padding-right: 3rem;
-}
+
