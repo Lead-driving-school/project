@@ -69,7 +69,7 @@ function nextPage(){
         flag=false;
     }
 
-    if(flag==true){
+    if(true){
         document.getElementById("reg-form").classList.replace("reg-form","reg-form-hidden");
         document.getElementById("reg2-f2").classList.replace("reg2-f2","reg2-f2-visible");
         packageLoad()
@@ -104,6 +104,7 @@ function changing(){
     }else{
         document.getElementById("number-text").innerHTML="License No"
         document.getElementById("ending-date").classList.replace("sub-row-f2-hidden","sub-row-f2")
+        document.getElementById("packageContainer").classList.replace("crosul-title-f","crosul-title-f-hidden")
     }
 }
 

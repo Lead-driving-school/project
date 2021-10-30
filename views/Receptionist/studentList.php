@@ -143,7 +143,9 @@
                         </div>
                     </div>
                 </div>
-
+            <div class="registerStudent-button-container">
+                <a href="<?php echo URL?>Receptionist/registration"><button class="registerStudent-button">Register Student</button></a>
+            </div>
             </div>
         </div>
     </div>
