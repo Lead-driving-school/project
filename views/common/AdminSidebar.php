@@ -16,7 +16,7 @@
             <span class="link-name">Packages & prices</span>
         </a>
         
-        <a class="<?php echo (getLink()=="http://localhost/project/Admin/employeeAccounts")?"list-item-active":"list-item";?>" href="<?php echo URL?>Admin/employeeAccounts">
+        <a class="<?php echo (getLink()=="http://localhost/project/Admin/employeeAccounts")||(getLink()=="http://localhost/project/Admin/studentAccounts")?"list-item-active":"list-item";?>" href="<?php echo URL?>Admin/employeeAccounts">
             <span class="link-icon">&#xf115</span>
             <span class="link-name">Accounts</span>
         </a>
