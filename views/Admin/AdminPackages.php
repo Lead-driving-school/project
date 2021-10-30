@@ -111,7 +111,7 @@
                         <div class="row">
                             <div class="column-1">Package 1</div>
                             <div class="col-3">Rs 3500.00</div>
-                            <div class="col-4"><a href="<?php echo URL?>Admin/eitPackages"><button class="edit">Edit</button></a></div>
+                            <div class="col-4"><a href="<?php echo URL?>Admin/editPackages"><button class="edit">Edit</button></a></div>
                         </div>
 
                         <div class="row">

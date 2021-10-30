@@ -36,7 +36,13 @@
                     <input type="search">
                 </div>
                 <div class="table-heading-container">
-                     
+                    <div class="heading-row">
+                        <div class="col-1">Employee ID</div>
+                        <div class="col-2">Name</div>
+                        <div class="col-3">Job Title</div>
+                        <div class="col-4">Contact</div>
+                        <div class="col-5"></div>
+                    </div> 
                 </div>
 
                 <div class="row-container" id="row-container">

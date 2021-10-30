@@ -28,6 +28,21 @@ class Admin extends Controller{
         
     }
 
+    
+
+    function AdminStudentDetails(){
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/AdminStudentDetails');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
+    }
+
+
     function addEmployee(){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='Admin'){
