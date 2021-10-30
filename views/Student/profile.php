@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo URL?>public/css/student/profile.css">
-    <title>Recipient Profile</title>
+    <title>StudentS Profile</title>
 </head>
 <body>
     <div class="container">
@@ -22,10 +22,10 @@
             <div class="view">
                 <div class="left">
                     <div class="big-picture">
-                        <img src="<?php echo URL?>public/image/profpic.png" alt="big-pic" width="250" height="250">
+                        <img src="<?php echo URL?>public/images/profpic.png" alt="big-pic" width="250" height="250">
                     </div>
                     <button class="upload-pic">
-                        <img src="<?php echo URL?>public/image/camera.png" alt="cam" width="35" height="35">
+                        <img src="<?php echo URL?>public/images/camera.png" alt="cam" width="35" height="35">
                     </button>
                 </div>
                 <div class="right">

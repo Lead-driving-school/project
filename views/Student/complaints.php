@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href=" <?php echo URL?>public/css/student/complaints.css">
     <script src="<?php echo URL?>public/js/student/complaints&review.js"></script>
-    <title>Document</title>
+    <title>Complaints</title>
 </head>
 <body>
     <div class="container">
@@ -31,7 +31,7 @@
                             </div>
 
                             <div class="title-reviews">
-                                <h4>Reviews</h4>
+                               <h4>Reviews</h4>
                             </div>
 
                         </div>

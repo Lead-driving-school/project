@@ -1,28 +1,35 @@
 *{
-    font-family: Arial, Helvetica, FontAwesome, sans-serif;
+    font-family: "Roboto", sans-serif;
     box-sizing: border-box;
 }
 body{
     margin: 0;
     padding: 0;
-    
-    /* background-color: #f3f7f7; */
 }
 
+.container-1{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f2f2f2;
+ 
+}
 .class-header{
     width: 100%;
     height: 80px;
     background-color: rgb(42, 165, 89);
 
 }
-
-.container-1{
-    width: 100vw;
+.main{
+    display: flex;
+}
+.container-2{
+    width: calc(100% - 250px);
     height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
     /* background-color: blue; */
 }
 
@@ -50,12 +57,17 @@ body{
 }
 
 .title{
-    width: 100%;
-    height: 10%;
+    width: 92%;
+    height: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: rgb(224, 192, 238); */
+    font-size: 20px;
+    font-weight: 600;
+    color: seashell;
+    border-radius: 5px;
+    box-shadow:  1px 1px 10px #b0b3b3;
+    background-color: #262b2f;
 }
 
 .details{
@@ -92,9 +104,9 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 1px 1px 10px;
-    border-radius: 6px;
-    /* background-color: green; */
+    box-shadow: 1px 1px 10px #b0b3b3;
+    border-radius: 5px;
+    background-color:white;
 }
 
 
@@ -106,8 +118,8 @@ body{
     display: flex;
     justify-content:space-between;
     align-items: center;
-    box-shadow: 1px 1px 5px;
-    border-radius: 6px;
+    box-shadow: 1px 1px 5px #b0b3b3;
+    border-radius: 5px;
     /* background-color: rgb(84, 152, 219); */
 }
 
@@ -129,3 +141,37 @@ body{
     /* background-color: rgb(102, 42, 89); */
 }
 
+.cel-1{
+    height: 45px;
+    width:28% ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: chocolate; */
+
+}
+
+.cel-2{
+    height: 45px; ;
+    width: 72%;
+    display: flex;
+    align-items: center;
+    /* background-color: rgb(102, 42, 89); */
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0892d0;
+  }
