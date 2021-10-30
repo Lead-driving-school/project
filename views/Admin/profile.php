@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo URL?>public/css/common/profileRecipient.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <title>Manager Profile</title>
+    <title>Lead driving school</title>
 </head>
 <body>
     <div class="container">

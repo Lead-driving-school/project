@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/Receptionist/registration.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Receptionist/registration2.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Receptionist/reg.css">
-    <title>Registration Form</title>
+    <title>Lead driving school</title>
 </head>
 <body>
     <div class="container">
