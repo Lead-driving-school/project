@@ -18,7 +18,7 @@
     
     
 
-    <title>Event Calendar</title>
+    <title>Lead driving school</title>
 </head>
 <body>
     <div class="header">

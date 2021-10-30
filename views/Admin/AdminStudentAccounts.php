@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/buttons.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/common/sidebar.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/common/header.css">
-    <title>Document</title>
+    <title>Lead driving school</title>
 </head>
 <body>
 

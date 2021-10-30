@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Conductor/viewConductor&Vehicle&Student/viewConductor&Vehicle&Student.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Conductor/viewConductor&Vehicle&Student/tableStyle.css">
-    <title>add Student</title>
+    <title>Lead driving school</title>
+
 </head>
 <body>
     <div class="main-content">

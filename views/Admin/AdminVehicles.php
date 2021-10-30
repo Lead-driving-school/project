@@ -19,7 +19,7 @@
     <script src="<?php echo URL?>public/js/common/sidebar.js"></script>
     <script src="<?php echo URL?>public/js/admin/popup.js"></script>
     <script src="popup.js"></script>
-    <title>Document</title>
+    <title>Lead driving school</title>
 </head>
 <body>
     <div id="pop-div" class="popup-container">

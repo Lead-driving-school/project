@@ -15,7 +15,7 @@
     <script  src="<?php echo URL?>public/js/common/header.js"></script>
     <script src="<?php echo URL?>public/js/common/sidebar.js"></script>
     <script src="<?php echo URL?>public/js/Admin/EmployeeAccount.js"></script>
-    <title>Document</title>
+    <title>Lead driving school</title>
 </head>
 <body>
     <div class="box-1">

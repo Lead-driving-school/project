@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/common/header.css">
     <script  src="<?php echo URL?>public/js/common/header.js"></script>
    
-    <title>Document</title>
+    <title>Lead driving school</title>
 </head>
 <body>
     <div class="box-1">

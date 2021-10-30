@@ -8,7 +8,8 @@
     <script src='https://cdn.plot.ly/plotly-2.4.2.min.js'></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script> -->
     <link rel="stylesheet" href="<?php echo URL?>public/css/Report/exam_participation.css">
-    <title>Income charts</title>
+    <title>Lead driving school</title>
+
 </head>
 <body>
     <div class="body-container">
