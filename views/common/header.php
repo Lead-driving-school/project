@@ -4,7 +4,7 @@
                 
             </div>
             <div class="com-name">
-                <h1>LEAD DRIVING SCHOOL</h1>
+                <h1></h1>
             </div>
             
                <?php echo "<div class=".'abc'.">Gihan
