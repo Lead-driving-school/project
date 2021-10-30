@@ -21,12 +21,12 @@
                     <div class="income-row">
                         <div class="name-field">Income</div>
                         <div class="value-field">15,000LKR</div>
-                        <div class="view-more"><button id="viewIncome" name="viewIncome">View more</button></div>
+                        <div class="view-more"><a href="<?php echo URL?>IncomeExpenses/viewIncome/"><button id="viewIncome" name="viewIncome">View more</button></div></a>
                     </div>
                     <div class="expense-row">
                         <div class="name-field">Expenses</div>
                         <div class="value-field">10,000LKR</div>
-                        <div class="view-more"><button id="viewExpenses" name="viewExpenses">View more</button></div>
+                        <div class="view-more"><a href="<?php echo URL?>IncomeExpenses/studentExpenses"><button id="viewExpenses" name="viewExpenses">View more</button></div></a>
                     </div>
                     <div class="profit-row">
                         <div class="name-field">Profit</div>

@@ -126,11 +126,16 @@ h3 {
 .back-button {
   width: 140px;
   height: 40px;
-  background-color: #434645;
+  background-color: #262b2f;
   color: white;
-  border: none;
+  border: 2px solid #262b2f;
   border-radius: 3px;
   box-shadow: 1px 1px 10px #b0b3b3;
+}
+.back-button:hover {
+  background-color: white;
+  color: #262b2f;
+  border: 2px solid #262b2f;
 }
 ::-webkit-scrollbar {
   width: 10px;

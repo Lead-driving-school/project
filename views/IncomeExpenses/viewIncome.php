@@ -16,14 +16,9 @@
     <title>Income</title>
 </head>
 <body>
-    <div class="header">
-
-        <img src="../image/IMG-20210823-WA0007.jpg" class="logo"alt="">
-        <!--this is the side bar content--> 
-    </div>
     
     <!--body content of the page starts here-->
-    <div class="main-container">
+    <div class="main-box">
         
         <div class="container">
             <!--Header-->
@@ -70,8 +65,8 @@
                 </div>
             </div>
             <div class="button-container">
-                <button class="income-graph-button" id="incomeGraph" name="incomeGraph">Graphical view</button>
-                <button class="back-button" id="back" name="back">Back</button>
+                <a href="<?php echo URL?>IncomeExpenses/incomeGraphic"><button class="income-graph-button" id="incomeGraph" name="incomeGraph">Graphical view</button></a>
+                <a href="<?php echo URL?>Manager/incomeExpenses"><button class="back-button" id="back" name="back">Back</button></a>
             </div>
         </div>
     </div>
