@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href= "<?php echo URL?>public/css/student/MarkGoingNotGoing.css">
-    <title>Mark Session Going or Not Going</title>
+    <title>Session DetailsS</title>
 </head>
 <body>
     <div class="container">
@@ -29,8 +29,9 @@
                 </div>
                 <div class="summary">
                     <div class="summary-title">
+                    <div class="today">Today <br> <hr></div>
                         <div class="all">All</div>
-                        <div class="today">Today <br> <hr></div>
+                        
                     </div>
                 </div>
                 <div class="table-container">
@@ -49,7 +50,7 @@
                                 <div class="col">183</div>
                                 <div class="col">Traffic lights</div>
                                 <div class="col">2019/10/20</div>
-                                <div class="col">10.30</div>
+                                <div class="col">10.00</div>
                                 <div class="col">
                                     <button class="going">Going</button>
                                 </div>
@@ -58,10 +59,10 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col">183</div>
+                                <div class="col">186</div>
                                 <div class="col">Traffic lights</div>
                                 <div class="col">2019/10/20</div>
-                                <div class="col">10.30</div>
+                                <div class="col">01.30</div>
                                 <div class="col">
                                     <button class="going">Going</button>
                                 </div>
@@ -70,70 +71,10 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col">183</div>
-                                <div class="col">Traffic lights</div>
+                                <div class="col">192</div>
+                                <div class="col">Traffic Law</div>
                                 <div class="col">2019/10/20</div>
-                                <div class="col">10.30</div>
-                                <div class="col">
-                                    <button class="going">Going</button>
-                                </div>
-                                <div class="col">
-                                    <button class="notgoing">Not Going</button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">183</div>
-                                <div class="col">Traffic lights</div>
-                                <div class="col">2019/10/20</div>
-                                <div class="col">10.30</div>
-                                <div class="col">
-                                    <button class="going">Going</button>
-                                </div>
-                                <div class="col">
-                                    <button class="notgoing">Not Going</button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">183</div>
-                                <div class="col">Traffic lights</div>
-                                <div class="col">2019/10/20</div>
-                                <div class="col">10.30</div>
-                                <div class="col">
-                                    <button class="going">Going</button>
-                                </div>
-                                <div class="col">
-                                    <button class="notgoing">Not Going</button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">183</div>
-                                <div class="col">Traffic lights</div>
-                                <div class="col">2019/10/20</div>
-                                <div class="col">10.30</div>
-                                <div class="col">
-                                    <button class="going">Going</button>
-                                </div>
-                                <div class="col">
-                                    <button class="notgoing">Not Going</button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">183</div>
-                                <div class="col">Traffic lights</div>
-                                <div class="col">2019/10/20</div>
-                                <div class="col">10.30</div>
-                                <div class="col">
-                                    <button class="going">Going</button>
-                                </div>
-                                <div class="col">
-                                    <button class="notgoing">Not Going</button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">183</div>
-                                <div class="col">Traffic lights</div>
-                                <div class="col">2019/10/20</div>
-                                <div class="col">10.30</div>
+                                <div class="col">04.00</div>
                                 <div class="col">
                                     <button class="going">Going</button>
                                 </div>
