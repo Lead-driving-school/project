@@ -47,10 +47,6 @@
                         <label for="time">Time:</label>
                         <input type="time" name="time" id="time">
                     </div>
-                    <div class="add-student-class">
-                        <label for="add-participant">Add Students:</label>
-                        <a href="<?php echo URL?>Manager/addStudentS"><button class="session-buttons" name="add-participants" id="add-participants">ADD STUDENTS</button></a>
-                    </div>
                 </div>
                 
                 <div class="button-set">

@@ -75,14 +75,10 @@
                     </div>
                 </div>
                 <div class="part-4-st">
-                    <a href="<?php echo URL?>Receptionist/studentList"><button class="close-button"  id="back">
+                    <a href="<?php echo URL?>Manager/studentList"><button class="close-button"  id="back">
                         <div class="plus-st"></div>
                         <div class="add-payment-st"><h3>Back</h3></div>
                     </button></a>
-                    <button class="butt-st" onclick="addPayment()" id="addPayment">
-                        <div class="plus-st">+</div>
-                        <div class="add-payment-st"><h3>Add Payments</h3></div>
-                    </button>
                 </div>
             </div>
         </div>

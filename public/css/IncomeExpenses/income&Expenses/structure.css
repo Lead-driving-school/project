@@ -24,16 +24,15 @@ h1 {
 }
 .income-expense-box {
   display: flex;
-  flex-direction: column;
-  background-color: white;
+  margin-top: 30px;
   justify-content: space-around;
   width: 80%;
   min-width: 600px;
   height: 85%;
   min-height: 400px;
-  font-size: 30px;
+  font-size: 25px;
   border-radius: 3px;
-  box-shadow: 1px 1px 10px #b0b3b3;
+  /* box-shadow: 1px 1px 10px #b0b3b3; */
 }
 .date-label {
   font-size: 16px;
@@ -41,20 +40,43 @@ h1 {
   width: 100%;
 }
 .income-row {
-  padding-left: 5%;
+  height: 300px;
+  width: fit-content;
+  background-color: white;
+  padding-left: 70px;
+  padding-right: 70px;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
+  box-shadow: 1px 1px 10px #b0b3b3;
 }
 .expense-row {
-  padding-left: 5%;
+  height: 300px;
+  width: fit-content;
+  background-color: white;
+  padding-left: 70px;
+  padding-right: 70px;
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 1px 1px 10px #b0b3b3;
 }
 .profit-row {
-  padding-left: 5%;
+  height: 300px;
+  width: fit-content;
+  padding-left: 70px;
+  background-color: white;
+  padding-right: 70px;
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 1px 1px 10px #b0b3b3;
 }
 .name-field {
-  width: 30%;
+  width: 100%;
+  display: flex;
+  font-weight: 600;
+  justify-content: center;
   /* background-color: rgb(187, 187, 187); */
 }
 .value-field {
@@ -62,17 +84,18 @@ h1 {
   /* background-color: darkcyan; */
 }
 .view-more {
-  width: 30%;
+  width: 100%;
   /* background-color: darkblue; */
 }
 .view-more button {
-  width: 50%;
+  width: fit-content;
   min-width: 100px;
   min-height: 40px;
   height: 100%;
   color: white;
   font-size: 18px;
-  border: none;
+  padding: 0px 20px;
+  border: 2px solid #0892d0;
   background-color: #0892d0;
   border-radius: 3px;
   font-weight: bold;

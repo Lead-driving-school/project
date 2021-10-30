@@ -293,4 +293,30 @@ class Manager extends Controller{
             $this->view->render('error');
         }
     }
+    function payments(){
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/payments');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+    }
+    function incomeExpenses(){
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/income&Expenses');
+            }else if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/income&Expenses');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+    }
 }
