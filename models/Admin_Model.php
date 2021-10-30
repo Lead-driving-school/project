@@ -87,9 +87,13 @@ class Admin_Model extends Model{
     }
 
     function getcomplaints(){
-        $result=$this->db->runQuery("SELECT complaints.submitted_date_time,complaints.description,complaints.suggestions, student.other_names from complaints INNER JOIN student on student.student_id=complaints.student_id");
+        $result=$this->db->runQuery("SELECT complaints.submitted_date_time,complaints.description,complaints.suggestions, student.init_name from complaints INNER JOIN student on student.student_id=complaints.student_id");
         return $result;
 
+    }
+    function getreviews(){
+        $result=$this->db->runQuery("SELECT reviews.submitted_date_time,reviews.idea,reviews.satisfaction,reviews.improvements, student.init_name from reviews INNER JOIN student on student.student_id=reviews.student_id");
+        return $result;
     }
 }
 

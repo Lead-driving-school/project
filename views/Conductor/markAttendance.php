@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/main/header.css">
-    <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/main/sidebar.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/main/structure.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Conductor/markAttendance/structure.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Conductor/markAttendance/tableStyle.css">
@@ -24,34 +23,39 @@
     
     <!--body content of the page starts here-->
     <div class="main-container">
-        <div class="sidebar" id="sidebar">
-            <div class="elements"><a href="#">Profile</a></div>
-            <div class="elements"><a href="#">Event Calendar</a></div>
-            <div class="elements"><a href="#">Attendance</a></div>
-            <div class="elements"><a href="#">Sessions</a></div>  
-            <div class="elements"><a href="#"></a></div>
-            <div class="elements"><a href="#"></a></div>
-            <div class="elements"><a href="#"></a></div>
-            <div class="elements"><a href="#">Log out</a></div>
-        </div>
+    <?php require_once APPROOT."/../views/common/InstructorSidebar.php"; ?>
         <div class="container">
             <!--Header-->
             <h1>Attendance</h1>
             <div class="date-viewer">
                 <p>16th Aug 2021</p>
             </div>
+            <div class="heading">
+                <div class="heading-row">
+                    <div class="cell">
+                    <div class="headingDetails">
+                        <div class="one">Profile Pic</div>
+                        <div class="three">ID</div>
+                        <div class="two">Name</div>
+                        
+                        <div class="four">Contact No</div>
+
+                    </div>
+                    </div>
+                </div>
+            </div>
             <div class="table">
                 <div class="row">
                     <div class="cell">
                         <div class="information">
                             <div class="one">Image</div>
-                            <div class="two">N.R.Senevirathne</div>
-                            <div class="three">ST1001</div>
+                            <div class="three">ST_1</div>
+                            <div class="two">J.J.Silva</div>
+                            <div class="four">0771324111</div>
                         </div>
                         <div class="Attendance-Button-set">
                             <button class="present" id="present">Present</button>
                             <button class="absent" id="absent">Absent</button>
-                            <button class="view" id="view">View</button>
                         </div>
                     </div>
                 </div>
@@ -59,13 +63,14 @@
                     <div class="cell">
                         <div class="information">
                             <div class="one">Image</div>
+                            <div class="three">ST_2</div>
                             <div class="two">N.R.Senevirathne</div>
-                            <div class="three">ST1001</div>
+                            <div class="four">0711524221</div>
                         </div>
                         <div class="Attendance-Button-set">
                             <button class="present" id="present">Present</button>
                             <button class="absent" id="absent">Absent</button>
-                            <button class="view" id="view">View</button>
+                            
                         </div>
                     </div>
                 </div>

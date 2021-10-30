@@ -2,16 +2,16 @@
 <div class="sidebar">
 
     <div class="nav-list">
-        <a class="<?php echo (getLink()=="http://localhost/project/Admin/a")?"list-item-active":"list-item";?>" href="#">
+        <a class="<?php echo (getLink()=="http://localhost/project/Admin")?"list-item-active":"list-item";?>" href="#">
             <span class="link-icon">&#xf007</span>
             <span class="link-name">Profile</span>
         </a>
         
-        <a class="<?php echo (getLink()=="http://localhost/project/Admin")?"list-item-active":"list-item";?>" href="<?php echo URL?>Admin/staff">
+        <a class="<?php echo (getLink()=="http://localhost/project/Admin/staff")?"list-item-active":"list-item";?>" href="<?php echo URL?>Admin/staff">
             <span class="link-icon">&#xf0c0</span>
             <span class="link-name">Staff</span>
         </a>
-        <a class="<?php echo (getLink()=="http://localhost/project/Admin/packages")?"list-item-active":"list-item";?>" href="<?php echo URL?>Admin/packages">
+        <a class="<?php echo (getLink()=="http://localhost/project/Admin/packages")||(getLink()=="http://localhost/project/Admin/initExpences")?"list-item-active":"list-item";?>" href="<?php echo URL?>Admin/packages">
             <span class="link-icon">&#xf0d6</span>
             <span class="link-name">Packages & prices</span>
         </a>
@@ -30,7 +30,7 @@
             <span class="link-name">Reports</span>
         </a>
 
-        <a class="<?php echo (getLink()=="http://localhost/project/Admin/viewComlain")?"list-item-active":"list-item";?>" href="<?php echo URL?>Admin/viewComlain">
+        <a class="<?php echo (getLink()=="http://localhost/project/Admin/viewComlain")||(getLink()=="http://localhost/project/Admin/viewReview")?"list-item-active":"list-item";?>" href="<?php echo URL?>Admin/viewComlain">
             <span class="link-icon">&#xf0e6</span>
             <span class="link-name">Complains & Reviews</span>
         </a>
@@ -40,7 +40,7 @@
             <span class="link-name">Income & Expences</span>
         </a>
 
-        <a class="<?php echo (getLink()=="http://localhost/project/Admin/a")?"list-item-active":"list-item";?>" href="<?php echo URL?>Admin/IncomeExpenses">
+        <a class="<?php echo (getLink()=="http://localhost/project/AdminAuth/logout")?"list-item-active":"list-item";?>" href="<?php echo URL?>AdminAuth/logout">
             <span class="link-icon">&#xf08b</span>
             <span class="link-name">Logout</span>
         </a>

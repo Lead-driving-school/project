@@ -1,29 +1,58 @@
 <?php
+// session_start();
+
 class Manager extends Controller{
     function __construct(){
         parent:: __construct();
     }
     function index(){
-        $this->view->render('Manager/profile');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/profile');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
     function addExam(){
-        $this->view->render('Manager/addExam');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/addExam');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
     function addExpenses(){
-        $this->view->render('Manager/addExpenses');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/addExpenses');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
 
     function addExpensesLogic($data){
         $values = explode(",", $data);
 
-        $managerId=1;
+        $managerId=$_SESSION['employee_id'];
         $result=$this->model->setExpenses($values[0],$values[1],doubleval($values[2]),$managerId);
         echo "inserted";
     }
     
     function validate($password){
         // echo $password;
-        $managerId=1;
+        $managerId=$_SESSION['employee_id'];
         $result=$this->model->checkPassword($managerId,$password);
         if($result==true){
             echo "success";
@@ -31,66 +60,237 @@ class Manager extends Controller{
     }
 
     function addInstructor(){
-        $this->view->render('Manager/addInstructor');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/addInstructor');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
-
     function addInstructorS(){
-        $this->view->render('Manager/addInstructorS');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/addInstructorS');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
 
     function addSession(){
-        $this->view->render('Manager/addSession');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/addSession');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
     
     function addStudent(){
-        $this->view->render('Manager/addStudent');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/addStudent');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
     function addStudentS(){
-        $this->view->render('Manager/addStudentS');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/addStudentS');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
     function addVehicle(){
-        $this->view->render('Manager/addVehicle');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/addVehicle');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
 
     function addVehicleS(){
-        $this->view->render('Manager/addVehicleS');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/addVehicleS');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
     function changeInstructor(){
-        $this->view->render('Manager/changeInstructor');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/changeInstructor');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+
+        
     }
     function changeStudent(){
-        $this->view->render('Manager/changeStudent');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/changeStudent');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
     function changeVehicle(){
-        $this->view->render('Manager/changeVehicle');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/changeVehicle');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
 
     function changeInstructorS(){
-        $this->view->render('Manager/changeInstructorS');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/changeInstructorS');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
     function changeStudentS(){
-        $this->view->render('Manager/changeStudentS');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/changeStudentS');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
     function changeVehicleS(){
-        $this->view->render('Manager/changeVehicleS');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/changeVehicleS');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
+    }
+    function editExam(){
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/editExam');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
 
-    function editExam(){
-        $this->view->render('Manager/editExam');
-    }
     function editSession(){
-        $this->view->render('Manager/editSession');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/editSession');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
     function studentList(){
-        $this->view->render('Manager/studentList');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/studentList');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
     function eventCalendar(){
-        $this->view->render('Manager/eventCalendar');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/eventCalendar');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
     function request(){
-        $this->view->render('Manager/request');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/request');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
 }

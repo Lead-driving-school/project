@@ -12,6 +12,9 @@ class IncomeExpenses extends Controller{
     function viewExpenses(){
         $this->view->render('IncomeExpenses/viewExpences');
     }
+    function studentExpenses(){
+        $this->view->render('IncomeExpenses/viewExpenses-Student');
+    }
 
 
     function otherExpensesview(){

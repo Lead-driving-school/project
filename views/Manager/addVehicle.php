@@ -57,7 +57,7 @@
                     <p>45</p><p>Vehicles</p>
                 </div>
                 <div class="button-set">
-                    <button class="cancel" id="cancel" name="cancel">Cancel</button>
+                    <a href="<?php echo URL?>Manager/addExam"><button class="cancel" id="cancel" name="cancel">Back</button></a>
                     <button class="save" id="save" name="save">Save Changes</button>
                 </div>
             </div>

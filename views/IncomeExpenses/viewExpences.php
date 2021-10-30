@@ -32,9 +32,8 @@
             <div class="tabs">
                 <div class="Horizontal-tab">
                     <div class="tabContainer">
-                    <button class="page-change-button" onclick="changeFilter(event,'All')">All</button>
-                    <button class="page-change-button" onclick="changeFilter(event,'Ssessions')">Expenses of Students</button>
-                    <button class="page-change-button" onclick="changeFilter(event,'Exams')">Other Expenses</button>
+                    <a href="<?php echo URL?>IncomeExpenses/studentExpenses"><button class="page-change-button" >Expenses of Students</button></a>
+                    <button class="page-change-button" >Other Expenses<hr></button>
                     </div>
                     
                 </div>

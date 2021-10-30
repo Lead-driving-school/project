@@ -69,13 +69,14 @@ function nextPage(){
         flag=false;
     }
 
-    // if(flag==true){
-    //     document.getElementById("reg-form").classList.replace("reg-form","reg-form-hidden");
-    //     document.getElementById("reg2-f2").classList.replace("reg2-f2","reg2-f2-visible");
-    // }
-    packageLoad()
-    document.getElementById("reg-form").classList.replace("reg-form","reg-form-hidden");
-    document.getElementById("reg2-f2").classList.replace("reg2-f2","reg2-f2-visible");
+    if(flag==true){
+        document.getElementById("reg-form").classList.replace("reg-form","reg-form-hidden");
+        document.getElementById("reg2-f2").classList.replace("reg2-f2","reg2-f2-visible");
+        packageLoad()
+    }
+    
+    // document.getElementById("reg-form").classList.replace("reg-form","reg-form-hidden");
+    // document.getElementById("reg2-f2").classList.replace("reg2-f2","reg2-f2-visible");
     
 
 }

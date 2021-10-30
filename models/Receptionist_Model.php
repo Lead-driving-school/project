@@ -97,5 +97,15 @@ class Receptionist_Model extends Model{
         }
         
     }
+
+    function getStudentDetails(){
+        $result=$this->db->runQuery("SELECT student_id,full_name,contact FROM student");
+        return $result;
+    }
+
+    public function getEmployeeDetailsMore($id){
+        $result=$this->db->runQuery("SELECT student_id,init_name,full_name,address,NIC,gender,district,city,div_sec,police_station,dob,contact,occupation,type,arival_date FROM student WHERE student_id='$id'");
+        return $result;
+    }
     
 }

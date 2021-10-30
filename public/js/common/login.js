@@ -2,7 +2,15 @@ function check_empty_field()
     {                                    
       if (document.getElementById("username").value == "" ||document.getElementById("password").value == "")
       {
-        alert("Please fill in the password or login field.");                   
+          if(document.getElementById("username").value == "") {
+              document.getElementById("username").placeholder="NIC field can't be empty";
+              document.getElementById("username").style.border="2px solid red";
+          } 
+          if(document.getElementById("password").value== "") {
+              document.getElementById("password").placeholder="Contact Number field can't be empty";
+              document.getElementById("password").style.border="2px solid red";
+              
+          }                   
       }
       else
       {

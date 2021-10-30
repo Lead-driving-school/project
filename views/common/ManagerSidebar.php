@@ -58,7 +58,7 @@
             Expense Recording
             </div>
         </a>
-        <a href="#" class="list-item">
+        <a href="<?php echo URL?>Staff/logout" class="list-item">
             <div class="link-icon">
             &#xf2bd
             </div>

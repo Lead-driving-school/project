@@ -9,21 +9,39 @@ function viewComplaint(){
         if (httprequest.readyState===4 && httprequest.status===200){
             console.log("Hi")
             console.log(httprequest.responseText)
-            // for(var i=0; i<4; i++){
-            //     row.innerHTML='<div class="msg-box-row">'+
-            //     '<div class="msg-title"><h2>Good Training</h2></div>'+
-            //     '<div class="msg-date"><h4>2021 sep 19</h4><h5>10.27am</h5></div>'+
+            const obj=JSON.parse(httprequest.responseText)
+            for(var i=0;i<obj.length;i++){
+                
+                obj[i].description = obj[i].description.replace(/-/g, " ");
+                obj[i].suggestions =obj[i].suggestions.replace(/-/g, " ");
+                obj[i].init_name =obj[i].init_name.replace(/-/g, " ");
+                
+                if(obj[i].suggestions==''){
+                    obj[i].suggestions="Description is not available"
+                }
+            }
+            
+            var myArr=[]
+            for(var i=0;i<obj.length;i++){
+                let str=String(obj[i].submitted_date_time)
+                myArr[i] = str.split(" ");
+            }
 
-            //     '<h3>Complain</h3>'+
-            //     '<p>Topic sentences are similar to mini thesis statements. Like a thesis statement, a topic sentence has a specific main point. Whereas the thesis is the main point of the essay, the topic sentence is the main point of the paragraph. Like the thesis statement, a topic sentence has a unifying function.</p>'+
-            //     '<h3>Suggetion</h3>'+
-            //     '<p>Topic sentences are similar to mini thesis statements. Like a thesis statement, a topic sentence has a specific main point. Whereas the thesis is the main point of the essay, the topic sentence is the main point of the paragraph. Like the thesis statement, a topic sentence has a unifying function.</p>'+
+            for(var i=0; i<obj.length; i++){
+                row.innerHTML='<div class="msg-box-row">'+
+                '<div class="msg-title"><h2>'+obj[i].init_name+'</h2></div>'+
+                '<div class="msg-date"><h4>'+myArr[i][0]+'</h4><h5>'+myArr[i][1]+'</h5></div>'+
 
-            //     '<div class="msg-btn"><button class="mark-as-read">Mark as read</button></div>'+
+                '<h3>Complain</h3>'+
+                '<p>'+ obj[i].description+'</p>'+
+                '<h3>Suggetion</h3>'+
+                '<p>'+obj[i].suggestions+'</p>'+
 
-            // '</div>'
+                '<div class="msg-btn"><button class="mark-as-read">Mark as read</button></div>'+
 
-            // }
+            '</div>'
+
+            }
         }
     }
     var url="http://localhost/project/Admin/complaintLogic";
@@ -31,4 +49,5 @@ function viewComplaint(){
     httprequest.send()
 
 }
+viewComplaint()
 
