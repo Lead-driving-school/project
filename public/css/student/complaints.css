@@ -33,7 +33,7 @@ body {
 }
 .main {
   width: 100%;
-  height: 655px;
+  height: 675px;
   display: flex;
   /* background-color: chocolate; */
 }
@@ -63,8 +63,8 @@ body {
   width: 30%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  /* background-color: chocolate; */
+  justify-content: center;
+ 
 }
 
 .row-2 {
@@ -89,6 +89,7 @@ body {
   text-align: center;
   padding-top: 10px;
   margin-right: 15px;
+ 
   /* background-color: cornsilk; */
 }
 
@@ -98,6 +99,7 @@ body {
   font-size: 20px;
   text-align: center;
   padding-top: 10px;
+  cursor: pointer;
   /* background-color: rgb(214, 175, 18); */
 }
 
@@ -165,6 +167,10 @@ body {
   align-items: flex-end;
   justify-content: flex-start;
   /* background-color: burlywood; */
+}
+
+h4{
+  font-weight: 400;
 }
 .com-row-1 {
   width: 90%;
@@ -293,9 +299,14 @@ body {
 
 }
 
+a{
+  text-decoration: none;
+  color: black;
+}
+
 p {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 17px;
+  font-weight: 500;
 }
 ::placeholder {
   color: red;

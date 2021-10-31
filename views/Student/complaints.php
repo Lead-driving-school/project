@@ -20,7 +20,7 @@
                 <div class="container-review">
                     <div class="row-1">
                         <div class="title">
-                            <h1>Review & Complaints</h1>
+                            <h1>Review & Complaint</h1>
                         </div>
                     </div>
                     <div class="row-2">
@@ -30,9 +30,10 @@
                                 <h4>Complaints</h4><hr class="hr-1">
                             </div>
 
-                            <div class="title-reviews">
+                        <a href="<?php echo URL?>Student/review">                          
+                              <div class="title-reviews">
                                <h4>Reviews</h4>
-                            </div>
+                            </div></a>
 
                         </div>
 
@@ -57,7 +58,7 @@ including you. We highly encourage you to send your feedback.
                                     </div>
                                     <div class="comments-2">
                                         <div class="com-row-1">
-                                            <h4>The klok jikjoko jnasjioas.</h4>
+                                            <h4>Add your suggestion here.</h4>
                                         </div>
                                         <div class="com-row-2">
                                             <textarea id="text-2" style="white-space: pre" class="complaints"> </textarea>

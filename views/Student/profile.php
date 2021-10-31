@@ -59,8 +59,8 @@
                             </div>
                         </div>
                         <div class="edit-profile">
-                            <button class="edit-button">Edit profile</button>
-                            <button class="more-button">More</button>
+                           <a href="<?php echo URL?>Student/editprofile"> <button class="edit-button">Edit profile</button></a>
+                            
                         </div>
                     </div>
                 </div>

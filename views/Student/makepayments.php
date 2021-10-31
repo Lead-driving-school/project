@@ -15,10 +15,10 @@
             </div>
             <div class="div-2">
                 <div class="col-1">
-                    <h3>Amount (LKR)</h3>
+                    <h3>Paying Amount(Rs.)</h3>
                 </div>
                 <div class="col-2">
-                    <h3>: Rs</h3>
+                    <h3>:</h3>
                 </div>
                 <div class="col-3">
                     <input type="number" class="amount">
@@ -42,7 +42,7 @@
             </div>
             <div class="div-4">
                 <div class="col-1">
-                    <h3>Total Amount</h3>
+                    <h3>Total Amount(Rs.)</h3>
                 </div>
                 <div class="col-2">
                     <h3>:</h3>
@@ -52,6 +52,12 @@
                 </div>
             </div>
             <div class="div-5">
+                <div class="div-button">
+                   <a href="<?php echo URL?>Student/payments"> <button class="Back">Back</button></a>
+                </div>
+                <div class="div-button">
+                    <button class="Cancel">Cancel</button>
+                </div>
                 <div class="div-button">
                     <button class="pay">Pay</button>
                 </div>

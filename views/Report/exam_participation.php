@@ -90,7 +90,7 @@
            
         </div>
         <div class="button-set">
-            <button class="back-button" id="back" name="back">Back</button>
+            <a href="<?php echo URL?>Report/examParticipationDay"><button class="back-button" id="back" name="back">Back</button></a>
         </div>
     </div>
     

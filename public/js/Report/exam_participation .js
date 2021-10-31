@@ -65,7 +65,7 @@ var trace1 = {
           size: 24
         },
         xref: 'paper',
-        x: 0.05,
+        x: 5,
       },  
     barmode: 'group'
 };
