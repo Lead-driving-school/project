@@ -17,9 +17,9 @@
                 <h1>
                     <div class="lead">LEAD</div>
                     <div class="driving">DRIVING</div> 
-                    <div class="school">SCHOOL</div> 
+                    <div class="school">SCHOOL</div>
                 </h1>
-              </div>
+                </div>
              </div>
                 <div class="login-box">
                     <div class="form-header" id="formHeader">
@@ -28,7 +28,7 @@
                     
 
                     
-                    <div name="loginForm" >
+                    <div class="loginForm" >
 
                         <div class="invalid-login" id="invalid-login">
                             Invalid username or password, please try again.
