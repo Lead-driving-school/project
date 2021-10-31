@@ -11,7 +11,8 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo"></div>
+        <?php require_once APPROOT."/../views/common/header.php"; ?>
+
         </div>
         <div class="main">
  

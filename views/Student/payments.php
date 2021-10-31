@@ -10,23 +10,21 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo">
-                <img src="IMG-20210823-WA0007.jpg" alt="logo">
-            </div>
+         <?php require_once APPROOT."/../views/common/header.php"; ?>
         </div>
         <div class="main">
              <?php require_once APPROOT."/../views/common/StudentSidebar.php"; ?>
            
             <div class="view">
                 <div class="profile">
-                    <div class="pic">
+                    <!-- <div class="pic">
                         <div class="pic-div-1">
                             <img src="<?php echo URL?>public/images/profpic.png" class="ppic" alt="profpic">
                         </div>
                         <div class="pic-div-2">
                             <h4>K.K Saman Perera</h4>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="title">
                         <div class="ti-name">
                             <h1>Payments</h1>
