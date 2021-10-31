@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/Employee_Details.css">
     <script  src="<?php echo URL?>public/js/admin/staff.js"></script>
     
-    <title>Document</title>
+    <title>Lead driving school</title>
 </head>
 <body>
 <div class="mid-box-container-1" id="mid-box-container-1">

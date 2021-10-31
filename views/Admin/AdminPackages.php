@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/common/header.css">
     <script  src="<?php echo URL?>public/js/common/header.js"></script>
     <script src="<?php echo URL?>public/js/common/sidebar.js"></script>
-    <title>Lead</title>
+    <title>Lead driving school</title>
 </head>
 <body>
     <div class="box-1">
@@ -111,7 +111,7 @@
                         <div class="row">
                             <div class="column-1">Package 1</div>
                             <div class="col-3">Rs 3500.00</div>
-                            <div class="col-4"><a href="<?php echo URL?>Admin/eitPackages"><button class="edit">Edit</button></a></div>
+                            <div class="col-4"><a href="<?php echo URL?>Admin/editPackages"><button class="edit">Edit</button></a></div>
                         </div>
 
                         <div class="row">

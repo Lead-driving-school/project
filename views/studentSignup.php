@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     
-    <title>Sign up</title>
+    <title>Lead driving school</title>
     
 </head>
 <body>

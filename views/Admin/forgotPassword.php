@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/buttons.css">
     <script src="<?php echo URL?>public/js/admin/forgotPassword.js"></script>
     
-    <title>Document</title>
+    <title>Lead driving school</title>
 </head>
 <body>
 <div class="otp-container" id="otp-container">

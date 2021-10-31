@@ -29,7 +29,7 @@ function forgot_password(){
                 document.getElementById("otp-container").classList.replace("otp-container","otp-container-active")
               }
               else{
-                document.getElementById("err").innerText="This NIC and contact number not exist"
+                document.getElementById("err").innerhtml+="This NIC and contact number not exist"
               }
           }
       }

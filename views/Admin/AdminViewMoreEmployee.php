@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/View_More_Employee.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/Mid_Box_Layout.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/buttons.css">
-    <title>Document</title>
+    <title>Lead driving school</title>
 </head>
 <body>
     <div class="mid-box-container-1">

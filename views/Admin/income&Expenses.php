@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/main/structure.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/IncomeExpenses/income&Expenses/structure.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/main/Horizontaltab.css">
-    <title>Income & Expenses</title>
+    <title>Lead driving school</title>
 </head>
 <body>
     <div class="header">

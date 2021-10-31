@@ -6,13 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="<?php echo URL?>public/css/Report/customerGraph.css">
-    <title>Lead driving school</title>
-
+    <link rel="stylesheet" href="<?php echo URL?>public/css/Report/sessionGraph.css">
+    <title>Income charts</title>
 </head>
 <body>
     <div class="body-container">
-        <div class="heading"><h1>Customer Growing</h1></div>
+        <div class="heading"><h1>Session Report</h1></div>
         <div class="selectors">
             <div class="method-selector">
                 <label for="method-selector-button" class="method-selector-label">Select method:</label>
@@ -40,50 +39,43 @@
             <div class="containers">
                 <div class="container1">
                     <div class="max-container">
-                        <div class="topic"><h2>Maximum registration for theory exam</h2></div>
+                        <div class="topic"><h2>Maximum no. of theory sessions</h2></div>
                         <div class="details"><div class="col-1"><h3>Thursday</h3></div><div class="col-2"><h3>10</h3></div></div>
-                        <!-- <div class="details"><div class="col-1""><h3>Friday</h3></div><div class="col-2"><h3>10000.00</h3></div></div> -->
+                    
                     </div>
                     <div class="min-container">
-                        <div class="topic"><h2>Minimum registration for theory exam </h2></div>
+                        <div class="topic"><h2>Minimum no. of theory sessions </h2></div>
                         <div class="details"><div class="col-1""><h3>Saturday</h3></div><div class="col-2"><h3>0</h3></div></div>
                         
                     </div>
                 </div>
-                <div class="container2">
-                    <div class="max-container">
-                        <div class="topic"><h2>Maximum registration for trail exam</h2></div>
-                        <div class="details"><div class="col-1""><h3>Thursday</h3></div><div class="col-2"><h3>19</h3></div></div>
-                        <!-- <div class="details"><div class="col-2"><h3>6642.85</h3></div></div> -->
-                    </div>
-                    <div class="min-container">
-                        <div class="topic"><h2>Minimum registration for trail exam </h2></div>
-                        <!-- <div class="details"><div class="col-2"><h3>43</h3></div></div>  -->
-                        <div class="details"><div class="col-1""><h3>Thursday</h3></div><div class="col-2"><h3>19</h3></div></div>
-                    </div>
-                </div>
+
                 <div class="container3">
                     <div class="max-container">
-                        <div class="topic"><h2>Total Registration for theory exam</h2></div>
+                        <div class="topic"><h2>Total no. of theory sessions</h2></div>
                         <div class="details"><div class="col-2"><h3>430</h3></div></div>
-                        <!-- <div class="details"><div class="col-1""><h3>Thursday</h3></div><div class="col-2"><h3>19</h3></div></div> -->
+                        
                     </div>
                     <div class="min-container">
-                        <div class="topic"><h2>Total Registration for trail exam</h2></div>
+                        <div class="topic"><h2>Total no. ofcompleted theory sessions</h2></div>
                         <div class="details"><div class="col-2"><h3>400</h3></div></div>
-                        <!-- <div class="details"><div class="col-1""><h3>Saturday</h3></div><div class="col-2"><h3>2</h3></div></div> -->
+                        
                     </div>
                 </div>
-                <!-- <div class="container4">
+
+                <div class="container4">
                     <div class="max-container">
-                        <div class="topic"><h2>Online Payments</h2></div>
-                        <div class="details"><div class="col-2"><h3>10</h3></div></div>
+                        <div class="topic"><h2>Total no. of practical sessions</h2></div>
+                        <div class="details"><div class="col-2"><h3>430</h3></div></div>
+                        
                     </div>
                     <div class="min-container">
-                        <div class="topic"><h2>Cash Payments</h2></div>
-                        <div class="details"><div class="amount"><h3>33</h3></div></div>
+                        <div class="topic"><h2>Total no. of completed practical sessions</h2></div>
+                        <div class="details"><div class="col-2"><h3>400</h3></div></div>
+                        
                     </div>
-                </div> -->
+                </div>
+       
             </div>
             
            
@@ -92,8 +84,8 @@
             <button class="back-button" id="back" name="back">Back</button>
         </div>
     </div>
-    
-    <script src="<?php echo URL?>public/js/Report/customerGraphScript.js"></script>
+
+    <script src="<?php echo URL?>public/js/Report/sessionGraphScript.js"></script>
     
 
 </body>

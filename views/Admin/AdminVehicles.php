@@ -19,7 +19,7 @@
     <script src="<?php echo URL?>public/js/common/sidebar.js"></script>
     <script src="<?php echo URL?>public/js/admin/popup.js"></script>
     <script src="popup.js"></script>
-    <title>Document</title>
+    <title>Lead driving school</title>
 </head>
 <body>
     <div id="pop-div" class="popup-container">
@@ -29,11 +29,11 @@
                 deleting a Vehicles will permenently remove it from your system 
             </div>
             <div class="btn-container">
-                <button onclick="cancel()">
+                <button class="yess" onclick="cancel()">
                     No, keep Vehicles 
                 </button >
                     
-                <button onclick="yesDelete()">
+                <button class="no" onclick="yesDelete()">
                     Yes, Delete Vehicles
                 </button>
             </div>
@@ -46,11 +46,11 @@
                 <input type="text"> 
             </div>
             <div class="btn-container2">
-                <button onclick="cancel2()">
+                <button class="yess" onclick="cancel2()">
                     Cancel 
                 </button >
                     
-                <button>
+                <button class="no">
                     Confirm
                 </button>
             </div>
@@ -67,7 +67,7 @@
 
                 <div class="add-new-search-container">
                    <a href="<?php echo URL?>Admin/addVehicle"><button class="add-new">Add Vehicle</button></a> 
-                    <button class="search">Search</button>
+                    <input type="text">
                 </div>
 
                 <div class="table-heading-container">

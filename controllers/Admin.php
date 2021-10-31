@@ -28,6 +28,81 @@ class Admin extends Controller{
         
     }
 
+    
+
+    function AdminStudentDetails(){
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/Reports/AdminStudentDetails');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
+    }
+
+    function attendence_sessions(){
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/Reports/attendence_sessions');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
+    }
+
+    function conductorGraphic(){
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/Reports/conductorGraphic');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
+    }
+
+    function customerGraphic(){
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/Reports/customerGraphic');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
+    }
+
+    function exam_participation(){
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/Reports/exam_participation');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
+    }
+
+    function sessionGraph(){
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/Reports/sessionGraph');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
+    }
+
+
     function addEmployee(){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='Admin'){

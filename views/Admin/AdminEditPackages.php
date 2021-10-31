@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/Mid_Box_Layout.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/buttons.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/Edit_packages.css">
-    <title>Document</title>
+    <title>Lead driving school</title>
 </head>
 <body>
     <div class="mid-box-container-1">
@@ -43,13 +43,32 @@
                         
                         <div class="classes-check-edit-in">
                             <div class="chk-bx">
-                                <label for="vehicle1">A</label><br>
+                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                <label for="vehicle1">A </label><br>
                             </div>
                             <div class="chk-bx">
-                                <label for="vehicle1">A</label><br>
+                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                <label for="vehicle1">A1 </label><br>
                             </div>
                             <div class="chk-bx">
-                                <label for="vehicle1">A</label><br>
+                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                <label for="vehicle1">A(Auto) </label><br>
+                            </div>
+                            <div class="chk-bx">
+                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                <label for="vehicle1">B </label><br>
+                            </div>
+                            <div class="chk-bx">
+                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                <label for="vehicle1">B1 </label><br>
+                            </div>
+                            <div class="chk-bx">
+                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                <label for="vehicle1">B(Auto) </label><br>
+                            </div>
+                            <div class="chk-bx">
+                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                <label for="vehicle1">C </label><br>
                             </div>
                         </div>
                         <div class="res"></div>
