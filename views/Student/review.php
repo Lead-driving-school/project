@@ -19,15 +19,15 @@
                 <div class="container-review">
                     <div class="row-1">
                         <div class="title">
-                            <h1>Review & Complaints</h1>
+                            <h1>Review & Complaint</h1>
                         </div>
                     </div>
                     <div class="row-2">
                         <div class="div-name">
 
-                            <div class="title-complaints">
+                        <a href="<?php echo URL?>Student/complaints"> <div class="title-complaints">
                                 <h4>Complaints</h4>
-                            </div>
+                            </div> </a>
 
                             <div class="title-reviews">
                                 <h4>Reviews</h4><hr class="hr-2">
