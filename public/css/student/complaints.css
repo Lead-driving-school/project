@@ -20,7 +20,7 @@ body {
   width: 100%;
   height: 80px;
   display: flex;
-  background-color: #05c075;
+  /* background-color: #05c075; */
 }
 
 .review {
