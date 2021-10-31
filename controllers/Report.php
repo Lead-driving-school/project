@@ -7,57 +7,158 @@ class Report extends Controller{
     }
 
     function report(){
-          $this->view->render('Report/reports');
-    }
-
-    function attendanceSession(){
-        $this->view->render('Report/attendanceSession');
-    }
-
-    function attendanceStudent(){
-        //gbutton remove
-        $this->view->render('Report/attendanceStudent');
-    }
-
-    function attendanceGraphic(){
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'||$_SESSION['job_title']=='Manager'){
+                if($_SESSION['job_title']=='Admin'){
+                    $this->view->render('Admin/reports');
+                }
+                else if($_SESSION['job_title']=='Manager'){
+                    $this->view->render('Manager/reports');
+                }
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
         
-        $this->view->render('Report/attendence_sessions');
     }
-
-    function examParticipationDay(){
-
-        $this->view->render('Report/examParticipationDays');
-    }
-
-    function examParticipationStudents(){
+    function attendence_sessions(){
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'||$_SESSION['job_title']=='Manager'){
+                $this->view->render('Report/attendence_sessions');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
         
-        $this->view->render('Report/examParticipationStudents');
     }
 
-    function examParticipationGraphic(){
-        $this->view->render('Report/exam_participation');
-    }
-
-    function conductorParticipation(){
-        $this->view->render('Report/ConductorParticipation');
-    }
     function conductorGraphic(){
-        $this->view->render('Report/conductorGraphic');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'||$_SESSION['job_title']=='Manager'){
+                $this->view->render('Report/conductorGraphic');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
-    function customerGrowing(){
-        $this->view->render('Report/customerGrowing');
-    }
     function customerGraphic(){
-        $this->view->render('Report/customerGraphic');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'||$_SESSION['job_title']=='Manager'){
+                $this->view->render('Report/customerGraphic');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 
+    function exam_participation(){
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'||$_SESSION['job_title']=='Manager'){
+                $this->view->render('Report/exam_participation');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
+    }
+
+    function sessionGraph(){
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'||$_SESSION['job_title']=='Manager'){
+                $this->view->render('Report/sessionGraph');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
+    }
+
+    //newly add
+    function attendanceSession(){
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'||$_SESSION['job_title']=='Manager'){
+                $this->view->render('Report/attendanceSession');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
+    }
+    function attendanceStudent(){
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'||$_SESSION['job_title']=='Manager'){
+                $this->view->render('Report/attendanceStudent');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
+    }
+    function ConductorParticipation(){
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'||$_SESSION['job_title']=='Manager'){
+                $this->view->render('Report/ConductorParticipation');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
+    }
+    function customerGrowing(){
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'||$_SESSION['job_title']=='Manager'){
+                $this->view->render('Report/customerGrowing');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
+    }
+    function examParticipationDays(){
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'||$_SESSION['job_title']=='Manager'){
+                $this->view->render('Report/examParticipationDays');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
+    }
+    function examParticipationStudents(){
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'||$_SESSION['job_title']=='Manager'){
+                $this->view->render('Report/examParticipationStudents');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
+    }
     function sessionReport(){
-        $this->view->render('Report/sessionReport');
-    }
-
-    function sessionGraphic(){
-        $this->view->render('Report/sessionGraph');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Admin'||$_SESSION['job_title']=='Manager'){
+                $this->view->render('Report/sessionReport');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
+        
     }
 }
 

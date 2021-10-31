@@ -168,7 +168,7 @@
                         </div>
                         <div class="filter-div-2">
                             <div class="button">
-                            <a href="<?php echo URL?>Report/sessionGraphic"><button class="Graphical"> Graphical View</button></a>
+                            <a href="<?php echo URL?>Report/sessionGraph"><button class="Graphical"> Graphical View</button></a>
                                 <a href="<?php echo URL?>Report/report"> 
                                     <button class="back" id="back" name="back">Back</button>
                                 </a>
