@@ -78,7 +78,7 @@ class User extends Controller{
         
     }
 
-    public function forgotPasswordLogic($data){
+    public function forgotPasswordLogic($data){ 
         $user = explode(",", $data);
         $results=$this->model->forgotPassword($user[0],$user[1]);
         if($results){

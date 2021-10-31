@@ -103,7 +103,7 @@ class Receptionist extends Controller{
         }
     }
     function studentList(){
-<<<<<<< HEAD
+
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='Receptionist'){
                 $this->view->render('receptionist/studentList');
@@ -113,10 +113,7 @@ class Receptionist extends Controller{
         }
         else{
             $this->view->render('error');
-        }
-    }    
-=======
-        $this->view->render('receptionist/studentList');
+        }   
     }
     
     function getStudentDetails(){
@@ -129,5 +126,28 @@ class Receptionist extends Controller{
         // echo "hi";
         echo json_encode($result);
     }
->>>>>>> 76105526b8905cad1a0b7c784f7fcd09d2485ee9
+    function viewExam(){
+        $this->view->render('Receptionist/viewExam');
+    }
+    function viewSession(){
+        $this->view->render('Receptionist/viewSession');
+    }
+    function viewStudent(){
+        $this->view->render('Receptionist/viewStudent');
+    }
+    function viewStudentS(){
+        $this->view->render('Receptionist/viewStudentS');
+    }
+    function viewInstructor(){
+        $this->view->render('Receptionist/viewInstructor');
+    }
+    function viewInstructorS(){
+        $this->view->render('Receptionist/viewInstructorS');
+    }
+    function viewVehicle(){
+        $this->view->render('Receptionist/viewVehicle');
+    }
+    function viewVehicleS(){
+        $this->view->render('Receptionist/viewVehicleS');
+    }
 }

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/Receptionist/registration.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Receptionist/registration2.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Receptionist/reg.css">
-    <title>Registration Form</title>
+    <title>Lead driving school</title>
 </head>
 <body>
     <div class="container">
@@ -79,6 +79,7 @@
                 </div>
             </div>
             <div class="part-5">
+                <a href="<?php echo URL?>Receptionist/studentList"><button class="Back" id="back" name="back">Back</button></a>
                 <button class="cancel" id="cancel" name="cancel" onclick="cancel()">Cancel</button>
                 <button class="next" id="next" name="next" onclick="nextPage()">Next Page</button>
             </div>
@@ -155,7 +156,7 @@
                 <input type="hidden" id="package-id-container" value="0">
                 <input type="hidden" id="package-amount-container" value="0">
 
-                    <div class="crosul-title-f2">Traning Packages</div>
+                    <div class="crosul-title-f2" id="packageContainer">Traning Packages</div>
                     <div class="crosul-f2">
                         <div class="scroll-f2" id="scroll">
                             

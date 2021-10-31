@@ -19,8 +19,8 @@
                     <div class="driving">DRIVING</div> 
                     <div class="school">SCHOOL</div> 
                 </h1>
-            </div>
-            </div>
+              </div>
+             </div>
                 <div class="login-box">
                     <div class="form-header" id="formHeader">
                         <h1 class="form-heder-h1">User Login</h1>
@@ -44,11 +44,11 @@
                             <button class="login-btn"   onclick="check_empty_field()">Log In</button>
 
                         </div>
-                            </div>
+                    </div>
                     
                 </div>
             </div>
         </div>
-    </div>
+    
 </body>
 </html>

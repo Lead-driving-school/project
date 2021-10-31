@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="<?php echo URL?>public/css/admin/Employee_Details.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/buttons.css">
     
-    <title>Document</title>
+    <title>Lead driving school</title>
 </head>
 <body>
 <div class="mid-box-container-1">

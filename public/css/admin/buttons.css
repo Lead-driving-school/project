@@ -142,7 +142,8 @@
   cursor: pointer;
 }
 
-.view-more , .mark-as-read{
+.view-more,
+.mark-as-read {
   width: fit-content;
   padding-left: 10px;
   padding-right: 10px;
@@ -156,7 +157,8 @@
   font-weight: 600;
 }
 
-.view-more:hover, .mark-as-read:hover{
+.view-more:hover,
+.mark-as-read:hover {
   border: 2px solid #0892d0;
   background-color: white;
   color: #0892d0;
@@ -165,4 +167,30 @@
   padding-right: 10px;
 
   cursor: pointer;
+}
+.registerStudent-button-container {
+  display: flex;
+  width: 85%;
+  justify-content: flex-end;
+}
+.registerStudent-button {
+  width: fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 40px;
+  border: 2px solid #0892d0;
+  box-shadow: 1px 1px 5px #b0b3b3;
+  background-color: #0892d0;
+  color: white;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.registerStudent-button:hover {
+  border: 2px solid #0892d0;
+  background-color: white;
+  color: #0892d0;
+  width: fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
 }

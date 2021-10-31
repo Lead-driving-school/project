@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo URL?>public/css/student/review.css">
     <script src="<?php echo URL?>public/js/student/complaints&review.js"></script>
-    <title>Reviews</title>
+    <title>Lead driving school</title>
 </head>
 <body>
     <div class="container">

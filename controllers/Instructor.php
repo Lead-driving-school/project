@@ -15,7 +15,7 @@ class Instructor extends Controller{
         $this->view->render('Conductor/markAttendance');
     }
     function sessions(){
-        $this->view->render('Conductor/sessions');
+        $this->view->render('Conductor/markGoingNotGoing');
     }
     function viewExam(){
         $this->view->render('Conductor/viewExam');

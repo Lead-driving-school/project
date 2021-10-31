@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="<?php echo URL?>public/css/Report/sessionGraph.css">
-    <title>Income charts</title>
+    <title>Lead driving school</title>
+
 </head>
 <body>
     <div class="body-container">

@@ -18,7 +18,7 @@
     
     
 
-    <title>Event Calendar</title>
+    <title>Lead driving school</title>
 </head>
 <body>
     <div class="header">
@@ -95,7 +95,7 @@
                         <div class="four">8.15</div>
                       </div>
                       <div class="viewButton">
-                        <a href="<?php echo URL?>Manager/editSession"><button id="View" class="View">View</button></a>
+                        <a href="<?php echo URL?>Receptionist/viewSession"><button id="View" class="View">View</button></a>
                       </div>
                     </div>
                   </div>
@@ -108,7 +108,7 @@
                         <div class="four">8.15</div>
                       </div>
                       <div class="viewButton">
-                        <a href="<?php echo URL?>Manager/editExam"><button id="View" class="View">View</button></a>
+                        <a href="<?php echo URL?>Receptionist/viewExam"><button id="View" class="View">View</button></a>
                       </div>
                     </div>
                   </div>

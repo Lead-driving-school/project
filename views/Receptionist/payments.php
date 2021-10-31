@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/Receptionist/addPayment.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Receptionist/addPayment_step2.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Receptionist/pay.css">
-    <title>List of Students</title>
+    <title>Lead driving school</title>
 </head>
 <body>
     <div class="container-st" id="container-st">
@@ -21,13 +21,12 @@
             </div>
         </div>
         <div class="view-st">
-            <?php require_once APPROOT."/../views/common/ReceptionistSidebar.php"; ?>
+            
             <div class="main-st">
                 <div class="part-1-st">
-                    <div class="st-prof-st">
-                        <img src="<?php echo URL?>public/css/images/profpic.png" alt="profpic" width="50" height="50">
-                        <p>H. Sampath wijesinghe</p>
-                    </div>
+              <div class="st-prof-st">
+
+                    </div>      
                     <div class="title-st">
                         <h2>Payments</h2>
                     </div>
@@ -50,7 +49,6 @@
                             <div class="three"><h4>Method</h4></div>
                             <div class="four">Price</div>
                             <!-- <div class="five"></div> -->
-                            
                         </div>
                     </div>
                     <div class="table-body">
@@ -73,28 +71,14 @@
                                 <div class="col-3"><p>Cash</p></div>
                                 <div class="col-4">3000.00</div>
                             </div>
-                            <div class="row-1">
-                                <div class="col-1"><p>09/22/2021</p></div>
-                                <div class="col-2"><p>16:41</p></div>
-                                <div class="col-3"><p>Cash</p></div>
-                                <div class="col-4">3000.00</div>
-                            </div>
-                            <div class="row-1">
-                                <div class="col-1"><p>09/22/2021</p></div>
-                                <div class="col-2"><p>16:41</p></div>
-                                <div class="col-3"><p>Cash</p></div>
-                                <div class="col-4">3000.00</div>
-                            </div>
-                            <div class="row-1">
-                                <div class="col-1"><p>09/22/2021</p></div>
-                                <div class="col-2"><p>16:41</p></div>
-                                <div class="col-3"><p>Cash</p></div>
-                                <div class="col-4">3000.00</div>
-                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="part-4-st">
+                    <a href="<?php echo URL?>Receptionist/studentList"><button class="close-button"  id="back">
+                        <div class="plus-st"></div>
+                        <div class="add-payment-st"><h3>Back</h3></div>
+                    </button></a>
                     <button class="butt-st" onclick="addPayment()" id="addPayment">
                         <div class="plus-st">+</div>
                         <div class="add-payment-st"><h3>Add Payments</h3></div>
