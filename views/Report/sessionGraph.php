@@ -81,9 +81,7 @@
             
            
         </div>
-        <div class="button-set">
-            <button class="back-button" id="back" name="back">Back</button>
-        </div>
+        <a href="<?php echo URL?>Report/report"><button class="back-button" id="back" name="back"> Back</button></a>
     </div>
 
     <script src="<?php echo URL?>public/js/Report/sessionGraphScript.js"></script>

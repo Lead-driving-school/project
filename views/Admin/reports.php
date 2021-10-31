@@ -14,7 +14,7 @@
         </div>
         <div class="main">
 
-            <?php require_once APPROOT."/../views/common/ManagerSidebar.php"; ?>
+            <?php require_once APPROOT."/../views/common/AdminSidebar.php"; ?>
             <div class="view">
                 <div class="title">
                     <div class="report"><h2>Reports</h2></div>
