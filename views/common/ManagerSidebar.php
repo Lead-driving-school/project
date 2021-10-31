@@ -42,7 +42,7 @@
             Income & Expences
             </div>
         </a>
-        <a href="#" class="list-item">
+        <a href="<?php echo URL?>Report/report" class="list-item">
             <div class="link-icon">
             &#xf2bd
             </div>

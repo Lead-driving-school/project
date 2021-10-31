@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="<?php echo URL?>public/css/common/sidebar.css"> 
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="sidebar">
 
     <div class="nav-list">
@@ -25,14 +26,14 @@
             <span class="link-name">Vehicles</span>
         </a>
         
-        <a class="<?php echo (getLink()=="http://localhost/project/Admin/a")?"list-item-active":"list-item";?>" href="#">
+        <a class="<?php echo (getLink()=="http://localhost/project/Report/report")?"list-item-active":"list-item";?>" href="<?php echo URL?>Report/report">
             <span class="link-icon">&#xf080</span>
             <span class="link-name">Reports</span>
         </a>
 
         <a class="<?php echo (getLink()=="http://localhost/project/Admin/viewComlain")||(getLink()=="http://localhost/project/Admin/viewReview")?"list-item-active":"list-item";?>" href="<?php echo URL?>Admin/viewComlain">
             <span class="link-icon">&#xf0e6</span>
-            <span class="link-name">Complains & Reviews</span>
+            <span class="link-name">Complaints & Reviews</span>
         </a>
 
         <a class="<?php echo (getLink()=="http://localhost/project/Admin/IncomeExpenses")?"list-item-active":"list-item";?>" href="<?php echo URL?>Admin/IncomeExpenses">

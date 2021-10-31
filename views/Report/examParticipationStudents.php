@@ -23,7 +23,7 @@
                    <h3>Students</h3><hr class="hr-1">
                 </div>
                 <div class="days">
-                   <a href="<?php echo URL?>Report/examParticipationDay"><h3>Days</h3></a> 
+                   <a href="<?php echo URL?>Report/examParticipationDays"><h3>Days</h3></a> 
                 </div>
             </div>
             <div class="table-header">
