@@ -33,10 +33,7 @@
         </div>
     </div>
     <div class="header">
-
-    <img src="../image/IMG-20210823-WA0007.jpg" class="logo"alt="">
-
-
+    <?php require_once APPROOT."/../views/common/header.php"; ?>
     </div>
 
     <!--body content of the page starts here-->

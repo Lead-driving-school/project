@@ -22,7 +22,7 @@
 </head>
 <body>
     <div class="header">
-        <img src="../image/IMG-20210823-WA0007.jpg" class="logo"alt="">
+    <?php require_once APPROOT."/../views/common/header.php"; ?>
         <!--this is the side bar content--> 
     </div>
     <!--body content of the page starts here-->
