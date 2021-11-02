@@ -35,7 +35,7 @@ class Admin_Model extends Model{
                 $this->db->runQuery("INSERT INTO teacher (employee_id) VALUES ('$Emp_Id')");
             }
 
-            // $this->sendOtp($OTP);
+            // sendOtp($OTP);
             return "successfull";
         }
         else if(!empty($contact)&&empty($nic)){
@@ -64,27 +64,7 @@ class Admin_Model extends Model{
         return array_merge($result, $license);
     }
 
-    public function sendOtp($otp){
-        $user = "94771845973";
-        $password = "7243";
-        $text = urlencode("hi roshan your otp is: ".$otp);
-        $to = "94771845973";
-
-        $baseurl ="http://www.textit.biz/sendmsg";
-        $url = "$baseurl/?id=$user&pw=$password&to=$to&text=$text";
-        $ret = file($url);
-
-        $res= explode(":",$ret[0]);
-
-        if (trim($res[0])=="OK")
-        {
-        echo "Message Sent - ID : ".$res[1];
-        }
-        else
-        {
-        echo "Sent Failed - Error : ".$res[1];
-        }
-    }
+    
 
     function getcomplaints(){
         $result=$this->db->runQuery("SELECT complaints.submitted_date_time,complaints.description,complaints.suggestions, student.init_name from complaints INNER JOIN student on student.student_id=complaints.student_id");
