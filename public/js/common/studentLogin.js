@@ -26,7 +26,7 @@ function check_empty_field()
                 const myArr = str.split(",", 1);
                 console.log(myArr[0]);
                 if(myArr[0]=='success'){
-                  window.location.assign("http://localhost/project/Student")
+                  window.location.assign("http://localhost/project/User")
                 }
                 else{
                   document.getElementById("invalid-login").classList.replace("invalid-login","invalid-login-true");

@@ -4,7 +4,36 @@ class User extends Controller{
         parent:: __construct();
     }
     function index(){
-        
+        if(isset($_SESSION['job_title'])){
+
+            if($_SESSION['job_title']=='student'){
+                $this->view->render('Conductor/profile');
+            }
+
+            else if($_SESSION['job_title']=='Receptionist'){
+                $this->view->render('receptionist/profile');
+            }
+            
+            
+            else if($_SESSION['job_title']=='Instructor'){
+                $this->view->render('Conductor/profile');
+            }
+
+            else if($_SESSION['job_title']=='Manager'){
+                $this->view->render('Manager/profile');
+            }
+
+            else if($_SESSION['job_title']=='Admin'){
+                $this->view->render('Admin/profile');
+            }
+            
+            else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
     function signup(){
         $this->view->render('studentSignup');
@@ -39,25 +68,26 @@ class User extends Controller{
         $user = explode(",", $data);
         $loginData = $this->model->login($user[0], $user[1]);
         if($loginData){
-            echo "success,";
-            // $this->startSession($loginData);
+            $this->startSession($loginData);
         }   
     }
 
     
     public function startSession($loginData){
-        $_SESSION['username'] = $loginData[0]['NIC'];
-        $_SESSION['student']='student';
+        $_SESSION['nic'] = $loginData['nic'];
+        $_SESSION['job_title'] = $loginData['job_title'];
+        $_SESSION['name'] = $loginData['name'];
         echo "success,";    
     }
     public function logout(){
-        unset($_SESSION['student']);
-        unset($_SESSION['username']);
+        unset($_SESSION['nic']);
+        unset($_SESSION['job_title']);
+        unset($_SESSION['name']);
         session_destroy();
         redirect('/');
     }
     public function isLoggedIn(){
-        if(isset($_SESSION['username'])){
+        if(isset($_SESSION['nic'])){
             return true;
         } else {
             return false;
@@ -65,12 +95,12 @@ class User extends Controller{
     }
 
     public function forgotPassword(){
-        $this->view->render('Student/forgotPassword');
+        $this->view->render('common/forgotPassword');
     }
 
     public function passwordReset(){
         if(isset($_SESSION['otp'])){
-            $this->view->render('Student/passwordReset');
+            $this->view->render('common/passwordReset');
         }
         else{
             $this->view->render('error');
