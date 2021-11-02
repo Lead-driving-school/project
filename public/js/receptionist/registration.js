@@ -42,26 +42,53 @@ function nextPage(){
         document.getElementById("police").style.border="2px solid red"
         flag=false;
     }
-    if(document.getElementById("male").checked){
-        var gender="m"
-    }else if(document.getElementById("female").checked){
-        var gender="f"
-    }else{
+    if(!document.getElementById("male").checked && !document.getElementById("female").checked){
         document.getElementById("message").innerHTML="You haven't select a gender"
         flag=false;
     }
-    var dateofbirth=document.getElementById("dateofbirth").value;
-    if(dateofbirth.length==0){
-        document.getElementById("dateofbirth").innerHTML="Date of birth can not be empty"
-        document.getElementById("dateofbirth").style.border="2px solid red"
-        flag=false;
-    }
+    // var dateofbirth=document.getElementById("dateofbirth").value;
+    // if(dateofbirth.length==0){
+    //     document.getElementById("dateofbirth").innerHTML="Date of birth can not be empty"
+    //     document.getElementById("dateofbirth").style.border="2px solid red"
+    //     flag=false;
+    // }
     var nic=document.getElementById("nic").value;
     if(nic.length==0){
         document.getElementById("nic").placeholder="nic can not be empty"
         document.getElementById("nic").style.border="2px solid red"
         flag=false;
     }
+
+
+    if(nic.length>0){
+        if(nic.length==10){
+            if(nic.charAt(9)=='V' || nic.charAt(9)=='v'){
+                for(var j=0;j<nic.length-1;j++){
+                    if(isNaN(nic.charAt(j))){
+                        document.getElementById("nic").value="nic is not valid"
+                        document.getElementById("nic").style.border="2px solid red"
+                        flag=false;
+                        break;
+                    }
+                }
+            }else{
+                document.getElementById("nic").value="nic is not valid"
+                document.getElementById("nic").style.border="2px solid red"
+                flag=false;
+            }
+        }else if(nic.length==12){
+                if(isNaN(nic)){
+                    document.getElementById("nic").value="nic is not valid"
+                    document.getElementById("nic").style.border="2px solid red"
+                    flag=false;
+                }
+        }else{
+            document.getElementById("nic").value="this nic is not valid"
+            document.getElementById("nic").style.border="2px solid red"
+            flag=false
+        }
+    }
+
     var mobile=document.getElementById("mobile").value;
     if(mobile.length!=10){
         document.getElementById("mobile").placeholder="Please recheck the mobile number"
@@ -70,6 +97,28 @@ function nextPage(){
     }
 
     if(true){
+        if(nic.length==10){
+            const d = new Date();
+            var yearvar=parseInt(nic.substr(0,2))
+            yearvar=1900+yearvar
+            console.log()
+            d.setFullYear(yearvar,00,01)
+            var datevar=nic.substr(2,3)
+            d.setDate(datevar - 1)
+            console.log(d.toISOString().slice(0, 10))
+            dateofbirth=d.toISOString().slice(0, 10)
+            
+        }else if(nic.length==12){
+            const d = new Date();
+            var yearvar=parseInt(nic.substr(0,4))
+            d.setFullYear(yearvar,00,01)
+            d.setDate(parseInt(nic.substr(4,3)) - 1)
+            console.log(d.toISOString().slice(0, 10))
+            dateofbirth=d.toISOString().slice(0, 10)
+        }
+
+    }
+    if(flag==true){
         document.getElementById("reg-form").classList.replace("reg-form","reg-form-hidden");
         document.getElementById("reg2-f2").classList.replace("reg2-f2","reg2-f2-visible");
         packageLoad()
@@ -121,8 +170,34 @@ function SaveData(){
     }else if(document.getElementById("female").checked){
         var gender="f"
     }
-    var dateofbirth=document.getElementById("dateofbirth").value;
     var nic=document.getElementById("nic").value;
+
+    //caLculate DOB from NIC
+    if(true){
+        if(nic.length==10){
+            const d = new Date();
+            var yearvar=parseInt(nic.substr(0,2))
+            yearvar=1900+yearvar
+            console.log()
+            d.setFullYear(yearvar,00,01)
+            var datevar=nic.substr(2,3)
+            d.setDate(datevar - 1)
+            console.log(d.toISOString().slice(0, 10))
+            var dateofbirth=d.toISOString().slice(0, 10)
+            
+        }else if(nic.length==12){
+            const d = new Date();
+            var yearvar=parseInt(nic.substr(0,4))
+            d.setFullYear(yearvar,00,01)
+            d.setDate(parseInt(nic.substr(4,3)) - 1)
+            console.log(d.toISOString().slice(0, 10))
+            var dateofbirth=d.toISOString().slice(0, 10)
+        }
+
+    }
+
+
+
     var mobile=document.getElementById("mobile").value;
     var occupation=document.getElementById("occupation").value;
     if(document.getElementById("written").checked){
@@ -132,6 +207,7 @@ function SaveData(){
     }else if(document.getElementById("license").checked){
         var type="license"
     }
+
     if(type=="written"){
         var classA1=document.getElementById("A1").checked;
         var classA=document.getElementById("A").checked;
@@ -234,8 +310,14 @@ function addPackage(length,id,packageId,amount){
     document.getElementById("package-id-container").value=packageId;
     document.getElementById("package-amount-container").value=amount;
     var idVal="pk-2-"+id
-    document.getElementById(idVal).classList.replace("submit-f2","submit-f2-selected");
-    document.getElementById(idVal).innerHTML="Selected"
+    if(document.getElementById(idVal).innerHTML=="Select"){
+        document.getElementById(idVal).classList.replace("submit-f2","submit-f2-selected");
+        document.getElementById(idVal).innerHTML="Selected"
+    }else{
+        document.getElementById(idVal).classList.replace("submit-f2-selected","submit-f2");
+        document.getElementById(idVal).innerHTML="Select"
+    }
+
 }
 
 

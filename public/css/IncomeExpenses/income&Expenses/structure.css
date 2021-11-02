@@ -32,6 +32,7 @@ h1 {
   min-height: 400px;
   font-size: 25px;
   border-radius: 3px;
+
   /* box-shadow: 1px 1px 10px #b0b3b3; */
 }
 .date-label {
@@ -43,8 +44,8 @@ h1 {
   height: 300px;
   width: fit-content;
   background-color: white;
-  padding-left: 70px;
-  padding-right: 70px;
+  padding-left: 100px;
+  padding-right: 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -54,8 +55,8 @@ h1 {
   height: 300px;
   width: fit-content;
   background-color: white;
-  padding-left: 70px;
-  padding-right: 70px;
+  padding-left: 100px;
+  padding-right: 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
