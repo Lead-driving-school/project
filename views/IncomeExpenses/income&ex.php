@@ -28,11 +28,6 @@
                         <div class="value-field">10,000LKR</div>
                         <div class="view-more"><a href="<?php echo URL?>IncomeExpenses/studentExpenses"><button id="viewExpenses" name="viewExpenses">View more</button></div></a>
                     </div>
-                    <div class="profit-row">
-                        <div class="name-field">Profit</div>
-                        <div class="value-field">5,000LKR</div>
-                        <div class="view-more"></div>
-                    </div>
                 </div>
             </div>
         </div>

@@ -1,8 +1,5 @@
 .header {
   height: 80px;
   width: 100%;
-  margin: 0;
-  padding: 0;
-  box-shadow: 1px 1px 10px #b0b3b3;
+  /* z-index: 1000; */
 }
-
