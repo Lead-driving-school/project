@@ -42,10 +42,13 @@ function check_empty_field()
     
         httpreq.open( "POST" , url  , true);
         //httpreq.setRequestHeader( "Content-type" , "application/x-www-form-urlencoded");
-        httpreq.send();
+        httpreq.send(); 
         // return true;                     
       }
     }
+
+    //meka main login eka
+//meka common eka athulata danna
 
 
     

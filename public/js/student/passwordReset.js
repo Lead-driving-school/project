@@ -49,3 +49,6 @@ function passing(){
 function hasWhiteSpace(s) {
     return s.indexOf(' ') >= 0;
 }
+
+//meka main login eka
+//meka common eka athulata danna

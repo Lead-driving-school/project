@@ -36,7 +36,7 @@ function forgot_password(){
   
       const nic = document.getElementById("nic").value;
       const contact = document.getElementById("Contact").value;
-      const data=[nic,contact];
+      const data=[nic,contact]; 
   
       let url = "http://localhost/project/Staff/forgotPasswordLogic/" + data;
   

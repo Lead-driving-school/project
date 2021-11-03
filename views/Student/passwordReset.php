@@ -31,3 +31,6 @@
     <script src="<?php echo URL?>public/js/student/passwordReset.js"></script>
 </body>
 </html>
+
+<!-- //meka main login eka
+//meka common eka athulata danna -->

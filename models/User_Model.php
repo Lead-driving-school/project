@@ -12,7 +12,7 @@ class User_Model extends Model{
         if(empty($result)){
             return false;
         }
-        if($otpcode==$result[0]['otp']){
+        if($otpcode==$result[0]['otp']){ 
             return true;
         }else {
             return false;

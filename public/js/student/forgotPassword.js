@@ -42,7 +42,7 @@ function forgot_password(){
   
       httpreq.open( "POST" , url  , true);
       //httpreq.setRequestHeader( "Content-type" , "application/x-www-form-urlencoded");
-      httpreq.send();
+      httpreq.send(); 
       // return true;                     
     }
     
@@ -84,3 +84,6 @@ httpreq.onreadystatechange = function(){
 // return true;                     
 
 }
+
+//meka main login eka
+//meka common eka athulata danna
