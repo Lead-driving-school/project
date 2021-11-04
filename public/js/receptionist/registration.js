@@ -118,8 +118,7 @@ function nextPage(){
         }
 
     }
-    //////////clear flag
-    flag=true;
+   
     if(flag==true){
         document.getElementById("reg-form").classList.replace("reg-form","reg-form-hidden");
         document.getElementById("reg2-f2").classList.replace("reg2-f2","reg2-f2-visible");
