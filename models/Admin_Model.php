@@ -5,13 +5,40 @@ class Admin_Model extends Model{
     {
         parent::__construct();
     }
+    function loadJobs(){
+        $jobs['Manager']='Manager';
+        $jobs['Receptionist']='Receptionist';
+        $jobs['Instructor']='Instructor';
+        $jobs['Teacher']='Teacher';
+        return $jobs;
+    }
     //return truth value and usertype
     public function registerEmployee($name, $empAddress, $NIC, $Dob, $gender, $telNo, $empType,$licenseNumber) {
         $hired_date = date('Y-m-d');
         $OTP=rand(100000,999999);
         $initPassword=rand(100000,999999);
-        $contact=$this->db->runQuery("SELECT contact_no FROM employee WHERE contact_no='$telNo'");
-        $nic=$this->db->runQuery("SELECT nic FROM employee WHERE nic='$NIC'");
+        $contact=$this->db->runQuery("SELECT contact FROM admin WHERE contact='$telNo'");
+        $nic=$this->db->runQuery("SELECT nic FROM admin WHERE nic='$NIC'");
+        if(empty($contact)||empty($nic)){
+            
+            if(empty($contact)){
+                $contact=$this->db->runQuery("SELECT contact_no FROM employee WHERE contact_no='$telNo'");
+            }
+            if(empty($nic)){
+                $nic=$this->db->runQuery("SELECT nic FROM employee WHERE nic='$NIC'");
+            }
+        
+            if(empty($contact)||empty($nic)){
+                if(empty($contact)){
+                    $contact=$this->db->runQuery("SELECT contact FROM student WHERE contact='$telNo'");
+                }
+                if(empty($nic)){
+                    $nic=$this->db->runQuery("SELECT NIC FROM student WHERE NIC='$NIC'");
+                }
+                
+                
+            }
+        }
 
         if(empty($contact)&&empty($nic)){
             $this->db->runQuery("INSERT INTO employee (name, address, gender, dob ,hired_date, contact_no, nic, job_title) VALUES ('$name','$empAddress', '$gender', '$Dob','$hired_date','$telNo', '$NIC', '$empType')");
@@ -36,7 +63,7 @@ class Admin_Model extends Model{
             }
 
             // sendOtp($OTP);
-            return "successfull";
+            return "successfull"; 
         }
         else if(!empty($contact)&&empty($nic)){
             return "contact exist";

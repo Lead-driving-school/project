@@ -13,7 +13,7 @@
         <div class="signup-box">
             <div class="left">
                 <div class="content-box">
-                <div class="topic"><h1>Sign Up</h1></div> 
+                <div class="topic"><h1>Reset your password</h1></div> 
                 <div class="message" id="msgDiv"></div>
                     <div  class="signup-password"  name="signupPassword">
                         
@@ -25,7 +25,15 @@
                 </div>
             </div>
             
-            <div class="right"></div>
+            <div class="right">
+            <div class="left-column">
+                <h1>
+                    <div class="lead">LEAD</div>
+                    <div class="driving">DRIVING</div> 
+                    <div class="school">SCHOOL</div>
+                </h1>
+                </div>
+            </div>
         </div>
     </div>
     <script src="<?php echo URL?>public/js/student/passwordReset.js"></script>

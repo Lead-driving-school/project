@@ -12,7 +12,7 @@ class User_Model extends Model{
         if(empty($result)){
             return false;
         }
-        if($otpcode==$result[0]['otp']){
+        if($otpcode==$result[0]['otp']){ 
             return true;
         }else {
             return false;
@@ -48,7 +48,7 @@ class User_Model extends Model{
                 
                 if(!empty($result)){
                     $data['job_title']="student";
-                    $data['name']=$result[0]['name'];
+                    $data['name']=$result[0]['init_name'];
                     $data['nic']=$result[0]['nic'];
                     return $data;
                 }
