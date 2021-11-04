@@ -17,6 +17,10 @@ class Manager extends Controller{
             $this->view->render('error');
         }
     }
+    function utilityExpenses(){
+        $cost=$this->model->utilityExpenses();
+        echo json_encode($cost);
+    }
     function addExam(){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='Manager'){
