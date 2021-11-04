@@ -18,10 +18,25 @@ h2 {
   height: 600px;
   display: flex;
 }
-.expense-name-class,
+.expense-name-class {
+  width: 48%;
+  font-size: 1rem;
+  /* background-color: #0892d0; */
+  display: flex;
+  justify-content: space-between;
+}
+.Discription-input[type="text"]:focus,
+.Expense-name-input[type="text"]:focus,
+.Amount-input[type="text"]:focus,
+.Confirm-amount-input[type="text"]:focus {
+  background-color: #e8f0fe;
+  outline: none;
+}
+.expense-text-class,
 .amount-class,
 .confirm-class {
   width: 75%;
+  /* background-color: #0892d0; */
   display: flex;
   justify-content: space-between;
 }

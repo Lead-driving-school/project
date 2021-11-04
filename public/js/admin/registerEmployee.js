@@ -5,9 +5,9 @@ function loadJobs(){
             console.log("Hi")
             console.log(httprequest.responseText)
             const obj=JSON.parse(httprequest.responseText)
-            document.getElementById('empType').innerHTML='<option value="Manager">'+obj['Manager']+'</option>'
-            +'<option value="Receptionist">'+obj['Receptionist']+'</option>'+'<option value="Instructor">'+obj['Instructor']+'</option>'
-            +'<option value="Teacher">'+obj['Teacher']+'</option>'
+            document.getElementById('empType').innerHTML='<option value="'+obj['Manager']+'">'+obj['Manager']+'</option>'
+            +'<option value="'+obj['Receptionist']+'">'+obj['Receptionist']+'</option>'+'<option value="'+obj['Instructor']+'">'+obj['Instructor']+'</option>'
+            +'<option value="'+obj['Teacher']+'">'+obj['Teacher']+'</option>'
             
         }
     }
