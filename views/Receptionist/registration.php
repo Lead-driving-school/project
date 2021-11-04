@@ -120,7 +120,7 @@
                 </div>
                 <div class="right-f2">
                     <div class="sub-row-f2">
-                        <label for="issue" id="issued-date-text">Issued Date</label>
+                        <label for="issue" id="issued-date-text">Medical Issued Date</label>
                         <div class="colen-f2">:</div>
                         <input type="date" id="issue" name="issue">
                     </div>

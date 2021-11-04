@@ -254,10 +254,11 @@ function SaveData(){
 }
 
 function loadVehicleClasses(){
-    var classA1=document.getElementById("A1").checked;
-    var classA=document.getElementById("A").checked;
+    var classA=document.getElementById("A1-A").checked;
+    var classAauto=document.getElementById("A-Auto").checked;
     var classB1=document.getElementById("B1").checked;
     var classB=document.getElementById("B").checked;
+    var classBauto=document.getElementById("B-Auto").checked;
     let httpreq = new XMLHttpRequest();
     httpreq.onreadystatechange = function(){
         
@@ -267,7 +268,7 @@ function loadVehicleClasses(){
             document.getElementById("initPayment").value=text;
         }
     }
-    let data=[classA1,classA,classB1,classB]
+    let data=[classA,classAauto,classB1,classB,classBauto]
     var url="http://localhost/project/Receptionist/vehicleClassSelection/"+data;
     httpreq.open( "POST" , url  , true);
     httpreq.send();

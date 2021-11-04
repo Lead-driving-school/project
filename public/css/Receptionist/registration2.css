@@ -296,7 +296,7 @@ input[type="radio"] {
   width: 25%;
   height: 40px;
   display: flex;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   align-items: center;
   justify-content: center;
 }
