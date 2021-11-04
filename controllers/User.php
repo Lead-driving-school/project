@@ -78,12 +78,31 @@ class User extends Controller{
         $_SESSION['nic'] = $loginData['nic'];
         $_SESSION['job_title'] = $loginData['job_title'];
         $_SESSION['name'] = $loginData['name'];
+        if(isset($loginData['employee_id'])){
+            $_SESSION['employee_id'] = $loginData['employee_id'];
+        }
+        if(isset($loginData['student_id'])){
+            $_SESSION['student_id'] = $loginData['student_id'];
+        }
+        if(isset($loginData['admin_key'])){
+            $_SESSION['admin_key'] = $loginData['admin_key'];
+        }
+        
         echo "success,";    
     }
     public function logout(){
         unset($_SESSION['nic']);
         unset($_SESSION['job_title']);
         unset($_SESSION['name']);
+        if(isset($loginData['employee_id'])){
+            unset($_SESSION['employee_id']);
+        }
+        if(isset($loginData['student_id'])){
+            unset($_SESSION['student_id']);
+        }
+        if(isset($loginData['admin_key'])){
+            unset($_SESSION['admin_key']);
+        }
         session_destroy();
         redirect('/');
     }
