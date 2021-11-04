@@ -10,12 +10,25 @@ class User_Model extends Model{
         
         $result=$this->db->runQuery("SELECT student_key.otp FROM student_key INNER JOIN student on student.student_id=student_key.student_id Where student.nic = '$nic'");
         if(empty($result)){
-            return false;
+            $result=$this->db->runQuery("SELECT employee_key.otp FROM employee_key INNER JOIN employee on employee.employee_id=employee_key.employee_id Where employee.nic = '$nic'");
+            if(empty($result)){
+                return false;
+            }
+            else{
+                if($otpcode==$result[0]['otp']){ 
+                    return true;
+                }else {
+                    return false;
+                } 
+            }
+            
         }
-        if($otpcode==$result[0]['otp']){ 
-            return true;
-        }else {
-            return false;
+        else{
+            if($otpcode==$result[0]['otp']){ 
+                return true;
+            }else {
+                return false;
+            }
         }
     }
     function setPassword($nic,$password){
