@@ -17,7 +17,7 @@
             <div class="title-container">
                 <h3>Forgot Password ? Enter your</h3>
             </div>
-            <div class="err" id="err"> 
+            <div class="err-1" id="err-1"> 
                 
             </div>
             <div class="field-container">
@@ -39,40 +39,5 @@
     </div>
 
 </div>
-<div class="mid-box-container-1">
-        <div>
-        <div class="mid-box-container-2">
-            <div class="title-container">
-                <h3>Forgot Password ? Enter your</h3>
-            </div>
-            <div class="err" id="err">
-                
-            </div>
-            <div class="field-container">
-               <div class="input-container">
-                    <label for="nic">NIC :</label>
-                    <input type="text" class="nic" id="nic" name="nic">
-               </div>
-                <div class="input-container">
-                    <label for="Contact">Contact Number :</label>
-                   <input type="text" class="Contact" id="Contact" name="Contact">
-                </div>  
-            </div>
-            <div class="button-container">
-                <a href="<?php echo URL?>User/loginpage">
-                <button class="cancel">
-                    Cancel
-                </button></a>
-                <button class="confirm" id="submit" name="submit"  onclick="forgot_password()">
-                   Confirm
-                </button>
-                
-            </div>
-        </div>
-        </div>
-    </div>
 </body>
 </html>
-
-<!-- //meka main login eka
-//meka common eka athulata danna -->

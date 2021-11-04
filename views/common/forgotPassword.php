@@ -12,12 +12,12 @@
     <title>Lead driving school</title>
 </head>
 <body>
-<div class="otp-container" id="otp-container">
+<!-- <div class="otp-container" id="otp-container">
     <div class="otp-mid">
             <div class="title-container">
                 <h3>Forgot Password ? Enter your</h3>
             </div>
-            <div class="err" id="err"> 
+            <div class="err-1" id="err-1"> 
                 
             </div>
             <div class="field-container">
@@ -38,7 +38,7 @@
             </div>
     </div>
 
-</div>
+</div> -->
 <div class="mid-box-container-1">
         <div>
         <div class="mid-box-container-2">

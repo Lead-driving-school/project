@@ -48,7 +48,7 @@ class User_Model extends Model{
                 
                 if(!empty($result)){
                     $data['job_title']="student";
-                    $data['name']=$result[0]['name'];
+                    $data['name']=$result[0]['init_name'];
                     $data['nic']=$result[0]['nic'];
                     return $data;
                 }

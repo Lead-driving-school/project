@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/Mid_Box_Layout.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/buttons.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/Add_Emoloyee.css">
-    <script src="<?php echo URL?>public/js/admin/registerEmployee.js"></script>
+    
     <title>Lead driving school</title>
 </head>
 <body>
+    
     <div class="mid-box-container-1">
         <div>
         <div class="mid-box-container-2">
@@ -54,10 +55,10 @@
                 <div class="input-container">
                     <label for="Emp-type">Job Title :</label>
                     <select class="Emp-type" id="empType"  name="empType" onchange="changeLicense()">
-                        <option value="Manager">Manager</option>
+                        <!-- <option value="Manager">Manager</option>
                         <option value="Receptionist">Receptionist</option>
                         <option value="Instructor">Instructor</option>
-                        <option value="Teacher">Teacher</option>
+                        <option value="Teacher">Teacher</option> -->
                     </select>
                 </div> 
 
@@ -80,5 +81,6 @@
         </div>
         </div>
     </div>
+    <script src="<?php echo URL?>public/js/admin/registerEmployee.js"></script>
 </body>
 </html>

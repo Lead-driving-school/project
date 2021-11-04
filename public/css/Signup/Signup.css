@@ -68,6 +68,7 @@
 .message-active {
   width: 310px;
   height: 50px;
+  padding: 0px 10px;
   margin-bottom: 10px;
   z-index: 1000;
   color: #d11534;
