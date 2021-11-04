@@ -14,14 +14,14 @@ class Receptionist_Model extends Model{
     function registerLicense(){
         
     }
-    function getVehicleClasses($classA1,$classA,$classB1,$classB){
+    function getVehicleClasses($classA,$classAauto,$classB1,$classB,$classBauto){
         $total=0;
-        if($classA1=="true"){
-            $result=$this->db->runQuery("SELECT initial_charge FROM vehicle_classes WHERE vehicle_class='A1'");
-            $total=$total+doubleval($result[0]['initial_charge']);
-        }
         if($classA=="true"){
             $result=$this->db->runQuery("SELECT initial_charge FROM vehicle_classes WHERE vehicle_class='A'");
+            $total=$total+doubleval($result[0]['initial_charge']);
+        }
+        if($classAauto=="true"){
+            $result=$this->db->runQuery("SELECT initial_charge FROM vehicle_classes WHERE vehicle_class='A-Auto'");
             $total=$total+doubleval($result[0]['initial_charge']);
         }
         if($classB1=="true"){
@@ -30,6 +30,10 @@ class Receptionist_Model extends Model{
         }
         if($classB=="true"){
             $result=$this->db->runQuery("SELECT initial_charge FROM vehicle_classes WHERE vehicle_class='B'");
+            $total=$total+doubleval($result[0]['initial_charge']);
+        }
+        if($classBauto=="true"){
+            $result=$this->db->runQuery("SELECT initial_charge FROM vehicle_classes WHERE vehicle_class='B-Auto'");
             $total=$total+doubleval($result[0]['initial_charge']);
         }
             

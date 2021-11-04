@@ -23,13 +23,15 @@ function forgot_password(){
               console.log("Done");
               const str = httpreq.responseText;
               console.log(httpreq.responseText)
-              const myArr = str.split(",", 1);
+              const myArr = str.split(",", 2);
               console.log(myArr[0]);
               if(myArr[0]=='success'){
-                document.getElementById("otp-container").classList.replace("otp-container","otp-container-active")
+                alert(myArr[1])
+                window.location.assign("http://localhost/project/User/forgotPasswordOTP");
               }
               else{
-                document.getElementById("err").innerhtml+="This NIC and contact number not exist"
+                document.getElementById("err").innerHTML="<div class='errIN' id='errIN'>This NIC and contact number not exist</div>"
+                // alert("kkkk")
               }
           }
       }
@@ -42,14 +44,14 @@ function forgot_password(){
   
       httpreq.open( "POST" , url  , true);
       //httpreq.setRequestHeader( "Content-type" , "application/x-www-form-urlencoded");
-      httpreq.send();
+      httpreq.send(); 
       // return true;                     
     }
     
 }
 
 function otpCancel(){
-  document.getElementById("otp-container").classList.replace("otp-container-active","otp-container")
+  window.location.assign("http://localhost/project/User/forgotPassword");
 }
 
 function compareOTP(){
@@ -69,6 +71,9 @@ httpreq.onreadystatechange = function(){
           alert("otp matched")
           window.location.assign("http://localhost/project/User/passwordReset");
         }
+        else{
+          document.getElementById("err-1").innerHTML="<div class='errIN-1' id='errIN-1'>This OTP number dosen't match</div>"
+        }
 
     }
   }
@@ -83,4 +88,5 @@ httpreq.onreadystatechange = function(){
   httpreq.send();
 // return true;                     
 
-}
+} 
+

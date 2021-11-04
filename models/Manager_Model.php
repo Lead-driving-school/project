@@ -4,6 +4,14 @@ class Manager_Model extends Model{
     {
         parent::__construct();
     }
+    function utilityExpenses(){
+        $cost['PetrolCost']='Petrol Cost';
+        $cost['ElectricityBill']='Electricity Bill';
+        $cost['WaterBill']='Water Bill';
+        $cost['Tyre']='Tyre Replacement';
+        $cost['Other']='Other Expenses';
+        return $cost;
+    }
     function checkPassword($managerId,$password){
         $result=$this->db->runQuery("SELECT employee_private.password FROM employee_private INNER JOIN employee on employee.employee_id=employee_private.employee_id Where employee.employee_id = '$managerId'");
         if(empty($result)){

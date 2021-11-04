@@ -12,7 +12,7 @@ class User_Model extends Model{
         if(empty($result)){
             return false;
         }
-        if($otpcode==$result[0]['otp']){
+        if($otpcode==$result[0]['otp']){ 
             return true;
         }else {
             return false;
@@ -26,11 +26,12 @@ class User_Model extends Model{
 
     public function login($username, $password) {
 
-        $result=$this->db->runQuery("SELECT username,nic FROM admin WHERE username='$username' AND passwordhash='$password'");
+        $result=$this->db->runQuery("SELECT username,nic,admin_key FROM admin WHERE username='$username' AND passwordhash='$password'");
         if(!empty($result)){
             $data['job_title']="Admin";
             $data['name']=$result[0]['username'];
             $data['nic']=$result[0]['nic'];
+            $data['admin_key']=$result[0]['admin_key'];
             return $data;      
         }
         else{
@@ -40,16 +41,18 @@ class User_Model extends Model{
                 $data['job_title']=$result[0]['job_title'];;
                 $data['name']=$result[0]['name'];
                 $data['nic']=$result[0]['nic'];
+                $data['employee_id']=$result[0]['employee_id'];
                 return $data;
             }
             else{
                 unset($result);
-                $result=$this->db->runQuery("SELECT student.nic,student.init_name FROM student INNER JOIN student_private ON student.student_id=student_private.student_id WHERE student.nic='$username' AND student_private.password='$password'");
+                $result=$this->db->runQuery("SELECT student.nic,student.init_name,student.student_id FROM student INNER JOIN student_private ON student.student_id=student_private.student_id WHERE student.nic='$username' AND student_private.password='$password'");
                 
                 if(!empty($result)){
                     $data['job_title']="student";
-                    $data['name']=$result[0]['name'];
+                    $data['name']=$result[0]['init_name'];
                     $data['nic']=$result[0]['nic'];
+                    $data['student_id']=$result[0]['student_id'];
                     return $data;
                 }
                 

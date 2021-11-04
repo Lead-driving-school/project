@@ -7,24 +7,25 @@ class User extends Controller{
         if(isset($_SESSION['job_title'])){
 
             if($_SESSION['job_title']=='student'){
-                $this->view->render('Conductor/profile');
+                // $this->view->render('Conductor/profile');
+                redirect('Student');
             }
 
             else if($_SESSION['job_title']=='Receptionist'){
-                $this->view->render('receptionist/profile');
+                redirect('Receptionist');
             }
             
             
             else if($_SESSION['job_title']=='Instructor'){
-                $this->view->render('Conductor/profile');
+                redirect('Instructor');
             }
 
             else if($_SESSION['job_title']=='Manager'){
-                $this->view->render('Manager/profile');
+                redirect('Manager');
             }
 
             else if($_SESSION['job_title']=='Admin'){
-                $this->view->render('Admin/profile');
+                redirect('Admin');
             }
             
             else{
@@ -67,7 +68,7 @@ class User extends Controller{
         
         $user = explode(",", $data);
         $loginData = $this->model->login($user[0], $user[1]);
-        if($loginData){
+        if(isset($loginData['nic'])){
             $this->startSession($loginData);
         }   
     }
@@ -77,12 +78,31 @@ class User extends Controller{
         $_SESSION['nic'] = $loginData['nic'];
         $_SESSION['job_title'] = $loginData['job_title'];
         $_SESSION['name'] = $loginData['name'];
+        if(isset($loginData['employee_id'])){
+            $_SESSION['employee_id'] = $loginData['employee_id'];
+        }
+        if(isset($loginData['student_id'])){
+            $_SESSION['student_id'] = $loginData['student_id'];
+        }
+        if(isset($loginData['admin_key'])){
+            $_SESSION['admin_key'] = $loginData['admin_key'];
+        }
+        
         echo "success,";    
     }
     public function logout(){
         unset($_SESSION['nic']);
         unset($_SESSION['job_title']);
         unset($_SESSION['name']);
+        if(isset($loginData['employee_id'])){
+            unset($_SESSION['employee_id']);
+        }
+        if(isset($loginData['student_id'])){
+            unset($_SESSION['student_id']);
+        }
+        if(isset($loginData['admin_key'])){
+            unset($_SESSION['admin_key']);
+        }
         session_destroy();
         redirect('/');
     }
@@ -96,6 +116,10 @@ class User extends Controller{
 
     public function forgotPassword(){
         $this->view->render('common/forgotPassword');
+    }
+
+    public function forgotPasswordOTP(){
+        $this->view->render('common/forgotPasswordOTP');
     }
 
     public function passwordReset(){

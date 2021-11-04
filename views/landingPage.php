@@ -15,10 +15,7 @@
                 <a href="#About-us"><button class="about-us" id="about">About Us</button></a>
                 <a href="#Contact-us"><button class="contact-us" id="contact">Contact Us</button></a>
             </div>
-            <div class="staff-button-set">
-                <a href="<?php echo URL?>Staff/loginpage"><button class="staff-login" id="staffLogin">Log in  as a Staff member</button></a>
-                <a href="<?php echo URL?>Staff/signup"><button class="staff-signup" id="staffSignUp" >I'm new to the staff</button></a>
-            </div>
+            
         </div>
         <div class="body-container">
             <div class="left">
