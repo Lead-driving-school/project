@@ -244,8 +244,25 @@ function SaveData(){
               
           }
         }
-        data=[nic,pmtAddress,gender,dateofbirth,mobile,initialCharges,packagePrice,district,city,divSecre,police,occupation,type,initName,fullName]
-        vehicleClasses=[classA,classAauto,classB1,classB,classBauto]
+        var medicalId=document.getElementById("medical").value;
+        var issuedDate=document.getElementById("issue").value;
+        alert(gender)
+
+
+        pmtAddress=pmtAddress.replace(/,+/g, '_');
+        pmtAddress=pmtAddress.replace(/\s+/g, '-');
+        pmtAddress=pmtAddress.replace(/\/+/g, '~');
+
+        divSecre=divSecre.replace(/,+/g, '_');
+        divSecre=divSecre.replace(/\s+/g, '-');
+        divSecre=divSecre.replace(/\/+/g, '~');
+        
+        fullName=fullName.replace(/\s+/g, '-');
+        initName=initName.replace(/\s+/g, '-');
+
+        let data=[nic,pmtAddress,gender,dateofbirth,mobile,initialCharges,packagePrice,district,city,divSecre,police,occupation,type,initName,fullName,medicalId,issuedDate]
+        console.log(data);
+        let vehicleClasses=[classA,classAauto,classB1,classB,classBauto]
         var url="http://localhost/project/Receptionist/registerForWritten/"+data+"/"+vehicleClasses+"/"+packageId+"/"+classArray;
         httpreq.open( "POST" , url  , true);
         httpreq.send();

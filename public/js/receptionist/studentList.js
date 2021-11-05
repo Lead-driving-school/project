@@ -60,11 +60,13 @@ function viewMore(id){
             stAddress=stAddress.replace(/-+/g, ' ');
             stAddress=stAddress.replace(/~+/g, '/');
 
+            
+
 
             document.getElementById('emId').innerText='St-'+student[0].student_id;
-            document.getElementById('intname').innerText=student[0].init_name;
-            document.getElementById('fullname').innerText=student[0].full_name;
-            document.getElementById('address').innerText=student[0].address;
+            document.getElementById('intname').innerText=studentname;
+            document.getElementById('fullname').innerText=studentnameFull;
+            document.getElementById('address').innerText=stAddress;
             document.getElementById('nic').innerText=student[0].NIC;
             if(student[0].gender=='m'){
                 document.getElementById('gender').innerText="Male";

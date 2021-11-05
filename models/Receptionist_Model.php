@@ -110,5 +110,11 @@ class Receptionist_Model extends Model{
         $result=$this->db->runQuery("SELECT student_id,init_name,full_name,address,NIC,gender,district,city,div_sec,police_station,dob,contact,occupation,type,arival_date FROM student WHERE student_id='$id'");
         return $result;
     }
+
+    public function addMedicalDetails($nic,$medicalNo,$issuedDate){
+        $st_id=$this->db->runQuery("SELECT(student_id) from student where nic='$nic'");
+        $studentId=intval($st_id[0]['student_id']);
+        $result=$this->db->runQuery("INSERT INTO medical_report VALUES($studentId,'$medicalNo','$issuedDate')");
+    }
     
 }
