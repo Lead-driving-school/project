@@ -11,7 +11,9 @@
 </head>
 <body>
     <div class="container">
-        <div class="header"></div>
+        <div class="header">
+        <?php require_once APPROOT."/../views/common/header.php"; ?>
+        </div>
         <div class="main">
         <?php require_once APPROOT."/../views/common/ReceptionistSidebar.php"; ?>
             <div class="view">
