@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/Mid_Box_Layout.css"> 
     <link rel="stylesheet" href="<?php echo URL?>public/css/common/forgotPassword.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/buttons.css">
-    <script src="<?php echo URL?>public/js/common/forgotPassword.js"></script>
+    <script src="<?php echo URL?>public/js/student/forgotPassword.js"></script>
     
     <title>Lead driving school</title>
 </head>
 <body>
-<div class="otp-container" id="otp-container">
+<!-- <div class="otp-container" id="otp-container">
     <div class="otp-mid">
             <div class="title-container">
                 <h3>Forgot Password ? Enter your</h3>
             </div>
-            <div class="err" id="err"> 
+            <div class="err-1" id="err-1"> 
                 
             </div>
             <div class="field-container">
@@ -38,7 +38,7 @@
             </div>
     </div>
 
-</div>
+</div> -->
 <div class="mid-box-container-1">
         <div>
         <div class="mid-box-container-2">
@@ -59,7 +59,7 @@
                 </div>  
             </div>
             <div class="button-container">
-                <a href="<?php echo URL?>Staff/loginpage">
+                <a href="<?php echo URL?>User/loginpage">
                 <button class="cancel">
                     Cancel
                 </button></a>

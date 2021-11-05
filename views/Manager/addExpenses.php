@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/main/structure.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/addExpences/structure.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/addExpences/bodyContainer.css">
-    <script src="<?php echo URL?>public/js/manager/addExpenses.js"></script>
+
     <title>Expenses Recording</title>
 </head>
 <body>
@@ -33,10 +33,7 @@
         </div>
     </div>
     <div class="header">
-
-    <img src="../image/IMG-20210823-WA0007.jpg" class="logo"alt="">
-
-
+    <?php require_once APPROOT."/../views/common/header.php"; ?>
     </div>
 
     <!--body content of the page starts here-->
@@ -51,8 +48,15 @@
                         <div class="form-part">
                                 <div class="expense-name-class">
                                     <label for="Expense-name">Expense:</label>
+                                    <select class="Expence-type" id="expType">
+
+                                    </select>
+                                </div>
+                                <div class="expense-text-class">
+                                    <label for="Expense-name"></label>
                                     <input type="text" class="Expense-name-input" name="expense" id="expense" style="white-space: pre"> 
                                 </div>
+                                
                                 <div class="discription-class">
                                     <label for="Discription">Discription:<br>(optional)</label>
                                     <textarea class="Discription-input" name="discription" id="discription" style="white-space: pre"></textarea>
@@ -77,5 +81,6 @@
         </div>
 
     </div>
+    <script src="<?php echo URL?>public/js/manager/addExpenses.js"></script>
 </body>
 </html>

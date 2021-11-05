@@ -1,3 +1,23 @@
+function loadJobs(){
+    let httprequest = new XMLHttpRequest();
+    httprequest.onreadystatechange = function(){
+        if (httprequest.readyState===4 && httprequest.status===200){
+            console.log("Hi")
+            console.log(httprequest.responseText)
+            const obj=JSON.parse(httprequest.responseText)
+            document.getElementById('empType').innerHTML='<option value="'+obj['Manager']+'">'+obj['Manager']+'</option>'
+            +'<option value="'+obj['Receptionist']+'">'+obj['Receptionist']+'</option>'+'<option value="'+obj['Instructor']+'">'+obj['Instructor']+'</option>'
+            +'<option value="'+obj['Teacher']+'">'+obj['Teacher']+'</option>'
+            
+        }
+    }
+    var url="http://localhost/project/Admin/loadJobs";
+    httprequest.open("POST",url,true)
+    httprequest.send()
+}
+loadJobs()
+
+
 function changeLicense(){
   if(document.getElementById('empType').value=='Instructor'){
     document.getElementById('license-Number').style.visibility="visible"

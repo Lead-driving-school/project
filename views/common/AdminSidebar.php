@@ -41,7 +41,7 @@
             <span class="link-name">Income & Expences</span>
         </a>
 
-        <a class="<?php echo (getLink()=="http://localhost/project/AdminAuth/logout")?"list-item-active":"list-item";?>" href="<?php echo URL?>AdminAuth/logout">
+        <a class="<?php echo (getLink()=="http://localhost/project/User/logout")?"list-item-active":"list-item";?>" href="<?php echo URL?>User/logout">
             <span class="link-icon">&#xf08b</span>
             <span class="link-name">Logout</span>
         </a>

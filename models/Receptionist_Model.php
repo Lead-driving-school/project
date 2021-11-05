@@ -14,14 +14,14 @@ class Receptionist_Model extends Model{
     function registerLicense(){
         
     }
-    function getVehicleClasses($classA1,$classA,$classB1,$classB){
+    function getVehicleClasses($classA,$classAauto,$classB1,$classB,$classBauto){
         $total=0;
-        if($classA1=="true"){
-            $result=$this->db->runQuery("SELECT initial_charge FROM vehicle_classes WHERE vehicle_class='A1'");
-            $total=$total+doubleval($result[0]['initial_charge']);
-        }
         if($classA=="true"){
             $result=$this->db->runQuery("SELECT initial_charge FROM vehicle_classes WHERE vehicle_class='A'");
+            $total=$total+doubleval($result[0]['initial_charge']);
+        }
+        if($classAauto=="true"){
+            $result=$this->db->runQuery("SELECT initial_charge FROM vehicle_classes WHERE vehicle_class='A-Auto'");
             $total=$total+doubleval($result[0]['initial_charge']);
         }
         if($classB1=="true"){
@@ -30,6 +30,10 @@ class Receptionist_Model extends Model{
         }
         if($classB=="true"){
             $result=$this->db->runQuery("SELECT initial_charge FROM vehicle_classes WHERE vehicle_class='B'");
+            $total=$total+doubleval($result[0]['initial_charge']);
+        }
+        if($classBauto=="true"){
+            $result=$this->db->runQuery("SELECT initial_charge FROM vehicle_classes WHERE vehicle_class='B-Auto'");
             $total=$total+doubleval($result[0]['initial_charge']);
         }
             
@@ -41,7 +45,6 @@ class Receptionist_Model extends Model{
     }
     function addStudent($nic,$address,$gender,$dob,$contact,$initPrice,$packagePrice,$district,$city,$div_sec,$police,$occupation,$type,$initName,$fullName){
         $totalAmount=doubleval($initPrice)+doubleval($packagePrice);
-        $message='hiiiiiiii';
         $date=date('Y-m-d');
         $OTP=rand(100000,999999);
         $initPassword=rand(100000,999999);
@@ -106,6 +109,12 @@ class Receptionist_Model extends Model{
     public function getEmployeeDetailsMore($id){
         $result=$this->db->runQuery("SELECT student_id,init_name,full_name,address,NIC,gender,district,city,div_sec,police_station,dob,contact,occupation,type,arival_date FROM student WHERE student_id='$id'");
         return $result;
+    }
+
+    public function addMedicalDetails($nic,$medicalNo,$issuedDate){
+        $st_id=$this->db->runQuery("SELECT(student_id) from student where nic='$nic'");
+        $studentId=intval($st_id[0]['student_id']);
+        $result=$this->db->runQuery("INSERT INTO medical_report VALUES($studentId,'$medicalNo','$issuedDate')");
     }
     
 }

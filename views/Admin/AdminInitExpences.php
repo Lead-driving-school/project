@@ -49,69 +49,32 @@
                         <div class="heading-row">
                             <div class="col-1">Number of Vehicles</div>
                             <div class="col-2"></div>
-                            <div class="col-3">Price</div>
+                            <div class="col-3">Price (LKR)</div>
                             <div class="col-4"></div>
                             
                         </div> 
                     </div>
                     <div class="row-container">
                         <div class="row">
-                            <div class="col-1">One Vehicle</div>
+                            <div class="col-1">One class of vehicles</div>
                             <div class="col-2"></div>
-                            <div class="col-3">Rs 3500.00</div>
+                            <div class="col-3">1700.00</div>
                             <div class="col-4"><button class="edit">Edit</button></div>
                         </div>
 
                         <div class="row">
-                            <div class="col-1">Two Vehicles</div>
+                            <div class="col-1">Two classes of vehicles</div>
                             <div class="col-2"></div>
-                            <div class="col-3">Rs 3500.00</div>
+                            <div class="col-3">2000.00</div>
                             <div class="col-4"><button class="edit">Edit</button></div>
                         </div>
 
                         <div class="row">
-                            <div class="col-1">Three Vehicles</div>
+                            <div class="col-1">Three classes of vehicles</div>
                             <div class="col-2"></div>
-                            <div class="col-3">Rs 3500.00</div>
+                            <div class="col-3">2250.00</div>
                             <div class="col-4"><button class="edit">Edit</button></div>
                         </div>
-
-                    </div>
-                </div>
-
-                <div class="info-container">
-                    <div class="topic-container">
-                        <h2>L- board charges</h2>
-                    </div>
-                    <hr class="topic-line">
-                    <!-- <div class="addnew-btn-container">
-                        <button class="add-new">Add New</button>
-                    </div> -->
-
-                    <div class="table-heading-container">
-                        <div class="heading-row">
-                            <div class="col-1">Vehicle Type</div>
-                            <div class="col-2"></div>
-                            <div class="col-3">Price</div>
-                            <div class="col-4"></div>
-                            
-                        </div> 
-                    </div>
-                    <div class="row-container">
-                        <div class="row">
-                            <div class="col-1">Morter bicycle</div>
-                            <div class="col-2"></div>
-                            <div class="col-3">Rs 3500.00</div>
-                            <div class="col-4"><button class="edit">Edit</button></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-1">Other vehicles</div>
-                            <div class="col-2"></div>
-                            <div class="col-3">Rs 3500.00</div>
-                            <div class="col-4"><button class="edit">Edit</button></div>
-                        </div>
-
 
                     </div>
                 </div>
@@ -127,7 +90,7 @@
                     <div class="table-heading-container">
                         <div class="heading-row">
                             <div class="column-1">Task</div>
-                            <div class="col-3">Price</div>
+                            <div class="col-3">Price (LKR)</div>
                             <div class="col-4"></div>
                             
                         </div> 
@@ -135,13 +98,13 @@
                     <div class="row-container">
                         <div class="row">
                             <div class="column-1">Reapplying for written test</div>
-                            <div class="col-3">Rs 3500.00</div>
+                            <div class="col-3">250.00</div>
                             <div class="col-4"><button class="edit">Edit</button></div>
                         </div>
 
                         <div class="row">
                             <div class="column-1">Reapplying for Practical test</div>
-                            <div class="col-3">Rs 3500.00</div>
+                            <div class="col-3">500.00</div>
                             <div class="col-4"><button class="edit">Edit</button></div>
                         </div>
 

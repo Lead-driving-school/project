@@ -1,6 +1,3 @@
-
-
-
 function viewComplaint(){
     const row=document.getElementById("msgBox")
     let httprequest= new XMLHttpRequest();

@@ -4,12 +4,9 @@
   box-sizing: border-box;
   font-family: "Roboto", FontAwesome, sans-serif;
 }
-html {
-  font-size: 65%;
-}
+
 .main-container {
   display: flex;
-  position: fixed;
   justify-content: space-between;
   width: 100vw;
   background-color: #f2f2f2;

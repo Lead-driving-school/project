@@ -70,7 +70,7 @@ class Receptionist extends Controller{
         
         $values = explode(",", $data);
 
-        $result=$this->model->getVehicleClasses($values[0],$values[1],$values[2],$values[3]);
+        $result=$this->model->getVehicleClasses($values[0],$values[1],$values[2],$values[3],$values[4]);
         echo $result;
     }
     function packageSelection(){
@@ -87,7 +87,8 @@ class Receptionist extends Controller{
         $result=$this->model->addInitExpenses($values[0],$vehicleCLasses,$receptionistId);
         $result=$this->model->assignPackages($values[0],$packageId,$receptionistId);
         $result=$this->model->assginVehicleClasses($values[0],$classArray);
-        
+        $result=$this->model->addMedicalDetails($values[0],$values[15],$values[16]);
+        echo "nic:".$values[0]." addres:".$values[1]." gender:".$values[2]." dateofBIrth:".$values[3]. " contact:".$values[4]."  init:".$values[5]."  pack:".$values[6]." district:".$values[7]." city:".$values[8]." divsec:".$values[9]." police:".$values[10]." occupation:".$values[11]." type:".$values[12]." initName:".$values[13]." fullName:".$values[14]." medicalNo:".$values[15]." issuedDate:".$values[16];
     }
 
     function sessions(){

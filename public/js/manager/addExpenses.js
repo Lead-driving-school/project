@@ -1,16 +1,35 @@
+function utilityExpenses(){
+    let httprequest = new XMLHttpRequest();
+    httprequest.onreadystatechange = function(){
+        if (httprequest.readyState===4 && httprequest.status===200){
+            console.log(httprequest.responseText)
+            const obj=JSON.parse(httprequest.responseText)
+            console.log(obj['PetrolCost'])
+            document.getElementById('expType').innerHTML='<option value="'+obj['PetrolCost']+'">'+obj['PetrolCost']+'</option>'+
+            '<option value="'+obj['ElectricityBill']+'">'+obj['ElectricityBill']+'</option>'+'<option value="'+obj['WaterBill']+'">'+obj['WaterBill']+'</option>'+
+            '<option value="'+obj['Tyre']+'">'+obj['Tyre']+'</option>'+
+            '<option value="'+obj['Other']+'">'+obj['Other']+'</option>'
+            
+        }
+    }
+    var url="http://localhost/project/Manager/utilityExpenses";
+    httprequest.open("POST",url,true)
+    httprequest.send()
+}
+utilityExpenses()
+
 function showConfirm(){
+    var expType=document.getElementById('expType').value;
     var expense=document.getElementById('expense').value;
     var discription=document.getElementById('discription').value;
     var amount=document.getElementById('amount').value;
     var confirm=document.getElementById('Confirm-amount').value;
     
-
-    if(expense.length==0 || amount.length==0 || confirm.length==0){
-        if(expense.length==0){
-            document.getElementById('expense').placeholder="Expense field can't be empty";
-            document.getElementById('expense').style.border="2px solid red";
-            
-        }
+    if(expType=="Other Expenses" && expense.length==0){
+        document.getElementById('expense').placeholder="Expense field can't be empty";
+        document.getElementById('expense').style.border="2px solid red";
+    }
+    if(amount.length==0 || confirm.length==0){
         if(amount.length==0){
             document.getElementById('amount').placeholder="Amount field can't be empty";
             document.getElementById('amount').style.border="2px solid red";
@@ -19,6 +38,12 @@ function showConfirm(){
             document.getElementById('Confirm-amount').placeholder="Confirm amount field can't be empty";
             document.getElementById('Confirm-amount').style.border="2px solid red";
         }
+    }else if(isNaN(amount)){
+            document.getElementById('password-mismatch').innerHTML="Amount is invalid";
+            document.getElementById('amount').style.border="2px solid red";
+    }else if(isNaN(confirm)){
+            document.getElementById('password-mismatch').innerHTML="Confirmation is invalid";
+            document.getElementById('Confirm-amount').style.border="2px solid red";
     }
     ///have to confirm this is in double format
     else if(amount!=confirm){
@@ -43,7 +68,13 @@ function closeConfirm(){
 
 
 function passData(){
-    var expense=document.getElementById('expense').value;
+    if(document.getElementById('expType').value=="Other Expenses"){
+        var expense=document.getElementById('expense').value;
+    }
+    else{
+        var expense=document.getElementById('expType').value;
+    }
+    
     var discription=document.getElementById('discription').value;
     var amount=document.getElementById('amount').value;
    

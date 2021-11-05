@@ -196,6 +196,11 @@ class Admin extends Controller{
     
 //end report
 
+    function loadJobs(){
+        $jobs=$this->model->loadJobs();
+        echo json_encode($jobs);
+    }
+
     function addEmployee(){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='Admin'){
@@ -414,7 +419,7 @@ class Admin extends Controller{
     function registerEmployee($data){
         $user = explode(",", $data);
         $result=$this->model->registerEmployee($user[0], $user[1], $user[2], $user[3], $user[4], $user[5], $user[6], $user[7]);
-        echo $result;
+        echo $result; 
     }
 
     function getEmployeeDetails(){

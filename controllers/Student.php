@@ -7,7 +7,10 @@ class Student extends Controller{
     }
 
     function index(){
-    
+        if($_SESSION['job_title']=='student'){
+            $this->view->render('Student/profile');
+            // redirect('Receptionist');
+        }
     }
 
     function complaints(){

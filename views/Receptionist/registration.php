@@ -55,17 +55,20 @@
                 </div>
 
                 <div class="right">
-                    <div class="sub-row">
-                        <label for="gender">Gender</label>
+                    <div class="gen-row">
+                        <label class="gen" for="gender">Gender</label>
                         <div class="colen">:</div>
-                        <input type="radio" id="male" name="gender">Male <input type="radio" id="female" name="gender">Female
+                        <div class="rad-div">
+                            <input type="radio" id="male" name="gender"><label for="male">Male</label>
+                            <input type="radio" id="female" name="gender"><label for="female">Female</label>
+                        </div>
                     </div>
                     <div class="message-bar" id="message"></div>
-                    <div class="sub-row">
+                    <!-- <div class="sub-row">
                         <label for="dateofbirth">Date of birth</label>
                         <div class="colen">:</div>
                         <input type="date"  id="dateofbirth">
-                    </div>
+                    </div> -->
                     <div class="sub-row">
                         <label for="nic">Identity/Passport</label>
                         <div class="colen">:</div>
@@ -117,46 +120,52 @@
                 </div>
                 <div class="right-f2">
                     <div class="sub-row-f2">
-                        <label for="issue" id="issued-date-text">Issued Date</label>
+                        <label for="issue" id="issued-date-text">Medical Issued Date</label>
                         <div class="colen-f2">:</div>
                         <input type="date" id="issue" name="issue">
                     </div>
                     <div class="sub-row-f2-hidden" id="ending-date">
-                        <label for="issue" id="issued-date-text">Ending Date</label>
+                        <label for="issue" id="ending-date-text">Ending Date</label>
                         <div class="colen-f2">:</div>
-                        <input type="date" id="issue" name="issue">
+                        <input type="date" id="ending">
                     </div>
                 </div>
             </div>
             <div class="part-5-f2">
                 <div class="tab-f2">
-                    <div class="header-f2">Applied Vehicle Classes</div>
-                        <div class="vehicle-box-f2">
-                            <div class="check-row-f2">
-                                <input type="checkbox" id="A1" name="vehicle" value="A1">
-                                <label for="vehicle1"> A1</label>
-                            </div>
-                            <div class="check-row-f2">
-                                <input type="checkbox" id="A" name="vehicle" value="A">
-                                <label for="vehicle2"> A</label>
-                            </div>
-                            <div class="check-row-f2">
-                                <input type="checkbox" id="B1" name="vehicle" value="B1">
-                                <label for="vehicle3"> B1</label>
-                            </div>
-                            <div class="check-row-f2">
-                                <input type="checkbox" id="B" name="vehicle" value="B">
-                                <label for="vehicle3"> B</label>
-                            </div>
+                    <div class="header-f2"><h4>Applied Vehicle Classes</h4></div>
+                    <div class="vehicle-box-f2">
+                        <div class="check-row-f2">
+                            <input type="checkbox" id="A1-A" name="vehicle" value="A1-A">
+                            <label for="vehicle1"> A1/A</label>
                         </div>
-                        <button class="calculate-total" id="calculate" onclick="loadVehicleClasses()">calculate total</button>
+                        <div class="check-row-f2">
+                            <input type="checkbox" id="A-Auto" name="vehicle" value="A-Auto">
+                            <label for="vehicle2"> A(Auto)</label>
+                        </div>
+                        <div class="check-row-f2">
+                            <input type="checkbox" id="B1" name="vehicle" value="B1">
+                            <label for="vehicle3"> B1</label>
+                        </div>
+                        <div class="check-row-f2">
+                            <input type="checkbox" id="B" name="vehicle" value="B">
+                            <label for="vehicle3"> B</label>
+                        </div>
+                        <div class="check-row-f2">
+                            <input type="checkbox" id="B-Auto" name="vehicle" value="B-Auto">
+                            <label for="vehicle3"> B(Auto)</label>
+                        </div>
                     </div>
+                    <div class="total-buttn">
+                        <button class="calculate-total" id="calculate" onclick="loadVehicleClasses()">Calculate Total</button>
+                    </div>
+                </div>
                 <div class="crosul-container-f2">
 
                 <input type="hidden" id="package-id-container" value="0">
                 <input type="hidden" id="package-amount-container" value="0">
 
-                    <div class="crosul-title-f2" id="packageContainer">Traning Packages</div>
+                    <div class="crosul-title-f2" id="packageContainer"><h4>Traning Packages</h4></div>
                     <div class="crosul-f2">
                         <div class="scroll-f2" id="scroll">
                             
