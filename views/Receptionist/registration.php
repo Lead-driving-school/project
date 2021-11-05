@@ -64,11 +64,11 @@
                         </div>
                     </div>
                     <div class="message-bar" id="message"></div>
-                    <div class="sub-row">
+                    <!-- <div class="sub-row">
                         <label for="dateofbirth">Date of birth</label>
                         <div class="colen">:</div>
                         <input type="date"  id="dateofbirth">
-                    </div>
+                    </div> -->
                     <div class="sub-row">
                         <label for="nic">Identity/Passport</label>
                         <div class="colen">:</div>

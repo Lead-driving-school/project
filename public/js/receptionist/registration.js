@@ -210,14 +210,15 @@ function SaveData(){
     }
 
     if(type=="written"){
-        var classA1=document.getElementById("A1").checked;
-        var classA=document.getElementById("A").checked;
+        var classA=document.getElementById("A1-A").checked;
+        var classAauto=document.getElementById("A-Auto").checked;
         var classB1=document.getElementById("B1").checked;
         var classB=document.getElementById("B").checked;
+        var classBauto=document.getElementById("B-Auto").checked;
 
         var classArray=[]
-        if(classA1==true){
-            classArray.push("A1");
+        if(classAauto==true){
+            classArray.push("A-Auto");
         }if(classA==true){
             classArray.push("A");
         }if(classB1==true){
@@ -225,7 +226,10 @@ function SaveData(){
         }if(classB==true){
             classArray.push("B");
         }
-        console.log(classA1,classA,classB1,classB);
+        if(classBauto==true){
+            classArray.push("B-Auto");
+        }
+   
         console.log(classArray);
         var packageId=document.getElementById("package-id-container").value;
         var initialCharges=document.getElementById("initPayment").value;
@@ -241,7 +245,7 @@ function SaveData(){
           }
         }
         data=[nic,pmtAddress,gender,dateofbirth,mobile,initialCharges,packagePrice,district,city,divSecre,police,occupation,type,initName,fullName]
-        vehicleClasses=[classA1,classA,classB1,classB]
+        vehicleClasses=[classA,classAauto,classB1,classB,classBauto]
         var url="http://localhost/project/Receptionist/registerForWritten/"+data+"/"+vehicleClasses+"/"+packageId+"/"+classArray;
         httpreq.open( "POST" , url  , true);
         httpreq.send();
@@ -250,6 +254,9 @@ function SaveData(){
     }else if(type=="license"){
 
     }
+    document.getElementById("reg2-f2").classList.replace("reg2-f2-visible","reg2-f2");
+    document.getElementById("reg-form").classList.replace("reg-form-hidden","reg-form");
+    
 }
 
 function loadVehicleClasses(){
