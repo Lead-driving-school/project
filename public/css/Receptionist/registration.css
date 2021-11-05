@@ -85,6 +85,7 @@ input[type="text"] {
   width: 76%;
   height: 40px;
   font-style: normal;
+  padding-left: 10px;
   font-size: 15px;
   border: none;
   border-radius: 3px;
@@ -132,6 +133,7 @@ input[type="text"] {
   width: 45%;
   height: 40px;
   font-style: normal;
+  padding-left: 10px;
   font-size: 15px;
   border: none;
   border-radius: 3px;

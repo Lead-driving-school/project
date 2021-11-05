@@ -125,9 +125,9 @@
                         <input type="date" id="issue" name="issue">
                     </div>
                     <div class="sub-row-f2-hidden" id="ending-date">
-                        <label for="issue" id="issued-date-text">Ending Date</label>
+                        <label for="issue" id="ending-date-text">Ending Date</label>
                         <div class="colen-f2">:</div>
-                        <input type="date" id="issue" name="issue">
+                        <input type="date" id="ending">
                     </div>
                 </div>
             </div>
