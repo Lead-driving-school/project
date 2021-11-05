@@ -45,7 +45,6 @@ class Receptionist_Model extends Model{
     }
     function addStudent($nic,$address,$gender,$dob,$contact,$initPrice,$packagePrice,$district,$city,$div_sec,$police,$occupation,$type,$initName,$fullName){
         $totalAmount=doubleval($initPrice)+doubleval($packagePrice);
-        $message='hiiiiiiii';
         $date=date('Y-m-d');
         $OTP=rand(100000,999999);
         $initPassword=rand(100000,999999);

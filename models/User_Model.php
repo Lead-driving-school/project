@@ -32,41 +32,65 @@ class User_Model extends Model{
         }
     }
     function setPassword($nic,$password){
+        $hash_password = password_hash($password,PASSWORD_DEFAULT, array('cost' => 9));
+        $res=$this->db->runQuery("SELECT student_id FROM student where NIC='$nic'");
         
-        $result=$this->db->runQuery("UPDATE student_private INNER JOIN student on student.student_id = student_private.student_id SET student_private.password ='$password' WHERE student.nic = '$nic'");
-        return 1;
+        if(!empty($res)){
+            $result=$this->db->runQuery("UPDATE student_private INNER JOIN student on student.student_id = student_private.student_id SET student_private.password ='$hash_password' WHERE student.nic = '$nic'");
+            return 1;
+        }else{
+            $res=$this->db->runQuery("SELECT employee_id FROM employee where nic='$nic'");
+            if(!empty($res)){
+                $result=$this->db->runQuery("UPDATE employee_private INNER JOIN employee on employee.employee_id = employee_private.employee_id SET employee_private.password ='$hash_password' WHERE employee.nic = '$nic'");
+                return 1;
+            }else{
+                return 0;
+            }
+            
+        }
     }
 
     public function login($username, $password) {
 
-        $result=$this->db->runQuery("SELECT username,nic,admin_key FROM admin WHERE username='$username' AND passwordhash='$password'");
+        $result=$this->db->runQuery("SELECT username,nic,admin_key,passwordhash FROM admin WHERE username='$username'");
         if(!empty($result)){
-            $data['job_title']="Admin";
-            $data['name']=$result[0]['username'];
-            $data['nic']=$result[0]['nic'];
-            $data['admin_key']=$result[0]['admin_key'];
-            return $data;      
+            if(password_verify($password,
+            $result[0]['passwordhash'] )){
+                $data['job_title']="Admin";
+                $data['name']=$result[0]['username'];
+                $data['nic']=$result[0]['nic'];
+                $data['admin_key']=$result[0]['admin_key'];
+                return $data;
+            }      
         }
         else{
             unset($result);
-            $result=$this->db->runQuery("SELECT employee.employee_id,employee.nic,employee.job_title,employee.name FROM employee INNER JOIN employee_private ON employee.employee_id=employee_private.employee_id WHERE employee.nic='$username' AND employee_private.password='$password'");
+            $result=$this->db->runQuery("SELECT employee.employee_id,employee.nic,employee.job_title,employee.name,employee_private.password FROM employee INNER JOIN employee_private ON employee.employee_id=employee_private.employee_id WHERE employee.nic='$username'");
             if(!empty($result)){
-                $data['job_title']=$result[0]['job_title'];;
-                $data['name']=$result[0]['name'];
-                $data['nic']=$result[0]['nic'];
-                $data['employee_id']=$result[0]['employee_id'];
-                return $data;
+                if(password_verify($password,
+                $result[0]['password'] )){
+                    $data['job_title']=$result[0]['job_title'];;
+                    $data['name']=$result[0]['name'];
+                    $data['nic']=$result[0]['nic'];
+                    $data['employee_id']=$result[0]['employee_id'];
+                    return $data;
+                } 
+                
             }
             else{
                 unset($result);
                 $result=$this->db->runQuery("SELECT student.nic,student.init_name,student.student_id FROM student INNER JOIN student_private ON student.student_id=student_private.student_id WHERE student.nic='$username' AND student_private.password='$password'");
                 
                 if(!empty($result)){
-                    $data['job_title']="student";
-                    $data['name']=$result[0]['init_name'];
-                    $data['nic']=$result[0]['nic'];
-                    $data['student_id']=$result[0]['student_id'];
-                    return $data;
+                    if(password_verify($password,
+                    $result[0]['password'] )){
+                        $data['job_title']="student";
+                        $data['name']=$result[0]['init_name'];
+                        $data['nic']=$result[0]['nic'];
+                        $data['student_id']=$result[0]['student_id'];
+                        return $data;
+                    } 
+                    
                 }
                 
             } 
@@ -121,22 +145,23 @@ class User_Model extends Model{
         // echo "from cm otp";
     }
     public function passwordReset($password){//select ekak gahala pennanna insert una kyla
+        $hash_password = password_hash($password,PASSWORD_DEFAULT, array('cost' => 9));
         $nic=$_SESSION['NIC'];
         if($_SESSION['user']=="Admin"){
-            $result=$this->db->runQuery("UPDATE admin SET  passwordhash='$password' WHERE nic = '$nic'");
+            $result=$this->db->runQuery("UPDATE admin SET  passwordhash='$hash_password' WHERE nic = '$nic'");
             unset($_SESSION['otp']);
             return "success";
             // echo "from otp";
         }
         else if($_SESSION['user']=="employee"){
-            $result=$this->db->runQuery("UPDATE employee_private INNER JOIN employee on employee.employee_id = employee_private.employee_id SET employee_private.password ='$password' WHERE employee.nic = '$nic'");
+            $result=$this->db->runQuery("UPDATE employee_private INNER JOIN employee on employee.employee_id = employee_private.employee_id SET employee_private.password ='$hash_password' WHERE employee.nic = '$nic'");
             unset($_SESSION['otp']);
             return "success";
             // echo "from otp";
         }
         else if($_SESSION['user']=="student"){
             
-            $result=$this->db->runQuery("UPDATE student_private INNER JOIN student on student.student_id = student_private.student_id SET student_private.password ='$password' WHERE student.NIC = '$nic'");
+            $result=$this->db->runQuery("UPDATE student_private INNER JOIN student on student.student_id = student_private.student_id SET student_private.password ='$hash_password' WHERE student.NIC = '$nic'");
             unset($_SESSION['otp']);
             return "success";
             // echo "from otp";
