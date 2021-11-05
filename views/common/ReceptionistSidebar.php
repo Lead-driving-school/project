@@ -37,7 +37,7 @@
             Sessions
             </div>
         </a>
-        <a href="<?php echo URL?>Receptionist/studentList" class="<?php echo (getLink()=="http://localhost/project/Receptionist/studentList")?"list-item-active":"list-item";?>">
+        <a href="<?php echo URL?>User/logout" class="<?php echo (getLink()=="http://localhost/project/Receptionist/studentList")?"list-item-active":"list-item";?>">
             <div class="link-icon">
             &#xf2bd
             </div>
