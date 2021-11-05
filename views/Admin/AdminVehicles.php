@@ -85,123 +85,56 @@
                     <div class="row">
                         <div class="col-1">V001</div>
                         <div class="col-2">Dual purpose</div>
-                        <div class="col-3">van</div>
+                        <div class="col-3">B</div>
                         <div class="col-4">58-1234</div>
                         <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
                     </div>
 
                     <div class="row">
                         <div class="col-1">V001</div>
-                        <div class="col-2">Dual purpose</div>
-                        <div class="col-3">van</div>
-                        <div class="col-4">58-1234</div>
+                        <div class="col-2">Mortor Tricycle</div>
+                        <div class="col-3">B1</div>
+                        <div class="col-4">QA-1234</div>
                         <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
                     </div>
                     <div class="row">
                         <div class="col-1">V001</div>
                         <div class="col-2">Dual purpose</div>
-                        <div class="col-3">van</div>
-                        <div class="col-4">58-1234</div>
+                        <div class="col-3">B (Auto)</div>
+                        <div class="col-4">KA-1234</div>
+                        <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-1">V001</div>
+                        <div class="col-2">Morter Bicycle</div>
+                        <div class="col-3">A</div>
+                        <div class="col-4">TU-3879</div>
+                        <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">V001</div>
+                        <div class="col-2">Morter Bicycle</div>
+                        <div class="col-3">A(Auto)</div>
+                        <div class="col-4">JJ-1234</div>
                         <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
                     </div>
 
                     <div class="row">
                         <div class="col-1">V001</div>
                         <div class="col-2">Dual purpose</div>
-                        <div class="col-3">van</div>
-                        <div class="col-4">58-1234</div>
+                        <div class="col-3">B</div>
+                        <div class="col-4">62-1254</div>
                         <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
                     </div>
                     <div class="row">
                         <div class="col-1">V001</div>
                         <div class="col-2">Dual purpose</div>
-                        <div class="col-3">van</div>
-                        <div class="col-4">58-1234</div>
+                        <div class="col-3">B</div>
+                        <div class="col-4">252-8534</div>
                         <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-1">V001</div>
-                        <div class="col-2">Dual purpose</div>
-                        <div class="col-3">van</div>
-                        <div class="col-4">58-1234</div>
-                        <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1">V001</div>
-                        <div class="col-2">Dual purpose</div>
-                        <div class="col-3">van</div>
-                        <div class="col-4">58-1234</div>
-                        <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-1">V001</div>
-                        <div class="col-2">Dual purpose</div>
-                        <div class="col-3">van</div>
-                        <div class="col-4">58-1234</div>
-                        <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1">V001</div>
-                        <div class="col-2">Dual purpose</div>
-                        <div class="col-3">van</div>
-                        <div class="col-4">58-1234</div>
-                        <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-1">V001</div>
-                        <div class="col-2">Dual purpose</div>
-                        <div class="col-3">van</div>
-                        <div class="col-4">58-1234</div>
-                        <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1">V001</div>
-                        <div class="col-2">Dual purpose</div>
-                        <div class="col-3">van</div>
-                        <div class="col-4">58-1234</div>
-                        <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-1">V001</div>
-                        <div class="col-2">Dual purpose</div>
-                        <div class="col-3">van</div>
-                        <div class="col-4">58-1234</div>
-                        <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1">V001</div>
-                        <div class="col-2">Dual purpose</div>
-                        <div class="col-3">van</div>
-                        <div class="col-4">58-1234</div>
-                        <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-1">V001</div>
-                        <div class="col-2">Dual purpose</div>
-                        <div class="col-3">van</div>
-                        <div class="col-4">58-1234</div>
-                        <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1">V001</div>
-                        <div class="col-2">Dual purpose</div>
-                        <div class="col-3">van</div>
-                        <div class="col-4">58-1234</div>
-                        <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-1">V001</div>
-                        <div class="col-2">Dual purpose</div>
-                        <div class="col-3">van</div>
-                        <div class="col-4">58-1234</div>
-                        <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
-                    </div>
                 </div>
 
                 

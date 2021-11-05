@@ -8,9 +8,8 @@
                 <h1></h1>
             </div>
             
-               <?php echo "<div class=".'abc'.">Gihan
-                </div> " ?>
-            
+               <div class="username"><?php echo isset($_SESSION['name'])?$_SESSION['name']:"";?></div> 
+               
             <div class="header-profile">
                 <img src="<?php echo URL?>public/images/profpic.png" alt="">
             </div>

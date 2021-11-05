@@ -25,7 +25,15 @@
                 </div>
             </div>
             
-            <div class="right"></div>
+            <div class="right">
+            <div class="left-column">
+                <h1>
+                    <div class="lead">LEAD</div>
+                    <div class="driving">DRIVING</div> 
+                    <div class="school">SCHOOL</div>
+                </h1>
+                </div>
+            </div>
         </div>
     </div>
     <script src="<?php echo URL?>public/js/common/passwordValidation.js"></script>
