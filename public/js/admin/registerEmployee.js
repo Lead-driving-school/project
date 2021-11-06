@@ -148,21 +148,26 @@ function register()
         console.log("onreadystatechange");
         if( httpreq.readyState === 4 && httpreq.status === 200){
             // console.log("Done");
+            const str = httpreq.responseText;
             console.log(httpreq.responseText);
-            if(httpreq.responseText=='successfull'){
+            const myArr = str.split(",", 2);
+            console.log(myArr[1]);
+            
+            if(myArr[0]=='successfull'){
               alert("Registration successfully")
+              alert(myArr[1])
               window.location.assign("http://localhost/project/Admin/staff");
             }
-            else if(httpreq.responseText=='contact exist'){
+            else if(myArr[0]=='contact exist'){
               err.classList.replace("err","err-true"); 
               err.innerHTML='The contact number you entered is already exist';
                 
             }
-            else if(httpreq.responseText=='nic exist'){
+            else if(myArr[0]=='nic exist'){
               err.classList.replace("err","err-true");
               err.innerHTML='The NIC you entered is already exist'; 
             }
-            else if(httpreq.responseText=='nic contact exist'){
+            else if(myArr[0]=='nic contact exist'){
               err.classList.replace("err","err-true");
               err.innerHTML='The NIC and contact number you entered are already exist'; 
             }
@@ -185,7 +190,7 @@ function register()
         Gender=document.getElementById('female').value
       }
 
-      console.log(Gender)
+      // console.log(Gender)
       let Employee=[name,empAddress,NIC,dateofbirth,Gender,telNo,empType,licenseNumber];
       
       let url = "http://localhost/project/Admin/registerEmployee/"+Employee;
