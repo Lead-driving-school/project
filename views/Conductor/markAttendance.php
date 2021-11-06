@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/main/header.css">
-    <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/main/structure.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Conductor/markAttendance/structure.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Conductor/markAttendance/tableStyle.css">
     <title>Attendance</title>
@@ -17,7 +16,7 @@
 <body>
     <div class="header">
 
-        <img src="../image/IMG-20210823-WA0007.jpg" class="logo"alt="">
+    <?php require_once APPROOT."/../views/common/header.php"; ?>
         <!--this is the side bar content--> 
     </div>
     

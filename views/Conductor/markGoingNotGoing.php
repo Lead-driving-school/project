@@ -10,12 +10,8 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo">
-                <img src="IMG-20210823-WA0007.jpg" alt="logo">
-            </div>
+            <?php require_once APPROOT."/../views/common/header.php"; ?>       
         </div>
-
-
         <div class="main">
             <?php require_once APPROOT."/../views/common/InstructorSidebar.php"; ?>
 
