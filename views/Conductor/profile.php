@@ -15,7 +15,7 @@
         <?php require_once APPROOT."/../views/common/header.php"; ?>
         </div>
         <div class="main">
-        <?php require_once APPROOT."/../views/common/AdminSidebar.php"; ?>
+        <?php require_once APPROOT."/../views/common/InstructorSidebar.php"; ?>
         <div class="view">
                 <div class="left">
                     <div class="big-picture">
