@@ -19,12 +19,33 @@ h2 {
   display: flex;
 }
 .expense-name-class {
-  width: 48%;
+  width: 56%;
   font-size: 1rem;
   /* background-color: #0892d0; */
   display: flex;
   justify-content: space-between;
 }
+#expType {
+  width: 140px;
+  height: 30px;
+  color: #0892d0;
+  padding-left: 5px;
+  border: 2px solid #0892d0;
+  font-weight: 600;
+  appearance: none;
+  font-family: inherit;
+  border-radius: 4px;
+  box-shadow: 1px 1px 10px #b0b3b3;
+}
+#expType:focus {
+  color: #0892d0;
+  border: 2px solid #0892d0;
+  appearance: none;
+  font-family: inherit;
+  border-radius: 4px;
+  box-shadow: 1px 1px 10px #b0b3b3;
+}
+
 .Discription-input[type="text"]:focus,
 .Expense-name-input[type="text"]:focus,
 .Amount-input[type="text"]:focus,

@@ -13,7 +13,7 @@
         <div class="header">
         <?php require_once APPROOT."/../views/common/header.php"; ?>
         </div>
-        <div class="main">
+        <div class="main"> 
             <?php require_once APPROOT."/../views/common/StudentSidebar.php"; ?>
             <div class="review">
                 <div class="container-review">

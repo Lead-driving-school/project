@@ -6,14 +6,41 @@ class IncomeExpenses extends Controller{
         parent:: __construct();
     }
     function index(){
-        $this->view->render('IncomeExpenses/income&Expenses');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager' || $_SESSION['job_title']=='Admin'){
+                $this->view->render('IncomeExpenses/income&Expenses');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
         
     function viewExpenses(){
-        $this->view->render('IncomeExpenses/viewExpences');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager' || $_SESSION['job_title']=='Admin'){
+                $this->view->render('IncomeExpenses/viewExpences');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
     function studentExpenses(){
-        $this->view->render('IncomeExpenses/viewExpenses-Student');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager' || $_SESSION['job_title']=='Admin'){
+                $this->view->render('IncomeExpenses/viewExpenses-Student');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
 
 
@@ -26,12 +53,39 @@ class IncomeExpenses extends Controller{
 
 
     function viewIncome(){
-        $this->view->render('IncomeExpenses/viewIncome');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager' || $_SESSION['job_title']=='Admin'){
+                $this->view->render('IncomeExpenses/viewIncome');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
     function incomeGraphic(){
-        $this->view->render('IncomeExpenses/incomeGraphic');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager' || $_SESSION['job_title']=='Admin'){
+                $this->view->render('IncomeExpenses/incomeGraphic');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
-    function expensesGraphic(){
-        $this->view->render('IncomeExpenses/expensesGraphic');
+    function expenseGraphic(){
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Manager' || $_SESSION['job_title']=='Admin'){
+                $this->view->render('IncomeExpenses/expensesGraphic');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
 }
