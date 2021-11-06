@@ -10,35 +10,9 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo">
-                <img src="images/IMG-20210823-WA0007.jpg" alt="logo" width="120" height="50">
-            </div>
-            <div class="prof">
-                <div class="prf-pic">
-                    <img src="images/profpic.png" alt="prof" width="50" height="50">
-                </div>
-                <div class="prf-log">
-                    <select name="logout" id="logout">
-                        <option value="name">S. Lakmal</option>
-                        <option value="myprofile">My Profile</option>
-                        <option value="logout">Logout</option>
-                    </select>
-                </div>
-            </div>
+            <?php require_once APPROOT."/../views/common/header.php"; ?>
         </div>
         <div class="my-content">
-            <!-- <div class="side-bar">
-                <ul>
-                    <li><a href="http://localhost/project/receptionist/profile">Profile</a></li>
-                    <li><a href="#">Event Calendar</a></li>
-                    <li><a href="http://localhost/project/receptionist/sessions">Sessions</a></li>
-                    <li><a href="http://localhost/project/receptionist/payments">Payments</a></li>
-                    <li><a href="http://localhost/project/receptionist/studentList">Student List</a></li>
-                    <li><a href="http://localhost/project/receptionist/registration">Registration</a></li>
-                    <li><a href="http://localhost/project/receptionist/addResult">Results Adding</a></li>
-                    <li><a href="#">Logout</a></li>
-                </ul>
-            </div> -->
             <?php require_once APPROOT."/../views/common/ReceptionistSidebar.php"; ?>
             <div class="view">
                 <div class="part-1">

@@ -246,7 +246,7 @@ function SaveData(){
         }
         var medicalId=document.getElementById("medical").value;
         var issuedDate=document.getElementById("issue").value;
-        alert(gender)
+        // alert(gender)
 
 
         pmtAddress=pmtAddress.replace(/,+/g, '_');
