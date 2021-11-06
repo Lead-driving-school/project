@@ -77,7 +77,7 @@ class User extends Controller{
     public function startSession($loginData){
         $_SESSION['nic'] = $loginData['nic'];
         $_SESSION['job_title'] = $loginData['job_title'];
-        $_SESSION['name'] = $loginData['name'];
+        $_SESSION['name'] = str_replace("-", " ", $loginData['name']);
         if(isset($loginData['employee_id'])){
             $_SESSION['employee_id'] = $loginData['employee_id'];
         }
