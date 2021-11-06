@@ -81,14 +81,16 @@ class Receptionist extends Controller{
     function registerForWritten($data,$vehicleCLasses,$packageId,$classArray){
         $values = explode(",", $data);
         // echo $packageId;
-        $result=$this->model->addStudent($values[0],$values[1],$values[2],$values[3],$values[4],$values[5],$values[6],$values[7],$values[8],$values[9],$values[10],$values[11],$values[12],$values[13],$values[14]);
+        $resultMsg=$this->model->addStudent($values[0],$values[1],$values[2],$values[3],$values[4],$values[5],$values[6],$values[7],$values[8],$values[9],$values[10],$values[11],$values[12],$values[13],$values[14]);
         // echo json_encode($result);
         $receptionistId=$_SESSION['employee_id'];
         $result=$this->model->addInitExpenses($values[0],$vehicleCLasses,$receptionistId);
         $result=$this->model->assignPackages($values[0],$packageId,$receptionistId);
         $result=$this->model->assginVehicleClasses($values[0],$classArray);
         $result=$this->model->addMedicalDetails($values[0],$values[15],$values[16]);
-        echo "nic:".$values[0]." addres:".$values[1]." gender:".$values[2]." dateofBIrth:".$values[3]. " contact:".$values[4]."  init:".$values[5]."  pack:".$values[6]." district:".$values[7]." city:".$values[8]." divsec:".$values[9]." police:".$values[10]." occupation:".$values[11]." type:".$values[12]." initName:".$values[13]." fullName:".$values[14]." medicalNo:".$values[15]." issuedDate:".$values[16];
+        echo $resultMsg;
+        // echo "nic:".$values[0]." addres:".$values[1]." gender:".$values[2]." dateofBIrth:".$values[3]. " contact:".$values[4]."  init:".$values[5]."  pack:".$values[6]." district:".$values[7]." city:".$values[8]." divsec:".$values[9]." police:".$values[10]." occupation:".$values[11]." type:".$values[12]." initName:".$values[13]." fullName:".$values[14]." medicalNo:".$values[15]." issuedDate:".$values[16];
+    
     }
 
     function sessions(){
@@ -128,27 +130,101 @@ class Receptionist extends Controller{
         echo json_encode($result);
     }
     function viewExam(){
-        $this->view->render('Receptionist/viewExam');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Receptionist'){
+                $this->view->render('Receptionist/viewExam');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        } 
+        
     }
     function viewSession(){
-        $this->view->render('Receptionist/viewSession');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Receptionist'){
+                $this->view->render('Receptionist/viewSession');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        } 
     }
     function viewStudent(){
-        $this->view->render('Receptionist/viewStudent');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Receptionist'){
+                $this->view->render('Receptionist/viewStudent');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }   
     }
     function viewStudentS(){
-        $this->view->render('Receptionist/viewStudentS');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Receptionist'){
+                $this->view->render('Receptionist/viewStudentS');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        } 
+        
     }
     function viewInstructor(){
-        $this->view->render('Receptionist/viewInstructor');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Receptionist'){
+                $this->view->render('Receptionist/viewInstructor');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        } 
     }
     function viewInstructorS(){
-        $this->view->render('Receptionist/viewInstructorS');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Receptionist'){
+                $this->view->render('Receptionist/viewInstructorS');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        } 
     }
     function viewVehicle(){
-        $this->view->render('Receptionist/viewVehicle');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Receptionist'){
+                $this->view->render('Receptionist/viewVehicle');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        } 
     }
     function viewVehicleS(){
-        $this->view->render('Receptionist/viewVehicleS');
+        if(isset($_SESSION['job_title'])){
+            if($_SESSION['job_title']=='Receptionist'){
+                $this->view->render('Receptionist/viewVehicleS');
+            }else{
+                $this->view->render('error');
+            }
+        }
+        else{
+            $this->view->render('error');
+        }
     }
 }

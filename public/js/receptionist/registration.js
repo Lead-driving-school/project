@@ -240,13 +240,12 @@ function SaveData(){
           console.log("onreadystatechange");
           if( httpreq.readyState === 4 && httpreq.status === 200){
             console.log(httpreq.responseText);
-              
+            alert(httpreq.responseText) ;
               
           }
         }
         var medicalId=document.getElementById("medical").value;
         var issuedDate=document.getElementById("issue").value;
-        alert(gender)
 
 
         pmtAddress=pmtAddress.replace(/,+/g, '_');
