@@ -68,7 +68,7 @@ httpreq.onreadystatechange = function(){
         console.log(myArr[0]);
         if(myArr[0]=='success'){
           // document.getElementById("otp-container").classList.replace("otp-container","otp-container-active")
-          alert("otp matched")
+          // alert("otp matched")
           window.location.assign("http://localhost/project/User/passwordReset");
         }
         else{
