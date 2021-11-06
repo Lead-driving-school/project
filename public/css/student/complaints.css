@@ -24,8 +24,8 @@ body {
 }
 
 .review {
-  width: 84%;
-  height: 655px;
+  width: calc(100% - 250px);
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,7 +33,7 @@ body {
 }
 .main {
   width: 100%;
-  height: 675px;
+  height: calc(100% - 80px);
   display: flex;
   /* background-color: chocolate; */
 }
@@ -64,7 +64,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
- 
 }
 
 .row-2 {
@@ -89,7 +88,7 @@ body {
   text-align: center;
   padding-top: 10px;
   margin-right: 15px;
- 
+
   /* background-color: cornsilk; */
 }
 
@@ -169,7 +168,7 @@ body {
   /* background-color: burlywood; */
 }
 
-h4{
+h4 {
   font-weight: 400;
 }
 .com-row-1 {
@@ -229,23 +228,22 @@ h4{
   /* background-color: brown; */
 }
 
-
-.clear-button{
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: cadetblue; */
+.clear-button {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: cadetblue; */
 }
-.clear{
-    width: 50%;
-    height: 60%;
-    font-size: 20px;
-    font-weight: 600;
-    color: seashell;
-    border-radius: 5px;
-    background-color:  #262b2f;
-    cursor: pointer;
+.clear {
+  width: 50%;
+  height: 60%;
+  font-size: 20px;
+  font-weight: 600;
+  color: seashell;
+  border-radius: 5px;
+  background-color: #262b2f;
+  cursor: pointer;
 }
 .clear-button {
   flex-grow: 1;
@@ -296,10 +294,9 @@ h4{
   background-color: seashell;
   color: #0892d0;
   box-shadow: 1px 1px 10px #b0b3b3;
-
 }
 
-a{
+a {
   text-decoration: none;
   color: black;
 }
@@ -313,27 +310,25 @@ p {
   opacity: 1;
 }
 
-
-.submit-button{
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: rgb(69, 88, 49); */
+.submit-button {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgb(69, 88, 49); */
 }
-.submit{
-    width: 50%;
-    height: 60%;
-    font-size: 20px;
-    font-weight: 600;
-    border-radius: 5px;
-    background-color: #0892d0;
-    color: seashell;
-    cursor: pointer;
+.submit {
+  width: 50%;
+  height: 60%;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: #0892d0;
+  color: seashell;
+  cursor: pointer;
 }
 :-ms-input-placeholder {
   color: red;
-
 }
 
 ::-ms-input-placeholder {

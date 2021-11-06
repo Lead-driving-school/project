@@ -79,7 +79,7 @@ class User_Model extends Model{
             }
             else{
                 unset($result);
-                $result=$this->db->runQuery("SELECT student.nic,student.init_name,student.student_id FROM student INNER JOIN student_private ON student.student_id=student_private.student_id WHERE student.nic='$username' AND student_private.password='$password'");
+                $result=$this->db->runQuery("SELECT student.nic,student.init_name,student.student_id,student_private.password FROM student INNER JOIN student_private ON student.student_id=student_private.student_id WHERE student.nic='$username' ");
                 
                 if(!empty($result)){
                     if(password_verify($password,

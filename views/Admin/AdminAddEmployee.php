@@ -34,10 +34,10 @@
                     <label for="NIC">NIC :</label>
                     <input type="text"  class="NIC" id="NIC"  name="NIC">
                 </div>
-                <div class="input-container">
+                <!-- <div class="input-container">
                     <label for="Dob">Date of Birth :</label>
                     <input type="date"  class="Dob"  id="Dob"  name="Dob">
-                </div>
+                </div> -->
                 <div class="input-container" >
                     <label>Gender :</label><br>
                     <input class="male" type="radio" name="Gender"  id="male" value="m">

@@ -37,10 +37,10 @@
             <span class="link-name">Reviews & Complaints</span>
         </a>
 
-        <a class="list-item" href="#">
+        <!-- <a class="list-item" href="#">
             <span class="link-icon">&#xf010</span>
             <span class="link-name">About Us</span>
-        </a>
+        </a> -->
 
         <a class="list-item" href="#">
             <span class="link-icon">&#xf08b</span>

@@ -4,7 +4,7 @@
     <div class="nav-list">
         <a href="<?php echo URL?>Receptionist/" class="<?php echo (getLink()=="http://localhost/project/Receptionist/")?"list-item-active":"list-item";?>">
             <div class="link-icon">
-            &#xf2bd
+            &#xf007
             </div>
             <div class="link-name">
             Profile
@@ -12,7 +12,7 @@
         </a>
         <a href="<?php echo URL?>Receptionist/eventCalendar" class="<?php echo (getLink()=="http://localhost/project/Receptionist/eventCalendar")?"list-item-active":"list-item";?>" >
             <div class="link-icon">
-            &#xf2bd
+            &#xf073
             </div>
             <div class="link-name">
             Event Calendar
@@ -22,7 +22,7 @@
         </a>
         <a href="<?php echo URL?>Receptionist/addResult" class="<?php echo (getLink()=="http://localhost/project/Receptionist/addResult")?"list-item-active":"list-item";?>">
             <div class="link-icon">
-            &#xf2bd
+            &#xf0f6
             </div>
             <div class="link-name">
             Add results
@@ -31,7 +31,7 @@
 
         <a href="<?php echo URL?>Receptionist/sessions" class="<?php echo (getLink()=="http://localhost/project/Receptionist/sessions")?"list-item-active":"list-item";?>">
             <div class="link-icon">
-            &#xf2bd
+            &#xf0ae
             </div>
             <div class="link-name">
             Sessions
@@ -39,15 +39,15 @@
         </a>
         <a href="<?php echo URL?>Receptionist/studentList" class="<?php echo (getLink()=="http://localhost/project/Receptionist/studentList")?"list-item-active":"list-item";?>">
             <div class="link-icon">
-            &#xf2bd
+            &#xf03a
             </div>
             <div class="link-name">
             Student List
             </div>
         </a>
-        <a href="#" class="list-item">
+        <a href="<?php echo URL?>User/logout" class="list-item">
             <div class="link-icon">
-            &#xf2bd
+            &#xf08b
             </div>
             <div class="link-name">
             Log out
