@@ -13,12 +13,7 @@
 <body>
     <div class="container-st" id="container-st">
         <div class="header-st">
-            <div class="logo-st">
-                <img src="images/logo.jpg" alt="logo" width="110" height="40">
-            </div>
-            <div class="profpic-st">
-                <img src="images/profpic.png" alt="profpic" width="45" height="45">
-            </div>
+            <?php require_once APPROOT."/../views/common/header.php"; ?>
         </div>
         <div class="view-st">
             

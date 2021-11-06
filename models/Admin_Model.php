@@ -63,7 +63,7 @@ class Admin_Model extends Model{
             }
 
             // sendOtp($OTP);
-            return "successfull"; 
+            return "successfull,".$OTP; 
         }
         else if(!empty($contact)&&empty($nic)){
             return "contact exist";

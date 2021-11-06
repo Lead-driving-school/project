@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/changeConductorVehicleStudent/structure.css"> 
     <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/changeConductorVehicleStudent/tablestyle.css">
-    <title>Students changing</title>
+    <title>Lead driving school</title>
     <div class="main-page">
         <div class="topic">
             <h1>Change Assigned Students</h1>

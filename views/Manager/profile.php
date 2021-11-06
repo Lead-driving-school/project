@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/student/profile.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/common/sidebar.css">
-    <title>Reciptionist</title>
+    <title>Lead driving school</title>
 </head>
 <body>
     <div class="container">

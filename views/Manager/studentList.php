@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/Admin/Mid_Box_Layout2.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/Employee_Details.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/buttons.css">
-    <title>List of Students</title>
+    <title>Lead driving school</title>
 </head>
 <body>
 

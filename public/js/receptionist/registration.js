@@ -246,6 +246,7 @@ function SaveData(){
         }
         var medicalId=document.getElementById("medical").value;
         var issuedDate=document.getElementById("issue").value;
+        // alert(gender)
 
 
         pmtAddress=pmtAddress.replace(/,+/g, '_');
@@ -270,8 +271,9 @@ function SaveData(){
     }else if(type=="license"){
 
     }
-    document.getElementById("reg2-f2").classList.replace("reg2-f2-visible","reg2-f2");
-    document.getElementById("reg-form").classList.replace("reg-form-hidden","reg-form");
+    window.location.assign("http://localhost/project/Receptionist/studentList");
+    // document.getElementById("reg2-f2").classList.replace("reg2-f2-visible","reg2-f2");
+    // document.getElementById("reg-form").classList.replace("reg-form-hidden","reg-form");
     
 }
 
