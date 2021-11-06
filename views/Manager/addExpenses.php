@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/addExpences/structure.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/addExpences/bodyContainer.css">
 
-    <title>Expenses Recording</title>
+    <title>Lead driving school</title>
 </head>
 <body>
     <div class="confirmation-box" id="confirmation">

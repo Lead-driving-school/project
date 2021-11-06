@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Receptionist/profile.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/common/sidebar.css">
-    <title>Reciptionist</title>
+    <title>Lead driving school</title>
 </head>
 <body>
     <div class="container">
         <div class="header">
-        <?php require_once APPROOT."/../views/common/header.php"; ?>
+            <?php require_once APPROOT."/../views/common/header.php"; ?>
         </div>
         <div class="main">
         <?php require_once APPROOT."/../views/common/ReceptionistSidebar.php"; ?>
