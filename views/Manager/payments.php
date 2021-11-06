@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/Receptionist/addPayment.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Receptionist/addPayment_step2.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Receptionist/pay.css">
-    <title>List of Students</title>
+    <title>Lead driving school</title>
 </head>
 <body>
     <div class="container-st" id="container-st">

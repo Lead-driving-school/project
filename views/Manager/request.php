@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/requests/structure.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/requests/containers.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/requests/tableStyle.css">
-    <title>Requests</title>
+    <title>Lead driving school</title>
 </head>
 <body>
     <div class="header">
