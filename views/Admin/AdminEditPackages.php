@@ -27,7 +27,7 @@
                     Edit
                     </button>
                </div>
-               <div class="input-container">
+               <!-- <div class="input-container">
                     <div class="input-container-edit">
                         <label for="vehicle-class-type-edit">Vehicle classes :</label>
                         <div class="vehicle-class-type-edit">
@@ -37,7 +37,7 @@
                     <button class="edit">
                         Edit
                     </button>
-                </div> 
+                </div>  -->
                 <div class="classes-check-outer-edit">
                     <div class="classes-check-edit">
                         

@@ -29,7 +29,10 @@
                     <select class="vehicle-class" id="">
                         <option value="A">A</option>
                         <option value="A">A(Auto)</option>
-                        <option value="B">B</option>
+                        <option value="B">A1</option>
+                        <option value="A">B</option>
+                        <option value="A">B(Auto)</option>
+                        <option value="B">B1</option>
                     </select>
                 </div> 
                      
