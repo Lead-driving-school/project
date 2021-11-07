@@ -32,7 +32,7 @@
                             <div class="row-1">
                                 <div class="col-1">Name</div>
                                 <div class="col-2">:</div>
-                                <div class="col-3">K.P.Sampath</div>
+                                <div class="col-3">Imal kovinda</div>
                             </div>
                             <div class="row-1">
                                 <div class="col-1">NIC</div>
@@ -42,7 +42,7 @@
                             <div class="row-1">
                                 <div class="col-1">Title</div>
                                 <div class="col-2">:</div>
-                                <div class="col-3">Recipient</div>
+                                <div class="col-3">Instructor</div>
                             </div>
                             <div class="row-1">
                                 <div class="col-1">Address</div>
