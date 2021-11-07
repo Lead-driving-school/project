@@ -20,13 +20,13 @@
                    <label for="package-name">Package Name :</label>
                    <input type="text" class="package-name">
                </div>
-               <div class="input-container">
+               <!-- <div class="input-container">
                     <label for="vehicle-class-type">Vehicle classes :</label>
                     <select class="vehicle-class-type" id="">
                         <option value="LightVehicles">Light Vehicles</option>
                         <option value="HeavyVehecles">Heavy Vehecles</option>
                     </select>
-                </div> 
+                </div>  -->
                 <div class="classes-check-outer">
                 <div class="classes-check">
                         <div class="chk-bx">

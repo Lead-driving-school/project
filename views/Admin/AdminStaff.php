@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/common/header.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/Mid_Box_Layout2.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/Employee_Details.css">
-    <script  src="<?php echo URL?>public/js/admin/staff.js"></script>
+    
     
     <title>Lead driving school</title>
 </head>
@@ -95,140 +95,13 @@
                 </div>
 
                 <div class="row-container" id="row-container" >
-                    <!-- <div class="row">
-                        <div class="col-1">E123</div>
-                        <div class="col-2">Sahan rishitha samarathunga</div>
-                        <div class="col-3">Manager</div>
-                        <div class="col-4">0777123456</div>
-                        <div class="col-5"><a href="<?php echo URL?>Admin/employeeDetails"><button class="view-more">View more</button></a></div>
-                    </div>
                     
-                    <div class="row">
-                        <div class="col-1">E123</div>
-                        <div class="col-2">Sahan rishitha samarathunga</div>
-                        <div class="col-3">Manager</div>
-                        <div class="col-4">0777123456</div>
-                        <div class="col-5"><a href="<?php echo URL?>Admin/employeeDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-1">E123</div>
-                        <div class="col-2">Sahan rishitha samarathunga</div>
-                        <div class="col-3">Manager</div>
-                        <div class="col-4">0777123456</div>
-                        <div class="col-5"><a href="<?php echo URL?>Admin/employeeDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-1">E123</div>
-                        <div class="col-2">Sahan rishitha samarathunga</div>
-                        <div class="col-3">Manager</div>
-                        <div class="col-4">0777123456</div>
-                        <div class="col-5"><a href="<?php echo URL?>Admin/employeeDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-1">E123</div>
-                        <div class="col-2">Sahan rishitha samarathunga</div>
-                        <div class="col-3">Manager</div>
-                        <div class="col-4">0777123456</div>
-                        <div class="col-5"><a href="<?php echo URL?>Admin/employeeDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-1">E123</div>
-                        <div class="col-2">Sahan rishitha samarathunga</div>
-                        <div class="col-3">Manager</div>
-                        <div class="col-4">0777123456</div>
-                        <div class="col-5"><a href="<?php echo URL?>Admin/employeeDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-1">E123</div>
-                        <div class="col-2">Sahan rishitha samarathunga</div>
-                        <div class="col-3">Manager</div>
-                        <div class="col-4">0777123456</div>
-                        <div class="col-5"><a href="<?php echo URL?>Admin/employeeDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-1">E123</div>
-                        <div class="col-2">Sahan rishitha samarathunga</div>
-                        <div class="col-3">Manager</div>
-                        <div class="col-4">0777123456</div>
-                        <div class="col-5"><a href="<?php echo URL?>Admin/employeeDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-1">E123</div>
-                        <div class="col-2">Sahan rishitha samarathunga</div>
-                        <div class="col-3">Manager</div>
-                        <div class="col-4">0777123456</div>
-                        <div class="col-5"><a href="<?php echo URL?>Admin/employeeDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-1">E123</div>
-                        <div class="col-2">Sahan rishitha samarathunga</div>
-                        <div class="col-3">Manager</div>
-                        <div class="col-4">0777123456</div>
-                        <div class="col-5"><a href="<?php echo URL?>Admin/employeeDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-1">E123</div>
-                        <div class="col-2">Sahan rishitha samarathunga</div>
-                        <div class="col-3">Manager</div>
-                        <div class="col-4">0777123456</div>
-                        <div class="col-5"><a href="<?php echo URL?>Admin/employeeDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-1">E123</div>
-                        <div class="col-2">Sahan rishitha samarathunga</div>
-                        <div class="col-3">Manager</div>
-                        <div class="col-4">0777123456</div>
-                        <div class="col-5"><a href="<?php echo URL?>Admin/employeeDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-1">E123</div>
-                        <div class="col-2">Sahan rishitha samarathunga</div>
-                        <div class="col-3">Manager</div>
-                        <div class="col-4">0777123456</div>
-                        <div class="col-5"><a href="<?php echo URL?>Admin/employeeDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-
-                    
-                    <div class="row">
-                        <div class="col-1">E123</div>
-                        <div class="col-2">Sahan rishitha samarathunga</div>
-                        <div class="col-3">Manager</div>
-                        <div class="col-4">0777123456</div>
-                        <div class="col-5"><a href="<?php echo URL?>Admin/employeeDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-1">E123</div>
-                        <div class="col-2">Sahan rishitha samarathunga</div>
-                        <div class="col-3">Manager</div>
-                        <div class="col-4">0777123456</div>
-                        <div class="col-5"><a href="<?php echo URL?>Admin/employeeDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-1">E123</div>
-                        <div class="col-2">Sahan rishitha samarathunga</div>
-                        <div class="col-3">Manager</div>
-                        <div class="col-4">0777123456</div>
-                        <div class="col-5"><a href="<?php echo URL?>Admin/employeeDetails"><button class="view-more">View more</button></a></div>
-                    </div> -->
                 </div>
                 
 
             </div>
         </div>
     </div>
-    
+    <script  src="<?php echo URL?>public/js/admin/staff.js"></script>
 </body>
 </html>
