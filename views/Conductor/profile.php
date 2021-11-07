@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/student/profile.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/common/sidebar.css">
-    <title>Lead driving school</title>
+    <title>Reciptionist</title>
 </head>
 <body>
     <div class="container">
@@ -15,7 +15,7 @@
         <?php require_once APPROOT."/../views/common/header.php"; ?>
         </div>
         <div class="main">
-        <?php require_once APPROOT."/../views/common/AdminSidebar.php"; ?>
+        <?php require_once APPROOT."/../views/common/InstructorSidebar.php"; ?>
         <div class="view">
                 <div class="left">
                     <div class="big-picture">
@@ -32,22 +32,22 @@
                             <div class="row-1">
                                 <div class="col-1">Name</div>
                                 <div class="col-2">:</div>
-                                <div class="col-3">Gihan weerasinghe</div>
+                                <div class="col-3">Imal kovinda</div>
                             </div>
                             <div class="row-1">
                                 <div class="col-1">NIC</div>
                                 <div class="col-2">:</div>
-                                <div class="col-3">980210324vV</div>
+                                <div class="col-3">9877234567V</div>
                             </div>
                             <div class="row-1">
                                 <div class="col-1">Title</div>
                                 <div class="col-2">:</div>
-                                <div class="col-3">Admin</div>
+                                <div class="col-3">Instructor</div>
                             </div>
                             <div class="row-1">
                                 <div class="col-1">Address</div>
                                 <div class="col-2">:</div>
-                                <div class="col-3">No. 5/65,pilimathalawa kandy,Matara</div>
+                                <div class="col-3">No. 5/65,Uyanwatta,Matara</div>
                             </div>
                             <div class="row-1">
                                 <div class="col-1">Tel-No</div>
@@ -61,7 +61,7 @@
                         </div>
                     </div>
                 </div>
-            </div>>
+            </div>
         </div>
     </div>
 </body>

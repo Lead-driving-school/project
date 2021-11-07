@@ -11,9 +11,9 @@
     <div class="main-page">
         <div class="header">
             <div class="logo-and-others">
-                <div class="logo">Logo Here</div>
-                <a href="#About-us"><button class="about-us" id="about">About Us</button></a>
-                <a href="#Contact-us"><button class="contact-us" id="contact">Contact Us</button></a>
+                <div ><img class="logo"src="<?php echo URL?>public/images/logo.png" alt=""></div>
+                <a href="#About-us"><button class="about-us-button" id="about">About Us</button></a>
+                <a href="#Contact-us"><button class="contact-us-button" id="contact">Contact Us</button></a>
             </div>
             
         </div>
@@ -40,6 +40,7 @@
             </div>
         </div>
     </div>
+    <div class="about-contact">
     <div class="About-us" id="About-us">
         <div class="title-div">
             <h1>ABOUT US</h1>
@@ -74,5 +75,7 @@
             </div>
         </div>
     </div>
+    </div>
+    
 </body>
 </html>

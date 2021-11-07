@@ -11,21 +11,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo">
-                <img src="images/logo.jpg" alt="logo" width="110" height="40">
-            </div>
-            <div class="prof">
-                <div class="pic">
-                    <img src="images/profpic.png" alt="profpic" width="45" height="45">
-                </div>
-                <div class="more">
-                    <select name="more" id="more">
-                        <option value="name">K. Kovinda</option>
-                        <option value="profile">My Profile</option>
-                        <option value="logout">Logout</option>
-                    </select>
-                </div>
-            </div>
+            <?php require_once APPROOT."/../views/common/header.php"; ?>
         </div>
 
         <div class="main">

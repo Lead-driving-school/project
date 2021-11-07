@@ -25,7 +25,7 @@ function passing(){
     
                 console.log(httpreq.responseText);
                 if(httpreq.responseText=="success"){
-                    alert('hi')
+                    // alert('hi')
                     window.location.assign("http://localhost/project/User/loginpage") 
                       
                 }
