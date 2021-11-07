@@ -4,25 +4,25 @@
 <div class="sidebar">
 
     <div class="nav-list">
-        <a class="list-item" href="<?php echo URL?>student/profile">
+        <a class="list-item" href="<?php echo URL?>Student/">
             <span class="link-icon">&#xf007</span>
             <span class="link-name">Profile</span>
         </a>
         
-        <a class="list-item" href="#">
+        <a class="list-item" href="<?php echo URL?>Student/eventCalendar">
             <span class="link-icon">&#xf073</span>
             <span class="link-name">Event Calendar</span>
         </a>
-        <a class="list-item" href="<?php echo URL?>student/payments">
+        <a class="list-item" href="<?php echo URL?>Student/payments">
             <span class="link-icon">&#xf0d6</span>
             <span class="link-name">Payment Details</span>
         </a>
         
-        <a class="list-item" href="<?php echo URL?>student/examdetails">
+        <a class="list-item" href="<?php echo URL?>Student/examdetails">
             <span class="link-icon">&#xf02d</span>
             <span class="link-name">Exam Details</span>
         </a>
-        <a class="list-item" href="<?php echo URL?>student/markGoingNotGoing">
+        <a class="list-item" href="<?php echo URL?>Student/markGoingNotGoing">
             <span class="link-icon">&#xf0c0</span>
             <span class="link-name">Sessions</span>
         </a>
@@ -32,7 +32,7 @@
             <span class="link-name">Pay Online</span>
         </a> -->
 
-        <a class="list-item" href="<?php echo URL?>student/complaints">
+        <a class="list-item" href="<?php echo URL?>Student/complaints">
             <span class="link-icon">&#xf010</span>
             <span class="link-name">Reviews & Complaints</span>
         </a>
@@ -42,7 +42,7 @@
             <span class="link-name">About Us</span>
         </a> -->
 
-        <a class="list-item" href="#">
+        <a class="list-item" href="<?php echo URL?>User/logout">
             <span class="link-icon">&#xf08b</span>
             <span class="link-name">Log Out</span>
         </a>

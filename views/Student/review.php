@@ -49,7 +49,7 @@
                                             <h4>what do you think about the Driving school staff and vehicles.</h4>
                                         </div>
                                         <div class="com-row-2">
-                                            <textarea id="text-1" style="white-space: pre"  class="complaints" > </textarea>
+                                            <textarea id="text-1" style="white-space: pre"  class="complaints" ></textarea>
                                         </div>
                                     </div>
                                     <div class="review-2">
@@ -57,7 +57,7 @@
                                             <h4>Do you satisfy about the training you got?.</h4>
                                         </div>
                                         <div class="com-row-2">
-                                            <textarea id="text-2" style="white-space: pre" class="complaints"> </textarea>
+                                            <textarea id="text-2" style="white-space: pre" class="complaints"></textarea>
                                         </div>
                                     </div>
                                     <div class="review-3">
@@ -65,7 +65,7 @@
                                             <h4>what are the improvement we should do according to you?</h4>
                                         </div>
                                         <div class="com-row-2">
-                                            <textarea  id="text-3" style="white-space: pre" class="complaints"> </textarea>
+                                            <textarea  id="text-3" style="white-space: pre" class="complaints"></textarea>
                                         </div>
                                     </div>
                                 </div>

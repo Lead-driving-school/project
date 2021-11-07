@@ -53,10 +53,13 @@ h2 {
   background-color: #e8f0fe;
   outline: none;
 }
-.expense-text-class-hidden {
+.expense-text-class {
   visibility: hidden;
+  width: 75%;
+  /* background-color: #0892d0; */
+  display: flex;
+  justify-content: space-between;
 }
-.expense-text-class,
 .amount-class,
 .confirm-class {
   visibility: visible;

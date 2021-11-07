@@ -54,7 +54,7 @@ including you. We highly encourage you to send your feedback.
                                             <h4>Add Your complaint here.</h4>
                                         </div>
                                         <div class="com-row-2">
-                                            <textarea id="text-1" style="white-space: pre" class="complaints" > </textarea>
+                                            <textarea id="text-1" style="white-space: pre" class="complaints" ></textarea>
                                         </div>
                                     </div>
                                     <div class="comments-2">
@@ -62,7 +62,7 @@ including you. We highly encourage you to send your feedback.
                                             <h4>Add your suggestion here.</h4>
                                         </div>
                                         <div class="com-row-2">
-                                            <textarea id="text-2" style="white-space: pre" class="complaints"> </textarea>
+                                            <textarea id="text-2" style="white-space: pre" class="complaints"></textarea>
                                         </div>
                                     </div>
                                 </div>
