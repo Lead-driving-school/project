@@ -18,6 +18,18 @@ function utilityExpenses(){
 }
 utilityExpenses()
 
+function expenseSelector(){
+        console.log("call the expenseSelector")
+        var expType=document.getElementById('expType').value;
+        if(expType=="Other Expenses"){
+            console.log("if part called")
+            document.getElementById('expense-text-container').style.visibility="visible";
+        }
+        else{
+            console.log("else part called")
+            document.getElementById('expense-text-container').style.visibility="hidden";
+        }
+}
 function showConfirm(){
     var expType=document.getElementById('expType').value;
     var expense=document.getElementById('expense').value;
@@ -129,6 +141,7 @@ function passwordCheck(){
 
                 console.log(httpreq.responseText);
                 if(httpreq.responseText=="success"){
+                    console.log(httpreq.responseText);
                     passData();
                 //     window.location.href='http://localhost/project/Staff/signupPassword';   
                 }

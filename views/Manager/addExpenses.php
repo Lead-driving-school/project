@@ -48,11 +48,11 @@
                         <div class="form-part">
                                 <div class="expense-name-class">
                                     <label for="Expense-name">Expense:</label>
-                                    <select class="Expence-type" id="expType">
+                                    <select class="Expence-type" id="expType" onchange="expenseSelector()">
 
                                     </select>
                                 </div>
-                                <div class="expense-text-class">
+                                <div class="expense-text-class" id="expense-text-container" >
                                     <label for="Expense-name"></label>
                                     <input type="text" class="Expense-name-input" name="expense" id="expense" style="white-space: pre"> 
                                 </div>
