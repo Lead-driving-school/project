@@ -21,7 +21,7 @@
                 </div>
                 <div class="container-details">
                 
-                    <!-- <div class="details">
+                    <div class="details">
                             <div class="row-1">
                                 <div class="col-1">
                                     <div class="col-details">
@@ -91,7 +91,7 @@
 
                                 </div>
                             </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
