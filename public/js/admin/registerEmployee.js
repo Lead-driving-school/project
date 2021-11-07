@@ -60,11 +60,6 @@ function register()
       document.getElementById('NIC').style.border="2px solid red";
       
     }
-    if(Dob== "") {
-      document.getElementById('Dob').placeholder="Date of birth field can't be empty";
-      document.getElementById('Dob').style.border="2px solid red";
-      
-    }
     if(document.getElementById('male').checked) {
         var gender='m';
     }

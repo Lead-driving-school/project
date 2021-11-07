@@ -10,19 +10,19 @@
     <title>Lead driving school</title>
 </head>
 <body>
-    <div class="mid-box-container-1">
+<div class="mid-box-container-1">
         <div class="mid-box-container-2">
             <div class="title-container">
-                <h1>Add New Package</h1>
+                <h1>Add Extra Prices</h1>
             </div>
             <div class="field-container">
                <div class="input-container">
-                   <label for="package-name">Package Name :</label>
+                   <label for="package-name">Vehicle Type :</label>
                    <input type="text" class="package-name">
                </div>
                
                 <div class="classes-check-outer">
-                <div class="classes-check">
+                    <div class="classes-check">
                         <div class="chk-bx">
                             <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
                             <label for="vehicle1">A </label><br>
