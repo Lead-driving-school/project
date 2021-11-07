@@ -32,7 +32,7 @@
                             <div class="row-1">
                                 <div class="col-1">Name</div>
                                 <div class="col-2">:</div>
-                                <div class="col-3">K.P.Sampath</div>
+                                <div class="col-3">Roshan senevirathne</div>
                             </div>
                             <div class="row-1">
                                 <div class="col-1">NIC</div>
@@ -42,12 +42,12 @@
                             <div class="row-1">
                                 <div class="col-1">Title</div>
                                 <div class="col-2">:</div>
-                                <div class="col-3">Recipient</div>
+                                <div class="col-3">Manager</div>
                             </div>
                             <div class="row-1">
                                 <div class="col-1">Address</div>
                                 <div class="col-2">:</div>
-                                <div class="col-3">No. 5/65,Uyanwatta,Matara</div>
+                                <div class="col-3">No. 5/65,piliyandala</div>
                             </div>
                             <div class="row-1">
                                 <div class="col-1">Tel-No</div>

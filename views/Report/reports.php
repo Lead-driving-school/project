@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Report/reports.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Lead driving school</title>
 </head>
 <body>
@@ -29,11 +30,12 @@
                                                 <h4>Student Attendance Report</h4>
                                             </div>
                                             <div class="div-2">
-                                                <img src="attendance-and-punctuality-5.png" class="att-img">
+                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                <!-- <img src="attendance-and-punctuality-5.png" class="att-img"> -->
                                             </div>
                                         </a>
                                     </div>
-
+ 
                                     
                                 </div>
                                 <div class="col-2">
@@ -99,6 +101,7 @@
                                     </div> -->
                                 </div>
                             </div>
+                            
                     </div>
                 </div>
             </div>

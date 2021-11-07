@@ -18,9 +18,16 @@ httpreq.onreadystatechange = function(){
         const rows = document.getElementById("scroll");
         
         // console.log(employee[0].employee_id)
+
+            
         
             for(var i=0;i<student.length;i++){
-                rows.innerHTML += '<div class="row-1"><div class="col-1"><p>St_'+student[i].student_id+'</p></div><div class="col-2"><p>'+student[i].full_name+'</p></div><div class="col-3"><p>'+student[i].contact+'</p></div><div class="col-4"><a href="http://localhost/project/Receptionist/payments"><button class="payments">Payments</button></a></div><div class="col-5"><button class="details" onclick="viewMore('+student[i].student_id+')">View Details</button></div></div>';
+
+                var studentname=student[i].full_name.replace(/_+/g, ',');
+                studentname = studentname.replace(/-+/g, ' ');
+                studentname=studentname.replace(/~+/g, '/');
+
+                rows.innerHTML += '<div class="row-1"><div class="col-1"><p>St_'+student[i].student_id+'</p></div><div class="col-2"><p>'+studentname+'</p></div><div class="col-3"><p>'+student[i].contact+'</p></div><div class="col-4"><a href="http://localhost/project/Receptionist/payments"><button class="payments">Payments</button></a></div><div class="col-5"><button class="details" onclick="viewMore('+student[i].student_id+')">View Details</button></div></div>';
             }
  
 
