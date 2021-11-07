@@ -20,7 +20,8 @@
                     <div class="report"><h2>Reports</h2></div>
                 </div>
                 <div class="container-details">
-                    <div class="details">
+                
+                    <!-- <div class="details">
                             <div class="row-1">
                                 <div class="col-1">
                                     <div class="col-details">
@@ -29,7 +30,7 @@
                                                 <h4>Student Attendance Report</h4>
                                             </div>
                                             <div class="div-2">
-                                                <img src="attendance-and-punctuality-5.png" class="att-img">
+                                                <img src="<?php echo URL?>public/images/1911.i511.003_driving training flat.jpg" alt="">
                                             </div>
                                         </a>
                                     </div>
@@ -87,19 +88,10 @@
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <!-- <div class="col-details">
-                                        <a href="">
-                                            <div class="div-1">
-                                                <h4></h4>
-                                            </div>
-                                            <div class="div-2">
-                                                <img src="" alt="">
-                                            </div>
-                                        </a>
-                                    </div> -->
+
                                 </div>
                             </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
