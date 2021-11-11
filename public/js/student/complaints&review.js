@@ -21,7 +21,7 @@ function submitComplaints(){
         httpRequest.onreadystatechange = function(){
             if(httpRequest.readyState==4 && httpRequest.status==200){
                 console.log(httpRequest.responseText)
-
+                    
             }
         }
 
@@ -29,8 +29,9 @@ function submitComplaints(){
         let url = "http://localhost/project/Student/complaintLogic/"+data
         httpRequest.open("POST",url,true)
         httpRequest.send()
-    }
 
+        clearComplaint()
+    }
 }
 
 // review
@@ -63,7 +64,7 @@ function submitreview(){
         httpRequest.onreadystatechange = function(){
             if(httpRequest.readyState==4 && httpRequest.status==200){
                 console.log(httpRequest.responseText)
-
+                
             }
         }
 
@@ -71,5 +72,7 @@ function submitreview(){
         let url = "http://localhost/project/Student/reviewLogic/"+data
         httpRequest.open("POST",url,true)
         httpRequest.send()
+
+        clearreview()
     }
 }

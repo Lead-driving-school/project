@@ -59,6 +59,7 @@ class Receptionist_Model extends Model{
 
                 $this->db->runQuery("INSERT INTO student_key (otp, student_id) VALUES ('$OTP', '$student_Id')");
                 $this->db->runQuery("INSERT INTO student_private (password, student_id) VALUES ('$initPassword', '$student_Id')");
+                $message=$OTP;
             }else{
                 $message="Contact Exist";
             }  

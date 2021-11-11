@@ -27,7 +27,7 @@
     </div>
     <!--body content of the page starts here-->
     <div class="main-container" id="main">
-    <?php require_once APPROOT."/../views/common/InstructorSidebar.php"; ?>
+    <?php require_once APPROOT."/../views/common/StudentSidebar.php"; ?>
     
         <div class="body-container">
           <div class="container1">
@@ -95,7 +95,7 @@
                         <div class="four">8.15</div>
                       </div>
                       <div class="viewButton">
-                        <a href="<?php echo URL?>Instructor/viewSession"><button id="View" class="View">View</button></a>
+                        <a href="<?php echo URL?>Student/viewSession"><button id="View" class="View">View</button></a>
                       </div>
                     </div>
                   </div>
@@ -108,7 +108,7 @@
                         <div class="four">8.15</div>
                       </div>
                       <div class="viewButton">
-                        <a href="<?php echo URL?>Instructor/viewExam"><button id="View" class="View">View</button></a>
+                        <a href="<?php echo URL?>Student/viewExam"><button id="View" class="View">View</button></a>
                       </div>
                     </div>
                   </div>

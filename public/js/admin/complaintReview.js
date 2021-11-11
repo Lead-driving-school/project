@@ -25,7 +25,7 @@ function viewComplaint(){
             }
 
             for(var i=0; i<obj.length; i++){
-                row.innerHTML='<div class="msg-box-row">'+
+                row.innerHTML+='<div class="msg-box-row">'+
                 '<div class="msg-title"><h2>'+obj[i].init_name+'</h2></div>'+
                 '<div class="msg-date"><h4>'+myArr[i][0]+'</h4><h5>'+myArr[i][1]+'</h5></div>'+
 

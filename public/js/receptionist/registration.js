@@ -240,7 +240,7 @@ function SaveData(){
           console.log("onreadystatechange");
           if( httpreq.readyState === 4 && httpreq.status === 200){
             console.log(httpreq.responseText);
-              
+            alert(httpreq.responseText) ;
               
           }
         }
@@ -271,8 +271,9 @@ function SaveData(){
     }else if(type=="license"){
 
     }
-    document.getElementById("reg2-f2").classList.replace("reg2-f2-visible","reg2-f2");
-    document.getElementById("reg-form").classList.replace("reg-form-hidden","reg-form");
+    window.location.assign("http://localhost/project/Receptionist/studentList");
+    // document.getElementById("reg2-f2").classList.replace("reg2-f2-visible","reg2-f2");
+    // document.getElementById("reg-form").classList.replace("reg-form-hidden","reg-form");
     
 }
 
