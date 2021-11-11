@@ -34,6 +34,7 @@ class Manager_Model extends Model{
         }
     }
     function setExpenses($title,$discription,$amount,$managerId){
+        date_default_timezone_set('Asia/Colombo');
         $date = date('Y-m-d H:i:s');
         
         $result=$this->db->runQuery("INSERT INTO other_expenses(title,description,recorded_date_time,amount,employee_id) VALUES('$title','$discription','$date',$amount,$managerId)");

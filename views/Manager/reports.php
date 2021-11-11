@@ -29,7 +29,7 @@
                                                 <h4>Student Attendance Report</h4>
                                             </div>
                                             <div class="div-2">
-                                                <img src="attendance-and-punctuality-5.png" class="att-img">
+                                                <img src="<?php echo URL?>/public/images/attendance.jpg" alt="">
                                             </div>
                                         </a>
                                     </div>
@@ -43,7 +43,7 @@
                                                 <h4>Customer Growing Report</h4>
                                             </div>
                                             <div class="div-2">
-                                                <img src="png-clipart-computer-icons-customer-business-relationship-text-service.png" alt="">
+                                                <img src="<?php echo URL?>/public/images/growing.jpg" alt="">
                                             </div>
                                         </a>
                                     </div>
@@ -55,7 +55,7 @@
                                                 <h4>Conductor Participation Report</h4>
                                             </div>
                                             <div class="div-2">
-                                                <img src="" alt="">
+                                                <img src="<?php echo URL?>/public/images/conductor.jpg" alt="">
                                             </div>
                                         </a>
                                     </div>
@@ -69,7 +69,7 @@
                                                 <h4>Exam Participation & Results</h4>
                                             </div>
                                             <div class="div-2">
-                                                <img src="68832327-passed-stamp-sign-seal.jpg" alt="">
+                                                <img src="<?php echo URL?>/public/images/passed.jpg" alt="">
                                             </div>
                                         </a>
                                     </div>
@@ -81,7 +81,7 @@
                                                 <h4>Sessions</h4>
                                             </div>
                                             <div class="div-2">
-                                                <img src="2gf4ykc.jpg" alt="">
+                                                <img src="<?php echo URL?>/public/images/sessions.jpg" alt="">
                                             </div>
                                         </a>
                                     </div>
