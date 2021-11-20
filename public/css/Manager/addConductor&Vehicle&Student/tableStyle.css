@@ -45,7 +45,8 @@
   width: 70%;
   justify-content: space-around;
 }
-#Add {
+#Add,
+.Add {
   width: 100px;
   height: 30px;
   font-weight: 600;
@@ -55,10 +56,27 @@
   border: none;
   border-radius: 3px;
 }
-#Add:hover {
+.Add-selected {
+  width: 100px;
+  height: 30px;
+  font-weight: 600;
+  box-shadow: 1px 1px 20px #b0b3b3;
+  color: white;
+  background-color: #262b2f;
+  border: none;
+  border-radius: 3px;
+}
+#Add:hover,
+.Add:hover {
   background-color: white;
   color: #0892d0;
   border: 2px solid #0892d0;
+  box-shadow: 1px 1px 10px #898a8a;
+}
+.Add-selected:hover {
+  background-color: white;
+  color: #262b2f;
+  border: 2px solid #262b2f;
   box-shadow: 1px 1px 10px #898a8a;
 }
 .addButton {

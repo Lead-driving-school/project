@@ -41,4 +41,8 @@ class Manager_Model extends Model{
         
     }
 
+    function getVehiclesForSessions(){
+        $result=$this->db->runQuery("SELECT vehicle.vehicle_id,vehicle.vehicle_no,vehicle_classes.vehicle_class,vehicle.vehicle_type FROM vehicle INNER JOIN vehicle_classes ON vehicle_classes.vehicle_class_id=vehicle.vehicle_class_id");
+        return $result;
+    }
 }

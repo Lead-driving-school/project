@@ -13,10 +13,6 @@
             <h1>Add Session</h1>
             <div class="body-content">
                 <div class="form-content">
-                    <div class="id-class">
-                        <label for="idNo">ID:</label>
-                        <input type="text" class="session-text" name="idNo" id="idNo"> 
-                    </div>
                     <div class="title-class">
                         <label for="title">Title:</label>
                         <input type="text" class="session-text" name="title" id="title"> 
