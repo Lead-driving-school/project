@@ -158,6 +158,7 @@ class Manager extends Controller{
         
     }
 
+
     function changeInstructor(){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='Manager'){
@@ -322,5 +323,11 @@ class Manager extends Controller{
         else{
             $this->view->render('error');
         }
+    }
+
+
+    function addVehiclesForSessions(){
+        $result=$this->model->getVehiclesForSessions();
+        echo json_encode($result);
     }
 }
