@@ -45,4 +45,15 @@ class Manager_Model extends Model{
         $result=$this->db->runQuery("SELECT vehicle.vehicle_id,vehicle.vehicle_no,vehicle_classes.vehicle_class,vehicle.vehicle_type FROM vehicle INNER JOIN vehicle_classes ON vehicle_classes.vehicle_class_id=vehicle.vehicle_class_id");
         return $result;
     }
+
+    function getInstructorsForSessions($type){
+        if($type=="Theory"){
+            $role="Teacher";
+        }else if($type=="Practical"){
+            $role="Instructor";
+        }
+        $result=$this->db->runQuery("SELECT employee_id,name,job_title FROM employee where job_title='$role'");
+        return $result;
+    }
+
 }
