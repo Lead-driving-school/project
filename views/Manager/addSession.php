@@ -20,16 +20,15 @@
                     <div class="type-class">
                         <label for="type">Type:</label>
                         <select name="type" id="type">
-                            <optgroup>
-                                <option value="noValue">Type</option>
-                                <option value="Theory">Theory</option>
-                                <option value="Practical">Practical</option>
-                            </optgroup>
+                            <option value="noValue">Type</option>
+                            <option value="Theory">Theory</option>
+                            <option value="Practical">Practical</option>
                         </select>
                     </div>
+                    <div class="msg" id="msg"></div>
                     <div class="add-instructor-class">
                         <label for="add-instructor">Instructor:</label>
-                        <a href="<?php echo URL?>Manager/addInstructorS"><button class="session-buttons" name="add-instructor" id="add-instructor">ADD INSTRUCTOR</button></a>
+                        <button class="session-buttons" name="add-instructor" id="add-instructor" onclick="callInstructorsPage()">ADD INSTRUCTOR</button>
                     </div>
                     <div class="add-vehicle-class">
                         <label for="add-vehicle">Vehicle:</label>
@@ -52,5 +51,6 @@
             </div>
         </div>
     </div>
+    <script src="<?php echo URL?>public/js/manager/navigateCheck.js"></script>
 </body>
 </html>

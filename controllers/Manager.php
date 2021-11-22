@@ -2,6 +2,7 @@
 // session_start();
 
 class Manager extends Controller{
+    
     function __construct(){
         parent:: __construct();
     }
@@ -76,9 +77,10 @@ class Manager extends Controller{
         }
         
     }
-    function addInstructorS(){
+    function addInstructorS($type){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='Manager'){
+                $_SESSION['type']=$type;
                 $this->view->render('Manager/addInstructorS');
             }else{
                 $this->view->render('error');
@@ -329,5 +331,14 @@ class Manager extends Controller{
     function addVehiclesForSessions(){
         $result=$this->model->getVehiclesForSessions();
         echo json_encode($result);
+    }
+
+    function addInstructorsForSessions(){
+        $result=$this->model->getInstructorsForSessions($_SESSION['type']);
+        echo json_encode($result);
+    }
+    function selectedInstructorsForSessions($selectedList){
+        $_SESSION['selectedInstructorList']=$selectedList;
+        echo "saved";
     }
 }

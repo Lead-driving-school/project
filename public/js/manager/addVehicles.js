@@ -1,4 +1,5 @@
 let count=0
+var buttonArr=[]
 document.getElementById("counter").innerHTML=count
 
 function getVehicles(){
@@ -14,6 +15,7 @@ function getVehicles(){
             }
 
             for(var i=0;i<obj.length;i++){
+                buttonArr.push(obj[i].vehicle_id)
                 rows.innerHTML+='<div class="row">'+
                 '<div class="cell">'+
                     '<div class="information">'+
@@ -23,7 +25,7 @@ function getVehicles(){
                         '<div class="four">'+obj[i].vehicle_type+'</div>'+
                     '</div>'+
                     '<div class="addButton">'+
-                        '<button class="Add" id="Add_'+i+'" onclick=selectSpecificVehicle('+i+','+obj.length+')>Add</button>'+
+                        '<button class="Add" id="Add_'+obj[i].vehicle_id+'" onclick=selectSpecificVehicle('+obj[i].vehicle_id+','+obj.length+')>Add</button>'+
                     '</div>'+
                 '</div>'+
             '</div>'
@@ -51,3 +53,4 @@ function selectSpecificVehicle(id,length){
     document.getElementById("counter").innerHTML=count;
 }
 getVehicles()
+console.log(buttonArr)
