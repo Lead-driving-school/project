@@ -1,16 +1,13 @@
-let count=0
+
 butttonArr=[]
 selectedInstructorsArr=[]
-document.getElementById("counter").innerHTML=count
+console.log(selectedInstructorsArr)
 
-// preselect=document.getElementById("selectedArr").value
-// preselectArr=preselect.split(",")
-// for(var i=0;i<preselectArr.length;i++){
-//     var idVar="Add_"+preselectArr[i]
-//     document.getElementById(idVar).innerHTML="Remove"
-//     document.getElementById(idVar).classList.replace("Add","Add-selected");
-//     count=preselectArr.length
-// }
+preselect=document.getElementById("selectedArr").value
+preselectArr=preselect.split(",")
+console.log(preselectArr)
+let count=preselectArr.length
+document.getElementById("counter").innerHTML=count
 
 function getInstructors(){
     let httpreq = new XMLHttpRequest();
@@ -22,8 +19,15 @@ function getInstructors(){
             for(var i=0;i<obj.length;i++){
                 obj[i].name = obj[i].name.replace(/-/g, " ");
             }
+            var className="Add"
+            var textField="Add"
 
+            console.log(preselectArr)
             for(var i=0;i<obj.length;i++){
+                if(preselectArr.includes(obj[i].employee_id)){
+                    className="Add-selected"
+                    textField="Remove"
+                }
                 butttonArr.push(obj[i].employee_id)
                 rows.innerHTML+='<div class="row">'+
                 '<div class="cell">'+
@@ -33,10 +37,12 @@ function getInstructors(){
                         '<div class="three">'+obj[i].job_title+'</div>'+
                     '</div>'+
                     '<div class="addButton">'+
-                        '<button class="Add" id="Add_'+obj[i].employee_id+'" onclick=selectSpecificInstructor('+obj[i].employee_id+','+obj.length+')>Add</button>'+
+                        '<button class="'+className+'" id="Add_'+obj[i].employee_id+'" onclick=selectSpecificInstructor('+obj[i].employee_id+','+obj.length+')>'+textField+'</button>'+
                     '</div>'+
                 '</div>'+
             '</div>'
+            className="Add"
+            textField="Add"
             }
             
         }
@@ -45,6 +51,7 @@ function getInstructors(){
     httpreq.open( "POST" , url  , true);
     httpreq.send();
 }
+getInstructors()
 
 function selectSpecificInstructor(id,length){
     var idVal="Add_"+id
@@ -80,6 +87,3 @@ function assignInstructors(){
     httpreq.send()
 
 }
-getInstructors()
-
-console.log(butttonArr)

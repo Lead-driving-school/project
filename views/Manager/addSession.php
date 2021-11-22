@@ -26,14 +26,6 @@
                         </select>
                     </div>
                     <div class="msg" id="msg"></div>
-                    <div class="add-instructor-class">
-                        <label for="add-instructor">Instructor:</label>
-                        <button class="session-buttons" name="add-instructor" id="add-instructor" onclick="callInstructorsPage()">ADD INSTRUCTOR</button>
-                    </div>
-                    <div class="add-vehicle-class">
-                        <label for="add-vehicle">Vehicle:</label>
-                        <a href="<?php echo URL?>Manager/addVehicleS"><button class="session-buttons"name="add-vehicle" id="add-vehicle">ADD VEHICLE</button></a>
-                    </div>
                     <div class="date-class">
                         <label for="date">Date:</label>
                         <input type="date" name="date" id="date">
@@ -41,6 +33,14 @@
                     <div class="time-class">
                         <label for="time">Time:</label>
                         <input type="time" name="time" id="time">
+                    </div>
+                    <div class="add-instructor-class">
+                        <label for="add-instructor">Instructor:</label>
+                        <button class="session-buttons" name="add-instructor" id="add-instructor" onclick="callInstructorsPage()">ADD INSTRUCTOR</button>
+                    </div>
+                    <div class="add-vehicle-class">
+                        <label for="add-vehicle">Vehicle:</label>
+                        <a href="<?php echo URL?>Manager/addVehicleS"><button class="session-buttons"name="add-vehicle" id="add-vehicle">ADD VEHICLE</button></a>
                     </div>
                 </div>
                 
