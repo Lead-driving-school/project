@@ -15,10 +15,16 @@
   align-items: center;
   justify-content: space-around;
 }
+.sidebar-button{
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
 
 .header-logo{
   min-width: 100px;
   height: 80px;
+  right: 0;
   /* background-color: rgb(104, 16, 16); */
 }
 
@@ -49,4 +55,13 @@
   padding-right: 10px;
   text-align: right;
   /* background-color: chartreuse; */
+}
+
+@media screen and (max-width: 992px) {
+  .sidebar-button{
+    width: 80px;
+    height: 50px;
+    visibility: visible;
+    background-color: blue;
+  }
 }

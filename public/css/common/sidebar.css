@@ -63,3 +63,10 @@
   border-radius: 5px;
   color: #00a2ff;
 }
+
+@media screen and (max-width: 992px) {
+  .sidebar {
+    visibility: hidden;
+    width: 0px;
+  }
+}
