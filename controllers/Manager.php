@@ -64,9 +64,12 @@ class Manager extends Controller{
         }
     }
 
-    function addInstructor(){
+    function addInstructor($type,$date,$time){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='Manager'){
+                $_SESSION['type']=$type;
+                $_SESSION['date']=$date;
+                $_SESSION['time']=$time;
                 $this->view->render('Manager/addInstructor');
             }else{
                 $this->view->render('error');
@@ -77,10 +80,13 @@ class Manager extends Controller{
         }
         
     }
-    function addInstructorS($type){
+    function addInstructorS($type,$title,$date,$time){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='Manager'){
                 $_SESSION['type']=$type;
+                $_SESSION['title']=$title;
+                $_SESSION['date']=$date;
+                $_SESSION['time']=$time;
                 $this->view->render('Manager/addInstructorS');
             }else{
                 $this->view->render('error');
@@ -133,9 +139,12 @@ class Manager extends Controller{
         
     }
 
-    function addVehicle(){
+    function addVehicle($type,$date,$time){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='Manager'){
+                $_SESSION['type']=$type;
+                $_SESSION['date']=$date;
+                $_SESSION['time']=$time;
                 $this->view->render('Manager/addVehicle');
             }else{
                 $this->view->render('error');
@@ -146,9 +155,13 @@ class Manager extends Controller{
         }
     }
 
-    function addVehicleS(){
+    function addVehicleS($type,$title,$date,$time){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='Manager'){
+                $_SESSION['type']=$type;
+                $_SESSION['title']=$title;
+                $_SESSION['date']=$date;
+                $_SESSION['time']=$time;
                 $this->view->render('Manager/addVehicleS');
             }else{
                 $this->view->render('error');
@@ -337,8 +350,54 @@ class Manager extends Controller{
         $result=$this->model->getInstructorsForSessions($_SESSION['type']);
         echo json_encode($result);
     }
+
+    function addVehiclesForExams(){
+        $result=$this->model->getVehiclesForExams();
+        echo json_encode($result);
+    }
+
+    function addInstructorsForExams(){
+        $result=$this->model->getInstructorsForExams();
+        echo json_encode($result);
+    }
+
     function selectedInstructorsForSessions($selectedList){
         $_SESSION['selectedInstructorList']=$selectedList;
         echo "saved";
+    }
+    
+    function selectedVehiclesForSessions($selectedList){
+        $_SESSION['selectedVehicleList']=$selectedList;
+        echo "saved";
+    }
+    function addSessionLogic($data){
+        $result=$this->model->addSession($data,$_SESSION['selectedInstructorList'],$_SESSION['selectedVehicleList'],$_SESSION['employee_id']);
+        $_SESSION['type']="noValue";
+        $_SESSION['title']="";
+        $_SESSION['date']="";
+        $_SESSION['time']="";
+        $_SESSION['selectedInstructorList']="";
+        $_SESSION['selectedVehicleList']="";
+        echo $result;
+    }
+
+    function selectedInstructorsForExams($selectedList){
+        $_SESSION['selectedInstructorList']=$selectedList;
+        echo "saved";
+    }
+    
+    function selectedVehiclesForExams($selectedList){
+        $_SESSION['selectedVehicleList']=$selectedList;
+        echo "saved";
+    }
+    function addExamLogic($data){
+        $result=$this->model->addExam($data,$_SESSION['selectedInstructorList'],$_SESSION['selectedVehicleList'],$_SESSION['employee_id']);
+        $_SESSION['type']="noValue";
+        
+        $_SESSION['date']="";
+        $_SESSION['time']="";
+        $_SESSION['selectedInstructorList']="";
+        $_SESSION['selectedVehicleList']="";
+        echo $result;
     }
 }

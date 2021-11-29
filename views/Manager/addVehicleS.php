@@ -11,6 +11,7 @@
 <body>
     <div class="main-content">
         <div class="addInstructor-box">
+        <input type="hidden" id="selectedArr" value="<?php echo isset($_SESSION['selectedVehicleList'])?$_SESSION['selectedVehicleList']:"";?>">
             <div class="topic">
                 <h1>Add Vehicle</h1>
             </div>
@@ -33,7 +34,7 @@
                 </div>
                 <div class="button-set">
                     <a href="<?php echo URL?>Manager/addSession"><button class="cancel" id="cancel" name="cancel">Back</button></a>
-                    <button class="save" id="save" name="save">Save Changes</button>
+                    <button class="save" id="save" name="save" onclick="assignVehicles()">Save Changes</button>
                 </div>
             </div>
         </div>

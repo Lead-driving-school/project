@@ -45,7 +45,7 @@ function getVehicles(){
             
         }
     }
-    let url="http://localhost/project/Manager/addVehiclesForSessions";
+    let url="http://localhost/project/Manager/addVehiclesForExams";
     httpreq.open( "POST" , url  , true);
     httpreq.send();
 
@@ -75,11 +75,11 @@ function assignVehicles(){
     httpreq.onreadystatechange=function(){
         if(httpreq.readyState===4 && httpreq.status===200){
             if(httpreq.responseText=="saved"){
-                window.location.href="http://localhost/project/Manager/addSession"
+                window.location.href="http://localhost/project/Manager/addExam"
             }
         }
     }
-    let url="http://localhost/project/Manager/selectedVehiclesForSessions/"+selectedVehicleArr
+    let url="http://localhost/project/Manager/selectedVehiclesForExams/"+selectedVehicleArr
     httpreq.open("POST",url,true)
     httpreq.send()
 
