@@ -1,4 +1,3 @@
-
 butttonArr=[]
 selectedInstructorsArr=[]
 console.log(selectedInstructorsArr)
@@ -47,7 +46,7 @@ function getInstructors(){
             
         }
     }
-    let url="http://localhost/project/Manager/addInstructorsForSessions";
+    let url="http://localhost/project/Manager/addInstructorsForExams";
     httpreq.open( "POST" , url  , true);
     httpreq.send();
 }
@@ -78,11 +77,11 @@ function assignInstructors(){
     httpreq.onreadystatechange=function(){
         if(httpreq.readyState===4 && httpreq.status===200){
             if(httpreq.responseText=="saved"){
-                window.location.href="http://localhost/project/Manager/addSession"
+                window.location.href="http://localhost/project/Manager/addExam"
             }
         }
     }
-    let url="http://localhost/project/Manager/selectedInstructorsForSessions/"+selectedInstructorsArr
+    let url="http://localhost/project/Manager/selectedInstructorsForExams/"+selectedInstructorsArr
     httpreq.open("POST",url,true)
     httpreq.send()
 

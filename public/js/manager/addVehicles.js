@@ -1,5 +1,10 @@
-let count=0
+
 var buttonArr=[]
+selectedVehicleArr=[]
+preselect=document.getElementById("selectedArr").value
+preselectArr=preselect.split(",")
+console.log(preselectArr)
+let count=preselectArr.length
 document.getElementById("counter").innerHTML=count
 
 function getVehicles(){
@@ -13,8 +18,13 @@ function getVehicles(){
                 obj[i].vehicle_no = obj[i].vehicle_no.replace(/-/g, " ");
                 obj[i].vehicle_type = obj[i].vehicle_type.replace(/-/g, " ");
             }
-
+            var className="Add"
+            var textField="Add"
             for(var i=0;i<obj.length;i++){
+                if(preselectArr.includes(obj[i].vehicle_id)){
+                    className="Add-selected"
+                    textField="Remove"
+                }
                 buttonArr.push(obj[i].vehicle_id)
                 rows.innerHTML+='<div class="row">'+
                 '<div class="cell">'+
@@ -25,10 +35,12 @@ function getVehicles(){
                         '<div class="four">'+obj[i].vehicle_type+'</div>'+
                     '</div>'+
                     '<div class="addButton">'+
-                        '<button class="Add" id="Add_'+obj[i].vehicle_id+'" onclick=selectSpecificVehicle('+obj[i].vehicle_id+','+obj.length+')>Add</button>'+
+                        '<button class="'+className+'" id="Add_'+obj[i].vehicle_id+'" onclick=selectSpecificVehicle('+obj[i].vehicle_id+','+obj.length+')>'+textField+'</button>'+
                     '</div>'+
                 '</div>'+
             '</div>'
+            className="Add"
+            textField="Add"
             }
             
         }
@@ -51,6 +63,26 @@ function selectSpecificVehicle(id,length){
         count--
     }
     document.getElementById("counter").innerHTML=count;
+}
+function assignVehicles(){
+    for(var j=0;j<buttonArr.length;j++){
+        var idVal="Add_"+buttonArr[j]
+        if(document.getElementById(idVal).innerHTML=="Remove"){
+            selectedVehicleArr.push(buttonArr[j])
+        }
+    }
+    let httpreq = new XMLHttpRequest();
+    httpreq.onreadystatechange=function(){
+        if(httpreq.readyState===4 && httpreq.status===200){
+            if(httpreq.responseText=="saved"){
+                window.location.href="http://localhost/project/Manager/addSession"
+            }
+        }
+    }
+    let url="http://localhost/project/Manager/selectedVehiclesForSessions/"+selectedVehicleArr
+    httpreq.open("POST",url,true)
+    httpreq.send()
+
 }
 getVehicles()
 console.log(buttonArr)

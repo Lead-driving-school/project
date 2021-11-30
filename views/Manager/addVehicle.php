@@ -11,6 +11,7 @@
 <body>
     <div class="main-content">
         <div class="addInstructor-box">
+        <input type="hidden" id="selectedArr" value="<?php echo isset($_SESSION['selectedVehicleList'])?$_SESSION['selectedVehicleList']:"";?>">
             <div class="topic">
                 <h1>Add Vehicle</h1>
             </div>
@@ -24,45 +25,20 @@
                         </div>
                     </div>
             </div>
-            <div class="table">
-                <div class="row">
-                    <div class="cell">
-                        <div class="information">
-                            <div class="one">V0001</div>
-                            <div class="two">CAD 1045</div>
-                            <div class="three">B</div>
-                            <div class="four">Motor Car</div>
-                        </div>
-                        <div class="addButton">
-                            <button id="Add">Add</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="cell">
-                        <div class="information">
-                            <div class="one">V0002</div>
-                            <div class="two">252 1045</div>
-                            <div class="three">B</div>
-                            <div class="four">Dual purpose</div>
-                        </div>
-                        <div class="addButton">
-                            <button id="Add">Add</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="table" id="tableRows">
+
             </div>
             <div class="bottom-part">
                 <div class="participation-count">
-                    <p>45</p><p>Vehicles</p>
+                <p id="counter"></p><p>Vehicles</p>
                 </div>
                 <div class="button-set">
                     <a href="<?php echo URL?>Manager/addExam"><button class="cancel" id="cancel" name="cancel">Back</button></a>
-                    <button class="save" id="save" name="save">Save Changes</button>
+                    <button class="save" id="save" name="save" onclick="assignVehicles()">Save Changes</button>
                 </div>
             </div>
         </div>
     </div>
-    
+    <script src="<?php echo URL?>public/js/manager/addvehiclesE.js"></script>
 </body>
 </html>

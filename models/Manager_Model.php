@@ -45,6 +45,10 @@ class Manager_Model extends Model{
         $result=$this->db->runQuery("SELECT vehicle.vehicle_id,vehicle.vehicle_no,vehicle_classes.vehicle_class,vehicle.vehicle_type FROM vehicle INNER JOIN vehicle_classes ON vehicle_classes.vehicle_class_id=vehicle.vehicle_class_id");
         return $result;
     }
+    function getVehiclesForExams(){
+        $result=$this->db->runQuery("SELECT vehicle.vehicle_id,vehicle.vehicle_no,vehicle_classes.vehicle_class,vehicle.vehicle_type FROM vehicle INNER JOIN vehicle_classes ON vehicle_classes.vehicle_class_id=vehicle.vehicle_class_id");
+        return $result;
+    }
 
     function getInstructorsForSessions($type){
         if($type=="Theory"){
@@ -53,6 +57,49 @@ class Manager_Model extends Model{
             $role="Instructor";
         }
         $result=$this->db->runQuery("SELECT employee_id,name,job_title FROM employee where job_title='$role'");
+        return $result;
+    }
+    function getInstructorsForExams(){
+        $result=$this->db->runQuery("SELECT employee_id,name,job_title FROM employee where job_title='Instructor' OR job_title='Teacher'");
+        return $result;
+    }
+    function addSession($data,$instructors,$vehicles,$managerId){
+        $values=explode(",",$data);
+        $instructorsList=explode(",",$instructors);
+        $vehiclesList=explode(",",$vehicles);
+        $result=$this->db->runQuery("INSERT INTO sessions(session_title,session_date,session_time,type,employee_id) VALUES('$values[0]','$values[1]','$values[2]','$values[3]',$managerId)");
+        $sessionId=$this->db->runQuery("SELECT session_id FROM sessions ORDER BY session_id DESC LIMIT 1");
+        $sessionId=intval($sessionId[0]['session_id']);
+        for($i=0;$i<count($instructorsList);$i++){
+            $result=$this->db->runQuery("INSERT INTO session_conductor_assigns VALUES($managerId,$sessionId,$instructorsList[$i])");
+        }
+        for($i=0;$i<count($vehiclesList);$i++){
+            $result=$this->db->runQuery("INSERT INTO session_vehicle_assigns VALUES($managerId,$sessionId,$vehiclesList[$i])");
+        }
+        return $instructors;
+    }
+    function addExam($data,$instructors,$vehicles,$managerId){
+        $values=explode(",",$data);
+        $instructorsList=explode(",",$instructors);
+        $vehiclesList=explode(",",$vehicles);
+        $result=$this->db->runQuery("INSERT INTO exams(exam_type,exam_date,exam_time,employee_id) VALUES('$values[0]','$values[1]','$values[2]',$managerId)");
+        $examId=$this->db->runQuery("SELECT exam_id FROM exams ORDER BY exam_id DESC LIMIT 1");
+        $examId=intval($examId[0]['exam_id']);
+        for($i=0;$i<count($instructorsList);$i++){
+            $result=$this->db->runQuery("INSERT INTO exam_conductor_assigns VALUES($managerId,$examId,$instructorsList[$i])");
+        }
+        for($i=0;$i<count($vehiclesList);$i++){
+            $result=$this->db->runQuery("INSERT INTO exam_vehicle_assigns VALUES($managerId,$examId,$vehiclesList[$i])");
+        }
+        return $data;
+    }
+    function getSessions(){
+        $result=$this->db->runQuery("SELECT Session_id,session_title,session_date,session_time,type FROM sessions");
+        return $result;
+    }
+
+    function getExams(){
+        $result=$this->db->runQuery("SELECT Exam_id,exam_date,exam_time,exam_type FROM exams");
         return $result;
     }
 

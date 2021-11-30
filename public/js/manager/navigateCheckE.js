@@ -1,10 +1,10 @@
+console.log("navigateCheckE")
 function callInstructorsPage(){
-    var title=document.getElementById("title").value
     let type=document.getElementById("type").value
     var date=document.getElementById("date").value
     var time=document.getElementById("time").value 
     if(type=="Theory" || type=="Practical") {
-        window.location.href="http://localhost/project/Manager/addInstructorS/"+type+"/"+title+"/"+date+"/"+time
+        window.location.href="http://localhost/project/Manager/addInstructor/"+type+"/"+date+"/"+time
     }else{
         document.getElementById("msg").innerHTML="Pleace Select a Type"
         document.getElementById("box").classList.replace("box","box-active")
@@ -12,25 +12,22 @@ function callInstructorsPage(){
 }
 
 function callVehiclesPage(){
-    var title=document.getElementById("title").value
+    
     let type=document.getElementById("type").value
     var date=document.getElementById("date").value
     var time=document.getElementById("time").value 
-    window.location.href="http://localhost/project/Manager/addVehicleS/"+type+"/"+title+"/"+date+"/"+time
+    
+    window.location.href="http://localhost/project/Manager/addVehicle/"+type+"/"+date+"/"+time
+    console.log(type+" "+date+" "+time)
 }
 
-function submitSession(){
+function submitExam(){
     console.log("function called");
-    var title=document.getElementById("title").value
     var type=document.getElementById("type").value
     var date=document.getElementById("date").value
     var time=document.getElementById("time").value 
 
-    if(title.length==0){
-        document.getElementById("msg").innerHTML="Title can't be empty"
-        document.getElementById("box").classList.replace("box","box-active")
-    }
-    else if(type=="noValue"){
+    if(type=="noValue"){
         document.getElementById("msg").innerHTML="Select a type"
         document.getElementById("box").classList.replace("box","box-active")
     }
@@ -61,16 +58,15 @@ function submitSession(){
                     console.log(httpreq.responseText);
                 }
             }
-            let data=[title,date,time,type]
-            let url="http://localhost/project/Manager/addSessionLogic/"+data;
+            let data=[type,date,time]
+            let url="http://localhost/project/Manager/addExamLogic/"+data;
             httpreq.open( "POST" , url  , true);
             httpreq.send();
         
-            document.getElementById("title").value=""
             document.getElementById("type").value=""
             document.getElementById("date").value=""
             document.getElementById("time").value =""
-            window.location.href="http://localhost/project/Manager/addSession"
+            // window.location.href="http://localhost/project/Manager/addExam"
         }
         
     }    
