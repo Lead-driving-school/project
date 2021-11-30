@@ -75,19 +75,7 @@
                 </div>
               </div>
               <div class="tableFixHead" id="tablerows">
-                  <div class="row">
-                    <div class="cell">
-                      <div class="information">
-                        <div class="one">SE01</div>
-                        <div class="two">Road Sign</div>
-                        <div class="three">Session</div>
-                        <div class="four">8.15</div>
-                      </div>
-                      <div class="viewButton">
-                        <button id="View" class="View">View</button>
-                      </div>
-                    </div>
-                  </div>
+
               </div>
           </div>
         </div>

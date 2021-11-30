@@ -93,5 +93,14 @@ class Manager_Model extends Model{
         }
         return $data;
     }
+    function getSessions(){
+        $result=$this->db->runQuery("SELECT Session_id,session_title,session_date,session_time,type FROM sessions");
+        return $result;
+    }
+
+    function getExams(){
+        $result=$this->db->runQuery("SELECT Exam_id,exam_date,exam_time,exam_type FROM exams");
+        return $result;
+    }
 
 }

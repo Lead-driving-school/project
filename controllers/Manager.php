@@ -400,4 +400,14 @@ class Manager extends Controller{
         $_SESSION['selectedVehicleList']="";
         echo $result;
     }
+
+    function getAvailableSessions(){
+        $result=$this->model->getSessions();
+        echo json_encode($result);
+    }
+
+    function getAvailableExams(){
+        $result=$this->model->getExams();
+        echo json_encode($result);
+    }
 }

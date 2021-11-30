@@ -47,7 +47,7 @@ const renderCalendar=()=>{
     //days from this month
     for(let i=1;i<=lastDay;i++){
         if(i==new Date().getDate() && date.getMonth()==new Date().getMonth()){
-            days+=`<div class="today"><button class= "dayButton" id="${i}" value="${i}" name="${i}" onclick=getFullDate(${i},${date.getMonth()})>${i}</button></div>`;
+            days+=`<div class="today"><button class= "dayButton" id="${i}" value="${i}" name="${i}" onclick=getFullDate(${i},${date.getMonth()},${date.getFullYear()})>${i}</button></div>`;
         }else{
             days+=`<div><button class= "dayButton" id="${i}" value="${i}" name="${i}" onclick=getFullDate(${i},${date.getMonth()},${date.getFullYear()})>${i}</button></div>`;
         }
