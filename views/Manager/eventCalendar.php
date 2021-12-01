@@ -28,8 +28,11 @@
     <!--body content of the page starts here-->
     <div class="main-container" id="main">
     <?php require_once APPROOT."/../views/common/ManagerSidebar.php"; ?>
-    
+
         <div class="body-container">
+          <input type="hidden" id="selectedDateContainer" value="">
+          <input type="hidden" id="examsContainer" value="">
+          <input type="hidden" id="sessionsContainer" value="">
           <div class="container1">
             <div class="calender-buttons">
               <div class="calender">
@@ -58,22 +61,16 @@
               <h1>Event Calendar</h1>
               <div class="Horizontal-tab">
                 <div class="tabContainer">
-                  <button class="page-change-button-selected" >Sessions</button>
-                  <button class="page-change-button" >Exams</button>
+                  <button class="page-change-button" id="sessionBtn">Sessions</button>
+                  <button class="page-change-button" id="examBtn">Exams</button>
                 </div>
               </div>
               <div class="heading">
-                <div class="heading-row">
-                  <div class="cell">
-                    <div class="headingDetails">
-                      <div class="one">Session Id</div>
-                      <div class="two">Title</div>
-                      <div class="three">Type</div>
-                      <div class="four">Time</div>
-                    </div>
-                  </div>
+                <div class="heading-row" id="headingRow">
+
                 </div>
               </div>
+
               <div class="tableFixHead" id="tablerows">
 
               </div>
