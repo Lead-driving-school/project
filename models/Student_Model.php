@@ -21,5 +21,11 @@ class Student_Model extends Model{
         $result=$this->db->runQuery("INSERT INTO reviews(submitted_date_time,idea,improvements,student_id,satisfaction) VALUES('$date','$idea','$improvement',$studentId,'$satisfy')");
     
     }
+    function getTodaySession(){
+        $date=date("Y-m-d");
+        $result=$this->db->runQuery("SELECT session_id , session_title, session_date, session_time FROM sessions WHERE session_date='2021-11-18'");
+        return $result;
+
+    }
 
 }

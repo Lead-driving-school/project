@@ -102,6 +102,12 @@ class Student extends Controller{
         }
     }
 
+    function markGoingNotGoingLogic(){
+        $value=$this->model->getTodaySession();
+        echo json_encode($value);
+        
+    }
+
     function payments(){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='student'){

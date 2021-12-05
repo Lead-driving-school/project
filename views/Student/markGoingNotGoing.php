@@ -43,20 +43,9 @@
                             </div>
 
                         </div>
-                        <div class="data">
-                            <div class="row">
-                                <div class="col">183</div>
-                                <div class="col">Traffic lights</div>
-                                <div class="col">2019/10/20</div>
-                                <div class="col">10.00</div>
-                                <div class="col">
-                                    <button class="going">Going</button>
-                                </div>
-                                <div class="col">
-                                    <button class="notgoing">Not Going</button>
-                                </div>
-                            </div>
-                            <div class="row">
+                        <div class="data" id="data">
+
+                            <!-- <div class="row">
                                 <div class="col">186</div>
                                 <div class="col">Traffic lights</div>
                                 <div class="col">2019/10/20</div>
@@ -79,9 +68,14 @@
                                 <div class="col">
                                     <button class="notgoing">Not Going</button>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <script src="<?php echo URL?>public/js/student/TodaySession.js"></script>
+
+</body>
+
