@@ -7,6 +7,11 @@ class Student_Model extends Model{
         parent::__construct();
     }
 
+    function getProfileDetails(){
+        $result=$this->db->runQuery("");
+        return $result;
+    }
+
     function setComplaints($description,$suggestion,$studentId)
     {
         date_default_timezone_set('Asia/Colombo');
