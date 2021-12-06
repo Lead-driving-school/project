@@ -76,6 +76,10 @@ class Student extends Controller{
         }
     }
 
+    function profileLogic(){
+        
+    }
+
     function makepayments(){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='student'){
@@ -100,6 +104,12 @@ class Student extends Controller{
         else{
             $this->view->render('error');
         }
+    }
+
+    function markGoingNotGoingLogic(){
+        $value=$this->model->getTodaySession();
+        echo json_encode($value);
+        
     }
 
     function payments(){
