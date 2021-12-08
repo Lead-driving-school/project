@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/changeConductorVehicleStudent/structure.css"> 
     <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/changeConductorVehicleStudent/tablestyle.css">
     <title>Lead driving school</title>
-    <div class="main-page">
+    
+</head>
+<body>
+<div class="main-page">
         <div class="topic">
             <h1>Change Assigned vehicles</h1>
         </div>
@@ -31,31 +34,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="table">
-                    <div class="row">
-                        <div class="cell">
-                            <div class="information">
-                                <div class="one">V0001</div>
-                                <div class="two">Motor tricycle</div>
-                                <div class="three">AAD 1045</div>
-                            </div>
-                            <div class="removeButton">
-                                <button id="Remove">Remove</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="cell">
-                            <div class="information">
-                                <div class="one">V0002</div>
-                                <div class="two">Dual Purpose</div>
-                                <div class="three">252 5434</div>
-                            </div>
-                            <div class="removeButton">
-                                <button id="Remove">Remove</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="table" id="tableRows1">
+
                 </div>
             </div>
             <div class="right-side">
@@ -78,19 +58,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="table">
-                    <div class="row">
-                        <div class="heading-cell">
-                            <div class="information">
-                                <div class="one">V0003</div>
-                                <div class="two">Motor Car</div>
-                                <div class="three">GA 4566</div>
-                            </div>
-                            <div class="addButton">
-                                <button id="Add">Add</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="table" id="tableRows2">
+
                 </div>
             </div>
         </div>
@@ -99,8 +68,6 @@
             <button class="session-buttons"name="save" id="save">Save changes</button>
         </div>    
     </div>
-</head>
-<body>
-    
+    <script src="<?php echo URL?>public/js/manager/changeVehicle.js"></script>
 </body>
 </html>

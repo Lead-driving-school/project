@@ -12,6 +12,7 @@
             <h1>Change Assigned conductors</h1>
         </div>
         <div class="body-content">
+            <input type="hidden" id="idContainer" value="">
             <div class="left-side">
                 <div class="heading">
                     <div class="heading-row">
@@ -31,31 +32,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="table">
-                    <div class="row">
-                        <div class="cell">
-                            <div class="information">
-                                <div class="one">INS1011</div>
-                                <div class="two">N.R.Senevirathne</div>
-                                <div class="three">Instructor</div>
-                            </div>
-                            <div class="removeButton">
-                                <button id="Remove">Remove</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="cell">
-                            <div class="information">
-                                <div class="one">INS1011</div>
-                                <div class="two">G.Silva</div>
-                                <div class="three">Instructor</div>
-                            </div>
-                            <div class="removeButton">
-                                <button id="Remove">Remove</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="table" id="tableRows1">
+
                 </div>
             </div>
             <div class="right-side">
@@ -78,19 +56,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="table">
-                    <div class="row">
-                        <div class="heading-cell">
-                            <div class="information">
-                                <div class="one">INS1011</div>
-                                <div class="two">N.R.Senevirathne</div>
-                                <div class="three">Instructor</div>
-                            </div>
-                            <div class="addButton">
-                                <button id="Add">Add</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="table" id="tableRows2">
+
                 </div>
             </div>
         </div>
@@ -101,6 +68,6 @@
     </div>
 </head>
 <body>
-    
+<script src="<?php echo URL?>public/js/manager/changeInstructor.js"></script>
 </body>
 </html>

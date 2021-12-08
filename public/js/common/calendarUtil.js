@@ -25,6 +25,7 @@ function getFullDate(date,month,year) {
                         row.innerHTML=""
                         for(var i=0;i<obj.length;i++){
                                 if(selectedDate==obj[i].session_date){
+                                        obj[i].session_title = obj[i].session_title.replace(/-/g, " ");
                                         row.innerHTML+='<div class="row">'+
                                         '<div class="cell">'+
                                         '<div class="information">'+
@@ -34,7 +35,7 @@ function getFullDate(date,month,year) {
                                         '<div class="four">'+obj[i].session_time+'</div>'+
                                         '</div>'+
                                         '<div class="viewButton">'+
-                                        '<button id="View" class="View">View</button>'+
+                                        '<button id="View_'+obj[i].Session_id+'" class="View" onclick=editSession('+obj[i].Session_id+')>View</button>'+
                                         '</div>'+
                                         '</div>'+
                                         '</div>'
@@ -49,9 +50,7 @@ function getFullDate(date,month,year) {
 
 }
 
-function viewExam(){
 
-}
 let httpreq1=new XMLHttpRequest()
 httpreq1.onreadystatechange=function(){
         if(httpreq1.readyState===4 && httpreq1.status===200){
@@ -64,7 +63,7 @@ httpreq1.onreadystatechange=function(){
                         heading.innerHTML=""
                         heading.innerHTML='<div class="cell">'+
                         '<div class="headingDetails">'+
-                          '<div class="one">Session Id</div>'+
+                          '<div class="one">Exam Id</div>'+
                           '<div class="three">Type</div>'+
                           '<div class="four">Time</div>'+
                         '</div>'+
@@ -81,7 +80,7 @@ httpreq1.onreadystatechange=function(){
                                             '<div class="four">'+obj[i].exam_time+'</div>'+
                                           '</div>'+
                                           '<div class="viewButton">'+
-                                           '<button id="View" class="View">View</button>'+
+                                           '<button id="View_'+obj[i].Exam_id+'" class="View" onclick=editExam('+obj[i].Exam_id+')>View</button>'+
                                           '</div>'+
                                         '</div>'+
                                       '</div>'
@@ -103,6 +102,7 @@ httpreq2.onreadystatechange=function(){
         if(httpreq2.readyState===4 && httpreq2.status===200){
                 console.log(httpreq2.responseText)
                 const obj=JSON.parse(httpreq2.responseText)
+                
                 window.addEventListener('load',function(){
 
                         var today=new Date();
@@ -114,6 +114,8 @@ httpreq2.onreadystatechange=function(){
                             }
                         var initDate=today.getFullYear()+"-"+(today.getMonth()+1)+"-"+dateval
                         document.getElementById("selectedDateContainer").value=initDate
+
+
 
                         let row=document.getElementById("tablerows")
                         let heading=document.getElementById("headingRow")
@@ -129,6 +131,7 @@ httpreq2.onreadystatechange=function(){
                         row.innerHTML=""
                         for(var i=0;i<obj.length;i++){
                                 if(obj[i].session_date==initDate){
+                                        obj[i].session_title = obj[i].session_title.replace(/-/g, " ");
                                         row.innerHTML+='<div class="row">'+
                                 '<div class="cell">'+
                                   '<div class="information">'+
@@ -138,7 +141,7 @@ httpreq2.onreadystatechange=function(){
                                     '<div class="four">'+obj[i].session_time+'</div>'+
                                   '</div>'+
                                   '<div class="viewButton">'+
-                                   '<button id="View" class="View">View</button>'+
+                                   '<button id="View_'+obj[i].Session_id+'" class="View" onclick=editSession('+obj[i].Session_id+')>View</button>'+
                                   '</div>'+
                                 '</div>'+
                               '</div>'
@@ -163,6 +166,7 @@ httpreq2.onreadystatechange=function(){
                         row.innerHTML=""
                         for(var i=0;i<obj.length;i++){
                                 if(selectedDate==obj[i].session_date){
+                                        obj[i].session_title = obj[i].session_title.replace(/-/g, " ");
                                         row.innerHTML+='<div class="row">'+
                                         '<div class="cell">'+
                                         '<div class="information">'+
@@ -172,7 +176,7 @@ httpreq2.onreadystatechange=function(){
                                         '<div class="four">'+obj[i].session_time+'</div>'+
                                         '</div>'+
                                         '<div class="viewButton">'+
-                                        '<button id="View" class="View">View</button>'+
+                                        '<button id="View_'+obj[i].Session_id+'" class="View" onclick=editSession('+obj[i].Session_id+')>View</button>'+
                                         '</div>'+
                                         '</div>'+
                                         '</div>'

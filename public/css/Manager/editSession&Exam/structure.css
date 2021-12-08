@@ -53,30 +53,119 @@
 .add-student-class {
   display: flex;
   align-items: center;
+  /* background-color: #d11534; */
 }
 label {
   width: 40%;
 }
+.title-label {
+  width: 25%;
+}
 .text-class {
-  width: 30%;
+  width: 140px;
+  height: 35px;
+  background-color: #f3f7f7;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px #dce0e094 inset;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.title-text-class {
+  width: 213px;
+  height: 35px;
+  background-color: #f3f7f7;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px #dce0e094 inset;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.type {
+  width: 140px;
+  height: 30px;
+  color: #0892d0;
+  padding-left: 5px;
+  border: 2px solid #0892d0;
+  font-weight: 600;
+  appearance: none;
+  font-family: inherit;
+  border-radius: 4px;
+  box-shadow: 1px 1px 10px #b0b3b3;
+}
+.type:focus {
+  color: #0892d0;
+  border: 2px solid #0892d0;
+  appearance: none;
+  font-family: inherit;
+  border-radius: 4px;
+  box-shadow: 1px 1px 10px #b0b3b3;
 }
 .edit-button {
   display: flex;
   justify-content: center;
   width: 30%;
 }
-#edit {
+.edit {
   border: solid #262b2f;
   border-width: 3px;
   border-radius: 3px;
+
   background-color: white;
   width: 50px;
   box-shadow: 1px 1px 10px #b0b3b3;
   color: #262b2f;
 }
-#edit:hover {
+.edit:hover {
+  font-weight: 600;
+  /* transition: 0.5s; */
+  cursor: pointer;
+}
+.save-button {
+  display: flex;
+}
+.save {
+  border: solid #0892d0;
+  border-width: 3px;
+  border-radius: 3px;
+  background-color: #0892d0;
+  width: 50px;
+  box-shadow: 1px 1px 10px #b0b3b3;
+  color: white;
+}
+.save:hover {
   font-weight: 600;
   transition: 0.5s;
+  border: solid #0892d0;
+  background-color: white;
+  color: #0892d0;
+  cursor: pointer;
+}
+.cancel-button {
+  display: flex;
+}
+.save-and-cancel {
+  margin-left: 40%;
+  display: none;
+  justify-content: space-between;
+  /* background-color: burlywood; */
+  width: 140px;
+}
+.cancel {
+  border: solid #262b2f;
+  border-width: 3px;
+  border-radius: 3px;
+  background-color: #262b2f;
+  width: 50px;
+  box-shadow: 1px 1px 10px #b0b3b3;
+  color: white;
+}
+.cancel:hover {
+  font-weight: 600;
+  transition: 0.5s;
+  border: solid #262b2f;
+  background-color: white;
+  color: #262b2f;
   cursor: pointer;
 }
 .button-set {
@@ -107,4 +196,20 @@ label {
   color: #0892d0;
   background-color: white;
   border: 2px solid #0892d0;
+}
+.box {
+  visibility: hidden;
+}
+.box-active {
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  display: flex;
+  height: 50px;
+  width: calc(100% - 50px);
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #d11534;
+  background-color: #fad1d8;
+  color: #d11534;
 }

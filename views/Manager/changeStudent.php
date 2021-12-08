@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/changeConductorVehicleStudent/structure.css"> 
     <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/changeConductorVehicleStudent/tablestyle.css">
     <title>Lead driving school</title>
-    <div class="main-page">
+</head>
+<body>
+<div class="main-page">
         <div class="topic">
             <h1>Change Assigned Students</h1>
         </div>
@@ -32,31 +34,8 @@
                     </div>
                 </div>
                 
-                <div class="table">
-                    <div class="row">
-                        <div class="cell">
-                            <div class="information">
-                                <div class="one">ST1001</div>
-                                <div class="two">N.R.Senevirathne</div>
-                                <div class="three">6/20</div>
-                            </div>
-                            <div class="removeButton">
-                                <button id="Remove">Remove</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="cell">
-                            <div class="information">
-                                <div class="one">ST1011</div>
-                                <div class="two">G.Silva</div>
-                                <div class="three">7/20</div>
-                            </div>
-                            <div class="removeButton">
-                                <button id="Remove">Remove</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="table" id="tableRows1">
+
                 </div>
             </div>
             <div class="right-side">
@@ -80,19 +59,8 @@
                     </div>
                 </div>
                 
-                <div class="table">
-                    <div class="row">
-                        <div class="cell">
-                            <div class="information">
-                                <div class="one">INS1011</div>
-                                <div class="two">N.R.Senevirathne</div>
-                                <div class="three">7/20</div>
-                            </div>
-                            <div class="addButton">
-                                <button id="Add">Add</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="table" id="tableRows2">
+
                 </div>
             </div>
         </div>
@@ -101,8 +69,6 @@
             <button class="session-buttons"name="save" id="save">Save changes</button>
         </div>    
     </div>
-</head>
-<body>
-    
+<script src="<?php echo URL?>public/js/manager/changeStudent.js"></script>
 </body>
 </html>

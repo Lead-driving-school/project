@@ -80,5 +80,6 @@
     </div>
     <script src="<?php echo URL?>public/js/common/calendarUtil.js"></script>
     <script src="<?php echo URL?>public/js/common/calendarscript.js"></script> 
+    <script src="<?php echo URL?>public/js/manager/editSessionExams.js"></script> 
 </body>
 </html>
