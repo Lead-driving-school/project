@@ -32,11 +32,12 @@
                     </div>
                     <div class="date-class">
                         <label for="date">Date:</label>
+                    
                         <input type="date" name="date" id="date" value="<?php echo isset($_SESSION['date'])?$_SESSION['date']:"";?>">
                     </div>
                     <div class="time-class">
                         <label for="time">Time:</label>
-                        <input type="time" name="time" id="time" value="<?php echo isset($_SESSION['time'])?$_SESSION['time']:"";?>">
+                        <input type="time" name="time" id="time" value="<?php echo isset($_SESSION['time'])?$_SESSION['time']:"";?>" >
                     </div>
                     <div class="add-instructor-class">
                         <label for="add-instructor">Instructor:</label>

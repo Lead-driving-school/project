@@ -103,4 +103,141 @@ class Manager_Model extends Model{
         return $result;
     }
 
+    function getExamDetails($id){
+        $id=intval($id);
+        $result=$this->db->runQuery("SELECT * FROM exams where Exam_id=$id");
+        return $result;
+    }
+
+    function saveEditedDate($date,$examId){
+       $result=$this->db->runQuery("UPDATE exams SET exam_date='$date' where  Exam_id=$examId");
+       return true;
+    }
+    function saveEditedTime($time,$examId){
+        $result=$this->db->runQuery("UPDATE exams SET exam_time='$time' where  Exam_id=$examId");
+        return true;
+    }
+    function saveEditedType($type,$examId){
+        $result=$this->db->runQuery("UPDATE exams SET exam_type='$type' where  Exam_id=$examId");
+        return true;
+    }
+
+    //change instructors,vehicles,students
+    function loadPreSelectedInstructors($examId){
+        $result=$this->db->runQuery("SELECT employee.employee_id,employee.name,employee.job_title from ((((employee 
+        INNER JOIN instructor on instructor.employee_id=employee.employee_id) 
+        INNER JOIN conductor on conductor.employee_id=instructor.employee_id)
+        INNER JOIN exam_conductor_assigns on exam_conductor_assigns.conductor_id=conductor.employee_id)
+        INNER JOIN exams on exams.exam_id=exam_conductor_assigns.exam_id)
+        where exams.exam_id=$examId");
+        return $result;
+    }
+    function loadPreSelectedVehicles($examId){
+        $result=$this->db->runQuery("SELECT vehicle.vehicle_id,vehicle.vehicle_type,vehicle.vehicle_no from ((vehicle INNER JOIN exam_vehicle_assigns on exam_vehicle_assigns.vehicle_id=vehicle.vehicle_id) INNER JOIN exams on exams.exam_id=exam_vehicle_assigns.exam_id) WHERE exams.exam_id=$examId");
+        return $result;
+    }
+    function loadUnselectedInstructors($examId){
+        $result=$this->db->runQuery("SELECT employee.employee_id,employee.name,employee.job_title from ((employee 
+        INNER JOIN instructor on instructor.employee_id=employee.employee_id) 
+        INNER JOIN conductor on conductor.employee_id=instructor.employee_id)");
+        return $result;
+    }
+    function loadUnselectedVehicles($examId){
+        $result=$this->db->runQuery("SELECT vehicle.vehicle_id,vehicle.vehicle_type,vehicle.vehicle_no from vehicle");
+        return $result;
+    }
+    function removeInstructor($employeeId){
+        $result=$this->db->runQuery("DELETE FROM exam_conductor_assigns WHERE conductor_id=$employeeId");
+        return true;
+    }
+    function addNewInstructor($managerId,$employeeId,$examId){
+        $result=$this->db->runQuery("INSERT INTO exam_conductor_assigns VALUES($managerId,$examId,$employeeId)");
+        return true;
+    }
+    function removeVehicles($vehicleId){
+        $result=$this->db->runQuery("DELETE FROM exam_vehicle_assigns WHERE vehicle_id=$vehicleId");
+        return true;
+    }
+    function addNewVehicles($managerId,$vehicleId,$examId){
+        $result=$this->db->runQuery("INSERT INTO exam_vehicle_assigns VALUES($managerId,$examId,$vehicleId)");
+        return true;
+    }
+    function loadPreSelectedStudents($examId){
+        $result=$this->db->runQuery("SELECT count(exam_student_assigns.student_id) AS total_assigns,exam_student_assigns.student_id,GROUP_CONCAT(exam_student_assigns.exam_id) AS exam_IDs,student.init_name FROM ((exam_student_assigns LEFT JOIN student on student.student_id=exam_student_assigns.student_id) LEFT JOIN exams on exams.exam_id=exam_student_assigns.exam_id) GROUP BY exam_student_assigns.student_id,student.init_name");
+        return $result;
+    }
+    function loadUnselectedStudents(){
+        $result=$this->db->runQuery("SELECT student.student_id,student.init_name FROM student");
+        return $result;
+    }
+    function addNewStudents($managerId,$studentId,$examId){
+        $result=$this->db->runQuery("INSERT INTO exam_student_assigns VALUES($managerId,$examId,$studentId)");
+        return true;
+    }
+    function removeStudents($studentId){
+        $result=$this->db->runQuery("DELETE FROM exam_student_assigns WHERE student_id=$studentId");
+        return true;
+    }
+
+    //edit Sessions
+    function getSessionDetails($id){
+        $id=intval($id);
+        $result=$this->db->runQuery("SELECT * FROM sessions where Session_id=$id");
+        return $result;
+    }
+    function saveEditedTitleS($title,$sessionId){
+        $result=$this->db->runQuery("UPDATE sessions SET session_title='$title' where  Session_id=$sessionId");
+        return true;
+     }
+    function saveEditedDateS($date,$sessionId){
+        $result=$this->db->runQuery("UPDATE sessions SET session_date='$date' where  Session_id=$sessionId");
+        return true;
+     }
+     function saveEditedTimeS($time,$sessionId){
+         $result=$this->db->runQuery("UPDATE sessions SET session_time='$time' where  Session_id=$sessionId");
+         return true;
+     }
+     function saveEditedTypeS($type,$sessionId){
+         $result=$this->db->runQuery("UPDATE sessions SET type='$type' where  Session_id=$sessionId");
+         return true;
+     }
+     function loadPreSelectedInstructorsS($sessionId){
+        $result=$this->db->runQuery("SELECT employee.employee_id,employee.name,employee.job_title from ((((employee 
+        INNER JOIN instructor on instructor.employee_id=employee.employee_id) 
+        INNER JOIN conductor on conductor.employee_id=instructor.employee_id)
+        INNER JOIN session_conductor_assigns on session_conductor_assigns.conductor_id=conductor.employee_id)
+        INNER JOIN sessions on sessions.session_id=session_conductor_assigns.session_id)
+        where sessions.session_id=$sessionId");
+        return $result;
+    }
+    function loadPreSelectedVehiclesS($sessionId){
+        $result=$this->db->runQuery("SELECT vehicle.vehicle_id,vehicle.vehicle_type,vehicle.vehicle_no from ((vehicle INNER JOIN session_vehicle_assigns on session_vehicle_assigns.vehicle_id=vehicle.vehicle_id) INNER JOIN sessions on sessions.session_id=session_vehicle_assigns.session_id) WHERE sessions.session_id=$sessionId");
+        return $result;
+    }
+    function loadUnselectedInstructorsS(){
+        $result=$this->db->runQuery("SELECT employee.employee_id,employee.name,employee.job_title from ((employee 
+        INNER JOIN instructor on instructor.employee_id=employee.employee_id) 
+        INNER JOIN conductor on conductor.employee_id=instructor.employee_id)");
+        return $result;
+    }
+    function loadUnselectedVehiclesS(){
+        $result=$this->db->runQuery("SELECT vehicle.vehicle_id,vehicle.vehicle_type,vehicle.vehicle_no from vehicle");
+        return $result;
+    }
+    function removeInstructorS($employeeId){
+        $result=$this->db->runQuery("DELETE FROM session_conductor_assigns WHERE conductor_id=$employeeId");
+        return true;
+    }
+    function addNewInstructorS($managerId,$employeeId,$sessionId){
+        $result=$this->db->runQuery("INSERT INTO session_conductor_assigns VALUES($managerId,$sessionId,$employeeId)");
+        return true;
+    }
+    function removeVehiclesS($vehicleId){
+        $result=$this->db->runQuery("DELETE FROM session_vehicle_assigns WHERE vehicle_id=$vehicleId");
+        return true;
+    }
+    function addNewVehiclesS($managerId,$vehicleId,$sessionId){
+        $result=$this->db->runQuery("INSERT INTO session_vehicle_assigns VALUES($managerId,$sessionId,$vehicleId)");
+        return true;
+    }
 }

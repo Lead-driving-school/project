@@ -10,47 +10,73 @@
 <body>
     <div class="main">
         <div class="form-box">
+        <input type="hidden" id="idContainer" value="<?php echo isset( $_SESSION['editSessionId'])? $_SESSION['editSessionId']:"";?>">
             <h1>Session</h1>
             <div class="body-content">
                 <div class="form-content">
-                    <div class="id-class">
-                        <label for="idNo">ID:</label>
-                        <p class="text-class">SE0001</p>
-                        <div class="edit-button"><button  name="edit" id="edit">Edit</button></div>
+                    <div class="box" id=box>
+                        <div class="msg" id="msg"></div>
                     </div>
                     <div class="title-class">
-                        <label for="title">Title</label>
-                        <p class="text-class">Road Signs</p>
-                        <div class="edit-button"><button  name="edit" id="edit">Edit</button></div>
+                        <label for="title" class="title-label">Title:</label>
+                        <input type="text" class="title-text-class" id="titleContainer" value="">
+                        <div class="edit-button"><button  class="edit" id="editTitle" onclick="changeTitle()">Edit</button></div>
                     </div>
+                        <div class="save-and-cancel" id="titleSaveCancel">
+                            <div class="save-button" id="saveTitleButton"><button  class="save" id="saveTitle" onclick="saveTitle()">Save</button></div>
+                            <div class="cancel-button" id="cancelTitleButton"><button  class="cancel" id="cancelTitle" onclick="cancelTitle()">Cancel</button></div>
+                        </div>
                     <div class="type-class">
                         <label for="type">Type:</label>
-                        <p class="text-class">Theory</p>
-                        <div class="edit-button"><button  name="edit" id="edit">Edit</button></div>
+                        <select name="type" id="type" class="type">
+                            <optgroup>
+                                <option value="Theory">Theory</option>
+                                <option value="Practical">Practical</option>
+                            </optgroup>
+                        </select>
+                        <div class="edit-button"><button  class="edit" id="editType" onclick="changeType()" >Edit</button></div>
                     </div>
+                        <div class="save-and-cancel" id="typeSaveCancel">
+                            <div class="save-button" id="saveTypeButton"><button  class="save" id="saveType" onclick="saveType()">Save</button></div>
+                            <div class="cancel-button" id="cancelTypeButton"><button  class="cancel" id="cancelType" onclick="cancelType()">Cancel</button></div>
+                        </div>
+                    <div class="date-class">
+                        <label for="date">Date:</label>
+                        <input type="date" class="text-class" id="dateContainer" value="">
+                        <div class="edit-button"><button  class="edit" id="editDate" onclick="changeDate()">Edit</button></div>
+
+                    </div>
+                    
+                        <div class="save-and-cancel" id="dateSaveCancel">
+                            <div class="save-button" id="saveDateButton"><button  class="save" id="saveDate" onclick="saveDate()">Save</button></div>
+                            <div class="cancel-button" id="cancelDateButton"><button  class="cancel" id="cancelDate" onclick="cancelDate()">Cancel</button></div>
+                        </div>
+
+                    <div class="time-class">
+                        <label for="time">Time:</label>
+                        <input type="time" class="text-class" id="timeContainer" value="">
+                        <div class="edit-button"><button  class="edit" id="editTime" onclick="changeTime()">Edit</button></div>
+                    </div>
+
+                        <div class="save-and-cancel" id="timeSaveCancel">
+                            <div class="save-button" id="saveTimeButton"><button  class="save" id="saveTime" onclick="saveTime()">Save</button></div>
+                            <div class="cancel-button" id="cancelTimeButton"><button  class="cancel" id="cancelTime" onclick="cancelTime()">Cancel</button></div>
+                        </div>
+
                     <div class="add-instructor-class">
                         <label for="add-instructor">Instructor:</label>
-                        <a href="<?php echo URL?>Manager/changeInstructorS"><button class="session-buttons" name="add-instructor" id="add-instructor">ADD INSTRUCTOR</button></a>
+                        <button class="session-buttons" name="add-instructor" id="add-instructor" onclick="changeInstructorLoad()">ADD INSTRUCTOR</button>
                         <div class="blank"></div>
                     </div>
                     <div class="add-vehicle-class">
                         <label for="add-vehicle">Vehicle:</label>
-                        <a href="<?php echo URL?>Manager/changeVehicleS"><button class="session-buttons" name="add-vehicle" id="add-vehicle">ADD VEHICLE</button></a>
+                        <button class="session-buttons"name="add-vehicle" id="add-vehicle" onclick="changeVehicleLoad()">ADD VEHICLE</button>
                         <div class="blank"></div>
                     </div>
-                    <div class="date-class">
-                        <label for="date">Date:</label>
-                        <p class="text-class">2021/10/10</p>
-                        <div class="edit-button"><button  name="edit" id="edit">Edit</button></div>
-                    </div>
-                    <div class="time-class">
-                        <label for="time">Time:</label>
-                        <p class="text-class">8:15AM</p>
-                        <div class="edit-button"><button  name="edit" id="edit">Edit</button></div>
-                    </div>
+
                     <div class="add-student-class">
                         <label for="add-participant">Add Students:</label>
-                        <a href="<?php echo URL?>Manager/changeStudentS"><button class="session-buttons" name="add-participants" id="add-participants">ADD STUDENTS</button></a>
+                        <button class="session-buttons" name="add-participants" id="add-participants" onclick="changeStudentLoad()">ADD STUDENTS</button>
                         <div class="blank"></div>
                     </div>
                 </div>
@@ -61,5 +87,6 @@
             </div>
         </div>
     </div>
+    <script src="<?php echo URL?>public/js/manager/editSession.js"></script> 
 </body>
 </html>

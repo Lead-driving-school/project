@@ -251,9 +251,12 @@ class Manager extends Controller{
         }
         
     }
-    function editExam(){
+    function editExam($id=''){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='Manager'){
+                if($id!=''){
+                    $_SESSION['editExamId']=$id;
+                }
                 $this->view->render('Manager/editExam');
             }else{
                 $this->view->render('error');
@@ -263,10 +266,12 @@ class Manager extends Controller{
             $this->view->render('error');
         }
     }
-
-    function editSession(){
+    function editSession($id=''){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='Manager'){
+                if($id!=''){
+                    $_SESSION['editSessionId']=$id;
+                }
                 $this->view->render('Manager/editSession');
             }else{
                 $this->view->render('error');
@@ -292,6 +297,12 @@ class Manager extends Controller{
     function eventCalendar(){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='Manager'){
+                $_SESSION['type']="noValue";
+                $_SESSION['title']="";
+                $_SESSION['date']="";
+                $_SESSION['time']="";
+                $_SESSION['selectedInstructorList']="";
+                $_SESSION['selectedVehicleList']="";
                 $this->view->render('Manager/eventCalendar');
             }else{
                 $this->view->render('error');
@@ -410,4 +421,162 @@ class Manager extends Controller{
         $result=$this->model->getExams();
         echo json_encode($result);
     }
+
+    function getExamDetails(){
+        $result=$this->model->getExamDetails($_SESSION['editExamId']);
+        echo json_encode($result); 
+    }
+    //editExam
+    function saveEditedDate($date){
+        $result=$this->model->saveEditedDate($date,$_SESSION['editExamId']);
+    }
+    function saveEditedTime($time){
+        $result=$this->model->saveEditedTime($time,$_SESSION['editExamId']);
+    }
+    function saveEditedType($type){
+        $result=$this->model->saveEditedType($type,$_SESSION['editExamId']);
+    }
+
+    function loadPreSelectedInstructors(){
+        $result=$this->model->loadPreSelectedInstructors($_SESSION['editExamId']);
+        echo json_encode($result);
+    }
+    function loadPreSelectedVehicles(){
+        $result=$this->model->loadPreSelectedVehicles($_SESSION['editExamId']);
+        echo json_encode($result);
+    }
+    function loadUnselectedInstructors(){
+        $result=$this->model->loadUnselectedInstructors();
+        echo json_encode($result);
+    }
+    function loadUnselectedVehicles(){
+        $result=$this->model->loadUnselectedVehicles();
+        echo json_encode($result);
+    }
+    function removeInstructor($employeeId){
+        $result=$this->model->removeInstructor($employeeId,$_SESSION['editExamId']);
+        if($result==true){
+            echo "true";
+        }else{
+            echo "false";
+        }
+    }
+    function addNewInstructor($employeeId){
+        $result=$this->model->addNewInstructor($_SESSION['employee_id'],$employeeId,$_SESSION['editExamId']);
+        if($result==true){
+            echo "true";
+        }else{
+            echo "false";
+        }
+    }
+    function removeVehicles($vehicleId){
+        $result=$this->model->removeVehicles($vehicleId,$_SESSION['editExamId']);
+        if($result==true){
+            echo "true";
+        }else{
+            echo "false";
+        }
+    }
+    function addNewVehicles($vehicleId){
+        $result=$this->model->addNewVehicles($_SESSION['employee_id'],$vehicleId,$_SESSION['editExamId']);
+        if($result==true){
+            echo "true";
+        }else{
+            echo "false";
+        }
+    }
+
+    function loadPreSelectedStudents(){
+        $result=$this->model->loadPreSelectedStudents($_SESSION['editExamId']);
+        echo json_encode($result);
+    }
+    function loadUnselectedStudents(){
+        $result=$this->model->loadUnselectedStudents();
+        echo json_encode($result);
+    }
+    function addNewStudents($studentId){
+        $result=$this->model->addNewStudents($_SESSION['employee_id'],$studentId,$_SESSION['editExamId']);
+        if($result==true){
+            echo "true";
+        }else{
+            echo "false";
+        }
+    }
+    function removeStudents($studentId){
+        $result=$this->model->removeStudents($studentId,$_SESSION['editExamId']);
+        if($result==true){
+            echo "true";
+        }else{
+            echo "false";
+        }
+    }
+
+    //edit sesisons
+    function getSessionDetails(){
+        $result=$this->model->getSessionDetails($_SESSION['editSessionId']);
+        echo json_encode($result); 
+    }
+
+    function saveEditedTitleS($title){
+        $result=$this->model->saveEditedTitleS($title,$_SESSION['editSessionId']);
+    }
+
+    function saveEditedDateS($date){
+        $result=$this->model->saveEditedDateS($date,$_SESSION['editSessionId']);
+    }
+    function saveEditedTimeS($time){
+        $result=$this->model->saveEditedTimeS($time,$_SESSION['editSessionId']);
+    }
+    function saveEditedTypeS($type){
+        $result=$this->model->saveEditedTypeS($type,$_SESSION['editSessionId']);
+    }
+    function loadPreSelectedInstructorsS(){
+        $result=$this->model->loadPreSelectedInstructorsS($_SESSION['editSessionId']);
+        echo json_encode($result);
+    }
+    function loadPreSelectedVehiclesS(){
+        $result=$this->model->loadPreSelectedVehiclesS($_SESSION['editSessionId']);
+        echo json_encode($result);
+    }
+    function loadUnselectedInstructorsS(){
+        $result=$this->model->loadUnselectedInstructorsS();
+        echo json_encode($result);
+    }
+    function loadUnselectedVehiclesS(){
+        $result=$this->model->loadUnselectedVehiclesS();
+        echo json_encode($result);
+    }
+    function removeInstructorS($employeeId){
+        $result=$this->model->removeInstructorS($employeeId,$_SESSION['editSessionId']);
+        if($result==true){
+            echo "true";
+        }else{
+            echo "false";
+        }
+    }
+    function addNewInstructorS($employeeId){
+        $result=$this->model->addNewInstructorS($_SESSION['employee_id'],$employeeId,$_SESSION['editSessionId']);
+        if($result==true){
+            echo "true";
+        }else{
+            echo "false";
+        }
+    }
+    function removeVehiclesS($vehicleId){
+        $result=$this->model->removeVehiclesS($vehicleId,$_SESSION['editSessionId']);
+        if($result==true){
+            echo "true";
+        }else{
+            echo "false";
+        }
+    }
+    function addNewVehiclesS($vehicleId){
+        $result=$this->model->addNewVehiclesS($_SESSION['employee_id'],$vehicleId,$_SESSION['editSessionId']);
+        if($result==true){
+            echo "true";
+        }else{
+            echo "false";
+        }
+    }
+
 }

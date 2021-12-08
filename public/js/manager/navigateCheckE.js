@@ -41,7 +41,13 @@ function submitExam(){
     }
     else{
         var today=new Date();
-        var day=today.getFullYear()+"-"+(today.getMonth()+1)+"-"+today.getDate() 
+        if(today.getDate()<10){
+            var dateval="0"+today.getDate()
+        }
+        else{
+            var dateval=today.getDate()
+        }
+        var day=today.getFullYear()+"-"+(today.getMonth()+1)+"-"+dateval
         var todaytime=today.getHours()+":"+today.getMinutes()
         if(date<day){
             document.getElementById("msg").innerHTML="The day you have selected was past"
