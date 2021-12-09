@@ -1,5 +1,5 @@
 selectedStudents=[]
-let examID=document.getElementById("idContainer").value
+let sessionID=document.getElementById("idContainer").value
 function loadPreSelectedStudents(){
     console.log("hi")
     let httpreq=new XMLHttpRequest()
@@ -13,19 +13,19 @@ function loadPreSelectedStudents(){
             }
             var myArr=[]
             for(var i=0;i<obj.length;i++){
-                myArr[i] = obj[i].exam_IDs.split(",");
+                myArr[i] = obj[i].session_IDs.split(",");
             }
 
             for(var i=0;i<obj.length;i++){
                 console.log(myArr[i])
-                if(myArr[i].includes(examID)){
+                if(myArr[i].includes(sessionID)){
                     selectedStudents.push(obj[i].student_id)
                     rows.innerHTML+='<div class="row">'+
                     '<div class="cell">'+
                         '<div class="information">'+
                             '<div class="one">ST_'+obj[i].student_id+'</div>'+
                             '<div class="two">'+obj[i].init_name+'</div>'+
-                            '<div class="three">'+obj[i].total_assigns+'/4</div>'+
+                            '<div class="three">'+obj[i].total_assigns+'/20</div>'+
                         '</div>'+
                         '<div class="removeButton">'+
                             '<button id="Remove_'+obj[i].student_id+'" class="Remove" onclick=removeStudents('+obj[i].student_id+')>Remove</button>'+
@@ -38,7 +38,7 @@ function loadPreSelectedStudents(){
 
         }
     }
-    let url="http://localhost/project/Manager/loadPreSelectedStudents/"
+    let url="http://localhost/project/Manager/loadPreSelectedStudentsS/"
     httpreq.open("POST",url,true)
     httpreq.send()
 }
@@ -63,7 +63,7 @@ function loadUnselectedStudents(){
                         '<div class="information">'+
                             '<div class="one">ST_'+obj[i].student_id+'</div>'+
                             '<div class="two">'+obj[i].init_name+'</div>'+
-                            '<div class="three">'+obj[i].total_assigns+'/4</div>'+
+                            '<div class="three">'+obj[i].total_assigns+'/20</div>'+
                         '</div>'+
                         '<div class="addButton">'+
                             '<button id="Add_'+obj[i].student_id+'" class="Add" onclick=addNewStudents('+obj[i].student_id+')>Add</button>'+
@@ -76,7 +76,7 @@ function loadUnselectedStudents(){
 
         }
     }
-    let url="http://localhost/project/Manager/loadUnselectedStudents/"
+    let url="http://localhost/project/Manager/loadUnselectedStudentsS/"
     httpreq.open("POST",url,true)
     httpreq.send()
 
@@ -88,11 +88,11 @@ function removeStudents(studentId){
     httpreq.onreadystatechange=function(){
         if(httpreq.readyState===4 && httpreq.status===200){
             if(httpreq.responseText=="true"){
-                window.location.href="http://localhost/project/Manager/changeStudent"
+                window.location.href="http://localhost/project/Manager/changeStudentS"
             }
         }
     }
-    let url="http://localhost/project/Manager/removeStudents/"+studentId
+    let url="http://localhost/project/Manager/removeStudentsS/"+studentId
     httpreq.open("POST",url,true)
     httpreq.send()
 }
@@ -101,11 +101,11 @@ function addNewStudents(studentId){
     httpreq.onreadystatechange=function(){
         if(httpreq.readyState===4 && httpreq.status===200){
             if(httpreq.responseText=="true"){
-                window.location.href="http://localhost/project/Manager/changeStudent"
+                window.location.href="http://localhost/project/Manager/changeStudentS"
             }
         }
     }
-    let url="http://localhost/project/Manager/addNewStudents/"+studentId
+    let url="http://localhost/project/Manager/addNewStudentsS/"+studentId
     httpreq.open("POST",url,true)
     httpreq.send()
 }

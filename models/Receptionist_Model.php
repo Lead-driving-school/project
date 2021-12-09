@@ -117,5 +117,13 @@ class Receptionist_Model extends Model{
         $studentId=intval($st_id[0]['student_id']);
         $result=$this->db->runQuery("INSERT INTO medical_report VALUES($studentId,'$medicalNo','$issuedDate')");
     }
-    
+    function getSessions(){
+        $result=$this->db->runQuery("SELECT Session_id,session_title,session_date,session_time,type FROM sessions");
+        return $result;
+    }
+
+    function getExams(){
+        $result=$this->db->runQuery("SELECT Exam_id,exam_date,exam_time,exam_type FROM exams");
+        return $result;
+    }
 }

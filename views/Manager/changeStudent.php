@@ -13,6 +13,7 @@
         <div class="topic">
             <h1>Change Assigned Students</h1>
         </div>
+        <input type="hidden" id="idContainer" value="<?php echo isset( $_SESSION['editExamId'])? $_SESSION['editExamId']:"";?>">
         <div class="body-content">
             <div class="left-side">
                 <div class="heading">
