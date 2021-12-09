@@ -227,4 +227,14 @@ class Receptionist extends Controller{
             $this->view->render('error');
         }
     }
+
+    function getAvailableSessions(){
+        $result=$this->model->getSessions();
+        echo json_encode($result);
+    }
+
+    function getAvailableExams(){
+        $result=$this->model->getExams();
+        echo json_encode($result);
+    }
 }
