@@ -44,7 +44,7 @@ function getFullDate(date,month,year) {
                         } 
                 }
         }
-        let url="http://localhost/project/Receptionist/getAvailableSessions"
+        let url="http://localhost/project/Student/getAvailableSessions"
         xhr.open("POST",url,true)
         xhr.send()
 
@@ -91,7 +91,7 @@ httpreq1.onreadystatechange=function(){
 
         }
 }
-let url1="http://localhost/project/Receptionist/getAvailableExams"
+let url1="http://localhost/project/Student/getAvailableExams"
 httpreq1.open("POST",url1,true)
 httpreq1.send()
 
@@ -187,7 +187,7 @@ httpreq2.onreadystatechange=function(){
 
         }
 }
-let url2="http://localhost/project/Receptionist/getAvailableSessions"
+let url2="http://localhost/project/Student/getAvailableSessions"
 httpreq2.open("POST",url2,true)
 httpreq2.send()
 

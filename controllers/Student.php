@@ -175,9 +175,12 @@ class Student extends Controller{
             $this->view->render('error');
         }
     }
-    function viewExam(){
+    function viewExam($id=''){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='student'){
+                if($id!=''){
+                    $_SESSION['viewExamId']=$id;
+                }
                 $this->view->render('Student/viewExam');
             }else{
                 $this->view->render('error');
@@ -188,9 +191,12 @@ class Student extends Controller{
         } 
         
     }
-    function viewSession(){
+    function viewSession($id=''){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='student'){
+                if($id!=''){
+                    $_SESSION['viewSessionId']=$id;
+                }
                 $this->view->render('Student/viewSession');
             }else{
                 $this->view->render('error');
@@ -272,6 +278,48 @@ class Student extends Controller{
         else{
             $this->view->render('error');
         }
+    }
+    function getAvailableSessions(){
+        $result=$this->model->getSessions($_SESSION['student_id']);
+        echo json_encode($result);
+    }
+
+    function getAvailableExams(){
+        $result=$this->model->getExams($_SESSION['student_id']);
+        echo json_encode($result);
+    }
+    function getExamDetails(){
+        $result=$this->model->getExamDetails($_SESSION['viewExamId']);
+        echo json_encode($result); 
+    }
+    function loadPreSelectedInstructors(){
+        $result=$this->model->loadPreSelectedInstructors($_SESSION['viewExamId']);
+        echo json_encode($result);
+    }
+    function loadPreSelectedVehicles(){
+        $result=$this->model->loadPreSelectedVehicles($_SESSION['viewExamId']);
+        echo json_encode($result);
+    }
+    function loadPreSelectedStudents(){
+        $result=$this->model->loadPreSelectedStudents($_SESSION['viewExamId']);
+        echo json_encode($result);
+    }
+    //Sessions
+    function getSessionDetails(){
+        $result=$this->model->getSessionDetails($_SESSION['viewSessionId']);
+        echo json_encode($result); 
+    }
+    function loadPreSelectedInstructorsS(){
+        $result=$this->model->loadPreSelectedInstructorsS($_SESSION['viewSessionId']);
+        echo json_encode($result);
+    }
+    function loadPreSelectedVehiclesS(){
+        $result=$this->model->loadPreSelectedVehiclesS($_SESSION['viewSessionId']);
+        echo json_encode($result);
+    }
+    function loadPreSelectedStudentsS(){
+        $result=$this->model->loadPreSelectedStudentsS($_SESSION['viewSessionId']);
+        echo json_encode($result);
     }
 
 }
