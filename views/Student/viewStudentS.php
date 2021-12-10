@@ -9,6 +9,7 @@
     <title>add Student</title>
 </head>
 <body>
+<input type="hidden" id="idContainer" value="<?php echo isset( $_SESSION['viewSessionId'])? $_SESSION['viewSessionId']:"";?>">
     <div class="main-content">
         <div class="addInstructor-box">
             <div class="topic">
@@ -23,31 +24,21 @@
                         </div>
                     </div>
             </div>
-            <div class="table">
-                <div class="row">
-                    <div class="cell">
-                        <div class="information">
-                            <div class="one">ST1001</div>
-                            <div class="two">N.R.Senevirathne</div>
-                            <div class="three">6/20</div>
-                        </div>
-                        <div class="addButton">
-                           
-                        </div>
-                    </div>
-                </div>
+            <div class="table" id="tableRows">
+
             </div>
             <div class="bottom-part">
             <div class="button-set">
                     <a href="<?php echo URL?>Student/viewSession"><button class="cancel" id="cancel" name="cancel">Back</button></a>
                 </div>
                 <div class="participation-count">
-                    <p>1</p><p>Participants</p>
+                    <p id="count"></p><p>Participants</p>
                 </div>
 
             </div>
         </div>
     </div>
+    <script src="<?php echo URL?>public/js/student/viewStudentS.js"></script>
     
 </body>
 </html>
