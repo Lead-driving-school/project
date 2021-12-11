@@ -8,7 +8,8 @@ class Student_Model extends Model{
     }
 
     function getProfileDetails(){
-        $result=$this->db->runQuery("");
+        $nic=$_SESSION['nic'];
+        $result=$this->db->runQuery("SELECT full_name,NIC,address,contact from student where nic = nic");
         return $result;
     }
 
