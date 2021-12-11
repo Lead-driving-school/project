@@ -30,7 +30,7 @@
                 <div class="right">
                     <div class="holder">
                         <div class="topic"><h2>Profile</h2></div>
-                        <div class="details">
+                        <div class="details" id="=details">
                             <div class="row-1">
                                 <div class="col-1">Name</div>
                                 <div class="col-2">:</div>
