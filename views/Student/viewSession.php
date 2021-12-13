@@ -8,7 +8,7 @@
     <title>Session</title>
 </head>
 <body>
-<div class="main">
+    <div class="main">
         <div class="form-box">
             <h1>Session</h1>
             <div class="body-content">

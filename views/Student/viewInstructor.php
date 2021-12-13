@@ -9,7 +9,7 @@
     <title>add Conductor</title>
 </head>
 <body>
-<div class="main-content">
+    <div class="main-content">
         <div class="addInstructor-box">
             <div class="topic">
                 <h1>Instructors</h1>
