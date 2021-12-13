@@ -8,7 +8,7 @@
     <title>Exam</title>
 </head>
 <body>
-<div class="main">
+    <div class="main">
         <div class="form-box">
             <h1>Exam</h1>
             <div class="body-content">

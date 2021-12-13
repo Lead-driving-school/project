@@ -36,7 +36,7 @@ function loadPreSelectedStudents(){
         }
         document.getElementById("count").innerHTML=count
     }
-    let url="http://localhost/project/Student/loadPreSelectedStudentsS/"
+    let url="http://localhost/project/Instructor/loadPreSelectedStudentsS/"
     httpreq.open("POST",url,true)
     httpreq.send()
 }

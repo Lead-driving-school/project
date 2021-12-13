@@ -1,4 +1,4 @@
-let sessionID=document.getElementById("idContainer").value
+let examID=document.getElementById("idContainer").value
 function loadPreSelectedStudents(){
     console.log("hi")
     let count=0
@@ -14,18 +14,19 @@ function loadPreSelectedStudents(){
             }
             var myArr=[]
             for(var i=0;i<obj.length;i++){
-                myArr[i] = obj[i].session_IDs.split(",");
+                myArr[i] = obj[i].exam_IDs.split(",");
             }
+
             for(var i=0;i<obj.length;i++){
-                // console.log(myArr[i])
-                if(myArr[i].includes(sessionID)){
+                console.log(myArr[i])
+                if(myArr[i].includes(examID)){
                     count=count+1
                     rows.innerHTML+='<div class="row">'+
                     '<div class="cell">'+
                         '<div class="information">'+
                             '<div class="one">ST_'+obj[i].student_id+'</div>'+
                             '<div class="two">'+obj[i].init_name+'</div>'+
-                            '<div class="three">'+obj[i].total_assigns+'/20</div>'+
+                            '<div class="three">'+obj[i].total_assigns+'/4</div>'+
                         '</div>'+
                     '</div>'+
                 '</div>'
@@ -36,7 +37,8 @@ function loadPreSelectedStudents(){
         }
         document.getElementById("count").innerHTML=count
     }
-    let url="http://localhost/project/Student/loadPreSelectedStudentsS/"
+    
+    let url="http://localhost/project/Instructor/loadPreSelectedStudents/"
     httpreq.open("POST",url,true)
     httpreq.send()
 }

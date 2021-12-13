@@ -28,7 +28,7 @@
 
             </div>
             <div class="bottom-part">
-            <div class="button-set">
+                <div class="button-set">
                     <a href="<?php echo URL?>Student/viewSession"><button class="cancel" id="cancel" name="cancel">Back</button></a>
                 </div>
                 <div class="participation-count">

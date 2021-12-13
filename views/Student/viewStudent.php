@@ -9,7 +9,7 @@
     <title>add Student</title>
 </head>
 <body>
-<div class="main-content">
+    <div class="main-content">
         <input type="hidden" id="idContainer" value="<?php echo isset( $_SESSION['viewExamId'])? $_SESSION['viewExamId']:"";?>">
         <div class="addInstructor-box">
             <div class="topic">

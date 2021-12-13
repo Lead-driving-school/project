@@ -9,7 +9,7 @@
     <title>add vehicle</title>
 </head>
 <body>
-<div class="main-content">
+    <div class="main-content">
         <div class="addInstructor-box">
             <div class="topic">
                 <h1>Vehicles</h1>
