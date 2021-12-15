@@ -11,6 +11,7 @@
 <body>
     <div class="main-content">
         <div class="addInstructor-box">
+        <input type="hidden" id="selectedArr" value="<?php echo isset($_SESSION['selectedInstructorList'])?$_SESSION['selectedInstructorList']:"";?>">
             <div class="topic">
                 <h1>Add Session Conductor</h1>
             </div>
@@ -23,31 +24,20 @@
                         </div>
                     </div>
             </div>
-            <div class="table">
-                <div class="row">
-                    <div class="cell">
-                        <div class="information">
-                            <div class="one">INS1011</div>
-                            <div class="two">N.R.Senevirathne</div>
-                            <div class="three">Instructor</div>
-                        </div>
-                        <div class="addButton">
-                            <button id="Add">Add</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="table" id="tablerows">
+
             </div>
             <div class="bottom-part">
                 <div class="participation-count">
-                    <p>45</p><p>Participants</p>
+                <p id="counter"></p><p>Participants</p>
                 </div>
                 <div class="button-set">
                     <a href="<?php echo URL?>Manager/addExam"><button class="cancel" id="cancel" name="cancel">Back</button></a>
-                    <button class="save" id="save" name="save">Save Changes</button>
+                    <button class="save" id="save" name="save"  onclick="assignInstructors()">Save Changes</button>
                 </div>
             </div>
         </div>
     </div>
-    
+    <script src="<?php echo URL?>public/js/manager/addInstructorsE.js"></script>
 </body>
 </html>

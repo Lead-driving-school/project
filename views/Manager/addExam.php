@@ -13,10 +13,13 @@
             <h1>Add Exam</h1>
             <div class="body-content">
                 <div class="form-content">
-                    <div class="id-class">
+                    <div class="box" id=box>
+                        <div class="msg" id="msg"></div>
+                    </div>
+                    <!-- <div class="id-class">
                         <label for="idNo">ID:</label>
                         <input type="text" class="session-text" name="idNo" id="idNo"> 
-                    </div>
+                    </div> -->
                     <div class="type-class">
                         <label for="type">Type:</label>
                         <select name="type" id="type">
@@ -27,31 +30,33 @@
                             </optgroup>
                         </select>
                     </div>
-                    <div class="add-instructor-class">
-                        <label for="add-instructor">Instructor:</label>
-                        <a href="<?php echo URL?>Manager/addInstructor"><button class="session-buttons" name="add-instructor" id="add-instructor">ADD CONDUCTOR</button></a>
-                    </div>
-                    <div class="add-vehicle-class">
-                        <label for="add-vehicle">Vehicle:</label>
-                        <a href="<?php echo URL?>Manager/addVehicle"><button class="session-buttons"name="add-vehicle" id="add-vehicle">ADD VEHICLE</button></a>
-                    </div>
                     <div class="date-class">
                         <label for="date">Date:</label>
-                        <input type="date" name="date" id="date">
+                    
+                        <input type="date" name="date" id="date" value="<?php echo isset($_SESSION['date'])?$_SESSION['date']:"";?>">
                     </div>
                     <div class="time-class">
                         <label for="time">Time:</label>
-                        <input type="time" name="time" id="time">
+                        <input type="time" name="time" id="time" value="<?php echo isset($_SESSION['time'])?$_SESSION['time']:"";?>" >
+                    </div>
+                    <div class="add-instructor-class">
+                        <label for="add-instructor">Instructor:</label>
+                        <button class="session-buttons" name="add-instructor" id="add-instructor" onclick="callInstructorsPage()">ADD CONDUCTOR</button>
+                    </div>
+                    <div class="add-vehicle-class">
+                        <label for="add-vehicle">Vehicle:</label>
+                        <button class="session-buttons"name="add-vehicle" id="add-vehicle" onclick="callVehiclesPage()">ADD VEHICLE</button>
                     </div>
 
                 </div>
                 
                 <div class="button-set">
                     <a href="<?php echo URL?>Manager/eventCalendar"><button class="session-buttons" name="cancel" id="cancel" >CANCEL</button></a>
-                    <button class="session-buttons"name="confirm" id="confirm">CONFIRM</button>
+                    <button class="session-buttons"name="confirm" id="confirm" onclick="submitExam()">CONFIRM</button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="<?php echo URL?>public/js/manager/navigateCheckE.js"></script>
 </body>
 </html>

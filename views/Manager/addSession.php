@@ -11,11 +11,15 @@
     <div class="main">
         <div class="form-box">
             <h1>Add Session</h1>
+
             <div class="body-content">
                 <div class="form-content">
+                    <div class="box" id=box>
+                        <div class="msg" id="msg"></div>
+                    </div>
                     <div class="title-class">
                         <label for="title">Title:</label>
-                        <input type="text" class="session-text" name="title" id="title"> 
+                        <input type="text" class="session-text" name="title" id="title" value="<?php echo isset($_SESSION['title'])?$_SESSION['title']:"";?>"> 
                     </div>
                     <div class="type-class">
                         <label for="type">Type:</label>
@@ -25,28 +29,27 @@
                             <option value="Practical">Practical</option>
                         </select>
                     </div>
-                    <div class="msg" id="msg"></div>
+                    <div class="date-class">
+                        <label for="date">Date:</label>
+                        <input type="date" name="date" id="date" value="<?php echo isset($_SESSION['date'])?$_SESSION['date']:"";?>">
+                    </div>
+                    <div class="time-class">
+                        <label for="time">Time:</label>
+                        <input type="time" name="time" id="time" value="<?php echo isset($_SESSION['time'])?$_SESSION['time']:"";?>">
+                    </div>
                     <div class="add-instructor-class">
                         <label for="add-instructor">Instructor:</label>
                         <button class="session-buttons" name="add-instructor" id="add-instructor" onclick="callInstructorsPage()">ADD INSTRUCTOR</button>
                     </div>
                     <div class="add-vehicle-class">
                         <label for="add-vehicle">Vehicle:</label>
-                        <a href="<?php echo URL?>Manager/addVehicleS"><button class="session-buttons"name="add-vehicle" id="add-vehicle">ADD VEHICLE</button></a>
-                    </div>
-                    <div class="date-class">
-                        <label for="date">Date:</label>
-                        <input type="date" name="date" id="date">
-                    </div>
-                    <div class="time-class">
-                        <label for="time">Time:</label>
-                        <input type="time" name="time" id="time">
+                        <button class="session-buttons"name="add-vehicle" id="add-vehicle" onclick="callVehiclesPage()">ADD VEHICLE</button>
                     </div>
                 </div>
                 
                 <div class="button-set">
                     <a href="<?php echo URL?>Manager/eventCalendar"><button class="session-buttons" name="cancel" id="cancel" >CANCEL</button></a>
-                    <button class="session-buttons"name="confirm" id="confirm">CONFIRM</button>
+                    <button class="session-buttons"name="confirm" id="confirm" onclick="submitSession()">CONFIRM</button>
                 </div>
             </div>
         </div>

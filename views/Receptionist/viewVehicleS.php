@@ -25,43 +25,19 @@
                         </div>
                     </div>
             </div>
-            <div class="table">
-                <div class="row">
-                    <div class="cell">
-                        <div class="information">
-                            <div class="one">V0001</div>
-                            <div class="two">CAD 1045</div>
-                            <div class="three">B</div>
-                            <div class="four">Motor Car</div>
-                        </div>
-                        <div class="addButton">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="cell">
-                        <div class="information">
-                            <div class="one">V0002</div>
-                            <div class="two">252 1045</div>
-                            <div class="three">B</div>
-                            <div class="four">Dual purpose</div>
-                        </div>
-                        <div class="addButton">
-                            
-                        </div>
-                    </div>
-                </div>
+            <div class="table" id="tableRows">
+
             </div>
             <div class="bottom-part">
             <div class="button-set">
                     <a href="<?php echo URL?>Receptionist/viewSession"><button class="cancel" id="cancel" name="cancel">Back</button></a>
                 </div>
                 <div class="participation-count">
-                    <p>2</p><p>Vehicles</p>
+                    <p id="count"></p><p>Vehicles</p>
                 </div>
             </div>
         </div>
     </div>
-    
+    <script src="<?php echo URL?>public/js/receptionist/viewVehicleS.js"></script>
 </body>
 </html>
