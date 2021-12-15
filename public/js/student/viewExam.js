@@ -29,3 +29,15 @@ function viewVehicle(){
 function viewStudents(){
     window.location.href="http://localhost/project/Student/viewStudent/"
 }
+function sendRequestsforExam(){
+    console.log("hi")
+    let httpreq = new XMLHttpRequest();
+    httpreq.onreadystatechange=function(){
+        if(httpreq.readyState===4 && httpreq.status===200){
+            console.log(httpreq.responseText);
+        }
+    }
+    let url="http://localhost/project/Student/requestForExam/"
+    httpreq.open("POST",url,true)
+    httpreq.send()
+}

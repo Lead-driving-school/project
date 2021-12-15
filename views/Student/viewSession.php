@@ -57,11 +57,12 @@
                 </div>
                 <div class="button-set">
                     <a href="<?php echo URL?>Student/eventCalendar"><button class="session-buttons" name="cancel" id="cancel" >Back</button></a>
-                    <button class="session-buttons"name="confirm" id="confirm">Request</button>
+                    
                 </div>
             </div>
         </div>
     </div>
     <script src="<?php echo URL?>public/js/student/viewSessions.js"></script> 
+    
 </body>
 </html>

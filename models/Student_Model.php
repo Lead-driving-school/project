@@ -41,6 +41,14 @@ class Student_Model extends Model{
         $result=$this->db->runQuery("SELECT exams.Exam_id,exams.exam_date,exams.exam_time,exams.exam_type FROM exams INNER JOIN exam_student_assigns on exam_student_assigns.exam_id=exams.exam_id where exam_student_assigns.student_id=$studentId");
         return $result;
     }
+    function getAllExams($studentId){
+        $result=$this->db->runQuery("SELECT exams.Exam_id,exams.exam_date,exams.exam_time,exams.exam_type FROM exams");
+        return $result;
+    }
+    function getAllSessions($studentId){
+        $result=$this->db->runQuery("SELECT Session_id,session_title,session_date,session_time,type FROM sessions");
+        return $result;
+    }
     function getExamDetails($id){
         $id=intval($id);
         $result=$this->db->runQuery("SELECT * FROM exams where Exam_id=$id");
@@ -87,6 +95,24 @@ class Student_Model extends Model{
     function loadPreSelectedStudentsS($sessionId){
         $result=$this->db->runQuery("SELECT count(session_student_assigns.student_id) AS total_assigns,session_student_assigns.student_id,GROUP_CONCAT(session_student_assigns.session_id) AS session_IDs,student.init_name FROM ((session_student_assigns LEFT JOIN student on student.student_id=session_student_assigns.student_id) LEFT JOIN sessions on sessions.session_id=session_student_assigns.session_id) GROUP BY session_student_assigns.student_id,student.init_name");
         return $result;
+    }
+
+    //requesting part
+    function requestForExam($examId,$studentId){
+        date_default_timezone_set('Asia/Colombo');
+        $date = date('Y-m-d H:i:s');
+        $studentId=intval($studentId);
+        $examId=intval($examId);
+        $result=$this->db->runQuery("INSERT INTO exam_request (student_id,exam_id,date_time) VALUES ($studentId,$examId,'$date')");
+        return $studentId;
+    }
+    function requestForSession($sessionId,$studentId){
+        date_default_timezone_set('Asia/Colombo');
+        $date = date('Y-m-d H:i:s');
+        $studentId=intval($studentId);
+        $sessionId=intval($sessionId);
+        $result=$this->db->runQuery("INSERT INTO session_request (student_id,session_id,date_time) VALUES ($studentId,$sessionId,'$date')");
+        return $studentId;
     }
 
 }

@@ -137,32 +137,6 @@ class Student extends Controller{
         }
     }
 
-    function requestexams(){
-        if(isset($_SESSION['job_title'])){
-            if($_SESSION['job_title']=='student'){
-                $this->view->render('Student/requestexam');
-            }else{
-                $this->view->render('error');
-            }
-        }
-        else{
-            $this->view->render('error');
-        }
-    }
-
-    function requestsession(){
-        if(isset($_SESSION['job_title'])){
-            if($_SESSION['job_title']=='student'){
-                $this->view->render('Student/requestsession');
-            }else{
-                $this->view->render('error');
-            }
-        }
-        else{
-            $this->view->render('error');
-        }
-    }
-
     function review(){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='student'){
@@ -285,9 +259,19 @@ class Student extends Controller{
     }
 
     function getAvailableExams(){
+        $result=$this->model->getAllExams($_SESSION['student_id']);
+        echo json_encode($result);
+    }
+    function getAllSessions(){
+        $result=$this->model->getAllSessions($_SESSION['student_id']);
+        echo json_encode($result);
+    }
+
+    function getAllExams(){
         $result=$this->model->getExams($_SESSION['student_id']);
         echo json_encode($result);
     }
+
     function getExamDetails(){
         $result=$this->model->getExamDetails($_SESSION['viewExamId']);
         echo json_encode($result); 
@@ -320,6 +304,16 @@ class Student extends Controller{
     function loadPreSelectedStudentsS(){
         $result=$this->model->loadPreSelectedStudentsS($_SESSION['viewSessionId']);
         echo json_encode($result);
+    }
+
+    //request part
+    function requestExam($id){
+        $result=$this->model->requestForExam($id,$_SESSION['student_id']);
+        echo $result;
+    }
+    function requestSession($id){
+        $result=$this->model->requestForSession($id,$_SESSION['student_id']);
+        echo $result;
     }
 
 }
