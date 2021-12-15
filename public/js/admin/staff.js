@@ -19,7 +19,7 @@ httpreq.onreadystatechange = function(){
         // console.log(employee[0].employee_id)
         function loadTable(){
             for(var i=0;i<employee.length;i++){
-                rows.innerHTML += '<div class="row"  ><div class="col-1" "  value="'+employee[i].employee_id+'">EM-'+employee[i].employee_id+'</div><div class="col-2">'+employee[i].name+'</div><div class="col-3">'+employee[i].job_title+'</div><div class="col-4">'+employee[i].contact_no+'</div><div class="col-5"><button class="view-more" id="'+employee[i].employee_id+'" onclick="viewMore('+employee[i].employee_id+')">View more</button></div></div>';
+                rows.innerHTML += '<div class="row"  ><div class="col-1" "  value="'+employee[i].employee_id+'"><b class="bold-name">ID</b><b class="bold">: </b>EM-'+employee[i].employee_id+'</div><div class="col-2"><b class="bold-name">Name</b><b class="bold">: </b>'+employee[i].name+'</div><div class="col-3"><b class="bold-name">Job Title</b><b class="bold">: </b>'+employee[i].job_title+'</div><div class="col-4"><b class="bold-name">Contact</b><b class="bold">: </b>'+employee[i].contact_no+'</div><div class="col-5"><button class="view-more" id="'+employee[i].employee_id+'" onclick="viewMore('+employee[i].employee_id+')">View more</button></div></div>';
             }
         }
 

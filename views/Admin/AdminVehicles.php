@@ -83,10 +83,10 @@
 
                 <div class="row-container">
                     <div class="row">
-                        <div class="col-1">V_1</div>
-                        <div class="col-2">Dual purpose</div>
-                        <div class="col-3">B</div>
-                        <div class="col-4">58-1234</div>
+                        <div class="col-1"><b class="bold-name-2">Vehicle ID</b><b class="bold">: </b>V_1</div>
+                        <div class="col-2"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose</div>
+                        <div class="col-3"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B</div>
+                        <div class="col-4"><b class="bold-name-2">Vehicle Number</b><b class="bold">: </b>58-1234</div>
                         <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
                     </div>
 

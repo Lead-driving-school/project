@@ -54,7 +54,6 @@
   height: 50px;
   margin-top: 5px;
   text-decoration: none;
-  color: seashell;
   display: flex;
   align-items: center;
   justify-items: center;
@@ -67,6 +66,17 @@
 @media screen and (max-width: 992px) {
   .sidebar {
     visibility: hidden;
-    width: 0px;
+    width: 0px; 
+    z-index: 4000;
+  }
+  .sidebar-active {
+    display: block;
+    width: 250px;
+    font-family: Arial, Helvetica, FontAwesome, sans-serif;
+    height: calc(100vh - 80px);
+    position: fixed;
+    top: 80px;
+    z-index: 4000;
+    background-color: #262b2f;
   }
 }

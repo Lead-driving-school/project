@@ -12,6 +12,8 @@
     <link  rel="stylesheet" href="<?php echo URL?>public/css/admin/layOut_common.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/common/sidebar.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/common/header.css">
+    <link  rel="stylesheet" href="<?php echo URL?>public/css/admin/responsive_pack.css">
+    
     <script  src="<?php echo URL?>public/js/common/header.js"></script>
     <script src="<?php echo URL?>public/js/common/sidebar.js"></script>
     <title>Lead driving school</title>
@@ -56,23 +58,23 @@
                     </div>
                     <div class="row-container">
                         <div class="row">
-                            <div class="col-1">One class of vehicles</div>
+                            <div class="col-1"><b class="bold-name-4">Number of Vehicles</b><b class="bold">: </b>One class of vehicles</div>
                             <div class="col-2"></div>
-                            <div class="col-3">1700.00</div>
+                            <div class="col-3"><b class="bold-name-4">Price (LKR)</b><b class="bold">: </b>1700.00</div>
                             <div class="col-4"><button class="edit">Edit</button></div>
                         </div>
 
                         <div class="row">
-                            <div class="col-1">Two classes of vehicles</div>
+                            <div class="col-1"><b class="bold-name-4">Number of Vehicles</b><b class="bold">: </b>Two classes of vehicles</div>
                             <div class="col-2"></div>
-                            <div class="col-3">2000.00</div>
+                            <div class="col-3"><b class="bold-name-4">Price (LKR)</b><b class="bold">: </b>2000.00</div>
                             <div class="col-4"><button class="edit">Edit</button></div>
                         </div>
 
                         <div class="row">
-                            <div class="col-1">Three classes of vehicles</div>
+                            <div class="col-1"><b class="bold-name-4">Number of Vehicles</b><b class="bold">: </b>Three classes of vehicles</div>
                             <div class="col-2"></div>
-                            <div class="col-3">2250.00</div>
+                            <div class="col-3"><b class="bold-name-4">Price (LKR)</b><b class="bold">: </b>2250.00</div>
                             <div class="col-4"><button class="edit">Edit</button></div>
                         </div>
 
@@ -97,14 +99,14 @@
                     </div>
                     <div class="row-container">
                         <div class="row">
-                            <div class="column-1">Reapplying for written test</div>
-                            <div class="col-3">250.00</div>
+                            <div class="column-1"><b class="bold-name-2">Task</b><b class="bold">: </b>Reapplying for written test</div>
+                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>250.00</div>
                             <div class="col-4"><button class="edit">Edit</button></div>
                         </div>
 
                         <div class="row">
-                            <div class="column-1">Reapplying for Practical test</div>
-                            <div class="col-3">500.00</div>
+                            <div class="column-1"><b class="bold-name-2">Task</b><b class="bold">: </b>Reapplying for Practical test</div>
+                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>500.00</div>
                             <div class="col-4"><button class="edit">Edit</button></div>
                         </div>
 
