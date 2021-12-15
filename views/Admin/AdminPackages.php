@@ -54,37 +54,44 @@
                     </div>
                     <div class="row-container">
                         <div class="row">
-                            <div class="col-1">Dual purpose vehicle</div>
-                            <div class="col-2">B</div>
-                            <div class="col-3">4000.00</div>
+                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle</div>
+                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B</div>
+                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>4000.00</div>
                             <div class="col-4"><button class="edit">Edit</button></div>
                         </div>
 
                         <div class="row">
-                            <div class="col-1">Dual purpose vehicle (Auto)</div>
-                            <div class="col-2">B (Auto)</div>
-                            <div class="col-3">4500.00</div>
+                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle (Auto)</div>
+                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B (Auto)</div>
+                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>4500.00</div>
                             <div class="col-4"><button class="edit">Edit</button></div>
                         </div>
 
                         <div class="row">
-                            <div class="col-1">Mortor Tricycle</div>
-                            <div class="col-2">B1</div>
-                            <div class="col-3">3000.00</div>
+                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle</div>
+                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B</div>
+                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>4000.00</div>
                             <div class="col-4"><button class="edit">Edit</button></div>
                         </div>
 
                         <div class="row">
-                            <div class="col-1">Morter Bicycle</div>
-                            <div class="col-2">A</div>
-                            <div class="col-3">2500.00</div>
+                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle (Auto)</div>
+                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B (Auto)</div>
+                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>4500.00</div>
                             <div class="col-4"><button class="edit">Edit</button></div>
                         </div>
 
                         <div class="row">
-                            <div class="col-1">Morter Bicycle (Auto)</div>
-                            <div class="col-2">A (Auto)</div>
-                            <div class="col-3">2500.00</div>
+                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle</div>
+                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B</div>
+                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>4000.00</div>
+                            <div class="col-4"><button class="edit">Edit</button></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle (Auto)</div>
+                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B (Auto)</div>
+                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>4500.00</div>
                             <div class="col-4"><button class="edit">Edit</button></div>
                         </div>
                     </div>
@@ -110,30 +117,30 @@
                     </div>
                     <div class="row-container">
                         <div class="row">
-                            <div class="col-1">Package 1</div>
-                            <div class="col-2">A,B,B1</div>
-                            <div class="col-3">14500.00</div>
+                            <div class="col-1"><b class="bold-name-3">Package Name</b><b class="bold">: </b>Package 1</div>
+                            <div class="col-2"><b class="bold-name-3">Vehicle classes</b><b class="bold">: </b>A,B,B1</div>
+                            <div class="col-3"><b class="bold-name-3">Price (LKR)</b><b class="bold">: </b>14500.00</div>
                             <div class="col-4"><a href="<?php echo URL?>Admin/editPackages"><button class="edit">Edit</button></a></div>
                         </div>
 
                         <div class="row">
-                            <div class="col-1">Package 2</div>
-                            <div class="col-2">A,B1</div>
-                            <div class="col-3">8500.00</div>
+                            <div class="col-1"><b class="bold-name-3">Package Name</b><b class="bold">: </b>Package 1</div>
+                            <div class="col-2"><b class="bold-name-3">Vehicle classes</b><b class="bold">: </b>A,B,B1</div>
+                            <div class="col-3"><b class="bold-name-3">Price (LKR)</b><b class="bold">: </b>14500.00</div>
                             <div class="col-4"><a href="<?php echo URL?>Admin/editPackages"><button class="edit">Edit</button></a></div>
                         </div>
 
                         <div class="row">
-                            <div class="col-1">Package 3</div>
-                            <div class="col-2">B,B1</div>
-                            <div class="col-3">5500.00</div>
+                            <div class="col-1"><b class="bold-name-3">Package Name</b><b class="bold">: </b>Package 1</div>
+                            <div class="col-2"><b class="bold-name-3">Vehicle classes</b><b class="bold">: </b>A,B,B1</div>
+                            <div class="col-3"><b class="bold-name-3">Price (LKR)</b><b class="bold">: </b>14500.00</div>
                             <div class="col-4"><a href="<?php echo URL?>Admin/editPackages"><button class="edit">Edit</button></a></div>
                         </div>
 
                         <div class="row">
-                            <div class="col-1">Package 4</div>
-                            <div class="col-2">A</div>
-                            <div class="col-3">4000.00</div>
+                            <div class="col-1"><b class="bold-name-3">Package Name</b><b class="bold">: </b>Package 1</div>
+                            <div class="col-2"><b class="bold-name-3">Vehicle classes</b><b class="bold">: </b>A,B,B1</div>
+                            <div class="col-3"><b class="bold-name-3">Price (LKR)</b><b class="bold">: </b>14500.00</div>
                             <div class="col-4"><a href="<?php echo URL?>Admin/editPackages"><button class="edit">Edit</button></a></div>
                         </div>
                     </div>
@@ -159,37 +166,37 @@
                     </div>
                     <div class="row-container">
                         <div class="row">
-                            <div class="col-1">Dual purpose vehicle</div>
-                            <div class="col-2">B</div>
-                            <div class="col-3">3500.00</div>
+                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle</div>
+                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B</div>
+                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>3500.00</div>
                             <div class="col-4"><button class="edit">Edit</button></div>
                         </div>
 
                         <div class="row">
-                            <div class="col-1">Dual purpose vehicle (Auto)</div>
-                            <div class="col-2">B (Auto)</div>
-                            <div class="col-3">3500.00</div>
+                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle</div>
+                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B</div>
+                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>3500.00</div>
                             <div class="col-4"><button class="edit">Edit</button></div>
                         </div>
 
                         <div class="row">
-                            <div class="col-1">Mortor Tricycle</div>
-                            <div class="col-2">B1</div>
-                            <div class="col-3">3500.00</div>
+                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle</div>
+                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B</div>
+                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>3500.00</div>
                             <div class="col-4"><button class="edit">Edit</button></div>
                         </div>
 
                         <div class="row">
-                            <div class="col-1">Morter Bicycle</div>
-                            <div class="col-2">A</div>
-                            <div class="col-3">3500.00</div>
+                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle</div>
+                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B</div>
+                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>3500.00</div>
                             <div class="col-4"><button class="edit">Edit</button></div>
                         </div>
 
                         <div class="row">
-                            <div class="col-1">Light Morter Bicycle</div>
-                            <div class="col-2">A1</div>
-                            <div class="col-3">3500.00</div>
+                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle</div>
+                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B</div>
+                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>3500.00</div>
                             <div class="col-4"><button class="edit">Edit</button></div>
                         </div>
                     </div>

@@ -1,7 +1,8 @@
 .title-container{
     width: 100%;
     text-align: center;
-    border-radius: 13px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     /* background-color: tomato; */
 }
 
@@ -101,4 +102,49 @@ select.vehicle-class-type {
 label{
     font-size: 20px;
     /* background-color: #07c075; */
+}
+
+
+@media screen and (max-width: 768px){
+    .title-container{
+        width: 100%;
+        background-color: #292d42;
+        border: 2px solid #292d42;
+        color: white;
+    }
+    .field-container{
+        width: 90%;
+        /* background-color: seagreen; */
+    }
+
+    .input-container{
+        height: 60px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+
+    #input-container{
+        height: 60px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 10px;
+    }
+    
+    .total-price, .package-name  {
+        width: 100%;
+        border: 2px solid #9e9ea0;
+        
+     }
+     select.Emp-type{
+        border: 2px solid #9e9ea0;
+        outline:0px;
+        width: 100%; 
+     }
+     .button-container{
+        width: 90%;
+        /* background-color: violet; */
+    }
 }

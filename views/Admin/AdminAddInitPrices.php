@@ -21,7 +21,7 @@
                    <input type="text" class="package-name">
                </div>
                
-                <div class="classes-check-outer">
+                <!-- <div class="classes-check-outer">
                     <div class="classes-check">
                         <div class="chk-bx">
                             <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
@@ -52,7 +52,7 @@
                             <label for="vehicle1">C </label><br>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 
                 <div class="input-container">
                     <label for="total-price">total-price (LKR):</label>
