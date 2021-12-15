@@ -29,3 +29,4 @@ function viewVehicle(){
 function viewStudents(){
     window.location.href="http://localhost/project/Instructor/viewStudent/"
 }
+

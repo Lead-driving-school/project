@@ -21,7 +21,19 @@
     <title>Event Calendar</title>
 </head>
 <body>
+    <div class="confirmation-box" id="confirmation">
+          <div class="box-body">
+              <div class="popup-content-box">
+                  <p>Are you sure about sending request?</p>
+                      <div class="popup-button-set">
+                          <button class="popup-confirm" name="confirm" id="confirm">I'm sure</button>
+                          <button class="popup-cancel" name="cancel" id="cancel" onclick="cancel()">I have to recheck</button>   
+                      </div>
+              </div>
+          </div>
+      </div>
     <div class="header">
+      
     <?php require_once APPROOT."/../views/common/header.php"; ?>
         <!--this is the side bar content--> 
     </div>
@@ -58,8 +70,10 @@
               <h1>Event Calendar</h1>
               <div class="Horizontal-tab">
                 <div class="tabContainer">
-                <button class="page-change-button" id="sessionBtn">Sessions</button>
-                  <button class="page-change-button" id="examBtn">Exams</button>
+                  <button class="page-change-button" id="sessionBtn">Assigned Sessions</button>
+                  <button class="page-change-button" id="examBtn">Assigned Exams</button>
+                  <button class="page-change-button" id="requestSessionBtn">Sessions</button>
+                  <button class="page-change-button" id="requestExamBtn">Exams</button>
                 </div>
               </div>
               <div class="heading">

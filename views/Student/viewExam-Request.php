@@ -5,22 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo URL?>public/css/Manager/editSession&Exam/structure.css">
-    <title>Session</title>
+    <title>Exam</title>
 </head>
 <body>
     <div class="main">
         <div class="form-box">
-            <h1>Session</h1>
+            <h1>Exam</h1>
             <div class="body-content">
                 <div class="form-content">
                     <div class="id-class">
                         <label for="idNo">ID:</label>
                         <div id="idContainer"></div>
-                        <div class="edit-button"></div>
-                    </div>
-                    <div class="title-class">
-                        <label for="title">Title</label>
-                        <div id="titleContainer"></div>
                         <div class="edit-button"></div>
                     </div>
                     <div class="type-class">
@@ -48,7 +43,7 @@
                         <button class="session-buttons" name="add-vehicle" id="add-vehicle" onclick="viewVehicle()">View Vehicle</button>
                         <div class="blank"></div>
                     </div>
- 
+
                     <div class="add-student-class">
                         <label for="add-participant">Students:</label>
                         <button class="session-buttons" name="add-participants" id="add-participants" onclick="viewStudents()">View Students</button>
@@ -57,12 +52,11 @@
                 </div>
                 <div class="button-set">
                     <a href="<?php echo URL?>Student/eventCalendar"><button class="session-buttons" name="cancel" id="cancel" >Back</button></a>
-                    
+                    <button class="session-buttons" id="confirm" onclick="sendRequestsforExam()">Request</button>
                 </div>
             </div>
         </div>
     </div>
-    <script src="<?php echo URL?>public/js/student/viewSessions.js"></script> 
-    
+    <script src="<?php echo URL?>public/js/student/viewExam.js"></script> 
 </body>
 </html>
