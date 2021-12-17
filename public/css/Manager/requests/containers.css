@@ -11,6 +11,7 @@
   flex-direction: column;
   background-color: white;
   justify-content: space-around;
+  align-items: center;
   flex-grow: 1;
   width: 350px;
   box-shadow: 1px 1px 10px #b0b3b3;
@@ -28,9 +29,39 @@
   width: 90%;
   height: 50%;
 }
+.initial-message-box {
+  margin-top: 20%;
+  display: flex;
+  width: 100%;
+  height: 90%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: aqua; */
+}
+.search-icon {
+}
+.message-content {
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .record {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: center; */
+}
+.label {
+  display: flex;
+  /* background-color: blue; */
+  width: 50%;
+}
+.data-part {
+  display: flex;
+  width: 50%;
+  /* background-color: burlywood; */
 }
 p {
   font-weight: 400;
@@ -38,8 +69,8 @@ p {
 .button-container {
   justify-self: center;
   display: flex;
-  justify-content: space-around;
-  width: 90%;
+  justify-content: space-between;
+  width: 85%;
   height: 80px;
 }
 #Accept {

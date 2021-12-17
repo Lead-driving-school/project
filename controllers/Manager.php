@@ -605,4 +605,20 @@ class Manager extends Controller{
         }
     }
 
+    function viewSessionRequests(){
+        $result=$this->model->viewSessionRequests();
+        echo json_encode($result);
+    }
+    function viewExamRequests(){
+        $result=$this->model->viewExamRequests();
+        echo json_encode($result);
+    }
+    function viewSessionRequestsFurther($studentId,$sessionId){
+        $result=$this->model->viewSessionRequestsFurther($studentId,$sessionId);
+        echo json_encode($result);
+    }
+    function viewExamRequestsFurther($studentId,$examId){
+        $result=$this->model->viewExamRequestsFurther($studentId,$examId);
+        echo json_encode($result);
+    }
 }
