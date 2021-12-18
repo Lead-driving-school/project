@@ -621,4 +621,17 @@ class Manager extends Controller{
         $result=$this->model->viewExamRequestsFurther($studentId,$examId);
         echo json_encode($result);
     }
+    function acceptRequestSession($studentId,$sessionId){
+        $result=$this->model->acceptRequestSession($_SESSION['employee_id'],$studentId,$sessionId);
+    }
+    function rejectRequestSession($studentId,$sessionId){
+        $result=$this->model->rejectRequestSession($studentId,$sessionId);
+    }
+
+    function acceptRequestExam($studentId,$examId){
+        $result=$this->model->acceptRequestExam($_SESSION['employee_id'],$studentId,$examId);
+    }
+    function rejectRequestExam($studentId,$examId){
+        $result=$this->model->rejectRequestExam($studentId,$examId);
+    }
 }
