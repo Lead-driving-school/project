@@ -29,6 +29,9 @@
     <?php require_once APPROOT."/../views/common/ReceptionistSidebar.php"; ?>
     
         <div class="body-container">
+        <input type="hidden" id="selectedDateContainer" value="">
+          <input type="hidden" id="examsContainer" value="">
+          <input type="hidden" id="sessionsContainer" value="">
           <div class="container1">
             <div class="calender-buttons">
               <div class="calender">
@@ -54,13 +57,12 @@
               <h1>Event Calendar</h1>
               <div class="Horizontal-tab">
                 <div class="tabContainer">
-                  <button class="page-change-button-selected" >All</button>
-                  <button class="page-change-button" >Sessions</button>
-                  <button class="page-change-button" >Exams</button>
+                <button class="page-change-button" id="sessionBtn">Sessions</button>
+                  <button class="page-change-button" id="examBtn">Exams</button>
                 </div>
               </div>
               <div class="heading">
-                <div class="heading-row">
+                <div class="heading-row" id="headingRow">
                   <div class="cell">
                     <div class="headingDetails">
                       <div class="one">Session Id</div>
@@ -71,72 +73,8 @@
                   </div>
                 </div>
               </div>
-              <div class="tableFixHead">
-                  <div class="row">
-                    <div class="cell">
-                      <div class="information">
-                        <div class="one">SE01</div>
-                        <div class="two">Road Sign</div>
-                        <div class="three">Session</div>
-                        <div class="four">8.15</div>
-                      </div>
-                      <div class="viewButton">
-                        <button id="View" class="View">View</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="cell">
-                      <div class="information">
-                        <div class="one">SE02</div>
-                        <div class="two">Road Sign Session2</div>
-                        <div class="three">Session</div>
-                        <div class="four">8.15</div>
-                      </div>
-                      <div class="viewButton">
-                        <a href="<?php echo URL?>Receptionist/viewSession"><button id="View" class="View">View</button></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="cell">
-                      <div class="information">
-                        <div class="one">Ex01</div>
-                        <div class="two">Trial Exam</div>
-                        <div class="three">Exam</div>
-                        <div class="four">8.15</div>
-                      </div>
-                      <div class="viewButton">
-                        <a href="<?php echo URL?>Receptionist/viewExam"><button id="View" class="View">View</button></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="cell">
-                      <div class="information">
-                        <div class="one">SE01</div>
-                        <div class="two">Road Sign</div>
-                        <div class="three">Session</div>
-                        <div class="four">8.15</div>
-                      </div>
-                      <div class="viewButton">
-                        <button id="View" class="View">View</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="cell">
-                      <div class="information">
-                        <div class="one">SE01</div>
-                        <div class="two">Road Sign</div>
-                        <div class="three">Session</div>
-                        <div class="four">8.15</div>
-                      </div>
-                      <div class="viewButton">
-                        <button id="View" class="View">View</button>
-                      </div>
-                    </div>
-                  </div>
+              <div class="tableFixHead" id="tablerows">
+
                  
                   
               </div>
@@ -144,7 +82,8 @@
         </div>
         
     </div>
-    <script src="<?php echo URL?>public/js/common/calendarUtil.js"></script>
+    <script src="<?php echo URL?>public/js/receptionist/calendarUtil.js"></script>
     <script src="<?php echo URL?>public/js/common/calendarscript.js"></script> 
+    <script src="<?php echo URL?>public/js/receptionist/viewSessionsExams.js"></script> 
 </body>
 </html>

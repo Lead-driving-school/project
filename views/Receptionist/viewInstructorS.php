@@ -13,7 +13,7 @@
     <div class="main-content">
         <div class="addInstructor-box">
             <div class="topic">
-                <h1>Session Conductors</h1>
+                <h1>Instructors </h1>
             </div>
             <div class="heading-row">
                     <div class="heading-cell">
@@ -24,27 +24,19 @@
                         </div>
                     </div>
             </div>
-            <div class="table">
-                <div class="row">
-                    <div class="cell">
-                        <div class="information">
-                            <div class="one">INS1011</div>
-                            <div class="two">N.R.Senevirathne</div>
-                            <div class="three">Instructor</div>
-                        </div>
-                    </div>
-                </div>
+            <div class="table" id="tableRows">
+
             </div>
             <div class="bottom-part">
             <div class="button-set">
                     <a href="<?php echo URL?>Receptionist/viewSession"><button class="cancel" id="cancel" name="cancel">Back</button></a>
                 </div>
                 <div class="participation-count">
-                    <p>1</p><p>Participants</p>
+                    <p id="count"></p><p>Participants</p>
                 </div>
             </div>
         </div>
     </div>
-    
+    <script src="<?php echo URL?>public/js/receptionist/viewInstructorS.js"></script>
 </body>
 </html>

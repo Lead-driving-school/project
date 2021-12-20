@@ -38,13 +38,13 @@
                     <label for="Dob">Date of Birth :</label>
                     <input type="date"  class="Dob"  id="Dob"  name="Dob">
                 </div> -->
-                <div class="input-container" >
+                <div id="input-container" class="input-container" >
                     <label>Gender :</label><br>
                     <input class="male" type="radio" name="Gender"  id="male" value="m">
                     <label for="male">Male</label> <br>
                     <input class="female" type="radio" name="Gender" id="female" value="f">
                     <label for="female">Female</label> 
-                </div>
+                </div> 
                 <div class="gender-below" id="gender-below">
 
                 </div>

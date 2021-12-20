@@ -136,26 +136,26 @@ class Manager_Model extends Model{
         $result=$this->db->runQuery("SELECT vehicle.vehicle_id,vehicle.vehicle_type,vehicle.vehicle_no from ((vehicle INNER JOIN exam_vehicle_assigns on exam_vehicle_assigns.vehicle_id=vehicle.vehicle_id) INNER JOIN exams on exams.exam_id=exam_vehicle_assigns.exam_id) WHERE exams.exam_id=$examId");
         return $result;
     }
-    function loadUnselectedInstructors($examId){
+    function loadUnselectedInstructors(){
         $result=$this->db->runQuery("SELECT employee.employee_id,employee.name,employee.job_title from ((employee 
         INNER JOIN instructor on instructor.employee_id=employee.employee_id) 
         INNER JOIN conductor on conductor.employee_id=instructor.employee_id)");
         return $result;
     }
-    function loadUnselectedVehicles($examId){
+    function loadUnselectedVehicles(){
         $result=$this->db->runQuery("SELECT vehicle.vehicle_id,vehicle.vehicle_type,vehicle.vehicle_no from vehicle");
         return $result;
     }
-    function removeInstructor($employeeId){
-        $result=$this->db->runQuery("DELETE FROM exam_conductor_assigns WHERE conductor_id=$employeeId");
+    function removeInstructor($employeeId,$examId){
+        $result=$this->db->runQuery("DELETE FROM exam_conductor_assigns WHERE conductor_id=$employeeId AND exam_id=$examId");
         return true;
     }
     function addNewInstructor($managerId,$employeeId,$examId){
         $result=$this->db->runQuery("INSERT INTO exam_conductor_assigns VALUES($managerId,$examId,$employeeId)");
         return true;
     }
-    function removeVehicles($vehicleId){
-        $result=$this->db->runQuery("DELETE FROM exam_vehicle_assigns WHERE vehicle_id=$vehicleId");
+    function removeVehicles($vehicleId,$examId){
+        $result=$this->db->runQuery("DELETE FROM exam_vehicle_assigns WHERE vehicle_id=$vehicleId AND exam_id=$examId");
         return true;
     }
     function addNewVehicles($managerId,$vehicleId,$examId){
@@ -167,15 +167,15 @@ class Manager_Model extends Model{
         return $result;
     }
     function loadUnselectedStudents(){
-        $result=$this->db->runQuery("SELECT student.student_id,student.init_name FROM student");
+        $result=$this->db->runQuery("SELECT count(exam_student_assigns.student_id) AS total_assigns,GROUP_CONCAT(exam_student_assigns.exam_id) AS exam_IDs,student.student_id,student.init_name FROM (exam_student_assigns RIGHT OUTER JOIN student on student.student_id=exam_student_assigns.student_id) GROUP BY student.student_id,student.init_name");
         return $result;
     }
     function addNewStudents($managerId,$studentId,$examId){
         $result=$this->db->runQuery("INSERT INTO exam_student_assigns VALUES($managerId,$examId,$studentId)");
         return true;
     }
-    function removeStudents($studentId){
-        $result=$this->db->runQuery("DELETE FROM exam_student_assigns WHERE student_id=$studentId");
+    function removeStudents($studentId,$examId){
+        $result=$this->db->runQuery("DELETE FROM exam_student_assigns WHERE student_id=$studentId AND exam_id=$examId");
         return true;
     }
 
@@ -225,19 +225,82 @@ class Manager_Model extends Model{
         return $result;
     }
     function removeInstructorS($employeeId){
-        $result=$this->db->runQuery("DELETE FROM session_conductor_assigns WHERE conductor_id=$employeeId");
+        $result=$this->db->runQuery("DELETE FROM session_conductor_assigns WHERE conductor_id=$employeeId AND session_id=$sessionId");
         return true;
     }
     function addNewInstructorS($managerId,$employeeId,$sessionId){
         $result=$this->db->runQuery("INSERT INTO session_conductor_assigns VALUES($managerId,$sessionId,$employeeId)");
         return true;
     }
-    function removeVehiclesS($vehicleId){
-        $result=$this->db->runQuery("DELETE FROM session_vehicle_assigns WHERE vehicle_id=$vehicleId");
+    function removeVehiclesS($vehicleId,$sessionId){
+        $result=$this->db->runQuery("DELETE FROM session_vehicle_assigns WHERE vehicle_id=$vehicleId AND session_id=$sessionId");
         return true;
     }
     function addNewVehiclesS($managerId,$vehicleId,$sessionId){
         $result=$this->db->runQuery("INSERT INTO session_vehicle_assigns VALUES($managerId,$sessionId,$vehicleId)");
         return true;
     }
+    function loadPreSelectedStudentsS($sessionId){
+        $result=$this->db->runQuery("SELECT count(session_student_assigns.student_id) AS total_assigns,session_student_assigns.student_id,GROUP_CONCAT(session_student_assigns.session_id) AS session_IDs,student.init_name FROM ((session_student_assigns LEFT JOIN student on student.student_id=session_student_assigns.student_id) LEFT JOIN sessions on sessions.session_id=session_student_assigns.session_id) GROUP BY session_student_assigns.student_id,student.init_name");
+        return $result;
+    }
+    function loadUnselectedStudentsS(){
+        $result=$this->db->runQuery("SELECT count(session_student_assigns.student_id) AS total_assigns,GROUP_CONCAT(session_student_assigns.session_id) AS session_IDs,student.student_id,student.init_name FROM (session_student_assigns RIGHT OUTER JOIN student on student.student_id=session_student_assigns.student_id) GROUP BY student.student_id,student.init_name");
+        return $result;
+    }
+    function addNewStudentsS($managerId,$studentId,$sessionId){
+        $result=$this->db->runQuery("INSERT INTO session_student_assigns VALUES($managerId,$sessionId,$studentId)");
+        return true;
+    }
+    function removeStudentsS($studentId,$sessionId){
+        $result=$this->db->runQuery("DELETE FROM session_student_assigns WHERE student_id=$studentId AND session_id=$sessionId");
+        return true;
+    }
+    function viewSessionRequests(){
+        $result=$this->db->runQuery("Select session_request.student_id,session_request.session_id,student.init_name FROM student INNER join session_request on session_request.student_id=student.student_id order by session_request.date_time");
+        return $result;
+    }
+    function viewExamRequests(){
+        $result=$this->db->runQuery("Select exam_request.student_id,exam_request.exam_id,student.init_name FROM student INNER join exam_request on exam_request.student_id=student.student_id order by exam_request.date_time");
+        return $result;
+    }
+
+    function viewSessionRequestsFurther($studentId,$sessionId){
+        $studentId=intval($studentId);
+        $sessionId=intval($sessionId);
+        $result=$this->db->runQuery("SELECT student.init_name,sessions.session_title,sessions.type,sessions.session_date,sessions.session_time,session_request.date_time,count(session_student_assigns.student_id) as total_assigns FROM (((student INNER JOIN session_request on session_request.student_id=student.student_id) INNER JOIN sessions on session_request.session_id=sessions.session_id) LEFT JOIN session_student_assigns on session_student_assigns.student_id=student.student_id) WHERE session_request.student_id=$studentId and session_request.session_id=$sessionId");
+        return $result;
+    }
+    function viewExamRequestsFurther($studentId,$examId){
+        $studentId=intval($studentId);
+        $sessionId=intval($examId);
+        $result=$this->db->runQuery("SELECT student.init_name,exams.exam_type,exams.exam_date,exams.exam_time,exam_request.date_time,count(exam_student_assigns.student_id) as total_assigns FROM (((student INNER JOIN exam_request on exam_request.student_id=student.student_id) INNER JOIN exams on exam_request.exam_id=exams.exam_id) LEFT JOIN exam_student_assigns on exam_student_assigns.student_id=student.student_id) WHERE exam_request.student_id=$studentId and exam_request.exam_id=$examId");
+        return $result;
+    }
+    function acceptRequestSession($employeeId,$studentId,$sessionId){
+        $studentId=intval($studentId);
+        $sessionId=intval($sessionId);
+        $employeeId=intval($employeeId);
+        $result=$this->db->runQuery("DELETE from session_request WHERE student_id=$studentId and session_id=$sessionId");
+        $result=$this->db->runQuery("INSERT INTO session_student_assigns VALUES($employeeId,$sessionId,$studentId)");
+    }
+    function rejectRequestSession($studentId,$sessionId){
+        $studentId=intval($studentId);
+        $sessionId=intval($sessionId);
+        $result=$this->db->runQuery("DELETE from session_request WHERE student_id=$studentId and session_id=$sessionId");
+    }
+
+    function acceptRequestExam($employeeId,$studentId,$examId){
+        $studentId=intval($studentId);
+        $examId=intval($examId);
+        $employeeId=intval($employeeId);
+        $result=$this->db->runQuery("DELETE from exam_request WHERE student_id=$studentId and exam_id=$examId");
+        $result=$this->db->runQuery("INSERT INTO exam_student_assigns VALUES($employeeId,$examId,$studentId)");
+    }
+    function rejectRequestExam($studentId,$examId){
+        $studentId=intval($studentId);
+        $examId=intval($examId);
+        $result=$this->db->runQuery("DELETE from exam_request WHERE student_id=$studentId and exam_id=$examId");
+    }
+
 }

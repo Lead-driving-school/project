@@ -297,6 +297,8 @@ class Manager extends Controller{
     function eventCalendar(){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='Manager'){
+                $_SESSION['editExamId']="";
+                $_SESSION['editSessionId']="";
                 $_SESSION['type']="noValue";
                 $_SESSION['title']="";
                 $_SESSION['date']="";
@@ -578,5 +580,58 @@ class Manager extends Controller{
             echo "false";
         }
     }
+    function loadPreSelectedStudentsS(){
+        $result=$this->model->loadPreSelectedStudentsS($_SESSION['editSessionId']);
+        echo json_encode($result);
+    }
+    function loadUnselectedStudentsS(){
+        $result=$this->model->loadUnselectedStudentsS();
+        echo json_encode($result);
+    }
+    function addNewStudentsS($studentId){
+        $result=$this->model->addNewStudentsS($_SESSION['employee_id'],$studentId,$_SESSION['editSessionId']);
+        if($result==true){
+            echo "true";
+        }else{
+            echo "false";
+        }
+    }
+    function removeStudentsS($studentId){
+        $result=$this->model->removeStudentsS($studentId,$_SESSION['editSessionId']);
+        if($result==true){
+            echo "true";
+        }else{
+            echo "false";
+        }
+    }
 
+    function viewSessionRequests(){
+        $result=$this->model->viewSessionRequests();
+        echo json_encode($result);
+    }
+    function viewExamRequests(){
+        $result=$this->model->viewExamRequests();
+        echo json_encode($result);
+    }
+    function viewSessionRequestsFurther($studentId,$sessionId){
+        $result=$this->model->viewSessionRequestsFurther($studentId,$sessionId);
+        echo json_encode($result);
+    }
+    function viewExamRequestsFurther($studentId,$examId){
+        $result=$this->model->viewExamRequestsFurther($studentId,$examId);
+        echo json_encode($result);
+    }
+    function acceptRequestSession($studentId,$sessionId){
+        $result=$this->model->acceptRequestSession($_SESSION['employee_id'],$studentId,$sessionId);
+    }
+    function rejectRequestSession($studentId,$sessionId){
+        $result=$this->model->rejectRequestSession($studentId,$sessionId);
+    }
+
+    function acceptRequestExam($studentId,$examId){
+        $result=$this->model->acceptRequestExam($_SESSION['employee_id'],$studentId,$examId);
+    }
+    function rejectRequestExam($studentId,$examId){
+        $result=$this->model->rejectRequestExam($studentId,$examId);
+    }
 }

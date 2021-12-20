@@ -21,7 +21,19 @@
     <title>Event Calendar</title>
 </head>
 <body>
+    <div class="confirmation-box" id="confirmation">
+          <div class="box-body">
+              <div class="popup-content-box">
+                  <p>Are you sure about sending request?</p>
+                      <div class="popup-button-set">
+                          <button class="popup-confirm" name="confirm" id="confirm">I'm sure</button>
+                          <button class="popup-cancel" name="cancel" id="cancel" onclick="cancel()">I have to recheck</button>   
+                      </div>
+              </div>
+          </div>
+      </div>
     <div class="header">
+      
     <?php require_once APPROOT."/../views/common/header.php"; ?>
         <!--this is the side bar content--> 
     </div>
@@ -29,7 +41,10 @@
     <div class="main-container" id="main">
     <?php require_once APPROOT."/../views/common/StudentSidebar.php"; ?>
     
-        <div class="body-container">
+    <div class="body-container">
+        <input type="hidden" id="selectedDateContainer" value="">
+          <input type="hidden" id="examsContainer" value="">
+          <input type="hidden" id="sessionsContainer" value="">
           <div class="container1">
             <div class="calender-buttons">
               <div class="calender">
@@ -55,13 +70,14 @@
               <h1>Event Calendar</h1>
               <div class="Horizontal-tab">
                 <div class="tabContainer">
-                  <button class="page-change-button-selected" >All</button>
-                  <button class="page-change-button" >Sessions</button>
-                  <button class="page-change-button" >Exams</button>
+                  <button class="page-change-button" id="sessionBtn">Assigned Sessions</button>
+                  <button class="page-change-button" id="examBtn">Assigned Exams</button>
+                  <button class="page-change-button" id="requestSessionBtn">Sessions</button>
+                  <button class="page-change-button" id="requestExamBtn">Exams</button>
                 </div>
               </div>
               <div class="heading">
-                <div class="heading-row">
+                <div class="heading-row" id="headingRow">
                   <div class="cell">
                     <div class="headingDetails">
                       <div class="one">Session Id</div>
@@ -72,72 +88,8 @@
                   </div>
                 </div>
               </div>
-              <div class="tableFixHead">
-                  <div class="row">
-                    <div class="cell">
-                      <div class="information">
-                        <div class="one">SE01</div>
-                        <div class="two">Road Sign</div>
-                        <div class="three">Session</div>
-                        <div class="four">8.15</div>
-                      </div>
-                      <div class="viewButton">
-                        <button id="View" class="View">View</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="cell">
-                      <div class="information">
-                        <div class="one">SE02</div>
-                        <div class="two">Road Sign Session2</div>
-                        <div class="three">Session</div>
-                        <div class="four">8.15</div>
-                      </div>
-                      <div class="viewButton">
-                        <a href="<?php echo URL?>Student/viewSession"><button id="View" class="View">View</button></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="cell">
-                      <div class="information">
-                        <div class="one">Ex01</div>
-                        <div class="two">Trial Exam</div>
-                        <div class="three">Exam</div>
-                        <div class="four">8.15</div>
-                      </div>
-                      <div class="viewButton">
-                        <a href="<?php echo URL?>Student/viewExam"><button id="View" class="View">View</button></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="cell">
-                      <div class="information">
-                        <div class="one">SE01</div>
-                        <div class="two">Road Sign</div>
-                        <div class="three">Session</div>
-                        <div class="four">8.15</div>
-                      </div>
-                      <div class="viewButton">
-                        <button id="View" class="View">View</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="cell">
-                      <div class="information">
-                        <div class="one">SE01</div>
-                        <div class="two">Road Sign</div>
-                        <div class="three">Session</div>
-                        <div class="four">8.15</div>
-                      </div>
-                      <div class="viewButton">
-                        <button id="View" class="View">View</button>
-                      </div>
-                    </div>
-                  </div>
+              <div class="tableFixHead" id="tablerows">
+
                  
                   
               </div>
@@ -145,7 +97,8 @@
         </div>
         
     </div>
-    <script src="<?php echo URL?>public/js/common/calendarUtil.js"></script>
+    <script src="<?php echo URL?>public/js/student/calendarUtil.js"></script>
     <script src="<?php echo URL?>public/js/common/calendarscript.js"></script> 
+    <script src="<?php echo URL?>public/js/student/viewSessionsExams.js"></script> 
 </body>
 </html>

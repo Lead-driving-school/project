@@ -1,4 +1,5 @@
 selectedStudents=[]
+let examID=document.getElementById("idContainer").value
 function loadPreSelectedStudents(){
     console.log("hi")
     let httpreq=new XMLHttpRequest()
@@ -10,20 +11,29 @@ function loadPreSelectedStudents(){
             for(var i=0;i<obj.length;i++){
                 obj[i].init_name = obj[i].init_name.replace(/-/g, " ");
             }
+            var myArr=[]
             for(var i=0;i<obj.length;i++){
-                selectedStudents.push(obj[i].student_id)
-                rows.innerHTML+='<div class="row">'+
-                '<div class="cell">'+
-                    '<div class="information">'+
-                        '<div class="one">ST_'+obj[i].student_id+'</div>'+
-                        '<div class="two">'+obj[i].init_name+'</div>'+
-                        '<div class="three">3/4</div>'+
+                myArr[i] = obj[i].exam_IDs.split(",");
+            }
+
+            for(var i=0;i<obj.length;i++){
+                console.log(myArr[i])
+                if(myArr[i].includes(examID)){
+                    selectedStudents.push(obj[i].student_id)
+                    rows.innerHTML+='<div class="row">'+
+                    '<div class="cell">'+
+                        '<div class="information">'+
+                            '<div class="one">ST_'+obj[i].student_id+'</div>'+
+                            '<div class="two">'+obj[i].init_name+'</div>'+
+                            '<div class="three">'+obj[i].total_assigns+'/4</div>'+
+                        '</div>'+
+                        '<div class="removeButton">'+
+                            '<button id="Remove_'+obj[i].student_id+'" class="Remove" onclick=removeStudents('+obj[i].student_id+')>Remove</button>'+
+                        '</div>'+
                     '</div>'+
-                    '<div class="removeButton">'+
-                        '<button id="Remove_'+obj[i].student_id+'" class="Remove" onclick=removeStudents('+obj[i].student_id+')>Remove</button>'+
-                    '</div>'+
-                '</div>'+
-            '</div>'
+                '</div>'
+                }
+                
             }
 
         }
@@ -53,7 +63,7 @@ function loadUnselectedStudents(){
                         '<div class="information">'+
                             '<div class="one">ST_'+obj[i].student_id+'</div>'+
                             '<div class="two">'+obj[i].init_name+'</div>'+
-                            '<div class="three">3/4</div>'+
+                            '<div class="three">'+obj[i].total_assigns+'/4</div>'+
                         '</div>'+
                         '<div class="addButton">'+
                             '<button id="Add_'+obj[i].student_id+'" class="Add" onclick=addNewStudents('+obj[i].student_id+')>Add</button>'+
