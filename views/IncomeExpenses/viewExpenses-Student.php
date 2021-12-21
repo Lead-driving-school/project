@@ -38,7 +38,7 @@
                 <div class="heading-row">
                     <div class="cell">
                     <div class="headingDetails">
-                        <div class="one">Expense ID</div>
+                        <div class="one">Student ID</div>
                         <div class="two">Student Name</div>
                         <div class="three">Date</div>
                         <div class="four">Time</div>
@@ -49,18 +49,8 @@
                 </div>
             </div>
             <div id = "tablerows" class="table" >
-                <div class="row">
-                    <div class="cell">
-                        <div class="information"> 
-                            <div class="one">EX_1</div>
-                            <div class="two">N.R.Senevirathne</div>
-                            <div class="three">2021-10-22</div>
-                            <div class="four">10:30:49</div>
-                            <div class="five">2500.00</div>
-                            <div class="six"><button class="done-button">Done</button></div>
-                    </div>
-                </div>
-                </div>
+
+                
             </div>
             <div class="button-container">
                 <a href="<?php echo URL?>IncomeExpenses/expenseGraphic"><button class="income-graph-button" id="incomeGraph" name="incomeGraph">Graphical view</button></a>
@@ -68,6 +58,6 @@
             </div>
         </div>
     </div>
-    
+    <script src="<?php echo URL?>public/js/IncomeExpenses/viewExpenses-Student.js"></script>
 </body>
 </html>

@@ -88,4 +88,12 @@ class IncomeExpenses extends Controller{
             $this->view->render('error');
         }
     }
+    function getStudentExpenses(){
+        $result=$this->model->getStudentExpenses();
+        echo json_encode($result);
+    }
+    function acceptExpense($studentId){
+        $result=$this->model->acceptExpense($studentId);
+        echo $result;
+    }
 }

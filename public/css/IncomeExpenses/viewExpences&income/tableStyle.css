@@ -117,6 +117,14 @@
   border: none;
   border-radius: 2px;
 }
+
+.accept-text {
+  display: flex;
+  /* background-color: blueviolet; */
+  justify-content: center;
+  padding-right: 10px;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
