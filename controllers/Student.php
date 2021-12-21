@@ -77,8 +77,8 @@ class Student extends Controller{
     }
 
     function profileLogic(){
-        $value=$this->model->getProfileDetails();
-       
+        $value=$this->model->getProfileDetails();    
+        // echo $value;
        echo json_encode($value);
         
     }
