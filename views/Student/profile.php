@@ -23,15 +23,15 @@
                     <div class="big-picture">
                         <img src="<?php echo URL?>public/images/profpic.png" alt="big-pic" width="250" height="250">
                     </div>
-                    <button class="upload-pic">
+                    <!-- <button class="upload-pic">
                         <img src="<?php echo URL?>public/images/camera.png" alt="cam" width="35" height="35">
-                    </button>
+                    </button> -->
                 </div>
                 <div class="right">
                     <div class="holder">
                         <div class="topic"><h2>Profile</h2></div>
-                        <div class="details" id="=details">
-                            <div class="row-1">
+                        <div class="details" id="details">
+                            <!-- <div class="row-1">
                                 <div class="col-1">Name</div>
                                 <div class="col-2">:</div>
                                 <div class="col-3">Jithru jayawantha</div>
@@ -55,7 +55,7 @@
                                 <div class="col-1">Tel-No</div>
                                 <div class="col-2">:</div>
                                 <div class="col-3">077 9345288</div>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="edit-profile">
                            <a href="<?php echo URL?>Student/editprofile"> <button class="edit-button">Edit profile</button></a>
@@ -67,4 +67,5 @@
         </div>
     </div>
 </body>
+<script src="<?php echo URL?>public/js/student/profile.js"></script>
 </html>
