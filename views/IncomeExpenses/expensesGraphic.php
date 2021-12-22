@@ -14,27 +14,23 @@
         <div class="heading"><h1>Expenses</h1></div>
         <div class="selectors">
             <div class="method-selector">
-                <label for="method-selector-button" class="method-selector-label">Select method:</label>
-                <select class="method-selector-select" name="method-selector" id="methodSelector">
-                    <optgroup>
-                        <option value="Weekly">Weekly</option>
-                        <option value="Monthly">Monthly</option>
-                        <option value="Annualy">Annualy</option>
-                    </optgroup>
+                <label for="method-selector-button" class="method-selector-label" >Select method:</label>
+                <select class="method-selector-select" name="method-selector" id="methodSelector" onclick="inputSelector()">
+                    
+                    
                 </select>
             </div>
-            <div class="date-selector">
-                <label for="date-container" class="date-container-label">Select Week:</label>
-                <input type="week" class="date-container" name="dateContainer" id="dateContainer" required>
+            <div class="date-selector" id="dateSelector">
+
             </div>
             <div class="go-button-container">
-                <button class="go-button" id="go" name="go">Go</button>
+                <button class="go-button" id="go" onclick="loadGraph()">Go</button>
             </div>
         </div>
         
         <div class="chart-n-values">
             <div class="income-chart">
-                <canvas  id="incomeChart"></canvas>
+                <canvas  id="expenseChart"></canvas>
             </div>
             <div class="containers">
                 <div class="container1">
@@ -88,7 +84,7 @@
         </div>
     </div>
     
-    <script src="<?php echo URL?>public/js/IncomeExpenses/incomeGraphScript.js"></script>
+    <script src="<?php echo URL?>public/js/IncomeExpenses/ExpenseGraphScript.js"></script>
     
 
 </body>

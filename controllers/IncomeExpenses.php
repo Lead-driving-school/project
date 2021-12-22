@@ -96,4 +96,20 @@ class IncomeExpenses extends Controller{
         $result=$this->model->acceptExpense($studentId);
         echo $result;
     }
+    function getExpensesBoxDetails(){
+        $result=$this->model->getExpensesBoxDetails();
+        echo $result;
+    }
+    function loadGraphWeek($week){
+        $result=$this->model->loadGraphWeek($week);
+        echo json_encode($result);
+    }
+    function loadGraphMonth(){
+        $result=$this->model->loadGraphMonth($month);
+        echo $result;
+    }
+    function loadGraphAnnual(){
+        $result=$this->model->loadGraphAnnual($annual);
+        echo $result;
+    }
 }
