@@ -8,6 +8,7 @@ let chart1= new Chart(mychart, {
     data:{
         labels: label1,
         datasets: [{
+            label:"Incomes",
             data: data1,
             backgroundColor: colors1,
         }]
