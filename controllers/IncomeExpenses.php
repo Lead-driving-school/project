@@ -104,12 +104,26 @@ class IncomeExpenses extends Controller{
         $result=$this->model->loadGraphWeek($week);
         echo json_encode($result);
     }
-    function loadGraphMonth(){
+    function loadGraphMonth($month){
         $result=$this->model->loadGraphMonth($month);
-        echo $result;
+        echo json_encode($result);
     }
-    function loadGraphAnnual(){
+    function loadGraphAnnual($annual){
         $result=$this->model->loadGraphAnnual($annual);
-        echo $result;
+        echo json_encode($result);
+    }
+
+    function loadBoxesWeek($week){
+        $result['maxTotalEx']=$this->model->getMaxWeek($week);
+        $result['minTotalEx']=$this->model->getMinWeek($week);
+        $result['avgEx']=$this->model->getAvgWeek($week);
+        $result['NoOfPayments']=$this->model->getNoOfExpensesWeek($week);
+        $result['maxNoOfPayment']=$this->model->maxCountExpensesWeek($week);
+        $result['minNoOfPayment']=$this->model->minCountExpensesWeek($week);
+        $result['minValDates']=$this->model->minCountElementExpensesWeek($week);
+        $result['maxValDates']=$this->model->maxCountElementExpensesWeek($week);
+        $result['initExpenses']=$this->model->totalInitExpensesWeek($week);
+        $result['otherExpenses']=$this->model->totalOtherExpensesWeek($week);
+        echo json_encode($result);
     }
 }
