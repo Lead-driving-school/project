@@ -36,43 +36,46 @@
                 <div class="container1">
                     <div class="max-container">
                         <div class="topic"><h2>Maximum Total Expenses</h2></div>
-                        <div class="details"><div class="day"><h3>Thursday</h3></div><div class="amount"><h3>10000.00</h3></div></div>
-                        <div class="details"><div class="day"><h3>Friday</h3></div><div class="amount"><h3>10000.00</h3></div></div>
+                        <div class="details" id="maxTotalExpense">
+                        
+                        </div>
                     </div>
                     <div class="min-container">
                         <div class="topic"><h2>Minimum Total Expenses</h2></div>
-                        <div class="details"><div class="day"><h3>Saturday</h3></div><div class="amount"><h3>3000.00</h3></div></div>
+                        <div class="details" id="minTotalExpense">
+                           
+                        </div>
                         
                     </div>
                 </div>
                 <div class="container2">
                     <div class="max-container">
                         <div class="topic"><h2>Expenses Average</h2></div>
-                        <div class="details"><div class="amount"><h3>6642.85</h3></div></div>
+                        <div class="details" id="average"></div>
                     </div>
                     <div class="min-container">
                         <div class="topic"><h2>No of Expenses captured</h2></div>
-                        <div class="details"><div class="amount"><h3>43</h3></div></div> 
+                        <div class="details" id="noOfExpenses"><div class="amount"><h3>43</h3></div></div> 
                     </div>
                 </div>
                 <div class="container3">
                     <div class="max-container">
                         <div class="topic"><h2>Maximum No of Expenses</h2></div>
-                        <div class="details"><div class="day"><h3>Thursday</h3></div><div class="amount"><h3>19</h3></div></div>
+                        <div class="details"><div class="day"><h3 id="maxNoExpensesDays"></h3></div><div class="amount" id="maxNoExpenses"></div></div>
                     </div>
                     <div class="min-container">
                         <div class="topic"><h2>Minimum No of payments</h2></div>
-                        <div class="details"><div class="day"><h3>Saturday</h3></div><div class="amount"><h3>2</h3></div></div>
+                        <div class="details"><div class="day"><h3 id="minNoExpensesDays"></h3></div><div class="amount" id="minNoExpenses"></div></div>
                     </div>
                 </div>
                 <div class="container4">
                     <div class="max-container">
-                        <div class="topic"><h2>Total Initial Expenses</h2></div>
-                        <div class="details"><div class="amount"><h3>2000.00</h3></div></div>
+                        <div class="topic" ><h2>Total Initial Expenses</h2></div>
+                        <div class="details" id="totalInitExpenses"></div>
                     </div>
                     <div class="min-container">
                         <div class="topic"><h2>Total Other Expenses</h2></div>
-                        <div class="details"><div class="amount"><h3>5300.00</h3></div></div>
+                        <div class="details" id="totalOtherExpenses"><div class="amount"><h3>5300.00</h3></div></div>
                     </div>
                 </div>
             </div>
