@@ -13,6 +13,12 @@ class Student_Model extends Model{
         return $result;
     }
 
+    function editProfiledetails(){
+        
+    }
+
+
+
     function setComplaints($description,$suggestion,$studentId)
     {
         date_default_timezone_set('Asia/Colombo');

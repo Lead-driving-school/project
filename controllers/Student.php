@@ -75,12 +75,18 @@ class Student extends Controller{
             $this->view->render('error');
         }
     }
-
+// homepage profile
     function profileLogic(){
         $value=$this->model->getProfileDetails();    
         // echo $value;
        echo json_encode($value);
         
+    }
+
+    // after click edit profile button
+
+    function editProfileData(){
+        $value=$this->model->
     }
 
     function makepayments(){

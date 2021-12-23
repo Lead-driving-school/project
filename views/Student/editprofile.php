@@ -42,10 +42,10 @@
                     </div>
                 </div>
                 <div class="row-button">
-                        <button class="change-pwd">Change Password</button>
+                        <button class="change-pwd" onclick="popupPwd()">Change Password</button>
                 </div>   
             </div> 
-            <div class="container-pwd">
+            <div class="container-pwd" id="container-pwd">
                 <div class="table-pwd">
                     <div class="pwd-row">
                         <div class="col-1">
@@ -81,11 +81,21 @@
                         </div>
                     </div>
                     <div class="pwd-row-submit">
+                        <button class="back">Back</button>
+                        <button class="cancel">Cancel</button>
                         <button class="submit">Submit</button>
                     </div>
                 </div>
             </div>      
         </div>
     </div>
+    
+    <script>
+        
+        function popupPwd(){
+            console.log("hello");
+            document.getElementById("container-pwd").classList.replace("container-pwd","container-pwd-active");
+}
+    </script>
 </body>
 </html>
