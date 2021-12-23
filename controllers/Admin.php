@@ -413,9 +413,6 @@ class Admin extends Controller{
         echo json_encode($value);
     }
 
-
-    
-
     function registerEmployee($data){
         $user = explode(",", $data);
         $result=$this->model->registerEmployee($user[0], $user[1], $user[2], $user[3], $user[4], $user[5], $user[6], $user[7]);
@@ -431,4 +428,21 @@ class Admin extends Controller{
         $result=$this->model->getEmployeeDetailsMore($id);
         echo json_encode($result);
     }
+
+    //function for load vehicle classes (admin/addInitPrice.js   && view/admin/addInitPrice.php) ----- add vehicle to database
+    function addVehiclelogic($data){
+        $vehicle = explode(",", $data);
+        $vehicleNum=$vehicle[0];
+        $type=$vehicle[1];
+        $classType = $this->model->VehicleClassesByName();
+        $results = $this->model->addVehiclelogic($vehicleNum,$type,$classType);
+        echo $results;
+    }
+    //load vehicle classes by name (type) 
+    function VehicleClassesByName(){
+        $result = $this->model->VehicleClassesByName();
+        echo json_encode($result);
+    }
+
+
 }
