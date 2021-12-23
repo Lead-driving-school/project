@@ -256,4 +256,51 @@ class Manager_Model extends Model{
         $result=$this->db->runQuery("DELETE FROM session_student_assigns WHERE student_id=$studentId AND session_id=$sessionId");
         return true;
     }
+    function viewSessionRequests(){
+        $result=$this->db->runQuery("Select session_request.student_id,session_request.session_id,student.init_name FROM student INNER join session_request on session_request.student_id=student.student_id order by session_request.date_time");
+        return $result;
+    }
+    function viewExamRequests(){
+        $result=$this->db->runQuery("Select exam_request.student_id,exam_request.exam_id,student.init_name FROM student INNER join exam_request on exam_request.student_id=student.student_id order by exam_request.date_time");
+        return $result;
+    }
+
+    function viewSessionRequestsFurther($studentId,$sessionId){
+        $studentId=intval($studentId);
+        $sessionId=intval($sessionId);
+        $result=$this->db->runQuery("SELECT student.init_name,sessions.session_title,sessions.type,sessions.session_date,sessions.session_time,session_request.date_time,count(session_student_assigns.student_id) as total_assigns FROM (((student INNER JOIN session_request on session_request.student_id=student.student_id) INNER JOIN sessions on session_request.session_id=sessions.session_id) LEFT JOIN session_student_assigns on session_student_assigns.student_id=student.student_id) WHERE session_request.student_id=$studentId and session_request.session_id=$sessionId");
+        return $result;
+    }
+    function viewExamRequestsFurther($studentId,$examId){
+        $studentId=intval($studentId);
+        $sessionId=intval($examId);
+        $result=$this->db->runQuery("SELECT student.init_name,exams.exam_type,exams.exam_date,exams.exam_time,exam_request.date_time,count(exam_student_assigns.student_id) as total_assigns FROM (((student INNER JOIN exam_request on exam_request.student_id=student.student_id) INNER JOIN exams on exam_request.exam_id=exams.exam_id) LEFT JOIN exam_student_assigns on exam_student_assigns.student_id=student.student_id) WHERE exam_request.student_id=$studentId and exam_request.exam_id=$examId");
+        return $result;
+    }
+    function acceptRequestSession($employeeId,$studentId,$sessionId){
+        $studentId=intval($studentId);
+        $sessionId=intval($sessionId);
+        $employeeId=intval($employeeId);
+        $result=$this->db->runQuery("DELETE from session_request WHERE student_id=$studentId and session_id=$sessionId");
+        $result=$this->db->runQuery("INSERT INTO session_student_assigns VALUES($employeeId,$sessionId,$studentId)");
+    }
+    function rejectRequestSession($studentId,$sessionId){
+        $studentId=intval($studentId);
+        $sessionId=intval($sessionId);
+        $result=$this->db->runQuery("DELETE from session_request WHERE student_id=$studentId and session_id=$sessionId");
+    }
+
+    function acceptRequestExam($employeeId,$studentId,$examId){
+        $studentId=intval($studentId);
+        $examId=intval($examId);
+        $employeeId=intval($employeeId);
+        $result=$this->db->runQuery("DELETE from exam_request WHERE student_id=$studentId and exam_id=$examId");
+        $result=$this->db->runQuery("INSERT INTO exam_student_assigns VALUES($employeeId,$examId,$studentId)");
+    }
+    function rejectRequestExam($studentId,$examId){
+        $studentId=intval($studentId);
+        $examId=intval($examId);
+        $result=$this->db->runQuery("DELETE from exam_request WHERE student_id=$studentId and exam_id=$examId");
+    }
+
 }

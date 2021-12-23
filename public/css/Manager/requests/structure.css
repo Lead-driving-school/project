@@ -15,3 +15,18 @@ h3 {
   font-size: 25px;
   color: #0892d0;
 }
+.link-set {
+  display: flex;
+  /* background-color: aqua; */
+  cursor: pointer;
+  width: 150px;
+  font-size: 17px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.exam-link:hover {
+  color: #0892d0;
+}
+.session-link:hover {
+  color: #0892d0;
+}

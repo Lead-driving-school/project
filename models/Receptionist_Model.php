@@ -80,7 +80,9 @@ class Receptionist_Model extends Model{
         }
         $st_id=$this->db->runQuery("SELECT(student_id) from student where nic='$nic'");
         $studentId=intval($st_id[0]['student_id']);
-        $result=$this->db->runQuery("INSERT INTO initial_service_expenses_submits VALUES($studentId,$count,$receptionistId)");
+        date_default_timezone_set('Asia/Colombo');
+        $date = date('Y-m-d H:i:s');
+        $result=$this->db->runQuery("INSERT INTO initial_service_expenses_submits(student_id,ischarge_id,receptionist_id,date_time) VALUES($studentId,$count,$receptionistId,'$date')");
     }
 
 

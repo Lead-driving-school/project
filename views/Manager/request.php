@@ -29,59 +29,33 @@
         <div class="container">
             <!--Header-->
             <h1>Requests</h1>
-            <h3>3 Unread Requests</h3>
+            <div class="link-set">
+                <div class="session-link" id="sessionlink" onclick="viewSessions()">Sessions</div>
+                <div class="exam-link" id="examLink" onclick="viewExams()">Exams</div>
+            </div>
+            <h3>3 Unresponded Requests</h3>
+
             <div class="body-container">
+
                 <div class="request-container">
-                    <div class="table">
-                        <div class="row">
-                            <div class="cell">
-                                <div class="information">
-                                    <h2>Gihan Weerasinghe has sent a request</h2>
-                                </div>
-                                <div class="viewButton">
-                                    <button id="View">View</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="cell">
-                                <div class="information">
-                                    <h2>Jithru Silva has sent a request</h2>
-                                </div>
-                                <div class="viewButton">
-                                    <button id="View">View</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="cell">
-                                <div class="information">
-                                    <h2>Jithru Silva has sent a request</h2>
-                                </div>
-                                <div class="viewButton">
-                                    <button id="View">View</button>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="table" id="tableRows">
+
                         
                     </div>
                 </div> 
                 <div class="details-container">
-                    <div class="details">
-                        <div class="record"><p>Session Title</p><p>Road Signs</p></div>
-                        <div class="record"><p>Sender</p><p>G. Weerasinghe</p></div>
-                        <div class="record"><p>Sending Date</p><p>2021-10-07</p></div>
-                        <div class="record"><p>Sending Time</p><p>14:10</p></div>
-                        <div class="record"><p>Session type</p><p>Theory</p></div>
-                        <div class="record"><p>Current Allocation</p><p>10/20</p></div>
+                    <div class="details" id="detailsList">
+
+                        
+                    
                     </div>
-                    <div class="button-container">
-                        <button name="Accept" id="Accept">Accept</button>
-                        <button name="Reject" id="Reject">Reject</button>
+                    <div class="button-container" id="buttonContainer">
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="<?php echo URL?>public/js/manager/requestsView.js"></script>
 </body>
 </html>
