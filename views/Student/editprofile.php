@@ -129,7 +129,7 @@
 
             }
             else{
-                console.log("Hiii");
+            
                 let httpreq=new XMLHttpRequest();
 
                 httpreq.onreadystatechange=function(){
@@ -170,6 +170,7 @@
                 if(httpreq.readyState===4 && httpreq.status===200){
                     console.log(httpreq.responseText);
                     if(httpreq.responseText=="updated"){
+                        alert("You have update your password");
                         document.getElementById("curruentPwd").value="";
                         document.getElementById("newPwd").value="";
                         document.getElementById("rePwd").value="";

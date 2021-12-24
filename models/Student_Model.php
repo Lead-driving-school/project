@@ -36,12 +36,7 @@ class Student_Model extends Model{
     function updatePassword($studentId,$password){
         $hash_password = password_hash($password,PASSWORD_DEFAULT, array('cost' => 9));
         $result=$this->db->runQuery("UPDATE student_private INNER JOIN student on student.student_id = student_private.student_id SET student_private.password ='$hash_password' WHERE student_private.student_id = '$studentId'");
-        echo json_encode($result);
-        if(!empty($result)){
-            return true;
-        }else{
-            return false;
-        }
+        return true;
 
     }
 
