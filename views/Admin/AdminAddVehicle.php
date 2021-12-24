@@ -18,23 +18,20 @@
             <div class="field-container">
                <div class="input-container">
                     <label for="vehicle-num">Vehicle Number :</label>
-                    <input type="text" class="vehicle-num">
+                    <input type="text" class="vehicle-num" id="vehicle-num">
                </div>
                 <div class="input-container">
                     <label for="vehicle-type">Vehicle Type :</label>
-                    <input type="text" class="vehicle-type">
-                </div>
-               <div class="input-container">
-                    <label for="vehicle-class">Vehicle class :</label>
-                    <select class="vehicle-class" id="">
-                        <option value="A">A</option>
-                        <option value="A">A(Auto)</option>
-                        <option value="B">A1</option>
-                        <option value="A">B</option>
-                        <option value="A">B(Auto)</option>
-                        <option value="B">B1</option>
+                    <select class="vehicle-class" id="vehicleClassByName">
                     </select>
-                </div> 
+                    <!-- <input type="text" class="vehicle-type"> -->
+                </div>
+               <!-- <div class="input-container">
+                    <label for="vehicle-class">Vehicle class :</label>
+                    <select class="vehicle-class" id="vehicleClass" >
+                        
+                    </select>
+                </div>  -->
                      
             </div>
             <div class="button-container">
@@ -43,12 +40,13 @@
                         Cancel
                     </button>
                 </a>
-                <button class="confirm">
+                <button class="confirm" onclick="addVehicle()">
                     Confirm
                 </button>
                 
             </div>
         </div>
     </div>
+    <script src="<?php echo URL?>public/js/admin/addVehicle.js"></script>
 </body>
 </html>

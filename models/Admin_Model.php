@@ -102,6 +102,33 @@ class Admin_Model extends Model{
         $result=$this->db->runQuery("SELECT reviews.submitted_date_time,reviews.idea,reviews.satisfaction,reviews.improvements, student.init_name from reviews INNER JOIN student on student.student_id=reviews.student_id");
         return $result;
     }
+
+    //this is vehicle classes type container
+
+    function VehicleClassesByName(){
+        $VehicleClasses = array("Dual Purpose","Dual Purpose-Auto", "Motor Car" ,"Motor Car-Auto" , "Motor Tricycle" , "Motor Cycle" , "Motor Cycle-Auto" );
+        return $VehicleClasses;
+    }
+
+
+    // this function call from controller/Asmin/addVehiclelogic()   
+    function addVehiclelogic($vehicleNum,$type,$classType){
+        $Classes = array("B","B-Auto", "B" ,"B-Auto" , "B1" , "A" , "A-Auto" );
+        $date=date("Y-m-d h:i:sa");
+        $class="";
+        for($i=0;$i<sizeof($classType);$i++){
+            if($type==str_replace(" ","~",$classType[$i])){
+                $class=$Classes[$i];
+            }
+            
+        }
+        $class_id=$this->db->runQuery("SELECT vehicle_class_id FROM vehicle_classes WHERE '$class'=vehicle_class");
+        $id= $class_id[0]['vehicle_class_id'];
+        $this->db->runQuery("INSERT INTO vehicle (vehicle_no,vehicle_type,added_date_time,vehicle_class_id) VALUES ('$vehicleNum','$type','$date','$id')");
+        return "successfull";
+    }
+
+    
 }
 
                                       
