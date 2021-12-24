@@ -85,10 +85,28 @@ class Student extends Controller{
 
     // after click edit profile button
 
-    function editProfileData(){
-        $value=$this->model->
+    // function editProfileData(){
+    //     $value=$this->model->
+    // }
+//-------------------------->
+    function validate($password){
+        // echo $password;
+        $studentId=$_SESSION['student_id'];
+        $result=$this->model->checkPassword($studentId,$password);
+        if($result==true){
+            echo "success";
+        }
     }
 
+    function updatePasswordLogic($password){
+        $studentId=$_SESSION['student_id'];
+        $result=$this->model->updatePassword($studentId,$password);
+        if($result==true){
+            echo "updated";
+        }
+
+    }
+//----------------------->
     function makepayments(){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='student'){

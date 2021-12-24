@@ -55,7 +55,7 @@
                             <h4>:</h4>  
                         </div>
                         <div class="col-3">
-                            <input type="password">
+                            <input type="password" id="curruentPwd">
                         </div>
                     </div>
                     <div class="pwd-row">
@@ -66,7 +66,7 @@
                             <h4>:</h4>  
                         </div>
                         <div class="col-3">
-                            <input type="password">
+                            <input type="password" id="newPwd">
                         </div>
                     </div>
                     <div class="pwd-row">
@@ -77,13 +77,13 @@
                             <h4>:</h4>  
                         </div>
                         <div class="col-3">
-                            <input type="password">
+                            <input type="password" id="rePwd">
                         </div>
                     </div>
                     <div class="pwd-row-submit">
-                        <button class="back">Back</button>
-                        <button class="cancel">Cancel</button>
-                        <button class="submit">Submit</button>
+                        <button class="back" onclick="backPopup()">Back</button>
+                        <button class="cancel" onclick="cancel()">Cancel</button>
+                        <button class="submit" onclick="submitPwd()">Submit</button>
                     </div>
                 </div>
             </div>      
@@ -93,9 +93,96 @@
     <script>
         
         function popupPwd(){
-            console.log("hello");
             document.getElementById("container-pwd").classList.replace("container-pwd","container-pwd-active");
-}
+            document.getElementById("curruentPwd").value="";
+            document.getElementById("newPwd").value="";
+            document.getElementById("rePwd").value="";
+        }
+        function backPopup(){
+            document.getElementById("container-pwd").classList.replace("container-pwd-active","container-pwd");
+        }   
+
+        function cancel(){
+            document.getElementById("curruentPwd").value="";
+            document.getElementById("newPwd").value="";
+            document.getElementById("rePwd").value="";
+        }
+
+        function submitPwd(){
+           
+            var crntpwd= document.getElementById("curruentPwd").value;
+            var newPwd=document.getElementById("newPwd").value;
+            var rePwd=document.getElementById("rePwd").value;
+
+
+            if(crntpwd.length==0){
+                document.getElementById("curruentPwd").placeholder="Password field can not be empty"; 
+                document.getElementById("curruentPwd").style.border="2px solid red";
+            }
+            if(newPwd.length==0){
+                document.getElementById("newPwd").placeholder="Password field can not be empty"; 
+                document.getElementById("newPwd").style.border="2px solid red";
+            }
+             if(rePwd.length==0){
+                document.getElementById("rePwd").placeholder="Password field can not be empty"; 
+                document.getElementById("rePwd").style.border="2px solid red";     
+
+            }
+            else{
+                console.log("Hiii");
+                let httpreq=new XMLHttpRequest();
+
+                httpreq.onreadystatechange=function(){
+                    if(httpreq.readyState === 4 && httpreq.status === 200){
+                        console.log(httpreq.responseText);
+                        if(httpreq.responseText=="success"){
+                            if(newPwd==rePwd){
+                                updatePwd(newPwd);
+                            }
+                            else{
+                                document.getElementById('newPwd').value="";
+                                document.getElementById('rePwd').value="";  
+                                document.getElementById("rePwd").placeholder="Password does not match"; 
+                                document.getElementById("rePwd").style.border="2px solid red";
+                            }
+
+                        }
+                        else{
+                            document.getElementById('curruentPwd').value="";
+                            document.getElementById('curruentPwd').placeholder="Incorrect password";
+                            document.getElementById('curruentPwd').style.border="2px solid red";
+                        }
+                    }
+                }
+
+                let url="http://localhost/project/Student/validate/"+ crntpwd;
+                httpreq.open("POST",url,true);
+                httpreq.send();
+
+            }
+ 
+        }
+
+        function updatePwd(newPwd){
+            let httpreq=new XMLHttpRequest();
+
+            httpreq.onreadystatechange=function(){
+                if(httpreq.readyState===4 && httpreq.status===200){
+                    console.log(httpreq.responseText);
+                    if(httpreq.responseText=="updated"){
+                        document.getElementById("curruentPwd").value="";
+                        document.getElementById("newPwd").value="";
+                        document.getElementById("rePwd").value="";
+                        document.getElementById("container-pwd").classList.replace("container-pwd-active","container-pwd");
+                    }
+                }
+            }
+
+            let url = "http://localhost/project/Student/updatePasswordLogic/" + newPwd;
+            httpreq.open("POST",url,true);
+            httpreq.send();
+
+        }
     </script>
 </body>
 </html>

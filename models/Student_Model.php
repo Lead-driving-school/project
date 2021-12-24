@@ -14,10 +14,38 @@ class Student_Model extends Model{
     }
 
     function editProfiledetails(){
-        
+
     }
 
+    //---------------------->
+    function checkPassword($studentId,$password){
+        $result=$this->db->runQuery("SELECT student_private.password FROM student_private INNER JOIN student on student.student_id=student_private.student_id Where student.student_id = '$studentId'");
+        
+        if(!empty($result)){
+            if(password_verify($password,
+            $result[0]['password'] )){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
+    }
 
+    function updatePassword($studentId,$password){
+        $hash_password = password_hash($password,PASSWORD_DEFAULT, array('cost' => 9));
+        $result=$this->db->runQuery("UPDATE student_private INNER JOIN student on student.student_id = student_private.student_id SET student_private.password ='$hash_password' WHERE student_private.student_id = '$studentId'");
+        echo json_encode($result);
+        if(!empty($result)){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
+//------------------------------------->
 
     function setComplaints($description,$suggestion,$studentId)
     {
