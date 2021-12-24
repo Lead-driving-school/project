@@ -55,7 +55,7 @@
                     </div>
                     <div class="min-container">
                         <div class="topic"><h2>No of Expenses captured</h2></div>
-                        <div class="details" id="noOfExpenses"><div class="amount"><h3>43</h3></div></div> 
+                        <div class="details" id="noOfExpenses"><div class="amount"></div></div> 
                     </div>
                 </div>
                 <div class="container3">
@@ -75,7 +75,7 @@
                     </div>
                     <div class="min-container">
                         <div class="topic"><h2>Total Other Expenses</h2></div>
-                        <div class="details" id="totalOtherExpenses"><div class="amount"><h3>5300.00</h3></div></div>
+                        <div class="details" id="totalOtherExpenses"><div class="amount"></div></div>
                     </div>
                 </div>
             </div>
