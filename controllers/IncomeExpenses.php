@@ -126,4 +126,32 @@ class IncomeExpenses extends Controller{
         $result['otherExpenses']=$this->model->totalOtherExpensesWeek($week);
         echo json_encode($result);
     }
+    function loadBoxesMonth($month){
+        $result['maxTotalEx']=$this->model->getMaxMonth($month);
+        $result['minTotalEx']=$this->model->getMinMonth($month);
+        $result['avgEx']=$this->model->getAvgMonth($month);
+        $result['NoOfPayments']=$this->model->getNoOfExpensesMonth($month);
+        $result['maxNoOfPayment']=$this->model->maxCountExpensesMonth($month);
+        $result['minNoOfPayment']=$this->model->minCountExpensesMonth($month);
+        $result['minValDates']=$this->model->minCountElementExpensesMonth($month);
+        $result['maxValDates']=$this->model->maxCountElementExpensesMonth($month);
+        $result['initExpenses']=$this->model->totalInitExpensesMonth($month);
+        $result['otherExpenses']=$this->model->totalOtherExpensesMonth($month);
+        echo json_encode($result);
+    }
+
+    function loadBoxesAnnual($annual){
+        $result['maxTotalEx']=$this->model->getMaxAnnual($annual);
+        $result['minTotalEx']=$this->model->getMinAnnual($annual);
+        $result['avgEx']=$this->model->getAvgAnnual($annual);
+        $result['NoOfPayments']=$this->model->getNoOfExpensesAnnual($annual);
+        $result['maxNoOfPayment']=$this->model->maxCountExpensesAnnual($annual);
+        $result['minNoOfPayment']=$this->model->minCountExpensesAnnual($annual);
+        $result['minValDates']=$this->model->minCountElementExpensesAnnual($annual);
+        $result['maxValDates']=$this->model->maxCountElementExpensesAnnual($annual);
+        $result['initExpenses']=$this->model->totalInitExpensesAnnual($annual);
+        $result['otherExpenses']=$this->model->totalOtherExpensesAnnual($annual);
+        echo json_encode($result);
+    }
+
 }
