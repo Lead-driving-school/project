@@ -18,7 +18,9 @@
             <div class="field-container">
                <div class="input-container">
                    <label for="package-name">Vehicle Type :</label>
-                   <input type="text" class="package-name">
+                   <select id="vehicleClass" type="text" class="package-name">
+                        
+                   </select>
                </div>
                
                 <!-- <div class="classes-check-outer">
@@ -73,5 +75,6 @@
             </div>
         </div>
     </div>
+    <script src="<?php echo URL?>public/js/admin/addInitPrice.js"></script>
 </body>
 </html>
