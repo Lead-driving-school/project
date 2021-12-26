@@ -43,6 +43,7 @@
                 </div>
                 <div class="row-button">
                         <button class="change-pwd" onclick="popupPwd()">Change Password</button>
+                        <a href="<?php echo URL?>Student"><button class="back-button">Back</button></a>
                 </div>   
             </div> 
             <div class="container-pwd" id="container-pwd">
