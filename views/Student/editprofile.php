@@ -34,12 +34,18 @@
                         <h4>Mobile</h4>
                         <h4>:</h4>  
                     </div>
-                    <div class="cell-2">
-                        077 2325764
+                    <div class="cell-2" id="phonecell">
+                        <input type="tel" class="phone" id="phone" value="0772237548" pattern="[0-9]{3}-[0-9]{7}" readonly>
                     </div>
                     <div class="cell-3">
-                        <button class="Edit">Edit</button>
+                        <button class="Edit" id="editphone" onclick="editPhone()">Edit</button>
+                        
                     </div>
+                </div>
+                <div class="row-hidden-phone" id="hidden-phone">
+                    <button class="save" onclick="savephone()">Save</button>
+                    <button class="cancel-edit" onclick="cancelPhone()">cancel</button>
+
                 </div>
                 <div class="row-button">
                         <button class="change-pwd" onclick="popupPwd()">Change Password</button>
@@ -92,6 +98,19 @@
     </div>
     
     <script>
+
+        function editPhone(){
+            document.getElementById("phone").removeAttribute('readonly');
+            document.getElementById("hidden-phone").classList.replace("row-hidden-phone","row-hidden-phone-active");
+            document.getElementById("editphone").classList.replace("Edit","Edit-active");
+            
+
+        }
+
+        function cancelPhone(){
+            document.getElementById("hidden-phone").classList.replace("row-hidden-phone-active","row-hidden-phone");
+            document.getElementById("editphone").classList.replace("Edit-active","Edit");
+        }
         
         function popupPwd(){
             document.getElementById("container-pwd").classList.replace("container-pwd","container-pwd-active");
