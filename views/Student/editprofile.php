@@ -107,9 +107,28 @@
 
         }
 
+        function savephone(){
+            var phone=document.getElementById("phone").value;
+
+            if(phone.length==0){
+                document.getElementById("phone").placeholder="Password field can not be empty"; 
+                document.getElementById("phone").style.border="2px solid red";      
+            }else if(phone.length !=10){
+                document.getElementById("phone").value="";
+                document.getElementById("phone").placeholder="Contact number not valid"; 
+                document.getElementById("phone").style.border="2px solid red";    
+            }else{
+
+            }
+
+        }
+
         function cancelPhone(){
+            var phone=document.getElementById("phone").value;
             document.getElementById("hidden-phone").classList.replace("row-hidden-phone-active","row-hidden-phone");
             document.getElementById("editphone").classList.replace("Edit-active","Edit");
+            document.getElementById("phone").value=phone;
+            document.getElementById("phone").readOnly="true";
         }
         
         function popupPwd(){
