@@ -119,6 +119,13 @@
                 document.getElementById("phone").style.border="2px solid red";    
             }else{
 
+                let httpreq=new XMLHttpRequest();
+                httpreq.onreadystatechange=function(){
+                    if(httpreq.readyState===4 && httpreq.status===200){
+                        
+                    }
+                }
+
             }
 
         }
