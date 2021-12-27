@@ -66,7 +66,7 @@
     
                         <div class="table">
 
-                            <div class="data">
+                            <div class="data" id="datalist">
                                 <!-- <div class="row">
                                     <div class="col-1">2019/10/20</div>
                                     <div class="col-2">10.00</div>
@@ -102,19 +102,20 @@
     </div>
     <script> 
         function getPaymentDetais(){
-            const row=document.getElementById("data");
+            const row=document.getElementById("datalist");
             let httpreq = new XMLHttpRequest();
             httpreq.onreadystatechange=function(){
                 if(httpreq.readyState===4 && httpreq.status===200){
-                    // console.log(httpreq.responseText);
+                    console.log(httpreq.responseText);
                     const obj=JSON.parse(httpreq.responseText);
-                    console.log(obj[0].amount);
-
-                   
-                        row.innerHTML+='<div class="row"><div class="col-1">2019/10/20</div><div class="col-2">10.00</div><div class="col-3">Cash</div><div class="col-4">'+obj[0].amount+'</div></div>'
+                    for(var i=0 ;i<obj.length;i++){
+                       console.log("for-loop");
+                        row.innerHTML+='<div class="row"><div class="col-1">'+obj[i].amount+'</div>'+
+                        '<div class="col-2">'+obj[i].amount+'</div>'+
+                        '<div class="col-3">'+obj[i].amount+'</div>'+
+                        '<div class="col-4">'+obj[i].amount+'</div></div>'
                     
-                    
-
+                    }
                 }
             }
 
