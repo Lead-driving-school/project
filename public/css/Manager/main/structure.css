@@ -19,3 +19,16 @@ h1 {
   font-size: 40px;
   color: #262b2f;
 }
+@media screen and (max-width: 768px) {
+  .main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #f2f2f2;
+    height: calc(100% - 60px);
+  }
+  h1 {
+    font-size: 30px;
+  }
+}
