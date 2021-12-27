@@ -120,6 +120,12 @@ class Student extends Controller{
         }
     }
 
+    function paymentDetails(){
+        $studentId=$_SESSION['student_id'];
+        $value=$this->model->getPaymentDetails($studentId);
+        echo json_encode($value);
+    }
+
     function markGoingNotGoing(){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='student'){
@@ -134,6 +140,7 @@ class Student extends Controller{
     }
 
     function markGoingNotGoingLogic(){
+        
         $value=$this->model->getTodaySession();
         echo json_encode($value);
         

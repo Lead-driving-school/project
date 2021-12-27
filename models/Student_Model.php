@@ -145,4 +145,10 @@ class Student_Model extends Model{
         return $studentId;
     }
 
+    function getPaymentDetails($studentId){
+        $result=$this->db->runQuery("SELECT payment_date_time, amount, student_id FROM `online_payments` WHERE student_id='54'");
+        return $result;
+
+    }
+
 }

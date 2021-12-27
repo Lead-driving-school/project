@@ -67,7 +67,7 @@
                         <div class="table">
 
                             <div class="data">
-                                <div class="row">
+                                <!-- <div class="row">
                                     <div class="col-1">2019/10/20</div>
                                     <div class="col-2">10.00</div>
                                     <div class="col-3">Cash</div>
@@ -86,7 +86,7 @@
                                     <div class="col-2">20.02</div>
                                     <div class="col-3">Online</div>
                                     <div class="col-4">4500.00</div>
-                                </div>
+                                </div> -->
     
                             </div>
                         </div>
@@ -100,5 +100,29 @@
             </div>
         </div>
     </div>
+    <script> 
+        function getPaymentDetais(){
+            const row=document.getElementById("data");
+            let httpreq = new XMLHttpRequest();
+            httpreq.onreadystatechange=function(){
+                if(httpreq.readyState===4 && httpreq.status===200){
+                    // console.log(httpreq.responseText);
+                    const obj=JSON.parse(httpreq.responseText);
+                    console.log(obj[0].amount);
+
+                   
+                        row.innerHTML+='<div class="row"><div class="col-1">2019/10/20</div><div class="col-2">10.00</div><div class="col-3">Cash</div><div class="col-4">'+obj[0].amount+'</div></div>'
+                    
+                    
+
+                }
+            }
+
+            let url="http://localhost/project/Student/paymentDetails";
+            httpreq.open("POST",url,true)
+            httpreq.send()
+        }
+        getPaymentDetais();
+    </script>
 </body>
 </html>
