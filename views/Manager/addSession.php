@@ -10,7 +10,7 @@
 <body>
     <div class="main">
         <div class="form-box">
-            <h1>Add Session</h1>
+        <div class="topic-header"><h1>Add Session</h1></div>
 
             <div class="body-content">
                 <div class="form-content">
