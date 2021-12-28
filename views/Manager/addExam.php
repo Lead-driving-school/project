@@ -10,10 +10,10 @@
 <body>
     <div class="main">
         <div class="form-box">
-            <h1>Add Exam</h1>
+            <div class="topic-header"><h1>Add Exam</h1></div>
             <div class="body-content">
                 <div class="form-content">
-                    <div class="box" id=box>
+                    <div class="box" id="box">
                         <div class="msg" id="msg"></div>
                     </div>
                     <!-- <div class="id-class">
