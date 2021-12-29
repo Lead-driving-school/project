@@ -8,13 +8,23 @@ function profileData(){
             const obj=JSON.parse(httprequest.responseText)
            console.log(obj[0].full_name)
 
-          //  for(var i=0; i<obj.length;i++){
+           var gender;
+           if(obj[0].gender=="m"){
+                gender="Male";
+           }else{
+               gender="Female"
+           }
+
+          
                row.innerHTML=
-           '<div class="row-1"><div class="col-1">Name</div><div class="col-2">:</div><div class="col-3">'+obj[0].full_name+'</div></div>'+
+           '<div class="row-1"><div class="col-1">Full Name</div><div class="col-2">:</div><div class="col-3">'+obj[0].full_name+'</div></div>'+
             '<div class="row-1"> <div class="col-1">NIC</div> <div class="col-2">:</div><div class="col-3">'+obj[0].NIC+'</div></div>'+
-            '<div class="row-1"><div class="col-1">Title</div><div class="col-2">:</div><div class="col-3">Student</div></div>'+
+            '<div class="row-1"><div class="col-1">Date of Birth</div><div class="col-2">:</div><div class="col-3">'+obj[0].dob+'</div></div>'+
+            '<div class="row-1"><div class="col-1">Gender</div><div class="col-2">:</div><div class="col-3">'+gender+'</div></div>'+
+            '<div class="row-1"><div class="col-1">Arival Date</div><div class="col-2">:</div><div class="col-3">'+obj[0].arival_date+'</div></div>'+
+            // '<div class="row-1"><div class="col-1">Title</div><div class="col-2">:</div><div class="col-3">Student</div></div>'+
             '<div class="row-1"><div class="col-1">Address</div><div class="col-2">:</div><div class="col-3">'+obj[0].address+'</div></div>'+
-           ' <div class="row-1"><div class="col-1">Tel-No</div><div class="col-2">:</div><div class="col-3">'+obj[0].contact+'</div>'
+           ' <div class="row-1"><div class="col-1">Contact Number</div><div class="col-2">:</div><div class="col-3">'+obj[0].contact+'</div>'
 
         
         }

@@ -82,8 +82,33 @@ body{
     display: flex;
     /* background-color: cadetblue; */
 }
+.row-hidden-Image{
+    width: 45%;
+    height: 50px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: cadetblue;
+    display: none;
+}
+.row-hidden-Image-active{
+    width: 45%;
+    height: 50px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* background-color: cadetblue; */
+}
 
-.save{
+input[type=file]{
+    background-color: tomato;
+    height: 30px;
+    width: 200px;
+    display: none;  
+}
+.save,.change{
     width: 80px;
     height: 30px;
     /* margin-right: 30px; */
@@ -94,11 +119,14 @@ body{
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     /* background-color: rgb(65, 67, 161); */
     
 }
-.cancel-edit{
+.cancel-edit,.remove{
 width: 80px;
 height: 30px;
 border: none;
@@ -324,14 +352,14 @@ input[type=password]{
     cursor: pointer;
     box-shadow: 1px 1px 10px #b0b3b3;
 }
-.submit:hover,.Edit:hover,.change-pwd:hover,.save:hover{
+.submit:hover,.Edit:hover,.change-pwd:hover,.save:hover,.change:hover{
     background-color:seashell;
     border: 2px solid #0892d0;
     box-shadow: 1px 1px 10px #b0b3b3;
     color: #0892d0;
 }
 
-.back:hover,.back-button:hover,.cancel:hover,.cancel-edit:hover{
+.remove:hover,.back:hover,.back-button:hover,.cancel:hover,.cancel-edit:hover{
     color: #262b2f;
     background-color: seashell;
     border: 2px solid #262b2f;

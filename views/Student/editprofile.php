@@ -25,8 +25,16 @@
                             <img src="<?php echo URL?>public/images/profpic.png" alt="pp">
                     </div>
                     <div class="cell-3">
-                        <button class="Edit">Edit</button>
+                        <button class="Edit" id="editImage" onclick="editImage()">Edit</button>
                     </div>
+                </div>
+                <div class="row-hidden-Image" id="hidden-Image">
+                    <label class="change">Change
+                    <input type="file" class="file" id="file">
+                    </label> 
+                    <button class="remove" onclick="removeImage()">Remove</button>
+                    <button class="cancel-edit" onclick="cancelImage()">cancel</button>
+
                 </div>
 
                 <div class="row">
@@ -43,6 +51,7 @@
                     </div>
                 </div>
                 <div class="row-hidden-phone" id="hidden-phone">
+                    
                     <button class="save" onclick="savephone()">Save</button>
                     <button class="cancel-edit" onclick="cancelPhone()">cancel</button>
 
@@ -137,7 +146,24 @@
             document.getElementById("phone").value=phone;
             document.getElementById("phone").readOnly="true";
         }
-        
+
+
+        // Image upload button
+        function editImage(){
+            document.getElementById("hidden-Image").classList.replace("row-hidden-Image","row-hidden-Image-active");
+            document.getElementById("editImage").classList.replace("Edit","Edit-active");
+            
+
+        }
+
+        function cancelImage(){
+            var phone=document.getElementById("phone").value;
+            document.getElementById("hidden-Image").classList.replace("row-hidden-Image-active","row-hidden-Image");
+            document.getElementById("editImage").classList.replace("Edit-active","Edit");
+  
+        }
+
+        //password change
         function popupPwd(){
             document.getElementById("container-pwd").classList.replace("container-pwd","container-pwd-active");
             document.getElementById("curruentPwd").value="";

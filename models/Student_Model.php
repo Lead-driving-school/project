@@ -9,7 +9,7 @@ class Student_Model extends Model{
 
     function getProfileDetails(){
         $nic=$_SESSION['student_id'];
-        $result=$this->db->runQuery("SELECT full_name,NIC,address,contact from student where student_id = $nic");
+        $result=$this->db->runQuery("SELECT * from student where student_id = $nic");
         return $result;
     }
 
