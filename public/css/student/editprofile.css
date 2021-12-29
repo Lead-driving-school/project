@@ -79,7 +79,7 @@ body{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    visibility: visible
+    display: flex;
     /* background-color: cadetblue; */
 }
 
