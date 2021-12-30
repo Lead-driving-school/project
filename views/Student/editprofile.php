@@ -22,14 +22,15 @@
                         <h4>Profile </h4>
                         <h4>:</h4> </div>
                     <div class="cell-2">
-                            <img src="<?php echo URL?>public/images/profpic.png" alt="pp">
+
+                            <img src="<?php echo URL?>public/images/profpic.png" alt="pp" id="uploadImage">
                     </div>
                     <div class="cell-3">
                         <button class="Edit" id="editImage" onclick="editImage()">Edit</button>
                     </div>
                 </div>
                 <div class="row-hidden-Image" id="hidden-Image">
-                    <label class="change">Change
+                    <label for="file" class="change" >Change
                     <input type="file" class="file" id="file">
                     </label> 
                     <button class="remove" onclick="removeImage()">Remove</button>
@@ -156,12 +157,35 @@
 
         }
 
+        function removeImage(){
+            // var img=document.getElementById("uploadImage");
+            // img.innerHTML="<img src="<?php echo URL?>public/images/profpic.png" alt="pp" id="uploadImage">";
+        }
+
         function cancelImage(){
-            var phone=document.getElementById("phone").value;
+            // var phone=document.getElementById("phone").value;
             document.getElementById("hidden-Image").classList.replace("row-hidden-Image-active","row-hidden-Image");
             document.getElementById("editImage").classList.replace("Edit-active","Edit");
   
         }
+
+        let img=document.getElementById("uploadImage");
+        let changeF=document.getElementById("file");
+
+        changeF.addEventListener('change',function(){
+            console.log(this.files[0].type);
+            if(this.files[0].type!='image/png' && this.files[0].type != 'image/jpeg' && this.files[0].type != 'image/jpg'){
+                alert("File type is not valid");
+            }else{
+                img.src=URL.createObjectURL(this.files[0]);
+            }
+
+        })
+
+ 
+
+ 
+        
 
         //password change
         function popupPwd(){

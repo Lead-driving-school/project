@@ -178,6 +178,7 @@ box-shadow: 1px 1px 10px #b0b3b3;
 img{
     width: 75px;
     height: 75px;
+    border-radius: 50%;
 }
 .cell-3{
     width: 130px;

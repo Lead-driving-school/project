@@ -72,13 +72,10 @@ body{
     
 }
 .big-picture{
-    /* margin: 10px 0px auto 20%; */
-    /* background-color: #84f78a; */
     width: 180px;
     height: 180px;
     margin-top: 10px;
-    margin-bottom: 30px;
-    
+    margin-bottom: 30px;  
 }
 
 .left-details{
@@ -136,21 +133,6 @@ h
     border-radius: 15px;
     color: #0892d0;
     
-}
-.upload-pic{
-    width: 35px;
-    height: 35px;
-    /* background-color: #c51c1c; */
-    border: 1px solid black;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 330px auto auto -70px;
-    cursor: pointer;
-}
-.upload-pic:hover{
-    background-color: #e6e3e3;
 }
 .right{
     width: 40%;
