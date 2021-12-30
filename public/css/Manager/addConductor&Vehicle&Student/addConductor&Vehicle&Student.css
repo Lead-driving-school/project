@@ -60,6 +60,7 @@
 .save {
   width: 130px;
   height: 40px;
+  /* margin-right: 5px; */
   font-weight: 600;
   background-color: #0892d0;
   box-shadow: 1px 1px 10px #b0b3b3;
@@ -68,11 +69,22 @@
   border: none;
 }
 .save:hover {
-  width: 130px;
+  /* width: 130px; */
   height: 40px;
   background-color: white;
   box-shadow: 1px 1px 10px #b0b3b3;
   border-radius: 4px;
   color: #0892d0;
   border: 2px solid #0892d0;
+}
+@media screen and (max-width: 1117px) {
+  .save {
+    width: 100px;
+    height: 40px;
+    font-size: xx-small;
+    font-weight: normal;
+  }
+  .heading-row {
+    display: none;
+  }
 }
