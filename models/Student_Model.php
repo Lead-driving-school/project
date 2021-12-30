@@ -146,7 +146,9 @@ class Student_Model extends Model{
     }
 
     function getPaymentDetails($studentId){
-        $result=$this->db->runQuery("SELECT payment_date_time, amount, student_id FROM `online_payments` WHERE student_id='54'");
+        $result_online=$this->db->runQuery("SELECT payment_date_time, amount FROM `online_payments` WHERE student_id='$studentId'");
+        $result_cash=$this->db->runQuery("SELECT  payment_date_time, amount FROM cash_payment INNER JOIN cash_payment_submits ON cash_payment.cpayment_id=cash_payment_submits.cpayment_id WHERE student_id='$studentId'");  
+        $result=array_merge($result_cash,$result_online);
         return $result;
 
     }

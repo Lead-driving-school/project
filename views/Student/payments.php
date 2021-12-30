@@ -37,8 +37,8 @@
                             <h3>Paid (LKR)</h3>
                             <h3>:</h3>
                         </div>
-                        <div class="paid-col-2">
-                            <div class="paid-val">18,500.00</div>
+                        <div class="paid-col-2" id="paid" >
+                            <!-- <div class="paid-val">18,500.00</div> -->
                         </div>
                     
                     </div>
@@ -103,19 +103,39 @@
     <script> 
         function getPaymentDetais(){
             const row=document.getElementById("datalist");
+            
             let httpreq = new XMLHttpRequest();
             httpreq.onreadystatechange=function(){
                 if(httpreq.readyState===4 && httpreq.status===200){
-                    console.log(httpreq.responseText);
+                    // console.log(httpreq.responseText);
                     const obj=JSON.parse(httpreq.responseText);
-                    for(var i=0 ;i<obj.length;i++){
-                       console.log("for-loop");
-                        row.innerHTML+='<div class="row"><div class="col-1">'+obj[i].amount+'</div>'+
-                        '<div class="col-2">'+obj[i].amount+'</div>'+
-                        '<div class="col-3">'+obj[i].amount+'</div>'+
-                        '<div class="col-4">'+obj[i].amount+'</div></div>'
-                    
+                    let paidAmount=0.00;
+                    console.log(obj);
+                    const sortByDate=obj=>{
+                        const sorter=(a,b)=>{
+                            return new Date(a.payment_date_time).getTime() - new Date(b.payment_date_time).getTime();
+                        }
+                        return obj.sort(sorter);
                     }
+                    sortByDate(obj);
+                    
+                    for(var i=0 ;i<obj.length;i++){
+                       
+                       let str=String(obj[i].payment_date_time);
+                         let myArr = str.split(" ");
+                         paidAmount+=parseFloat(obj[i].amount);
+                         
+                        
+                        row.innerHTML+='<div class="row"><div class="col-1">'+myArr[0]+'</div>'+
+                        '<div class="col-2">'+myArr[1]+'</div>'+
+                        '<div class="col-3">Cash</div>'+
+                        '<div class="col-4">'+obj[i].amount+'</div></div>';
+                    }
+                    console.log(paidAmount);
+                    paidAmount=String(paidAmount);
+
+                    document.getElementById("paid").innerHTML='<div class="paid-val">'+paidAmount+'</div>';
+                    
                 }
             }
 
