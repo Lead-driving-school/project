@@ -63,11 +63,21 @@ label {
 .session-text {
   width: 50%;
   height: 35px;
-  background-color: #f3f7f7;
+  padding-left: 5px;
+  background-color: #ffffff;
   border-radius: 3px;
-  box-shadow: 0px 0px 10px #dce0e094 inset;
-  border: none;
+  /* box-shadow: 0px 0px 10px #14f3f394 inset; */
+  border: 2px solid #0892d0;
   cursor: pointer;
+  outline: none;
+}
+input.session-text[type="text"]:focus,
+input#date[type="date"]:focus,
+input#time[type="time"]:focus {
+  /* box-shadow: 0px 0px 10px rgb(172, 171, 171); */
+  background-color: #c8dcff;
+  border: 2px solid #0892d0;
+  /* box-shadow: 0px 0px 10px #b0b3b3; */
   outline: none;
 }
 #type {
@@ -94,10 +104,12 @@ label {
 #time {
   width: 140px;
   height: 30px;
+  color: #0892d0;
   border-radius: 3px;
-  background-color: #f3f7f7;
-  box-shadow: 0px 0px 10px #dce0e094 inset;
-  border: none;
+  background-color: white;
+  border: 2px solid #0892d0;
+  /* box-shadow: 0px 0px 10px #14f3f394 inset; */
+  /* border: none; */
   cursor: pointer;
   outline: none;
 }
@@ -159,6 +171,10 @@ label {
   background-color: #fad1d8;
   color: #d11534;
 }
+::-webkit-calendar-picker-indicator {
+  color: #0892d0;
+}
+
 @media screen and (max-width: 952px) {
   .main {
     width: 100%;
@@ -184,8 +200,10 @@ label {
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #262b2f;
-    color: white;
+    border: 4px solid #0892d0;
+    background-color: white;
+    color: #0892d0;
+    border-radius: 4px;
   }
   .form-box h1 {
     padding: 30px 0px;
