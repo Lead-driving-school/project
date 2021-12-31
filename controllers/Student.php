@@ -77,10 +77,9 @@ class Student extends Controller{
     }
 // homepage profile
     function profileLogic(){
-        $value=$this->model->getProfileDetails();    
-        // echo $value;
+        $value=$this->model->getProfileDetails();   
        echo json_encode($value);
-        
+
     }
 
     // after click edit profile button
@@ -123,6 +122,11 @@ class Student extends Controller{
     function paymentDetails(){
         $studentId=$_SESSION['student_id'];
         $value=$this->model->getPaymentDetails($studentId);
+        echo json_encode($value);
+    }
+
+    function paymentDetailsAmount(){
+        $value=$this->model->getProfileDetailsAmount();   
         echo json_encode($value);
     }
 

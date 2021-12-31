@@ -47,6 +47,7 @@ img{
     width: calc(100% - 250px);
     display: flex;
     flex-direction: column;
+   
     /* background-color: rgb(206, 206, 16); */
 }
 .profile{
@@ -108,16 +109,17 @@ img{
     /* background-color: burlywood; */
 }
 .summary{
-    width: 100%;
+    width: 85%;
     height: 17%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    padding-left: 20px;
+    justify-content: space-between;
     /* background-color: chartreuse; */
 }
 .paid{
-    width: 40%;
-    height: 90%;
+    width: 25%;
+    height: 70%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -143,10 +145,8 @@ img{
 
 }
 .paid-val{
-    width: 67%;
+    width: 100%;
     height: 90%;
-    font-size: 20px;
-    font-weight: 600;
     border-radius: 4px;
     box-shadow: 1px 1px 10px #b0b3b3;
     background-color: white;
@@ -158,15 +158,15 @@ img{
 }
 
 .remaining{
-    width: 40%;
-    height: 90%;
+    width: 25%;
+    height: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
     /* background-color: crimson; */
 }
 .remaining-col-1{
-    width: 43%;
+    width: 50%;
     height: 70%;
     font-size: 20px;
     font-weight: 600;
