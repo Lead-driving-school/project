@@ -157,8 +157,6 @@ h2 {
 }
 .cancel:hover {
   font-weight: bold;
-  width: 100px;
-  height: 40px;
   color: #262b2f;
   background-color: white;
   border: 2px solid #262b2f;
@@ -176,4 +174,20 @@ h2 {
 
 ::-ms-input-placeholder {
   color: red;
+}
+@media screen and (max-width: 992px) {
+  .Discription-input {
+    display: flex;
+    width: 60%;
+  }
+  .discription-class {
+    display: flex;
+    width: 75%;
+    /* background-color: tomato; */
+    justify-content: space-between;
+  }
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }

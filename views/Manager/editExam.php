@@ -11,14 +11,15 @@
     <div class="main">
         <div class="form-box">
             <input type="hidden" id="idContainer" value="<?php echo isset( $_SESSION['editExamId'])? $_SESSION['editExamId']:"";?>">
-            <h1>Exam</h1>
+            <div class="topic-header"><h1>Exam</h1></div>
             <div class="body-content">
                 <div class="form-content">
-                    <div class="box" id=box>
+                    <div class="box" id="box">
                         <div class="msg" id="msg"></div>
                     </div>
                     <div class="type-class">
                         <label for="type">Type:</label>
+                        <div class="input-and-button">
                         <select name="type" id="type" class="type">
                             <optgroup>
                                 <option value="Theory">Theory</option>
@@ -26,6 +27,7 @@
                             </optgroup>
                         </select>
                         <div class="edit-button"><button  class="edit" id="editType" onclick="changeType()" >Edit</button></div>
+                        </div>
                     </div>
                         <div class="save-and-cancel" id="typeSaveCancel">
                             <div class="save-button" id="saveTypeButton"><button  class="save" id="saveType" onclick="saveType()">Save</button></div>
@@ -33,9 +35,10 @@
                         </div>
                     <div class="date-class">
                         <label for="date">Date:</label>
+                        <div class="input-and-button">
                         <input type="date" class="text-class" id="dateContainer" value="">
                         <div class="edit-button"><button  class="edit" id="editDate" onclick="changeDate()">Edit</button></div>
-
+                        </div>
                     </div>
                     
                         <div class="save-and-cancel" id="dateSaveCancel">
@@ -45,8 +48,10 @@
 
                     <div class="time-class">
                         <label for="time">Time:</label>
+                        <div class="input-and-button">
                         <input type="time" class="text-class" id="timeContainer" value="">
                         <div class="edit-button"><button  class="edit" id="editTime" onclick="changeTime()">Edit</button></div>
+                        </div>
                     </div>
 
                         <div class="save-and-cancel" id="timeSaveCancel">
@@ -73,7 +78,7 @@
                 </div>
                 <div class="button-set">
                     <a href="<?php echo URL?>Manager/eventCalendar"><button class="session-buttons" name="cancel" id="cancel" >CANCEL</button></a>
-                    <button class="session-buttons"name="confirm" id="confirm">CONFIRM</button>
+                    <button class="session-buttons"name="confirm" id="confirm">DELETE</button>
                 </div>
             </div>
         </div>

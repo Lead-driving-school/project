@@ -43,7 +43,7 @@
             <div class="container">
                 
                 <!--Header-->
-                <h2>Add Expenses</h2>
+                <div class="topic-header"><h2>Add Expenses</h2></div>
                 <div class="body-container">
                         <div class="form-part">
                                 <div class="expense-name-class">

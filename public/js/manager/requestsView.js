@@ -8,6 +8,8 @@ function viewRequests(){
             rows.innerHTML=""
             let buttonContainer=document.getElementById("buttonContainer")
             buttonContainer.innerHTML=""
+            let counterVal=document.getElementById("request-counter");
+            counterVal.innerHTML=obj.length+" Unresponded Requests"
             let detailList=document.getElementById("detailsList")
             detailList.innerHTML='<div class="initial-message-box">'+
             '<div class="search-icon">Search Icon</div>'+
@@ -48,6 +50,8 @@ function viewExams(){
             rows.innerHTML=""
             let buttonContainer=document.getElementById("buttonContainer")
             buttonContainer.innerHTML=""
+            let counterVal=document.getElementById("request-counter");
+            counterVal.innerHTML=obj.length+" Unresponded Requests"
             let detailList=document.getElementById("detailsList")
             detailList.innerHTML='<div class="initial-message-box">'+
             '<div class="search-icon">Search Icon</div>'+
@@ -86,6 +90,8 @@ function viewSessions(){
             rows.innerHTML=""
             let buttonContainer=document.getElementById("buttonContainer")
             buttonContainer.innerHTML=""
+            let counterVal=document.getElementById("request-counter");
+            counterVal.innerHTML=obj.length+" Unresponded Requests"
             let detailList=document.getElementById("detailsList")
             detailList.innerHTML='<div class="initial-message-box">'+
             '<div class="search-icon">Search Icon</div>'+
@@ -125,7 +131,6 @@ function viewDetailsSessions(sessionId,studentId){
             obj[0].session_title=obj[0].session_title.replace(/-/g, " ");
             let str=String(obj[0].date_time)
             const myArr= str.split(" ")
-
             let detailList=document.getElementById("detailsList")
             detailList.innerHTML='<div class="record"><div class="label">Session Title</div><div class="data-part">'+obj[0].session_title+'</div></div>'+
             '<div class="record"><div class="label">Sender</div><div class="data-part">'+obj[0].init_name+'</div></div>'+
