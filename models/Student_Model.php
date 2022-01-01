@@ -158,6 +158,5 @@ class Student_Model extends Model{
         return $result;
 
     }
-    
 
 }

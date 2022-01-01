@@ -24,7 +24,7 @@
                         <div class="title">
                             <h1>Theory Exam</h1>
                         </div>
-                        <div class="details">
+                        <div class="details" id="theory-details">
                             
                             <div class="theory-box">
                                 <div class="row">
@@ -166,5 +166,6 @@
             </div>
         </div>
     </div>
+    <script src="<?php echo URL?>public/js/student/examdetails.js"></script>
 </body>
 </html>
