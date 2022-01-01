@@ -224,7 +224,7 @@ class Manager_Model extends Model{
         $result=$this->db->runQuery("SELECT vehicle.vehicle_id,vehicle.vehicle_type,vehicle.vehicle_no from vehicle");
         return $result;
     }
-    function removeInstructorS($employeeId){
+    function removeInstructorS($employeeId,$sessionId){
         $result=$this->db->runQuery("DELETE FROM session_conductor_assigns WHERE conductor_id=$employeeId AND session_id=$sessionId");
         return true;
     }

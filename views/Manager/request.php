@@ -28,12 +28,12 @@
     <?php require_once APPROOT."/../views/common/ManagerSidebar.php"; ?>
         <div class="container">
             <!--Header-->
-            <h1>Requests</h1>
+            <div class="topic"><h1>Requests</h1></div>
             <div class="link-set">
                 <div class="session-link" id="sessionlink" onclick="viewSessions()">Sessions</div>
                 <div class="exam-link" id="examLink" onclick="viewExams()">Exams</div>
             </div>
-            <h3>3 Unresponded Requests</h3>
+            <h3 id="request-counter"></h3>
 
             <div class="body-container">
 
@@ -53,6 +53,7 @@
 
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>
