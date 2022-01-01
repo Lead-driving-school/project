@@ -4,7 +4,15 @@
   padding-left: 35px;
   padding-right: 35px;
   width: calc(100% - 250px);
+  /* background-color: yellow; */
   height: 100%;
+}
+.topic {
+  display: flex;
+  width: 95%;
+
+  /* background-color: yellow; */
+  justify-content: flex-end;
 }
 .body-container {
   display: flex;

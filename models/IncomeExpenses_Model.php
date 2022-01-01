@@ -34,7 +34,7 @@ class IncomeExpenses_Model extends Model{
             $endTime=$date.' 11:59:59';
 
             $weekAmount[$i]=$this->db->runQuery("SELECT sum(amount) as total from other_expenses where recorded_date_time>='$startTime' and recorded_date_time < '$endTime'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($weekAmount[$i][0]['total'])+intval($studentAmount[$i][0]['total']);
@@ -56,7 +56,7 @@ class IncomeExpenses_Model extends Model{
             $endTime=$date.' 11:59:59';
 
             $monthAmount[$i]=$this->db->runQuery("SELECT sum(amount) as total from other_expenses where recorded_date_time>='$startTime' and recorded_date_time <= '$endTime'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($monthAmount[$i][0]['total'])+intval($studentAmount[$i][0]['total']);
@@ -76,7 +76,7 @@ class IncomeExpenses_Model extends Model{
             $endDate=$endDate.' 00:00:00';
 
             $annualAmount[$i]=$this->db->runQuery("SELECT sum(amount) as total from other_expenses where recorded_date_time>='$startDate' and recorded_date_time < '$endDate'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <'$endDate'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <'$endDate' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($annualAmount[$i][0]['total'])+intval($studentAmount[$i][0]['total']);
@@ -104,7 +104,7 @@ class IncomeExpenses_Model extends Model{
             $endTime=$date.' 11:59:59';
 
             $weekAmount[$i]=$this->db->runQuery("SELECT sum(amount) as total from other_expenses where recorded_date_time>='$startTime' and recorded_date_time < '$endTime'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($weekAmount[$i][0]['total'])+intval($studentAmount[$i][0]['total']);
@@ -124,7 +124,7 @@ class IncomeExpenses_Model extends Model{
             $endTime=$date.' 11:59:59';
 
             $weekAmount[$i]=$this->db->runQuery("SELECT sum(amount) as total from other_expenses where recorded_date_time>='$startTime' and recorded_date_time < '$endTime'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($weekAmount[$i][0]['total'])+intval($studentAmount[$i][0]['total']);
@@ -144,7 +144,7 @@ class IncomeExpenses_Model extends Model{
             $endTime=$date.' 11:59:59';
 
             $weekAmount[$i]=$this->db->runQuery("SELECT sum(amount) as total from other_expenses where recorded_date_time>='$startTime' and recorded_date_time < '$endTime'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($weekAmount[$i][0]['total'])+intval($studentAmount[$i][0]['total']);
@@ -159,7 +159,7 @@ class IncomeExpenses_Model extends Model{
         $startDate=$startDate.' 00:00:00';
         $endDate=$endDate.' 00:00:00';
         $weekAmount=$this->db->runQuery("SELECT count(amount) as totalCount from other_expenses where recorded_date_time>='$startDate' and recorded_date_time < '$endDate'");
-        $studentAmount=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <='$endDate'");
+        $studentAmount=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <='$endDate' and initial_service_expenses_submits.status='Accepted'");
         $totalAmount=0;
         $totalAmount=intval($weekAmount[0]['totalCount'])+intval($studentAmount[0]['totalCount']);
         return $totalAmount;
@@ -176,7 +176,7 @@ class IncomeExpenses_Model extends Model{
             $endTime=$date.' 11:59:59';
 
             $weekAmount[$i]=$this->db->runQuery("SELECT count(amount) as totalCount from other_expenses where recorded_date_time>='$startTime' and recorded_date_time < '$endTime'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($weekAmount[$i][0]['totalCount'])+intval($studentAmount[$i][0]['totalCount']);
@@ -196,7 +196,7 @@ class IncomeExpenses_Model extends Model{
             $endTime=$date.' 11:59:59';
 
             $weekAmount[$i]=$this->db->runQuery("SELECT count(amount) as totalCount from other_expenses where recorded_date_time>='$startTime' and recorded_date_time < '$endTime'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($weekAmount[$i][0]['totalCount'])+intval($studentAmount[$i][0]['totalCount']);
@@ -222,7 +222,7 @@ class IncomeExpenses_Model extends Model{
             $endTime=$date.' 11:59:59';
 
             $weekAmount[$i]=$this->db->runQuery("SELECT count(amount) as totalCount from other_expenses where recorded_date_time>='$startTime' and recorded_date_time < '$endTime'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($weekAmount[$i][0]['totalCount'])+intval($studentAmount[$i][0]['totalCount']);
@@ -248,7 +248,7 @@ class IncomeExpenses_Model extends Model{
             $endTime=$date.' 11:59:59';
 
             $weekAmount[$i]=$this->db->runQuery("SELECT count(amount) as totalCount from other_expenses where recorded_date_time>='$startTime' and recorded_date_time < '$endTime'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($weekAmount[$i][0]['totalCount'])+intval($studentAmount[$i][0]['totalCount']);
@@ -261,7 +261,7 @@ class IncomeExpenses_Model extends Model{
         $endDate=date('Y-m-d', strtotime($startDate. ' + '. 7 .' days'));
         $startDate=$startDate.' 00:00:00';
         $endDate=$endDate.' 00:00:00';
-        $studentAmount=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <'$endDate'");
+        $studentAmount=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <'$endDate' and initial_service_expenses_submits.status='Accepted'");
         
         return intval($studentAmount[0]['total']);
 
@@ -299,7 +299,7 @@ class IncomeExpenses_Model extends Model{
             $endTime=$date.' 11:59:59';
 
             $monthAmount[$i]=$this->db->runQuery("SELECT sum(amount) as total from other_expenses where recorded_date_time>='$startTime' and recorded_date_time <= '$endTime'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($monthAmount[$i][0]['total'])+intval($studentAmount[$i][0]['total']);
@@ -329,7 +329,7 @@ class IncomeExpenses_Model extends Model{
             $endTime=$date.' 11:59:59';
 
             $monthAmount[$i]=$this->db->runQuery("SELECT sum(amount) as total from other_expenses where recorded_date_time>='$startTime' and recorded_date_time <= '$endTime'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($monthAmount[$i][0]['total'])+intval($studentAmount[$i][0]['total']);
@@ -358,7 +358,7 @@ class IncomeExpenses_Model extends Model{
             $endTime=$date.' 11:59:59';
 
             $monthAmount[$i]=$this->db->runQuery("SELECT sum(amount) as total from other_expenses where recorded_date_time>='$startTime' and recorded_date_time <= '$endTime'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($monthAmount[$i][0]['total'])+intval($studentAmount[$i][0]['total']);
@@ -391,7 +391,7 @@ class IncomeExpenses_Model extends Model{
         $startDate=$startDate.' 00:00:00';
         $endDate=$endDate.' 00:00:00';
         $monthAmount=$this->db->runQuery("SELECT count(amount) as totalCount from other_expenses where recorded_date_time>='$startDate' and recorded_date_time < '$endDate'");
-        $studentAmount=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <='$endDate'");
+        $studentAmount=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <='$endDate' and initial_service_expenses_submits.status='Accepted'");
         $totalAmount=0;
         $totalAmount=intval($monthAmount[0]['totalCount'])+intval($studentAmount[0]['totalCount']);
         return $totalAmount;
@@ -419,7 +419,7 @@ class IncomeExpenses_Model extends Model{
             $endTime=$date.' 11:59:59';
 
             $monthAmount[$i]=$this->db->runQuery("SELECT count(amount) as totalCount from other_expenses where recorded_date_time>='$startTime' and recorded_date_time <= '$endTime'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($monthAmount[$i][0]['totalCount'])+intval($studentAmount[$i][0]['totalCount']);
@@ -449,7 +449,7 @@ class IncomeExpenses_Model extends Model{
             $endTime=$date.' 11:59:59';
 
             $monthAmount[$i]=$this->db->runQuery("SELECT count(amount) as totalCount from other_expenses where recorded_date_time>='$startTime' and recorded_date_time <= '$endTime'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($monthAmount[$i][0]['totalCount'])+intval($studentAmount[$i][0]['totalCount']);
@@ -479,7 +479,7 @@ class IncomeExpenses_Model extends Model{
             $endTime=$date.' 11:59:59';
 
             $monthAmount[$i]=$this->db->runQuery("SELECT count(amount) as totalCount from other_expenses where recorded_date_time>='$startTime' and recorded_date_time <= '$endTime'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($monthAmount[$i][0]['totalCount'])+intval($studentAmount[$i][0]['totalCount']);
@@ -517,7 +517,7 @@ class IncomeExpenses_Model extends Model{
             $endTime=$date.' 11:59:59';
 
             $monthAmount[$i]=$this->db->runQuery("SELECT count(amount) as totalCount from other_expenses where recorded_date_time>='$startTime' and recorded_date_time <= '$endTime'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startTime' and initial_service_expenses_submits.date_time <='$endTime' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($monthAmount[$i][0]['totalCount'])+intval($studentAmount[$i][0]['totalCount']);
@@ -548,7 +548,7 @@ class IncomeExpenses_Model extends Model{
         $endDate=date('Y-m-d', strtotime($startDate. ' + '. $divisor .' days'));
         $startDate=$startDate.' 00:00:00';
         $endDate=$endDate.' 00:00:00';
-        $studentAmount=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <'$endDate'");
+        $studentAmount=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <'$endDate' and initial_service_expenses_submits.status='Accepted'");
         
         return intval($studentAmount[0]['total']);
     }
@@ -585,7 +585,7 @@ class IncomeExpenses_Model extends Model{
             $endDate=$endDate.' 00:00:00';
 
             $annualAmount[$i]=$this->db->runQuery("SELECT sum(amount) as total from other_expenses where recorded_date_time>='$startDate' and recorded_date_time < '$endDate'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <'$endDate'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <'$endDate' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($annualAmount[$i][0]['total'])+intval($studentAmount[$i][0]['total']);
@@ -604,7 +604,7 @@ class IncomeExpenses_Model extends Model{
             $endDate=$endDate.' 00:00:00';
 
             $annualAmount[$i]=$this->db->runQuery("SELECT sum(amount) as total from other_expenses where recorded_date_time>='$startDate' and recorded_date_time < '$endDate'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <'$endDate'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <'$endDate' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($annualAmount[$i][0]['total'])+intval($studentAmount[$i][0]['total']);
@@ -623,7 +623,7 @@ class IncomeExpenses_Model extends Model{
             $endDate=$endDate.' 00:00:00';
 
             $annualAmount[$i]=$this->db->runQuery("SELECT sum(amount) as total from other_expenses where recorded_date_time>='$startDate' and recorded_date_time < '$endDate'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <'$endDate'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <'$endDate' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($annualAmount[$i][0]['total'])+intval($studentAmount[$i][0]['total']);
@@ -636,7 +636,7 @@ class IncomeExpenses_Model extends Model{
         $startDate=$startDate.' 00:00:00';
         $endDate=$endDate.' 00:00:00';
         $weekAmount=$this->db->runQuery("SELECT count(amount) as totalCount from other_expenses where recorded_date_time>='$startDate' and recorded_date_time < '$endDate'");
-        $studentAmount=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <='$endDate'");
+        $studentAmount=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <='$endDate' and initial_service_expenses_submits.status='Accepted'");
         $totalAmount=0;
         $totalAmount=intval($weekAmount[0]['totalCount'])+intval($studentAmount[0]['totalCount']);
         return $totalAmount;
@@ -653,7 +653,7 @@ class IncomeExpenses_Model extends Model{
             $endDate=$endDate.' 00:00:00';
 
             $annualAmount[$i]=$this->db->runQuery("SELECT count(amount) as totalCount from other_expenses where recorded_date_time>='$startDate' and recorded_date_time < '$endDate'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <='$endDate'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <='$endDate' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($annualAmount[$i][0]['totalCount'])+intval($studentAmount[$i][0]['totalCount']);
@@ -672,7 +672,7 @@ class IncomeExpenses_Model extends Model{
             $endDate=$endDate.' 00:00:00';
 
             $annualAmount[$i]=$this->db->runQuery("SELECT count(amount) as totalCount from other_expenses where recorded_date_time>='$startDate' and recorded_date_time < '$endDate'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <='$endDate'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <='$endDate' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($annualAmount[$i][0]['totalCount'])+intval($studentAmount[$i][0]['totalCount']);
@@ -691,7 +691,7 @@ class IncomeExpenses_Model extends Model{
             $endDate=$endDate.' 00:00:00';
 
             $annualAmount[$i]=$this->db->runQuery("SELECT count(amount) as totalCount from other_expenses where recorded_date_time>='$startDate' and recorded_date_time < '$endDate'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <='$endDate'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <='$endDate' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($annualAmount[$i][0]['totalCount'])+intval($studentAmount[$i][0]['totalCount']);
@@ -717,7 +717,7 @@ class IncomeExpenses_Model extends Model{
             $endDate=$endDate.' 00:00:00';
 
             $annualAmount[$i]=$this->db->runQuery("SELECT count(amount) as totalCount from other_expenses where recorded_date_time>='$startDate' and recorded_date_time < '$endDate'");        
-            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <'$endDate'");
+            $studentAmount[$i]=$this->db->runQuery("SELECT count(initial_service_expenses.amount) as totalCount from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <'$endDate' and initial_service_expenses_submits.status='Accepted'");
 
             $totalAmount[$i]=0;
             $totalAmount[$i]=intval($annualAmount[$i][0]['totalCount'])+intval($studentAmount[$i][0]['totalCount']);
@@ -736,7 +736,7 @@ class IncomeExpenses_Model extends Model{
         $endDate=date('Y-m-d', strtotime($startDate. ' + '. 12 .' months'));
         $startDate=$startDate.' 00:00:00';
         $endDate=$endDate.' 00:00:00';
-        $studentAmount=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <'$endDate'");
+        $studentAmount=$this->db->runQuery("SELECT sum(initial_service_expenses.amount) as total from initial_service_expenses INNER JOIN initial_service_expenses_submits on initial_service_expenses_submits.ischarge_id=initial_service_expenses.ischarge_id WHERE initial_service_expenses_submits.date_time>='$startDate' and initial_service_expenses_submits.date_time <'$endDate' and initial_service_expenses_submits.status='Accepted'");
         
         return intval($studentAmount[0]['total']);
     }
