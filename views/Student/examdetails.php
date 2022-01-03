@@ -26,7 +26,7 @@
                         </div>
                         <div class="details" id="theory-details">
                             
-                            <div class="theory-box">
+                            <!-- <div class="theory-box" id="theory-box">
                                 <div class="row">
                                     <div class="col-1">
                                         <h4>Date</h4>
@@ -87,7 +87,7 @@
                                         5
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
@@ -97,9 +97,9 @@
                         <div class="title">
                             <h1>Trail Exam</h1>
                         </div>
-                        <div class="details">
+                        <div class="details" id="trail-details">
                             
-                            <div class="trail-box">
+                            <!-- <div class="trail-box" id="trail-box">
                                 <div class="row">
                                     <div class="cel-1">
                                         <h4>Date</h4>
@@ -120,15 +120,7 @@
                                     </div>
                                 </div>
                                 
-                                <div class="row">
-                                    <div class="cel-1">
-                                        <h4>Venue</h4>
-                                        <h4>:</h4>
-                                    </div>
-                                    <div class="cel-2">
-                                        Galle
-                                    </div>
-                                </div>
+ 
                                 
                                 <div class="row">
                                     <div class="cel-1">
@@ -139,17 +131,7 @@
                                         Nimal perera jayawardhana
                                     </div>
                                 </div>
-                            
-                            
-                                <div class="row">
-                                    <div class="cel-1">
-                                        <h4>Vehicle</h4>
-                                        <h4>:</h4>
-                                    </div>
-                                    <div class="cel-2">
-                                        JJ-89854
-                                    </div>
-                                </div>
+
                             
                                 <div class="row">
                                     <div class="cel-1">
@@ -160,7 +142,7 @@
                                         5
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                 </div>
             </div>

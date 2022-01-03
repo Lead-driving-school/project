@@ -175,6 +175,13 @@ class Student extends Controller{
         }
     }
 
+    function getExamDetailsLogic(){
+        $value=$this->model->getTheoryTrailExamDetails();
+        echo json_encode($value);
+
+    }
+    
+
 
     function review(){
         if(isset($_SESSION['job_title'])){

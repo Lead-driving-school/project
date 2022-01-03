@@ -20,6 +20,7 @@ class Student_Model extends Model{
     }
 
     function editProfiledetails(){
+  
 
     }
 
@@ -90,6 +91,15 @@ class Student_Model extends Model{
         $result=$this->db->runQuery("SELECT * FROM exams where Exam_id=$id");
         return $result;
     }
+
+    function getTheoryTrailExamDetails(){
+        $studentId=$_SESSION['student_id'];
+        $result=$this->db->runQuery("SELECT exam_type,exam_date,exam_time,name,results FROM exams INNER JOIN exam_participation ON exams.exam_id=exam_participation.exam_id INNER JOIN employee ON employee.employee_id= exams.employee_id WHERE exam_participation.student_id='54'");
+        return $result;
+
+    }
+
+
     function loadPreSelectedInstructors($examId){
         $result=$this->db->runQuery("SELECT employee.employee_id,employee.name,employee.job_title from ((((employee 
         INNER JOIN instructor on instructor.employee_id=employee.employee_id) 
