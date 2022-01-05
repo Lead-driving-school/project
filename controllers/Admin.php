@@ -444,5 +444,11 @@ class Admin extends Controller{
         echo json_encode($result);
     }
 
+    // function for view all vehicles
+    function loadVehicle(){
+        $result = $this->model->loadVehicle();
+        echo json_encode($result);
+    }
+
 
 }
