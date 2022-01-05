@@ -126,6 +126,15 @@ class Admin_Model extends Model{
         $id= $class_id[0]['vehicle_class_id'];
         $this->db->runQuery("INSERT INTO vehicle (vehicle_no,vehicle_type,added_date_time,vehicle_class_id) VALUES ('$vehicleNum','$type','$date','$id')");
         return "successfull";
+
+        
+    }
+    
+    
+    // function for view all vehicles (get from db)
+    function loadVehicle(){
+        $result = $this->db->runQuery("SELECT vehicle.vehicle_id,vehicle.vehicle_no,vehicle.vehicle_type,vehicle.added_date_time, vehicle_classes.vehicle_class from vehicle INNER JOIN vehicle_classes on vehicle.vehicle_class_id=vehicle_classes.vehicle_class_id");
+        return $result;
     }
 
     
