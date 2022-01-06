@@ -10,6 +10,16 @@
     
 </head>
 <body>
+    <div class="confirmation-box" id="confirmation">
+          <div class="box-body">
+              <div class="popup-content-box">
+                  <p>This student has already been allocated for maxmium amount of sessions :)</p>
+                      <div class="popup-button-set">
+                          <button class="popup-confirm" name="confirm" id="confirm">Got it</button>   
+                      </div>
+              </div>
+          </div>
+    </div>
 <div class="main-page">
         <div class="topic">
             <h1>Change Assigned Students</h1>

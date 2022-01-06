@@ -239,3 +239,22 @@ function changeVehicleLoad(){
 function changeStudentLoad(){
     window.location.href="http://localhost/project/Manager/changeStudentS/"
 }
+function deleteSession(){
+    document.getElementById("confirmation").classList.replace("confirmation-box","confirmation-box-active")
+    document.getElementById("cancel").addEventListener('click',function(){
+        document.getElementById("confirmation").classList.replace("confirmation-box-active","confirmation-box")
+    });
+    document.getElementById("confirm").addEventListener('click',function(){
+        let httpreq=new XMLHttpRequest()
+        httpreq.onreadystatechange=function(){
+            if(httpreq.readyState===4 && httpreq.status===200){
+                window.location.href="http://localhost/project/Manager/eventCalendar/"
+            }
+
+        }
+        let url="http://localhost/project/Manager/deleteSession"
+        httpreq.open("POST",url,true)
+        httpreq.send()
+        document.getElementById("confirmation").classList.replace("confirmation-box-active","confirmation-box")
+    });
+}

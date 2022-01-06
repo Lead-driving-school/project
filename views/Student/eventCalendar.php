@@ -21,12 +21,22 @@
     <title>Event Calendar</title>
 </head>
 <body>
+<div class="confirmation-box" id="confirmation2">
+          <div class="box-body">
+              <div class="popup-content-box">
+                  <p>You have already been sent maximum amount of requests :)</p>
+                      <div class="popup-button-set">
+                          <button class="popup-confirm" name="confirm" id="confirm-got">Got it</button>   
+                      </div>
+              </div>
+          </div>
+    </div>
     <div class="confirmation-box" id="confirmation">
           <div class="box-body">
               <div class="popup-content-box">
                   <p>Are you sure about sending request?</p>
                       <div class="popup-button-set">
-                          <button class="popup-confirm" name="confirm" id="confirm">I'm sure</button>
+                          <button class="popup-confirm" name="confirm" id="confirm" on>I'm sure</button>
                           <button class="popup-cancel" name="cancel" id="cancel" onclick="cancel()">I have to recheck</button>   
                       </div>
               </div>

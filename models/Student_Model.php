@@ -103,16 +103,32 @@ class Student_Model extends Model{
         $date = date('Y-m-d H:i:s');
         $studentId=intval($studentId);
         $examId=intval($examId);
-        $result=$this->db->runQuery("INSERT INTO exam_request (student_id,exam_id,date_time) VALUES ($studentId,$examId,'$date')");
-        return $studentId;
+
+        $stdCount=$this->db->runQuery("SELECT Count(student_id) as count_std from  exam_student_assigns where student_id=$studentId");
+        $stdCount=intval($stdCount[0]['count_std']);
+        if($stdCount<4){
+            $result=$this->db->runQuery("INSERT INTO exam_request (student_id,exam_id,date_time) VALUES ($studentId,$examId,'$date')");
+            return true;
+        }else{
+            return false;
+        }
+
     }
     function requestForSession($sessionId,$studentId){
         date_default_timezone_set('Asia/Colombo');
         $date = date('Y-m-d H:i:s');
         $studentId=intval($studentId);
         $sessionId=intval($sessionId);
-        $result=$this->db->runQuery("INSERT INTO session_request (student_id,session_id,date_time) VALUES ($studentId,$sessionId,'$date')");
-        return $studentId;
+        $stdCount=$this->db->runQuery("SELECT Count(student_id) as count_std from  session_student_assigns where student_id=$studentId");
+        $stdCount=intval($stdCount[0]['count_std']);
+        if($stdCount<20){
+            $result=$this->db->runQuery("INSERT INTO session_request (student_id,session_id,date_time) VALUES ($studentId,$sessionId,'$date')");
+            return true;
+        }
+        else{
+            return false;
+        }
+
     }
 
 }

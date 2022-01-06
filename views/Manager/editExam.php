@@ -8,6 +8,17 @@
     <title>Lead driving school</title>
 </head>
 <body>
+    <div class="confirmation-box" id="confirmation">
+          <div class="box-body">
+              <div class="popup-content-box">
+                  <p>Are you sure you want to delete this?</p>
+                      <div class="popup-button-set">
+                          <button class="popup-confirm" name="confirm" id="confirm">I'm sure</button>
+                          <button class="popup-cancel" name="cancel" id="cancel">I have to recheck</button>   
+                      </div>
+              </div>
+          </div>
+      </div>
     <div class="main">
         <div class="form-box">
             <input type="hidden" id="idContainer" value="<?php echo isset( $_SESSION['editExamId'])? $_SESSION['editExamId']:"";?>">
@@ -78,7 +89,7 @@
                 </div>
                 <div class="button-set">
                     <a href="<?php echo URL?>Manager/eventCalendar"><button class="session-buttons" name="cancel" id="cancel" >CANCEL</button></a>
-                    <button class="session-buttons"name="confirm" id="confirm">DELETE</button>
+                    <button class="session-buttons" id="delete" onclick="deleteExam()">DELETE</button>
                 </div>
             </div>
         </div>
