@@ -75,11 +75,37 @@ class Student extends Controller{
             $this->view->render('error');
         }
     }
-
+// homepage profile
     function profileLogic(){
-        
+        $value=$this->model->getProfileDetails();   
+       echo json_encode($value);
+
     }
 
+    // after click edit profile button
+
+    // function editProfileData(){
+    //     $value=$this->model->
+    // }
+//-------------------------->
+    function validate($password){
+        // echo $password;
+        $studentId=$_SESSION['student_id'];
+        $result=$this->model->checkPassword($studentId,$password);
+        if($result==true){
+            echo "success";
+        }
+    }
+
+    function updatePasswordLogic($password){
+        $studentId=$_SESSION['student_id'];
+        $result=$this->model->updatePassword($studentId,$password);
+        if($result==true){
+            echo "updated";
+        }
+
+    }
+//----------------------->
     function makepayments(){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='student'){
@@ -91,6 +117,17 @@ class Student extends Controller{
         else{
             $this->view->render('error');
         }
+    }
+
+    function paymentDetails(){
+        $studentId=$_SESSION['student_id'];
+        $value=$this->model->getPaymentDetails($studentId);
+        echo json_encode($value);
+    }
+
+    function paymentDetailsAmount(){
+        $value=$this->model->getProfileDetailsAmount();   
+        echo json_encode($value);
     }
 
     function markGoingNotGoing(){
@@ -107,6 +144,7 @@ class Student extends Controller{
     }
 
     function markGoingNotGoingLogic(){
+        
         $value=$this->model->getTodaySession();
         echo json_encode($value);
         
@@ -136,6 +174,14 @@ class Student extends Controller{
             $this->view->render('error');
         }
     }
+
+    function getExamDetailsLogic(){
+        $value=$this->model->getTheoryTrailExamDetails();
+        echo json_encode($value);
+
+    }
+    
+
 
     function review(){
         if(isset($_SESSION['job_title'])){

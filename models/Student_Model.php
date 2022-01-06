@@ -3,14 +3,51 @@
 class Student_Model extends Model{
 
     function __construct()
-    {
+    { 
         parent::__construct();
     }
 
     function getProfileDetails(){
-        $result=$this->db->runQuery("");
+        $nic=$_SESSION['student_id'];
+        $result=$this->db->runQuery("SELECT * from student where student_id = '$nic'");
         return $result;
     }
+
+    function getProfileDetailsAmount(){
+        $nic=$_SESSION['student_id'];
+        $result=$this->db->runQuery("SELECT total_amount from student where student_id = '$nic'");
+        return $result;
+    }
+
+    function editProfiledetails(){
+  
+
+    }
+
+    //---------------------->
+    function checkPassword($studentId,$password){
+        $result=$this->db->runQuery("SELECT student_private.password FROM student_private INNER JOIN student on student.student_id=student_private.student_id Where student.student_id = '$studentId'");
+        
+        if(!empty($result)){
+            if(password_verify($password,
+            $result[0]['password'] )){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
+    }
+
+    function updatePassword($studentId,$password){
+        $hash_password = password_hash($password,PASSWORD_DEFAULT, array('cost' => 9));
+        $result=$this->db->runQuery("UPDATE student_private INNER JOIN student on student.student_id = student_private.student_id SET student_private.password ='$hash_password' WHERE student_private.student_id = '$studentId'");
+        return true;
+
+    }
+
+//------------------------------------->
 
     function setComplaints($description,$suggestion,$studentId)
     {
@@ -54,6 +91,15 @@ class Student_Model extends Model{
         $result=$this->db->runQuery("SELECT * FROM exams where Exam_id=$id");
         return $result;
     }
+
+    function getTheoryTrailExamDetails(){
+        $studentId=$_SESSION['student_id'];
+        $result=$this->db->runQuery("SELECT exam_type,exam_date,exam_time,name,results FROM exams INNER JOIN exam_participation ON exams.exam_id=exam_participation.exam_id INNER JOIN employee ON employee.employee_id= exams.employee_id WHERE exam_participation.student_id='54'");
+        return $result;
+
+    }
+
+
     function loadPreSelectedInstructors($examId){
         $result=$this->db->runQuery("SELECT employee.employee_id,employee.name,employee.job_title from ((((employee 
         INNER JOIN instructor on instructor.employee_id=employee.employee_id) 
@@ -128,6 +174,14 @@ class Student_Model extends Model{
         else{
             return false;
         }
+
+    }
+
+    function getPaymentDetails($studentId){
+        $result_online=$this->db->runQuery("SELECT payment_date_time, amount, opayment_id FROM `online_payments` WHERE student_id='$studentId'");
+        $result_cash=$this->db->runQuery("SELECT  payment_date_time, amount,cash_payment.cpayment_id FROM cash_payment INNER JOIN cash_payment_submits ON cash_payment.cpayment_id=cash_payment_submits.cpayment_id WHERE student_id='$studentId'");  
+        $result=array_merge($result_cash,$result_online);
+        return $result;
 
     }
 

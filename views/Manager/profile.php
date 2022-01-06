@@ -19,11 +19,8 @@
         <div class="view">
                 <div class="left">
                     <div class="big-picture">
-                        <img src="<?php echo URL?>public/images/profpic.png" alt="big-pic" width="250" height="250">
+                        <img class="prof-pic" src="<?php echo URL?>public/images/profpic.png" alt="big-pic" width="250" height="250">
                     </div>
-                    <button class="upload-pic">
-                        <img src="<?php echo URL?>public/images/camera.png" alt="cam" width="35" height="35">
-                    </button>
                 </div>
                 <div class="right">
                     <div class="holder">
@@ -64,5 +61,20 @@
             </div>
         </div>
     </div>
+
+    <script>
+                let img=document.getElementById("uploadImage");
+        let changeF=document.getElementById("file");
+
+        changeF.addEventListener('change',function(){
+            console.log(this.files[0].type);
+            if(this.files[0].type!='image/png' && this.files[0].type != 'image/jpeg' && this.files[0].type != 'image/jpg'){
+                alert("File type is not valid");
+            }else{
+                img.src=URL.createObjectURL(this.files[0]);
+            }
+
+        })
+    </script>
 </body>
 </html>

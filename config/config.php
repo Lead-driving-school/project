@@ -11,10 +11,10 @@ function getLink(){
     return $actual_link;
 }
 
-function sendOtp($otp){
+function sendOtp($message,$tel){
     $user = "94771845973";
     $password = "7243";
-    $text = urlencode("hi roshan your otp is: ".$otp);
+    $text = urlencode($message);
     $to = "94771845973";
 
     $baseurl ="http://www.textit.biz/sendmsg";

@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/admin/buttons.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/common/sidebar.css">
     <link rel="stylesheet" href="<?php echo URL?>public/css/common/header.css">
-    <script  src="<?php echo URL?>public/js/common/header.js"></script>
-    <script src="<?php echo URL?>public/js/common/sidebar.js"></script>
+    <!-- <script  src="<?php echo URL?>public/js/common/header.js"></script>
+    <script src="<?php echo URL?>public/js/common/sidebar.js"></script> -->
     <script src="<?php echo URL?>public/js/admin/popup.js"></script>
     <script src="popup.js"></script>
     <title>Lead driving school</title>
@@ -72,68 +72,17 @@
 
                 <div class="table-heading-container">
                     <div class="heading-row">
-                        <div class="col-1">Vehicle ID</div>
-                        <div class="col-2">Vehicle Type</div>
-                        <div class="col-3">Vehicle class</div>
-                        <div class="col-4">Vehicle Number</div>
-                        <div class="col-5"></div>
+                        <div class="coll-1">Vehicle ID</div>
+                        <div class="coll-2">Vehicle Type</div>
+                        <div class="coll-3">Vehicle class</div>
+                        <div class="coll-4">Vehicle Number</div>
+                        <div class="coll-5">Added Date</div>
+                        <div class="coll-6"></div>
                     </div> 
                 </div>
 
 
-                <div class="row-container">
-                    <div class="row">
-                        <div class="col-1"><b class="bold-name-2">Vehicle ID</b><b class="bold">: </b>V_1</div>
-                        <div class="col-2"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose</div>
-                        <div class="col-3"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B</div>
-                        <div class="col-4"><b class="bold-name-2">Vehicle Number</b><b class="bold">: </b>58-1234</div>
-                        <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-1">V_2</div>
-                        <div class="col-2">Mortor Tricycle</div>
-                        <div class="col-3">B1</div>
-                        <div class="col-4">QA-1234</div>
-                        <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1">V_3</div>
-                        <div class="col-2">Dual purpose</div>
-                        <div class="col-3">B (Auto)</div>
-                        <div class="col-4">KA-1234</div>
-                        <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-1">V_4</div>
-                        <div class="col-2">Morter Bicycle</div>
-                        <div class="col-3">A</div>
-                        <div class="col-4">TU-3879</div>
-                        <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1">V_5</div>
-                        <div class="col-2">Morter Bicycle</div>
-                        <div class="col-3">A(Auto)</div>
-                        <div class="col-4">JJ-1234</div>
-                        <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-1">V_6</div>
-                        <div class="col-2">Dual purpose</div>
-                        <div class="col-3">B</div>
-                        <div class="col-4">62-1254</div>
-                        <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1">V_7</div>
-                        <div class="col-2">Dual purpose</div>
-                        <div class="col-3">B</div>
-                        <div class="col-4">252-8534</div>
-                        <div class="col-5"><button class="row-delete" onclick ="deletex()">Delete</button></div>
-                    </div>
+                <div class="row-container" id="rows">
 
                 </div>
 
@@ -144,7 +93,7 @@
     </div>
     
     
-
+    <script src="<?php echo URL?>public/js/admin/vehicles.js"></script>
     
 </body>
 

@@ -34,21 +34,21 @@
                 <div class="summary">
                     <div class="paid">
                         <div class="paid-col-1">
-                            <h3>Paid (LKR)</h3>
+                            <h3>Paid</h3>
                             <h3>:</h3>
                         </div>
-                        <div class="paid-col-2">
-                            <div class="paid-val">18,500.00</div>
+                        <div class="paid-col-2" id="paid" >
+                            <!-- <div class="paid-val">18,500.00</div> -->
                         </div>
                     
                     </div>
                     <div class="remaining">
                         <div class="remaining-col-1">
-                            <h3>Remaining (LKR)</h3>
+                            <h3>Remaining</h3>
                             <h3>:</h3>
                         </div>
-                        <div class="remaining-col-2">
-                            <div class="paid-val">7,000.00</div>
+                        <div class="remaining-col-2" id="remain">
+                            <!-- <div class="paid-val">7,000.00</div> -->
                         </div>
                     </div>
 
@@ -66,8 +66,8 @@
     
                         <div class="table">
 
-                            <div class="data">
-                                <div class="row">
+                            <div class="data" id="datalist">
+                                <!-- <div class="row">
                                     <div class="col-1">2019/10/20</div>
                                     <div class="col-2">10.00</div>
                                     <div class="col-3">Cash</div>
@@ -86,7 +86,7 @@
                                     <div class="col-2">20.02</div>
                                     <div class="col-3">Online</div>
                                     <div class="col-4">4500.00</div>
-                                </div>
+                                </div> -->
     
                             </div>
                         </div>
@@ -100,5 +100,88 @@
             </div>
         </div>
     </div>
+    <script> 
+        function getPaymentDetais(){
+            const row=document.getElementById("datalist");
+            
+            let httpreq = new XMLHttpRequest();
+            let paidAmount=0.00;
+            httpreq.onreadystatechange=function(){
+                if(httpreq.readyState===4 && httpreq.status===200){
+                    // console.log(httpreq.responseText);
+                    const obj=JSON.parse(httpreq.responseText);
+                    
+                    // console.log(obj);
+                    const sortByDate=obj=>{
+                        const sorter=(a,b)=>{
+                            return new Date(a.payment_date_time).getTime() - new Date(b.payment_date_time).getTime();
+                        }
+                        return obj.sort(sorter);
+                    }
+                    sortByDate(obj);
+                    let method;
+                    
+                    for(var i=0 ;i<obj.length;i++){
+                        if (typeof obj[i].cpayment_id==='undefined'){
+                            method="Online";
+                        }else{
+                            method="Cash";
+                        }
+                       
+                       let str=String(obj[i].payment_date_time);
+                         let myArr = str.split(" ");
+                         paidAmount+=parseFloat(obj[i].amount);
+                         
+                        
+                        row.innerHTML+='<div class="row"><div class="col-1">'+myArr[0]+'</div>'+
+                        '<div class="col-2">'+myArr[1]+'</div>'+
+                        '<div class="col-3">'+method+'</div>'+
+                        '<div class="col-4">'+obj[i].amount+'</div></div>';
+                    }
+                    console.log(paidAmount);
+                    paidAmountLKR=paidAmount.toLocaleString("en-US", {style:"currency", currency:"LKR"});
+                    // console.log(paidAmount);
+
+                    document.getElementById("paid").innerHTML='<div class="paid-val">'+paidAmountLKR+'</div>';
+                    
+                }
+            }
+
+            let url="http://localhost/project/Student/paymentDetails";
+            httpreq.open("POST",url,true)
+            httpreq.send()
+
+            let httpreqamount= new XMLHttpRequest();
+            httpreqamount.onreadystatechange=function(){
+                if(httpreqamount.readyState===4 && httpreqamount.status===200){
+                    const objamount=JSON.parse(httpreqamount.responseText);
+                    let totAmount=objamount[0].total_amount;
+                    // totAmount=parseFloat(totAmount);
+                    // console.log(typeof totAmount);
+                    // let paidAmount2=paidAmount;
+                    console.log(totAmount);
+                    // console.log(typeof paidAmount2);
+                    let remain2=totAmount-paidAmount;
+                    console.log(remain2);
+                    if(remain2>0){
+                        remain2LKR=remain2.toLocaleString("en-US", {style:"currency", currency:"LKR"});
+                        document.getElementById("remain").innerHTML='<div class="paid-val">'+remain2LKR+'</div>';
+      
+                    }else{
+                        document.getElementById("remain").innerHTML='<div class="paid-val">All Paid</div>';
+                        document.getElementById("remain").style.color='green';
+
+                    }
+               
+
+                }
+            }
+            let url2="http://localhost/project/Student/paymentDetailsAmount";
+            httpreqamount.open("POST",url2,true)
+            httpreqamount.send()
+
+        }
+        getPaymentDetais();
+    </script>
 </body>
 </html>
