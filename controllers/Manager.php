@@ -282,6 +282,15 @@ class Manager extends Controller{
         }
         
     }
+
+    function deleteSession(){
+        $result=$this->model->deleteSession($_SESSION['editSessionId']);
+    }
+    function deleteExam(){
+        $result=$this->model->deleteExam($_SESSION['editExamId']);
+    }
+
+
     function studentList(){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='Manager'){
