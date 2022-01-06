@@ -13,7 +13,7 @@ function viewTodaySession(){
             '<div class="col">'+obj[i].session_title+'</div>'+
             '<div class="col">'+obj[i].session_date+'</div>'+
             '<div class="col">'+obj[i].session_time+'</div>'+
-            '<div class="col"> <button class="going">Going</button></div><div class="col"> <button class="notgoing">Not Going</button></div></div>'
+            '<div class="col" id="going-col"> <button class="going" onclick="going()">Going</button></div><div class="col" > <button class="notgoing-click-going">Not Going</button></div></div>'
 
         }
 
@@ -25,5 +25,12 @@ function viewTodaySession(){
     var url="http://localhost/project/Student/markGoingNotGoingLogic";
     httprequest.open("POST",url,true)
     httprequest.send()
+}
+
+function going(){
+    document.getElementById("notgoing-col").classList.replace("notgoing-click-going","notgoing");
+    console.log("hi");
+
+    
 }
 viewTodaySession()
