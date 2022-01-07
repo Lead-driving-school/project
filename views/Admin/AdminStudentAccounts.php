@@ -44,75 +44,14 @@
                         
                     </div> 
                 </div>
-                <div class="row-container">
-                    <div class="row">
-                        <div class="column-1">St_1</div>
-                        <div class="column-2">rishitha Sandaruwan Weerasinghe</div>
-                        <div class="column-3">0717123455</div>
-                        <div class="column-4"><a href="<?php echo URL?>Admin/AdminStudentDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="column-1">St_2</div>
-                        <div class="column-2">Sahan Sandaruwan</div>
-                        <div class="column-3">0777121238</div>
-                        <div class="column-4"><a href="<?php echo URL?>Admin/AdminStudentDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-                    <div class="row">
-                        <div class="column-1">St_3</div>
-                        <div class="column-2">Gihan rishitha samarathunga</div>
-                        <div class="column-3">0777123456</div>
-                        <div class="column-4"><a href="<?php echo URL?>Admin/AdminStudentDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-                    <div class="row">
-                        <div class="column-1">St_4</div>
-                        <div class="column-2">Sahan madushan Weerasinghe</div>
-                        <div class="column-3">0777123456</div>
-                        <div class="column-4"><a href="<?php echo URL?>Admin/AdminStudentDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-                    <div class="row">
-                        <div class="column-1">St_5</div>
-                        <div class="column-2">Gihan rishitha madushan</div>
-                        <div class="column-3">0777178922</div>
-                        <div class="column-4"><a href="<?php echo URL?>Admin/AdminStudentDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-                    <<div class="row">
-                        <div class="column-1">St_6</div>
-                        <div class="column-2">rishitha Sandaruwan Weerasinghe</div>
-                        <div class="column-3">0717123455</div>
-                        <div class="column-4"><a href="<?php echo URL?>Admin/AdminStudentDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="column-1">St_7</div>
-                        <div class="column-2">Sahan Sandaruwan</div>
-                        <div class="column-3">0772456952</div>
-                        <div class="column-4"><a href="<?php echo URL?>Admin/AdminStudentDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-                    <div class="row">
-                        <div class="column-1">St_8</div>
-                        <div class="column-2">Gihan rishitha samarathunga</div>
-                        <div class="column-3">0777178924</div>
-                        <div class="column-4"><a href="<?php echo URL?>Admin/AdminStudentDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-                    <div class="row">
-                        <div class="column-1">St_9</div>
-                        <div class="column-2">Sahan madushan Weerasinghe</div>
-                        <div class="column-3">0777123166</div>
-                        <div class="column-4"><a href="<?php echo URL?>Admin/AdminStudentDetails"><button class="view-more">View more</button></a></div>
-                    </div>
-                    <div class="row">
-                        <div class="column-1">St_10</div>
-                        <div class="column-2">Gihan rishitha madushan</div>
-                        <div class="column-3">0757128456</div>
-                        <div class="column-4"><a href="<?php echo URL?>Admin/AdminStudentDetails"><button class="view-more">View more</button></a></div>
-                    </div>
+                <div class="row-container" id="row-container">
+                    
 
                 </div>
 
             </div>
         </div>
     </div>
-    <script src="<?php echo URL?>public/js/receptionist/studentList.js"></script>
+    <script src="<?php echo URL?>public/js/Admin/studentAccount.js"></script>
 </body>
 </html>

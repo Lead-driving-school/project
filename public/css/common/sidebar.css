@@ -80,3 +80,14 @@
     background-color: #262b2f;
   }
 }
+@media screen and (min-width: 992px){
+  .sidebar-active {
+    width: 250px;
+    font-family: Arial, Helvetica, FontAwesome, sans-serif;
+    height: calc(100vh - 80px);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 80px;
+    background-color: #262b2f;
+  }
+}

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="<?php echo URL?>public/css/common/header.css">
     <script  src="<?php echo URL?>public/js/common/header.js"></script>
     <script src="<?php echo URL?>public/js/common/sidebar.js"></script>
-    <script src="<?php echo URL?>public/js/Admin/EmployeeAccount.js"></script>
+    
     <title>Lead driving school</title>
 </head>
 <body>
@@ -46,18 +46,12 @@
                 </div>
 
                 <div class="row-container" id="row-container">
-                    <div class="row">
-                        
-                        <div class="col-1"> <b class="bold-name">ID</b><b class="bold">: </b> E123</div>
-                        <div class="col-2"> <b class="bold-name">Name</b><b class="bold">: </b>Sahan rishitha samarathunga</div>
-                        <div class="col-3"> <b class="bold-name">Job Title</b><b class="bold">: </b>Manager</div>
-                        <div class="col-4"> <b class="bold-name">Contact</b><b class="bold">: </b>0777123456</div>
-                        <div class="col-5"><a href="<?php echo URL?>Admin/viewMoreEmployee"><button class="view-more">View more</button></a></div>
-                    </div>
+                    
                 </div>
 
             </div>
         </div>
     </div>
+    <script src="<?php echo URL?>public/js/Admin/EmployeeAccount.js"></script>
 </body>
 </html>
