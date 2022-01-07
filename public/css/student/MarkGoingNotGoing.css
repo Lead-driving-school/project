@@ -205,7 +205,7 @@ hr {
 }
 
 .going {
-  width: 100px;
+  width: 90px;
   height: 40px;
   font-size: 16px;
   font-weight: 600;
@@ -216,6 +216,20 @@ hr {
   box-shadow: 1px 1px 10px #b0b3b3;
   cursor: pointer;
 }
+
+.going-click-notgoing{
+  width: 90px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid #0892d0;
+  border-radius: 3px;
+  background-color: #0892d0;
+  color: seashell;
+  box-shadow: 1px 1px 10px #b0b3b3;
+  cursor: pointer;
+  display: none;
+}
 .going:hover {
   border: 2px solid #0892d0;
   background-color: seashell;
@@ -224,7 +238,7 @@ hr {
 }
 
 .notgoing {
-  width: 100px;
+  width: 90px;
   height: 40px;
   font-size: 16px;
   font-weight: 600;
@@ -245,7 +259,7 @@ hr {
 }
 
 .notgoing-click-going{
-  width: 100px;
+  width: 90px;
   height: 40px;
   font-size: 17px;
   font-weight: 600;
@@ -256,6 +270,7 @@ hr {
   cursor: pointer;
   box-shadow: 1px 1px 10px #b0b3b3;
   display: none;
+ 
   
 }
 ::-webkit-scrollbar {
