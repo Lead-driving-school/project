@@ -81,6 +81,17 @@ class Admin_Model extends Model{
         return $result;
     }
 
+    public function getStudentDetails(){
+        $result=$this->db->runQuery("SELECT student_id,init_name,contact FROM student");
+        return $result;
+    }
+    //function for get students more details and store them to a session variable
+    public function viewMoreStudentsDetails($id){
+        $result=$this->db->runQuery("SELECT student_id,init_name,full_name,address,NIC,gender,district,city,div_sec,police_station,dob,contact,occupation,type,arival_date FROM student WHERE student_id='$id'");
+        $_SESSION['result'] = $result;
+        return "success";
+    }
+
     public function getEmployeeDetailsMore($id){
         $result=$this->db->runQuery("SELECT employee_id,name,job_title,nic,contact_no,address,dob,gender,hired_date FROM employee WHERE employee_id='$id'");
         $license=[];
@@ -88,7 +99,7 @@ class Admin_Model extends Model{
             $license=$this->db->runQuery("SELECT instructor_license_id FROM instructor WHERE employee_id='$id'");
         }
 
-        return array_merge($result, $license);
+        $_SESSION['empDetails'] = array_merge($result, $license);
     }
 
     
