@@ -103,6 +103,21 @@ class Manager_Model extends Model{
         return $result;
     }
 
+    function deleteSession($sessionId){
+        $result=$this->db->runQuery("DELETE FROM session_student_assigns WHERE session_id=$sessionId");
+        $result=$this->db->runQuery("DELETE FROM session_vehicle_assigns WHERE session_id=$sessionId");
+        $result=$this->db->runQuery("DELETE FROM session_conductor_assigns WHERE session_id=$sessionId");
+        $result=$this->db->runQuery("DELETE FROM session_request WHERE session_id=$sessionId");
+        $result=$this->db->runQuery("DELETE FROM sessions WHERE session_id=$sessionId");
+    }
+    function deleteExam($examId){
+        $result=$this->db->runQuery("DELETE FROM exam_student_assigns WHERE exam_id=$examId");
+        $result=$this->db->runQuery("DELETE FROM exam_vehicle_assigns WHERE exam_id=$examId");
+        $result=$this->db->runQuery("DELETE FROM exam_conductor_assigns WHERE exam_id=$examId");
+        $result=$this->db->runQuery("DELETE FROM exam_request WHERE exam_id=$examId");
+        $result=$this->db->runQuery("DELETE FROM exams WHERE Exam_id=$examId");
+    }
+
     function getExamDetails($id){
         $id=intval($id);
         $result=$this->db->runQuery("SELECT * FROM exams where Exam_id=$id");
@@ -171,8 +186,16 @@ class Manager_Model extends Model{
         return $result;
     }
     function addNewStudents($managerId,$studentId,$examId){
-        $result=$this->db->runQuery("INSERT INTO exam_student_assigns VALUES($managerId,$examId,$studentId)");
-        return true;
+        $stdCount=$this->db->runQuery("SELECT Count(student_id) as count_std from  exam_student_assigns where student_id=$studentId");
+        $stdCount=intval($stdCount[0]['count_std']);
+       
+        if($stdCount<4){
+            $result=$this->db->runQuery("INSERT INTO exam_student_assigns VALUES($managerId,$examId,$studentId)");
+            return true;
+        }else{
+            return false;
+        }
+
     }
     function removeStudents($studentId,$examId){
         $result=$this->db->runQuery("DELETE FROM exam_student_assigns WHERE student_id=$studentId AND exam_id=$examId");
@@ -249,8 +272,15 @@ class Manager_Model extends Model{
         return $result;
     }
     function addNewStudentsS($managerId,$studentId,$sessionId){
-        $result=$this->db->runQuery("INSERT INTO session_student_assigns VALUES($managerId,$sessionId,$studentId)");
-        return true;
+        $stdCount=$this->db->runQuery("SELECT Count(student_id) as count_std from  session_student_assigns where student_id=$studentId");
+        $stdCount=intval($stdCount[0]['count_std']);
+        
+        if($stdCount<20){
+            $result=$this->db->runQuery("INSERT INTO session_student_assigns VALUES($managerId,$sessionId,$studentId)");
+            return true;
+        }else{
+            return false;
+        }
     }
     function removeStudentsS($studentId,$sessionId){
         $result=$this->db->runQuery("DELETE FROM session_student_assigns WHERE student_id=$studentId AND session_id=$sessionId");

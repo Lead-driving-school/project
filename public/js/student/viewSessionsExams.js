@@ -12,7 +12,12 @@ function requestExam(id){
         let httpreq=new XMLHttpRequest()
         httpreq.onreadystatechange=function(){
             if(httpreq.readyState===4 && httpreq.status===200){
-
+                if(httpreq.responseText=="false"){
+                    document.getElementById("confirmation2").classList.replace("confirmation-box","confirmation-box-active")
+                    document.getElementById("confirm-got").addEventListener('click',function(){
+                        document.getElementById("confirmation2").classList.replace("confirmation-box-active","confirmation-box")
+                    });
+                }
             }
         }
         url="http://localhost/project/Student/requestExam/"+id
@@ -31,7 +36,12 @@ function requestSession(id){
         let httpreq=new XMLHttpRequest()
         httpreq.onreadystatechange=function(){
             if(httpreq.readyState===4 && httpreq.status===200){
-                console.log(httpreq.responseText)
+                if(httpreq.responseText=="false"){
+                    document.getElementById("confirmation2").classList.replace("confirmation-box","confirmation-box-active")
+                    document.getElementById("confirm-got").addEventListener('click',function(){
+                        document.getElementById("confirmation2").classList.replace("confirmation-box-active","confirmation-box")
+                    });
+                }
             }
         }
         url="http://localhost/project/Student/requestSession/"+id

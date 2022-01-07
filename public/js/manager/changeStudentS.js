@@ -103,6 +103,12 @@ function addNewStudents(studentId){
             if(httpreq.responseText=="true"){
                 window.location.href="http://localhost/project/Manager/changeStudentS"
             }
+            if(httpreq.responseText=="false"){
+                document.getElementById("confirmation").classList.replace("confirmation-box","confirmation-box-active")
+                document.getElementById("confirm").addEventListener('click',function(){
+                    document.getElementById("confirmation").classList.replace("confirmation-box-active","confirmation-box")
+                });
+            }
         }
     }
     let url="http://localhost/project/Manager/addNewStudentsS/"+studentId

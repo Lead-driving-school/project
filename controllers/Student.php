@@ -355,11 +355,19 @@ class Student extends Controller{
     //request part
     function requestExam($id){
         $result=$this->model->requestForExam($id,$_SESSION['student_id']);
-        echo $result;
+        if($result==true){
+            echo "true";
+        }else{
+            echo "false";
+        }
     }
     function requestSession($id){
         $result=$this->model->requestForSession($id,$_SESSION['student_id']);
-        echo $result;
+        if($result==true){
+            echo "true";
+        }else{
+            echo "false";
+        }
     }
 
 }
