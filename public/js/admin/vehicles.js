@@ -8,7 +8,7 @@ function loadVehicles(){
                 const row = document.getElementById("rows");
                 console.log(vehicle[i].added_date_time)
                 row.innerHTML += '<div class="row">'+
-                '<div class="coll-1"><b class="bold-name-2">Vehicle ID</b><b class="bold">: </b>V_'+vehicle[i].vehicle_id+'</div>'+
+                '<div class="coll-1" ><b class="bold-name-2">Vehicle ID</b><b class="bold">: </b>V_'+vehicle[i].vehicle_id+'</div>'+
                 '<div class="coll-2"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>'+vehicle[i].vehicle_type+'</div>'+
                 '<div class="coll-3"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>'+vehicle[i].vehicle_class+'</div>'+
                 '<div class="coll-4"><b class="bold-name-2">Vehicle Number</b><b class="bold">: </b>'+vehicle[i].vehicle_no+'</div>'+
