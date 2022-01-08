@@ -45,6 +45,13 @@ class Instructor extends Controller{
             $this->view->render('error');
         } 
     }
+
+    function markGoingNotGoingLogic(){
+        
+        $value=$this->model->getTodaySession();
+        echo json_encode($value);
+        
+    }
     function viewExam($id=''){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='Instructor'){

@@ -57,17 +57,6 @@
                                     <button class="notgoing">Not Going</button>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col">192</div>
-                                <div class="col">Traffic Law</div>
-                                <div class="col">2019/10/20</div>
-                                <div class="col">04.00</div>
-                                <div class="col">
-                                    <button class="going">Going</button>
-                                </div>
-                                <div class="col">
-                                    <button class="notgoing">Not Going</button>
-                                </div>
                             </div> -->
                         </div>
                     </div>
