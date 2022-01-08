@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href= "<?php echo URL?>public/css/student/MarkGoingNotGoing.css">
+    <link rel="stylesheet" href= "<?php echo URL?>public/css/conductor/MarkGoingNotGoing.css">
     <title>Session DetailsS</title>
 </head>
 <body>
@@ -41,8 +41,8 @@
                             </div>
 
                         </div>
-                        <div class="data">
-                            <div class="row">
+                        <div class="data" id="data">
+                            <!-- <div class="row">
                                 <div class="col">183</div>
                                 <div class="col">Traffic lights</div>
                                 <div class="col">2019/10/20</div>
@@ -77,9 +77,12 @@
                                 <div class="col">
                                     <button class="notgoing">Not Going</button>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <script src="<?php echo URL?>public/js/instructor/Allmarkgoingnotgoing.js"></script>
+</body>
