@@ -148,6 +148,25 @@ class Admin_Model extends Model{
         return $result;
     }
 
+    //Init prices and extra charges
+    function loadInitPrices(){
+        $classes = $this->VehicleClassesByName();
+        $Vclass = array(array("Dual Purpose/Motor Car","Dual Purpose-Auto/Motor Car-Auto","Motor Tricycle" , "Motor Cycle" , "Motor Cycle-Auto" ), array("B","B-Auto", "B1" , "A" , "A-Auto" ) ,array() , array(), array());
+        $prices = $this->db->runQuery("SELECT vehicle_class,initial_charge,extra_charges_for_extra_day,vehicle_class_id FROM vehicle_classes");
+        for($i=0;$i<sizeof($Vclass[1]);$i++){
+            for($j=0;$j<sizeof($Vclass[1]);$j++)
+            {
+                if($Vclass[1][$i]==$prices[$j]['vehicle_class']){
+                    $Vclass[2][$i]=$prices[$j]['initial_charge'];
+                    $Vclass[3][$i]=$prices[$j]['extra_charges_for_extra_day'];
+                    $Vclass[4][$i]=$prices[$j]['vehicle_class_id'];
+                }
+            }
+        }
+
+        return $Vclass;
+    }
+
     
 }
 

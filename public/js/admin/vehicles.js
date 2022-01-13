@@ -6,7 +6,7 @@ function loadVehicles(){
             const vehicle = JSON.parse(httpreq.responseText)
             for(i=0;i<vehicle.length;i++){
                 const row = document.getElementById("rows");
-                console.log(vehicle[i].added_date_time)
+                // console.log(vehicle[i].added_date_time)
                 row.innerHTML += '<div class="row">'+
                 '<div class="coll-1" ><b class="bold-name-2">Vehicle ID</b><b class="bold">: </b>V_'+vehicle[i].vehicle_id+'</div>'+
                 '<div class="coll-2"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>'+vehicle[i].vehicle_type+'</div>'+
