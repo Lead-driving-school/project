@@ -176,5 +176,5 @@
                 </div>
         </div>
     </div>
-</body>
+    <script src="<?php echo URL?>public/js/Report/exam_participation_students.js"></script>
 </html>
