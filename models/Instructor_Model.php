@@ -5,6 +5,13 @@ class Instructor_Model extends Model{
         parent::__construct();
     }
 
+    function getTodaySession(){
+        $date=date("Y-m-d");
+        $result=$this->db->runQuery("SELECT session_id , session_title, session_date, session_time FROM sessions WHERE session_date='2021-11-18'");
+        return $result;
+
+    }
+
     function getSessions($employeeId){
         $result=$this->db->runQuery("SELECT sessions.Session_id,sessions.session_title,sessions.session_date,sessions.session_time,sessions.type FROM sessions INNER join session_conductor_assigns on session_conductor_assigns.session_id=sessions.session_id where session_conductor_assigns.conductor_id=$employeeId");
         return $result;

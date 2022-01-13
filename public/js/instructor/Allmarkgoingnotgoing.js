@@ -1,4 +1,5 @@
-function viewTodaySession(){
+function viewAllSession(){
+
 
     const row = document.getElementById("data");
     let httprequest=new XMLHttpRequest();
@@ -7,7 +8,7 @@ function viewTodaySession(){
             // console.log(httprequest.responseText)
            const obj=JSON.parse(httprequest.responseText)
            console.log(obj)
-           for(var i=0; i<obj.length;i++){sessionid
+           for(var i=0; i<obj.length;i++){
             var sessionid=obj[i].session_id;
             row.innerHTML+=
             '<div class="row"><div class="col">'+obj[i].session_id +'</div>'+
@@ -25,19 +26,8 @@ function viewTodaySession(){
 
     }
     
-    var url="http://localhost/project/Student/markGoingNotGoingLogic";
+    var url="http://localhost/project/Instructor/markGoingNotGoingLogic";
     httprequest.open("POST",url,true)
     httprequest.send()
 }
-function going(objId){
-    console.log(objId);
-    document.getElementById(objId).classList.replace("notgoing","notgoing-click-going");
-    
-      
-}
-
-function notgoing(objId){
-    document.getElementById(objId).classList.replace("going","going-click-notgoing"); 
-}
-
-viewTodaySession()
+viewAllSession()
