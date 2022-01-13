@@ -469,5 +469,12 @@ class Admin extends Controller{
         echo json_encode($_SESSION['result']);
     }
 
+    //PACKAGES/ initial prices
+    function loadInitPrices(){
+        $result = $this->model->loadInitPrices();
+        echo json_encode($result);
+        
+    }
+
 
 }

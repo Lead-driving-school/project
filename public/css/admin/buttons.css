@@ -119,6 +119,10 @@
   /* background-color: indianred; */
 }
 
+.edit-deactivate{
+  display: none;
+}
+
 .edit:hover {
   background-color: #777777;
 }
@@ -144,6 +148,7 @@
 
 .view-more,
 .mark-as-read {
+  display: block;
   width: fit-content;
   padding-left: 10px;
   padding-right: 10px;
@@ -157,16 +162,39 @@
   font-weight: 600;
 }
 
+.view-more-deactivate{
+  display: none;
+}
+
+.save-small:hover,
 .view-more:hover,
 .mark-as-read:hover {
   border: 2px solid #0892d0;
   background-color: white;
   color: #0892d0;
-  width: fit-content;
+  /* width: fit-content;
   padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 10px; */
 
   cursor: pointer;
+}
+
+.save-small {
+  display: block;
+  width: fit-content;
+  padding: 5px 8px;
+  height: fit-content;
+  border: 2px solid #0892d0;
+  box-shadow: 1px 1px 5px #b0b3b3;
+  background-color: #0892d0;
+  color: white;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.save-small-deactivate{
+  display: none;
 }
 .registerStudent-button-container {
   display: flex;
@@ -193,4 +221,30 @@
   width: fit-content;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.cancel-small-deactivate{
+  display: none;
+}
+
+.cancel-small{
+  display: block;
+  height: fit-content;
+  width: fit-content;
+  padding: 5px 8px;
+  font-size: 13px;
+  font-weight: 400;
+  border-radius: 5px;
+  color: #505050;
+  background-color: #bbbbbb;
+  border: 2px solid #bbbbbb;
+}
+
+.cancel-small:hover{
+  background-color: white;
+  cursor: pointer;
+}
+
+.col-4 > .cancel-small{
+  margin-right: 5px;
 }

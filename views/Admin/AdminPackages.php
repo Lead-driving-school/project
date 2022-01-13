@@ -40,9 +40,9 @@
                         <h2>Initial Prices (Without training)</h2>
                     </div>
                     <hr class="topic-line">
-                    <div class="addnew-btn-container">
+                    <!-- <div class="addnew-btn-container">
                         <a href="<?php echo URL?>Admin/addInitPrices"><button class="add-new">Add New</button></a>
-                    </div>
+                    </div> -->
                     <div class="table-heading-container">
                         <div class="heading-row">
                             <div class="col-1">Vehicle Type</div>
@@ -52,48 +52,8 @@
                             
                         </div> 
                     </div>
-                    <div class="row-container">
-                        <div class="row">
-                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle</div>
-                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B</div>
-                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>4000.00</div>
-                            <div class="col-4"><button class="edit">Edit</button></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle (Auto)</div>
-                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B (Auto)</div>
-                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>4500.00</div>
-                            <div class="col-4"><button class="edit">Edit</button></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle</div>
-                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B</div>
-                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>4000.00</div>
-                            <div class="col-4"><button class="edit">Edit</button></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle (Auto)</div>
-                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B (Auto)</div>
-                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>4500.00</div>
-                            <div class="col-4"><button class="edit">Edit</button></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle</div>
-                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B</div>
-                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>4000.00</div>
-                            <div class="col-4"><button class="edit">Edit</button></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle (Auto)</div>
-                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B (Auto)</div>
-                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>4500.00</div>
-                            <div class="col-4"><button class="edit">Edit</button></div>
-                        </div>
+                    <div class="row-container" id="Initial-Prices">
+                        
                     </div>
                 </div>
 
@@ -151,9 +111,9 @@
                         <h2>Extra Prices(per day)</h2>
                     </div>
                     <hr class="topic-line">
-                    <div class="addnew-btn-container">
+                    <!-- <div class="addnew-btn-container">
                         <a href="<?php echo URL?>Admin/addExtraPrices"><button class="add-new">Add New</button></a>
-                    </div>
+                    </div> -->
 
                     <div class="table-heading-container">
                         <div class="heading-row">
@@ -164,46 +124,14 @@
                             
                         </div> 
                     </div>
-                    <div class="row-container">
-                        <div class="row">
-                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle</div>
-                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B</div>
-                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>3500.00</div>
-                            <div class="col-4"><button class="edit">Edit</button></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle</div>
-                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B</div>
-                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>3500.00</div>
-                            <div class="col-4"><button class="edit">Edit</button></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle</div>
-                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B</div>
-                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>3500.00</div>
-                            <div class="col-4"><button class="edit">Edit</button></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle</div>
-                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B</div>
-                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>3500.00</div>
-                            <div class="col-4"><button class="edit">Edit</button></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-1"><b class="bold-name-2">Vehicle Type</b><b class="bold">: </b>Dual purpose vehicle</div>
-                            <div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>B</div>
-                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>3500.00</div>
-                            <div class="col-4"><button class="edit">Edit</button></div>
-                        </div>
+                    <div class="row-container" id="Extra-Prices">
+                        
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
+    <script  src="<?php echo URL?>public/js/Admin/packages.js"></script>
 </body>
 </html>
