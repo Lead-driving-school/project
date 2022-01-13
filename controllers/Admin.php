@@ -476,5 +476,44 @@ class Admin extends Controller{
         
     }
 
+    //Packages / edit change initial prices
+    function editInitPrices($data){
+        $details = explode(",", $data);
+        $result = $this->model->editInitPrices($details);
+        echo $result;
+    }
+    //Packages / edit change Extra prices
+    function editExtraPrices($data){
+        $details = explode(",", $data);
+        $result = $this->model->editExtraPrices($details);
+        echo $result;
+    }
+
+    //load Service Charges for RMV ----> initial charges
+    function loadExpences(){
+        $result = $this->model->loadExpences();
+        echo json_encode($result);
+    }
+    //load Service Charges for RMV ----> Other charges
+    function loadOtherExpences(){
+        $result = $this->model->loadOtherExpences();
+        echo json_encode($result);
+    }
+    //Edit Service Charges for RMV ----> initial charges
+    function editInitCharges($data){
+        $details = explode(",", $data);
+        $result = $this->model->editInitCharges($details);
+        echo $result;
+    }
+    //Edit Service Charges for RMV ----> Other charges
+    function editOtherCharges($data){
+        $details = explode(",", $data);
+        $result = $this->model->editOtherCharges($details);
+        echo $result;
+    }
+
+
+    
+
 
 }
