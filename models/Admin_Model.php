@@ -166,15 +166,36 @@ class Admin_Model extends Model{
 
         return $Vclass;
     }
-
+    //Packages / edit change initial prices
     function editInitPrices($details){
         $this->db->runQuery("UPDATE vehicle_classes SET initial_charge = '$details[1]' WHERE vehicle_class_id = '$details[0]'");
         return 'success';
     }
-
+    //Packages / edit change Extra prices
     function editExtraPrices($details)
     {
         $this->db->runQuery("UPDATE vehicle_classes SET extra_charges_for_extra_day = '$details[1]' WHERE vehicle_class_id = '$details[0]'");
+        return 'success';
+    }
+    //load Service Charges for RMV ----> initial charges
+    function loadExpences(){
+        $res1=$this->db->runQuery("SELECT * FROM initial_service_expenses");
+        return $res1;
+
+    }
+    //load Service Charges for RMV ----> other charges
+    function loadOtherExpences(){
+        $res2=$this->db->runQuery("SELECT * FROM exam_failure_charges");
+        return $res2;
+    }
+    //Edit Service Charges for RMV ----> initial charges
+    function editInitCharges($data){
+        $this->db->runQuery("UPDATE initial_service_expenses SET amount = '$data[1]' WHERE ischarge_id = '$data[0]'");
+        return 'success';
+    }
+    //Edit Service Charges for RMV ----> other charges
+    function editOtherCharges($data){
+        $this->db->runQuery("UPDATE exam_failure_charges SET amount = '$data[1]' WHERE ef_id = '$data[0]'");
         return 'success';
     }
 

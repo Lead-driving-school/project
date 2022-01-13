@@ -56,27 +56,7 @@
                             
                         </div> 
                     </div>
-                    <div class="row-container">
-                        <div class="row">
-                            <div class="col-1"><b class="bold-name-4">Number of Vehicles</b><b class="bold">: </b>One class of vehicles</div>
-                            <div class="col-2"></div>
-                            <div class="col-3"><b class="bold-name-4">Price (LKR)</b><b class="bold">: </b>1700.00</div>
-                            <div class="col-4"><button class="edit">Edit</button></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-1"><b class="bold-name-4">Number of Vehicles</b><b class="bold">: </b>Two classes of vehicles</div>
-                            <div class="col-2"></div>
-                            <div class="col-3"><b class="bold-name-4">Price (LKR)</b><b class="bold">: </b>2000.00</div>
-                            <div class="col-4"><button class="edit">Edit</button></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-1"><b class="bold-name-4">Number of Vehicles</b><b class="bold">: </b>Three classes of vehicles</div>
-                            <div class="col-2"></div>
-                            <div class="col-3"><b class="bold-name-4">Price (LKR)</b><b class="bold">: </b>2250.00</div>
-                            <div class="col-4"><button class="edit">Edit</button></div>
-                        </div>
+                    <div class="row-container" id="Initial-Charges">
 
                     </div>
                 </div>
@@ -97,20 +77,8 @@
                             
                         </div> 
                     </div>
-                    <div class="row-container">
-                        <div class="row">
-                            <div class="column-1"><b class="bold-name-2">Task</b><b class="bold">: </b>Reapplying for written test</div>
-                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>250.00</div>
-                            <div class="col-4"><button class="edit">Edit</button></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="column-1"><b class="bold-name-2">Task</b><b class="bold">: </b>Reapplying for Practical test</div>
-                            <div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b>500.00</div>
-                            <div class="col-4"><button class="edit">Edit</button></div>
-                        </div>
-
-                        
+                    <div class="row-container" id="Other-charges">
+                    
                     </div>
                 </div>
 
@@ -119,5 +87,6 @@
             </div>
         </div>
     </div>
+    <script  src="<?php echo URL?>public/js/Admin/expences.js"></script>
 </body>
 </html>
