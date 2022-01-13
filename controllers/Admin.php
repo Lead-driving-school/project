@@ -476,5 +476,18 @@ class Admin extends Controller{
         
     }
 
+    //Packages / edit change initial prices
+    function editInitPrices($data){
+        $details = explode(",", $data);
+        $result = $this->model->editInitPrices($details);
+        echo $result;
+    }
+
+    function editExtraPrices($data){
+        $details = explode(",", $data);
+        $result = $this->model->editExtraPrices($details);
+        echo $result;
+    }
+
 
 }

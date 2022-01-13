@@ -167,6 +167,17 @@ class Admin_Model extends Model{
         return $Vclass;
     }
 
+    function editInitPrices($details){
+        $this->db->runQuery("UPDATE vehicle_classes SET initial_charge = '$details[1]' WHERE vehicle_class_id = '$details[0]'");
+        return 'success';
+    }
+
+    function editExtraPrices($details)
+    {
+        $this->db->runQuery("UPDATE vehicle_classes SET extra_charges_for_extra_day = '$details[1]' WHERE vehicle_class_id = '$details[0]'");
+        return 'success';
+    }
+
     
 }
 

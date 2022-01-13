@@ -67,6 +67,7 @@
     justify-content: space-evenly;
     background-color: white;
     box-shadow: 1px 1px 5px #b0b3b3;
+    padding: 0 10px;
 }
 
 .table-heading-container{
@@ -110,8 +111,18 @@
 
 .col-3{
     width: 25%;
-    text-align: right;
+    margin: auto;
+    text-align: center;
     /* background-color: darkolivegreen; */
+}
+
+.col-3 > input{
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    background-color: white;
+    border: none;
+    font-size: 1rem;
 }
 
 .row .col-3{
@@ -183,6 +194,16 @@
     .bold{
         width: 10px;
         display: block;
+    }
+
+    .col-1 > .bold , .col-2 > .bold{
+        margin-right: 2px;
+    }
+    
+
+    .col-3 > input{
+        text-align: left;
+        
     }
 
 }
