@@ -70,6 +70,8 @@ class Report extends Controller{
         
     }
 
+    
+
     function sessionGraph(){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='Admin'||$_SESSION['job_title']=='Manager'){
@@ -149,6 +151,14 @@ class Report extends Controller{
         }
         
     }
+    // Report
+
+    function examParticipationStudentsReportLogic(){
+        $value=$this->model->examPArticipationStudent();
+        echo json_encode($value);
+
+    }
+
     function sessionReport(){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='Admin'||$_SESSION['job_title']=='Manager'){
