@@ -65,7 +65,7 @@ class Student_Model extends Model{
     }
     function getTodaySession(){
         $date=date("Y-m-d");
-        $result=$this->db->runQuery("SELECT session_id , session_title, session_date, session_time FROM sessions WHERE session_date='2021-11-18'");
+        $result=$this->db->runQuery("SELECT sessions.session_id , sessions.session_title, sessions.session_date, sessions.session_time,session_participation.status FROM sessions INNER JOIN session_participation ON sessions.session_id=session_participation.session_id WHERE session_date='2021-11-18'");
         return $result;
 
     }
