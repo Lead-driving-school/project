@@ -19,11 +19,8 @@ function viewTodaySession(){
             '<div class="col" id="going-col"> <button class="going" id="'+sessionid+'" onclick="going('+sessionid+')">Going</button></div>'+
             '<div class="col"><button class="notgoing" id="'+sessionid+'" onclick="notgoing('+sessionid+')">Not Going</button></div></div>'
             }else if(status="going"){
-            row.innerHTML+=
-            '<div class="row"><div class="col">'+obj[i].session_id +'</div>'+
-            '<div class="col">'+obj[i].session_title+'</div>'+
-            '<div class="col">'+obj[i].session_date+'</div>'+
-            '<div class="col">'+obj[i].session_time+'</div></div>'
+                console.log("going");
+
             }else{
             '<div class="row"><div class="col">'+obj[i].session_id +'</div>'+
             '<div class="col">'+obj[i].session_title+'</div>'+
@@ -51,9 +48,12 @@ function going(objId){
     let httprequest=new XMLHttpRequest();
     httprequest.onreadystatechange=function(){
         if(httprequest.readyState===4 && httprequest.status===200){
-            console.log("Hi");
-            window.location.href="http://localhost/project/Student/markGoingNotGoingLogic";
-
+            console.log(httprequest.responseText);
+            if(httprequest.responseText==true){
+                console.log("Hi");
+                window.location.href="http://localhost/project/Student/markGoingNotGoing";  
+            }
+                     
         }
     }
 
