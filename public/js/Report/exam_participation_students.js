@@ -6,6 +6,10 @@ function getExamParticipationDetails(){
             console.log(httpreq.responseText);
             const obj=JSON.parse(httpreq.responseText);
             console.log(obj)
+
+            
+
+            
             
         }
     }
