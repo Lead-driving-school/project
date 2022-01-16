@@ -1,3 +1,47 @@
+function loadPackages(){
+    let packages = document.getElementById('packages')
+    let httprequest  = new XMLHttpRequest();
+    httprequest.onreadystatechange = function(){
+        if (httprequest.readyState===4 && httprequest.status===200){
+            console.log(httprequest.responseText+"kkk")
+            const package = JSON.parse(httprequest.responseText)
+            for(i=0; i<package.length; i++){
+                packages.innerHTML += '<div class="row">'+
+                '<div class="col-1"><b class="bold-name-3">Package Name</b><b class="bold">: </b>'+package[i].type+'</div>'+
+                '<div class="col-2"><b class="bold-name-3">Vehicle classes</b><b class="bold">: </b>'+package[i].classes+'</div>'+
+                '<div class="col-3"><b class="bold-name-3">Price (LKR)</b><b class="bold">: </b>'+package[i].amount+'</div>'+
+                '<div class="col-4"><button class="edit" onclick ="editPackage('+package[i].package_id+')">Edit</button></div>'+
+                '</div>'
+            }
+            
+        }
+    }
+    
+    var url="http://localhost/project/Admin/getPackages";
+    httprequest.open("POST",url,true)
+    httprequest.send()
+}
+
+function editPackage(id){
+    let httprequest  = new XMLHttpRequest();
+    httprequest.onreadystatechange = function(){
+        if (httprequest.readyState===4 && httprequest.status===200){
+            console.log(httprequest.responseText)
+            if(httprequest.responseText=="success"){
+                window.location.assign("http://localhost/project/Admin/editPackages");
+            }
+            
+            
+        }
+    }
+    
+    var url="http://localhost/project/Admin/clickEditPackages/"+id;
+    httprequest.open("POST",url,true)
+    httprequest.send()
+}
+
+
+
 function loadInitPrices(){
     let httpreq = new XMLHttpRequest()
     httpreq.onreadystatechange = function(){
@@ -21,9 +65,13 @@ function loadInitPrices(){
                 '<div class="col-2"><b class="bold-name-2">Vehicle class</b><b class="bold">: </b>'+initPrices[1][i]+'</div>'+
                 '<div class="col-3"><b class="bold-name-2">Price (LKR)</b><b class="bold">: </b><input disabled="true" type="text" id="eprice'+initPrices[4][i]+'" value="'+initPrices[3][i]+'"></div>'+
                 '<div class="col-4"><button id="Ee'+initPrices[4][i]+'" class="edit" onclick ="editExtra('+initPrices[4][i]+')">Edit</button><button id="E'+initPrices[4][i]+'"  class="save-small-deactivate" onclick ="saveExtra('+initPrices[4][i]+')">Save</button><button id="ce'+initPrices[4][i]+'" class="cancel-small-deactivate" onclick ="cancelExtra('+initPrices[4][i]+')">Cancel</button></div>'+
-                '</div>'
+                '</div>' 
+
+               
 
             }
+
+            
         }
     }
 
@@ -33,6 +81,7 @@ function loadInitPrices(){
     httpreq.send();
 }
 loadInitPrices()
+loadPackages()
 
 function editInit(id){
 

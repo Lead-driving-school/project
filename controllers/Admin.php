@@ -512,6 +512,16 @@ class Admin extends Controller{
         echo $result;
     }
 
+    function getPackages(){
+        $result = $this->model->getPackages();
+        echo json_encode($result);
+    }
+
+    function clickEditPackages($id){
+        $result = $this->model->clickEditPackages($id);
+        echo $result;
+    }
+
 
     
 
