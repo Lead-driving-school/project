@@ -52,6 +52,9 @@ class Instructor extends Controller{
         echo json_encode($value);
         
     }
+
+ 
+
     function viewExam($id=''){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='Instructor'){
