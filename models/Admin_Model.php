@@ -198,6 +198,19 @@ class Admin_Model extends Model{
         $this->db->runQuery("UPDATE exam_failure_charges SET amount = '$data[1]' WHERE ef_id = '$data[0]'");
         return 'success';
     }
+    //select packages for view training packages
+    function getPackages(){
+        $result=$this->db->runQuery("SELECT packages.package_id,GROUP_CONCAT(vehicle_classes.vehicle_class) as classes,packages.amount , packages.type from ((package_n_vehicles inner join packages on package_n_vehicles.package_id=packages.package_id) inner join vehicle_classes on package_n_vehicles.vehicle_class_id=vehicle_classes.vehicle_class_id) group by package_id");
+        return $result;
+    }
+    //get packages for edit packages page
+    function clickEditPackages($id){
+        $result=$this->db->runQuery("SELECT packages.package_id,GROUP_CONCAT(vehicle_classes.vehicle_class) as classes,packages.amount , packages.type from ((package_n_vehicles inner join packages on package_n_vehicles.package_id=packages.package_id) inner join vehicle_classes on package_n_vehicles.vehicle_class_id=vehicle_classes.vehicle_class_id) where packages.package_id='$id'");
+        $_SESSION['packageDetails'] = $result;
+        return 'success';
+    }
+
+    
 
     
 }
