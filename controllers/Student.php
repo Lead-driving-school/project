@@ -150,6 +150,11 @@ class Student extends Controller{
         
     }
 
+    function markGoingNotGoingLogic_Going($status){
+        $value=$this->model->upadateTodaySession($status);
+
+    }
+
     function payments(){
         if(isset($_SESSION['job_title'])){
             if($_SESSION['job_title']=='student'){

@@ -67,8 +67,16 @@ class Student_Model extends Model{
         $date=date("Y-m-d");
         $result=$this->db->runQuery("SELECT sessions.session_id , sessions.session_title, sessions.session_date, sessions.session_time,session_participation.status FROM sessions INNER JOIN session_participation ON sessions.session_id=session_participation.session_id WHERE session_date='2021-11-18'");
         return $result;
+    }
+
+    function upadateTodaySession($status){
+        $id=$_SESSION['student_id'];
+        $result=$this->db->runQuery("UPDATE session_participation SET status='$status' WHERE student_id='$id'");
+        return true;
 
     }
+
+    //------------>
     function getSessions($studentId){
         $result=$this->db->runQuery("SELECT sessions.Session_id,sessions.session_title,sessions.session_date,sessions.session_time,sessions.type FROM sessions INNER join session_student_assigns on session_student_assigns.session_id=sessions.session_id where session_student_assigns.student_id=$studentId");
         return $result;
@@ -86,6 +94,7 @@ class Student_Model extends Model{
         $result=$this->db->runQuery("SELECT Session_id,session_title,session_date,session_time,type FROM sessions");
         return $result;
     }
+    
     function getExamDetails($id){
         $id=intval($id);
         $result=$this->db->runQuery("SELECT * FROM exams where Exam_id=$id");
@@ -176,6 +185,7 @@ class Student_Model extends Model{
         }
 
     }
+    //---------------------------->
 
     function getPaymentDetails($studentId){
         $result_online=$this->db->runQuery("SELECT payment_date_time, amount, opayment_id FROM `online_payments` WHERE student_id='$studentId'");
