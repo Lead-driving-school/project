@@ -150,9 +150,16 @@ class Student extends Controller{
         
     }
 
-    function markGoingNotGoingLogic_Going($status){
-        $value=$this->model->upadateTodaySession($status);
+    function markGoingNotGoingLogic_Going($data){
+        $value=explode(",",$data);
+        $value=$this->model->upadateTodaySession($value[0],$value[1]);
+        
+    }
 
+    function markGoingNotGoingLogic_NotGoing($data){
+        $value=explode(",",$data);
+        $value=$this->model->upadateTodaySession($value[0],$value[1]);
+        
     }
 
     function payments(){
