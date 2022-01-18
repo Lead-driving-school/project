@@ -69,9 +69,9 @@ class Student_Model extends Model{
         return $result;
     }
 
-    function upadateTodaySession($status){
+    function upadateTodaySession($status,$sessionId){
         $id=$_SESSION['student_id'];
-        $result=$this->db->runQuery("UPDATE session_participation SET status='$status' WHERE student_id='$id'");
+        $result=$this->db->runQuery("UPDATE session_participation SET status='$status' WHERE student_id='$id' AND session_id='$sessionId'");
         return true;
 
     }
